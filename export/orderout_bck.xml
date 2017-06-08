@@ -1,0 +1,4811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Классификатор>
+
+<Группы>
+<Группа>
+<Ид>208</Ид>
+<Наименование>Фасады</Наименование>
+<Группы>
+<Группа>
+<Ид>210</Ид>
+<Наименование>Фасадные панели VOX Solid</Наименование>
+</Группа>
+<Группа>
+<Ид>212</Ид>
+<Наименование>Мембраны фасадные</Наименование>
+</Группа>
+<Группа>
+<Ид>209</Ид>
+<Наименование>Cайдинг FaSiding</Наименование>
+</Группа>
+<Группа>
+<Ид>254</Ид>
+<Наименование>Cайдинг VOX MAX-3</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>226</Ид>
+<Наименование>Чердачные лестницы</Наименование>
+<Группы>
+<Группа>
+<Ид>230</Ид>
+<Наименование>Чердачные лестницы Oman</Наименование>
+</Группа>
+<Группа>
+<Ид>250</Ид>
+<Наименование>Чердачные лестницы VELUX</Наименование>
+</Группа>
+<Группа>
+<Ид>232</Ид>
+<Наименование>Чердачные лестницы Fakro</Наименование>
+</Группа>
+<Группа>
+<Ид>231</Ид>
+<Наименование>Чердачные лестницы Roto</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>211</Ид>
+<Наименование>Теплоизоляция</Наименование>
+<Группы>
+<Группа>
+<Ид>229</Ид>
+<Наименование>Базальтовый утеплитель</Наименование>
+</Группа>
+<Группа>
+<Ид>233</Ид>
+<Наименование>Стекловата</Наименование>
+</Группа>
+<Группа>
+<Ид>228</Ид>
+<Наименование>Экструдированный пенополистирол Carbon</Наименование>
+</Группа>
+<Группа>
+<Ид>240</Ид>
+<Наименование>Утеплитель ТехноНИКОЛЬ</Наименование>
+</Группа>
+<Группа>
+<Ид>241</Ид>
+<Наименование>Утеплитель ROCKWOOL</Наименование>
+</Группа>
+<Группа>
+<Ид>242</Ид>
+<Наименование>Утеплитель ISOVER</Наименование>
+</Группа>
+<Группа>
+<Ид>243</Ид>
+<Наименование>Экструдированный пенополиcтирол Техноплекс</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>195</Ид>
+<Наименование>Скатная кровля</Наименование>
+<Группы>
+<Группа>
+<Ид>198</Ид>
+<Наименование>Композитная черепица</Наименование>
+</Группа>
+<Группа>
+<Ид>199</Ид>
+<Наименование>Модульная черепица</Наименование>
+</Группа>
+<Группа>
+<Ид>201</Ид>
+<Наименование>Пленки кровельные</Наименование>
+</Группа>
+<Группа>
+<Ид>200</Ид>
+<Наименование>Водосточные системы</Наименование>
+</Группа>
+<Группа>
+<Ид>203</Ид>
+<Наименование>Мембраны кровельные</Наименование>
+</Группа>
+<Группа>
+<Ид>204</Ид>
+<Наименование>Софиты</Наименование>
+</Группа>
+<Группа>
+<Ид>202</Ид>
+<Наименование>Ленты для пленок и мембран</Наименование>
+</Группа>
+<Группа>
+<Ид>238</Ид>
+<Наименование>Битумные ленты Nicoband</Наименование>
+</Группа>
+<Группа>
+<Ид>239</Ид>
+<Наименование>Битумные ленты Plastter</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>206</Ид>
+<Наименование>Плоские кровли</Наименование>
+<Группы>
+<Группа>
+<Ид>207</Ид>
+<Наименование>ПВХ мембраны</Наименование>
+</Группа>
+<Группа>
+<Ид>234</Ид>
+<Наименование>Комплектация к ПВХ-мембранам</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>217</Ид>
+<Наименование>Сад и огород</Наименование>
+<Группы>
+<Группа>
+<Ид>218</Ид>
+<Наименование>Агроволокно</Наименование>
+</Группа>
+<Группа>
+<Ид>219</Ид>
+<Наименование>Сетки</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>220</Ид>
+<Наименование>Дренажные материалы</Наименование>
+<Группы>
+<Группа>
+<Ид>222</Ид>
+<Наименование>Дренажная труба</Наименование>
+</Группа>
+<Группа>
+<Ид>224</Ид>
+<Наименование>Колодцы и фитинг</Наименование>
+</Группа>
+<Группа>
+<Ид>221</Ид>
+<Наименование>Линейный водоотвод</Наименование>
+</Группа>
+<Группа>
+<Ид>223</Ид>
+<Наименование>Дренажная мембрана</Наименование>
+</Группа>
+<Группа>
+<Ид>225</Ид>
+<Наименование>Геотекстиль Геопульс</Наименование>
+</Группа>
+<Группа>
+<Ид>251</Ид>
+<Наименование>Дренажная мембрана Planter</Наименование>
+</Группа>
+<Группа>
+<Ид>252</Ид>
+<Наименование>Дренажная мембрана Изолит</Наименование>
+</Группа>
+<Группа>
+<Ид>253</Ид>
+<Наименование>Геотекстиль Typar</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>197</Ид>
+<Наименование>Битумная черепица</Наименование>
+<Группы>
+<Группа>
+<Ид>235</Ид>
+<Наименование>Битумная черепица SHINGLAS</Наименование>
+</Группа>
+<Группа>
+<Ид>236</Ид>
+<Наименование>Битумная черепица TILERCAT</Наименование>
+</Группа>
+<Группа>
+<Ид>237</Ид>
+<Наименование>Комплектация для битумной черепицы</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>205</Ид>
+<Наименование>Мансардные окна</Наименование>
+<Группы>
+<Группа>
+<Ид>247</Ид>
+<Наименование>Мансардные окна FAKRO</Наименование>
+</Группа>
+<Группа>
+<Ид>248</Ид>
+<Наименование>Мансардные окна ROTO</Наименование>
+</Группа>
+<Группа>
+<Ид>249</Ид>
+<Наименование>Мансардные окна VELUX</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>196</Ид>
+<Наименование>Еврорубероид</Наименование>
+<Группы>
+</Группы>
+</Группа>
+<Группа>
+<Ид>213</Ид>
+<Наименование>Гидроизоляция</Наименование>
+<Группы>
+<Группа>
+<Ид>216</Ид>
+<Наименование>ПВХ-мембрана</Наименование>
+</Группа>
+<Группа>
+<Ид>215</Ид>
+<Наименование>Мастики и праймеры</Наименование>
+</Группа>
+<Группа>
+<Ид>244</Ид>
+<Наименование>Комплектация к ПВХ-мембранам</Наименование>
+</Группа>
+<Группа>
+<Ид>245</Ид>
+<Наименование>Битумные ленты Nicoband</Наименование>
+</Группа>
+<Группа>
+<Ид>246</Ид>
+<Наименование>Битумные ленты Plastter</Наименование>
+</Группа>
+</Группы>
+</Группа>
+<Группа>
+<Ид>214</Ид>
+<Наименование>Еврорубероид</Наименование>
+<Группы>
+<Группа>
+<Ид>255</Ид>
+<Наименование>Еврорубероид Технониколь</Наименование>
+</Группа>
+</Группы>
+</Группа>
+</Группы>
+</Классификатор>
+
+<orders>
+<order>
+<orderid>10</orderid>
+<firstname>Віталій</firstname>
+<lastname>Хмиз</lastname>
+<telephone>+38-(096)-784-86-95</telephone>
+<email>the_eney@ukr.net</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Віталій</paymentfirstname>
+<paymentlastname>Хмиз</paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>13 склад</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Львів</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>EUR</currencycode>
+<currencyvalue>0.04000000</currencyvalue>
+<shippingfirstname>Віталій</shippingfirstname>
+<shippinglastname>Хмиз</shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>13 склад</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Львів</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>11</orderid>
+<firstname>ГСО</firstname>
+<lastname></lastname>
+<telephone>+38-(095)-463-18-54</telephone>
+<email>sergey_hummer08@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>ГСО</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>10б/154</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Черновцы</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04300000</currencyvalue>
+<shippingfirstname>ГСО</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>10б/154</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Черновцы</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>12</orderid>
+<firstname>ГСо</firstname>
+<lastname></lastname>
+<telephone>+38-(095)-463-18-54</telephone>
+<email>sergey_hummer08@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>ГСо</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>10б/154</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Черновцы</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04300000</currencyvalue>
+<shippingfirstname>ГСо</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>10б/154</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Черновцы</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>13</orderid>
+<firstname>drtdrtreterteter</firstname>
+<lastname></lastname>
+<telephone>+38-(093)-939-39-39</telephone>
+<email>test@example.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>drtdrtreterteter</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>tetertetee</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>tretertretert</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>drtdrtreterteter</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>tetertetee</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>tretertretert</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category>Гидроизоляция</category>
+<categoryid>213</categoryid>
+<subcategories>
+</subcategories>
+<articul>Bosch PMD 7</articul>
+<Наименование>Детектор Bosch PMD 7</Наименование>
+<Описание>&lt;p&gt;&lt;span style=&quot;font-family: Verdana;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;При проведении ремонтных работ в помещении удобно обнаружить в стенах и потолках электрическую проводку, металлические элементы из стали и цветных металлов компактным детектором Bosch PMD 7. Прибор автоматически калибруется, что позволяет получать наиболее точные значения.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Небольшой детектор Bosch PMD 7 поставляется в металлическом кейсе Tinbox. Для запитывания устройства достаточно трех мизинчиковых батареек 1,5 В LR03 (AAA). Используя детектор металлов и проводки, можно обнаружить сталь на глубине до 70 мм, медь на глубине до 60 мм.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Понятная индикация «светофор» дает возможность узнать местонахождение проводов и металлических объектов, чтобы безопасно выполнить сверление отверстий и выполнение прочих ремонтно-строительных работ. Звуковой сигнал дополняет систему индикации аппарата. Корпус детектора Bosch PMD 7 с мягкой накладкой предназначен для удобного использования в бытовой сфере.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Бытовой детектор отличается простотой эксплуатации. Чтобы обнаружить провода и арматуру, достаточно нажатия всего одной кнопки детектора. Световая индикация, осуществляемая светодиодом детектора металлов, интуитивно понятна каждому пользователю.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/Bosch_PMD_7.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>0,15 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Источник питания</Ид>
+<Значение>3 x 1,5 В LR03 (AAA)</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Сфера использования</Ид>
+<Значение>Профессиональный инструмент</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Глубина обнаружения</Ид>
+<Значение>70 мм MAX</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Глубина сканирования</Ид>
+<Значение>меди 60 мм;  проводки 50 мм;  стали 70 мм.</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>14</orderid>
+<firstname>Nazar</firstname>
+<lastname></lastname>
+<telephone>+380632066147</telephone>
+<email>nazarco1989@yandex.ua</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Nazar</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Ukraine, Lviv 19</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Malekhiv</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Nazar</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Ukraine, Lviv 19</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Malekhiv</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>15</orderid>
+<firstname>Nazar</firstname>
+<lastname></lastname>
+<telephone>+380632066147</telephone>
+<email>nazar200@nextmail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Nazar</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Ukraine, Lviv 19</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Malekhiv</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Nazar</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Ukraine, Lviv 19</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Malekhiv</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category>Еврорубероид</category>
+<categoryid>196</categoryid>
+<subcategories>
+<subcategory>Cайдинг FaSiding</subcategory>
+<subcategoryid>209</subcategoryid>
+</subcategories>
+<articul>Sparky BR 100E	</articul>
+<Наименование>Электродрель Sparky BR 100E	</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/ обычные/main1.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Мощность</Ид>
+<Значение>350 Вт</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-3000 об/мин</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм; древесина - 20 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажымной 0,8-10 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,2 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Сфера использования</Ид>
+<Значение>Бытовой</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>16</orderid>
+<firstname>dfgsdfhfg</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>sdjfsdkh@dfsfsf.sdfsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dfgsdfhfg</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jhgsdjfg</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>jhfgsfshdjh</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dfgsdfhfg</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jhgsdjfg</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>jhfgsfshdjh</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>17</orderid>
+<firstname>hsjdshjdsh</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>hdksfjsdhf|@sdfkjsdfl.sdfsfs</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>hsjdshjdsh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>sdjfhskdjhf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>sdjkhfsdjkf</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>hsjdshjdsh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>sdjfhskdjhf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>sdjkhfsdjkf</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>18</orderid>
+<firstname>sdghshjsdfg</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>dfsdhfds@dfsfsdf.fsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdghshjsdfg</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jhgjgjhjg</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>jgjhgjhgjhg</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdghshjsdfg</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jhgjgjhjg</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>jgjhgjhgjhg</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>19</orderid>
+<firstname>jfjksdhfsjfh</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>djhasdjhas@jha.asdas</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>jfjksdhfsjfh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jhakdjhasdjh</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>hkjahdajkdh</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>jfjksdhfsjfh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jhakdjhasdjh</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>hkjahdajkdh</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>20</orderid>
+<firstname>n,msdnsam,dn</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fdm#ssds@fsdfsdf.sdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>n,msdnsam,dn</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>mnds,fmsdnf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>nmsdfnsd,fm</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>n,msdnsam,dn</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>mnds,fmsdnf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>nmsdfnsd,fm</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>21</orderid>
+<firstname>sdkfjdskfjkj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>kfdjsfjlds@kfjsdf.dfsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdkfjdskfjkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jklsdflskfjdfk</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>klfjsdklfjsdfk</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdkfjdskfjkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jklsdflskfjdfk</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>klfjsdklfjsdfk</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>22</orderid>
+<firstname>dsfsdkfjh</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>sdsdf@dffd.dfsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dsfsdkfjh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjsfsdjf@kjfdhsf.sdfsdf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>sdjksdfhsjfk</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dsfsdkfjh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjsfsdjf@kjfdhsf.sdfsdf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>sdjksdfhsjfk</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>23</orderid>
+<firstname>dfklgjdfgj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>kdfjsdkfjdfk@kdj.sdsds</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dfklgjdfgj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jksdlflskdfjfjk</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dfklgjdfgj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jksdlflskdfjfjk</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>24</orderid>
+<firstname>dflkgjdgkljdgkl</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fjsdkfklsdfj@ldkfjsf.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dflkgjdgkljdgkl</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjfsdlkfjsdlkfsdlfkj</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dflkgjdgkljdgkl</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjfsdlkfjsdlkfsdlfkj</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>25</orderid>
+<firstname>fdsjfsjflkjsfkl</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>kfdsfsdf@ksdsd.assdad</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fdsjfsjflkjsfkl</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kljdfsklfjdsfklj</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity></paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fdsjfsjflkjsfkl</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kljdfsklfjdsfklj</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity></shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>26</orderid>
+<firstname>dsfdsfsfsf</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>LLASDK@sdsds.sdsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dsfdsfsfsf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>dsasdadasdad</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dsfdsfsfsf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>dsasdadasdad</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>27</orderid>
+<firstname>sdlkfjsdfsdjlf</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fksdjfsfj@jldfsfs.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdlkfjsdfsdjlf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kljsdfkdsjflkjf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>kjfsdlkfjsdfklj</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdlkfjsdfsdjlf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kljsdfkdsjflkjf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>kjfsdlkfjsdfklj</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>28</orderid>
+<firstname>fdgdfgdfgdg</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>kfsjdfjklsdf@dfsdfsdf.kjkjj</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fdgdfgdfgdg</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kljlkjlkjklj</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>fsdkjfsdfksjlfkj</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fdgdfgdfgdg</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kljlkjlkjklj</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>fsdkjfsdfksjlfkj</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>29</orderid>
+<firstname>sdfjsdfdsjfkljsdflkj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>kfdjsfklsdjf@sdsdsd.sdsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdfjsdfdsjfkljsdflkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjsdklfjdsfklsjflk</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>kljkldssjfsdklfj</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdfjsdfdsjfkljsdflkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjsdklfjdsfklsjflk</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>kljkldssjfsdklfj</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>30</orderid>
+<firstname>sdfkljsdfkj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fasdjlfk@sdfadad.asdasd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdfkljsdfkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjfsdlksdf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>sdfjklfjsdfkj</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdfkljsdfkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjfsdlksdf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>sdfjklfjsdfkj</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>31</orderid>
+<firstname>sdjsdlfsjdfkjf</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>askdjasdkj!@kjljsdfksf.dfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sdjsdlfsjdfkjf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jsdfksdjfdksjfjk</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>sdjsdlfsjdfkjf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jsdfksdjfdksjfjk</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>32</orderid>
+<firstname>kjdfsdklfjsdfkjsd</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>djksdjskd@jdkfjdf.ssdsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>kjdfsdklfjsdfkjsd</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>jsdlkfjdfkjs</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>fjsdfkljsdfkj</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>kjdfsdklfjsdfkjsd</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>jsdlkfjdfkjs</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>fjsdfkljsdfkj</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>33</orderid>
+<firstname>kssdflkj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>dkjsdsj@dfdfd.sdfdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>kssdflkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjsdklfjsdfklj</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Агрономичное (Винницкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>kssdflkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjsdklfjsdfklj</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Агрономичное (Винницкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>34</orderid>
+<firstname>fsdfsdfsdfsf</firstname>
+<lastname></lastname>
+<telephone>+38(122)-222-22-22</telephone>
+<email>sdfsf@fddfdf.dfdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fsdfsdfsdfsf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>address</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fsdfsdfsdfsf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>address</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>35</orderid>
+<firstname>kjssklfjsdkfjsdfkj</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>dfsfsdf@dasdasd.adad</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>kjssklfjsdkfjsdfkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>dsjlkasjdad</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>kjssklfjsdkfjsdfkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>dsjlkasjdad</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>36</orderid>
+<firstname>fsdfkfjsflkj</firstname>
+<lastname></lastname>
+<telephone>+38(122)-222-22-22</telephone>
+<email>wewewe@sdsdsd.sdsdsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fsdfkfjsflkj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>fkjdfslkfjsdf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fsdfkfjsflkj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>fkjdfslkfjsdf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>37</orderid>
+<firstname>dfsfjksdfjsh</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>sdddfdf@sdsedsds.dsdsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dfsfjksdfjsh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dfsfjksdfjsh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>38</orderid>
+<firstname>asdasdasda</firstname>
+<lastname></lastname>
+<telephone>+38(454)-444-44-44</telephone>
+<email>dfsdfssdf@dfsdfsf.sdfsdfsfs</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>asdasdasda</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>asdasdasda</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>39</orderid>
+<firstname>efsdfsdfsfsf</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>sdsfsdf@fdsfsdf.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>efsdfsdfsfsf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1></paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Акимовка (Запорожская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>efsdfsdfsfsf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1></shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Акимовка (Запорожская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>40</orderid>
+<firstname>fhsdkjfhsdkjfh</firstname>
+<lastname></lastname>
+<telephone>+38(999)-999-99-99</telephone>
+<email>sdfff@sdfsdfsd.sdfsfs</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fhsdkjfhsdkjfh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>
+                                                
+                                                
+                             </paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>
+                                                        Notice: Undefined variable: config_country_id in /home/rostik/PhpProjec</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fhsdkjfhsdkjfh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>
+                                                
+                                                
+                             </shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>
+                                                        Notice: Undefined variable: config_country_id in /home/rostik/PhpProjec</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>41</orderid>
+<firstname>dsfjshfkjsdkfjh</firstname>
+<lastname></lastname>
+<telephone>+38(333)-333-33-33</telephone>
+<email>dffsdfsdfs@fsdfsdf.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dsfjshfkjsdkfjh</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>
+                                                
+                                                
+                             </paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>
+                                                        Notice: Undefined variable: config_country_id in /home/rostik/PhpProjec</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dsfjshfkjsdkfjh</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>
+                                                
+                                                
+                             </shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>
+                                                        Notice: Undefined variable: config_country_id in /home/rostik/PhpProjec</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>42</orderid>
+<firstname>fsdfsdfsfs</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fvdgdfgdfg@fsdfsdf.fhfgh</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>fsdfsdfsfs</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Патриотов, 10</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Акимовка (Запорожская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>fsdfsdfsfs</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Патриотов, 10</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Акимовка (Запорожская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>43</orderid>
+<firstname>jksldfjsdfjkfl</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>sdfjsdkl@efsdfsdf.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>jksldfjsdfjkfl</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Мичурина, 28</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Агрономичное (Винницкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>jksldfjsdfjkfl</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Мичурина, 28</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Агрономичное (Винницкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>44</orderid>
+<firstname>jhdkfsdhjfkhs</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>sfsds@rsesf.fghjgh</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>jhdkfsdhjfkhs</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>jhdkfsdhjfkhs</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>45</orderid>
+<firstname>dssdfsdfsfj`</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>fhkfjsdf@fedfsdf.sdfsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dssdfsdfsfj`</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Чапаева, 2г</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dssdfsdfsfj`</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Чапаева, 2г</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>46</orderid>
+<firstname>kdljfsflkjsdflk</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>jksdlkfjsdfkls@dfsdf.sdfsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>kdljfsflkjsdflk</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1></paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Акимовка (Запорожская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>kdljfsflkjsdflk</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1></shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Акимовка (Запорожская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>47</orderid>
+<firstname>jhskdjfhsdfkdjshf</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>sfsdfsf@dfsff.sfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>jhskdjfhsdfkdjshf</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>jhskdjfhsdfkdjshf</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>48</orderid>
+<firstname>dsfshfjkshjhj</firstname>
+<lastname></lastname>
+<telephone>+38(344)-444-44-44</telephone>
+<email>dssfdsfs@dffsf.sdfsdfsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dsfshfjkshjhj</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>hdfskjfsdhkjf</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>fdsjhsdkfjh</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dsfshfjkshjhj</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>hdfskjfsdhkjf</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>fdsjhsdkfjh</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>49</orderid>
+<firstname>gsdfsdfsdfsd</firstname>
+<lastname></lastname>
+<telephone>+38(233)-333-33-33</telephone>
+<email>sdfsfsfdsfsf@ffsdfsdf.sdfsdf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>gsdfsdfsdfsd</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>sdfsdfsdfsd</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>sdfsdfsdfsdf</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>gsdfsdfsdfsd</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>sdfsdfsdfsd</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>sdfsdfsdfsdf</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>50</orderid>
+<firstname>gdfdgdfgfdgdfg</firstname>
+<lastname></lastname>
+<telephone>+38(233)-333-33-33</telephone>
+<email>wesdfsd@rfrsfsdf.sdfsdfsd</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>gdfdgdfgfdgdfg</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>rtertetet</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>ertrtetertert</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>gdfdgdfgfdgdfg</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>rtertetet</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>ertrtetertert</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>51</orderid>
+<firstname>djkfsdlkjfsdlfk</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>jkdshkjfhs@affsfds.sdfdsf</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>djkfsdlkjfsdlfk</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>kjsdhkjhfsk</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>sdhfksdhf</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>djkfsdlkjfsdlfk</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>kjsdhkjhfsk</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>sdhfksdhf</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>52</orderid>
+<firstname>gfgfgfgfgfg</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>sfefgd@gmail.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>gfgfgfgfgfg</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>gfgfgfgfgfg</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>53</orderid>
+<firstname>asdhkajdhskjd</firstname>
+<lastname></lastname>
+<telephone>+38(111)-111-11-11</telephone>
+<email>jkdhaskdjad@dfsfsf.ewrw</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>asdhkajdhskjd</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : пл. Кирова, 10</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Александрия (Кировоградская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>asdhkajdhskjd</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : пл. Кирова, 10</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Александрия (Кировоградская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>55</orderid>
+<firstname>test</firstname>
+<lastname>test</lastname>
+<telephone>0970811551</telephone>
+<email>polina.apriori@gmail.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>test</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Б. Хмельницкого, 59</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>одесса</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>test</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Б. Хмельницкого, 59</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>одесса</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>56</orderid>
+<firstname>sarat</firstname>
+<lastname></lastname>
+<telephone>+38(093)-466-66-66</telephone>
+<email>saratlviv@gmail.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>sarat</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №5 : ул. Данилишина, 2</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Львов (Львовская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04170000</currencyvalue>
+<shippingfirstname>sarat</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №5 : ул. Данилишина, 2</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Львов (Львовская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>57</orderid>
+<firstname>weqeqewq</firstname>
+<lastname></lastname>
+<telephone>+38(222)-222-22-22</telephone>
+<email>y.dnistrian@secl.com.ua</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>weqeqewq</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>weqeqewq</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>58</orderid>
+<firstname>dfbdfb</firstname>
+<lastname></lastname>
+<telephone>+38(234)-535-45-23</telephone>
+<email>Nazar200@nextmail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dfbdfb</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №13 : ул. Ставова, 7в</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Львов (Львовская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>dfbdfb</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №13 : ул. Ставова, 7в</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Львов (Львовская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>59</orderid>
+<firstname>Михаил</firstname>
+<lastname></lastname>
+<telephone>+38(050)-312-74-96</telephone>
+<email>michael_huntsys@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Михаил</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>ул.Богдана Хмельницкого, 59</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04170000</currencyvalue>
+<shippingfirstname>Михаил</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>ул.Богдана Хмельницкого, 59</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>60</orderid>
+<firstname>Вячеслав</firstname>
+<lastname></lastname>
+<telephone>+38(093)-677-71-58</telephone>
+<email>thq@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Вячеслав</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Гайдара 3</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Вячеслав</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Гайдара 3</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Фиксированная стоимость доставки</shippingmethod>
+<Товары>
+<Товар>
+<category>Еврорубероид</category>
+<categoryid>196</categoryid>
+<subcategories>
+<subcategory>Cайдинг FaSiding</subcategory>
+<subcategoryid>209</subcategoryid>
+</subcategories>
+<articul>Sparky BR 100E	</articul>
+<Наименование>Электродрель Sparky BR 100E	</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/ обычные/main1.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Мощность</Ид>
+<Значение>350 Вт</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-3000 об/мин</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм; древесина - 20 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажымной 0,8-10 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,2 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Сфера использования</Ид>
+<Значение>Бытовой</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>61</orderid>
+<firstname>Михаил</firstname>
+<lastname>Михаил</lastname>
+<telephone>0503127496</telephone>
+<email>michael_huntsys@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Михаил</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №13 : ул. Днепропетровская дорога, 82</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса (Одесская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04170000</currencyvalue>
+<shippingfirstname>Михаил</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №13 : ул. Днепропетровская дорога, 82</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса (Одесская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+</Товары>
+</order>
+<order>
+<orderid>62</orderid>
+<firstname>Михаил</firstname>
+<lastname>Михаил</lastname>
+<telephone>0951999120</telephone>
+<email>michael_huntsys@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Михаил</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : Ленинградское шоссе, 28</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса (Одесская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>USD</currencycode>
+<currencyvalue>0.04170000</currencyvalue>
+<shippingfirstname>Михаил</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : Ленинградское шоссе, 28</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса (Одесская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+<subcategory>Водосточные системы</subcategory>
+<subcategoryid>200</subcategoryid>
+</subcategories>
+<articul></articul>
+<Наименование>Горло желоба Profil 130 коричневое</Наименование>
+<Описание>&lt;p&gt;Применяется для отвода дождевой воды в местах, где невозможно установить желоб.&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/PROFiL/130 кор/gorlo.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>63</orderid>
+<firstname>Анастасия</firstname>
+<lastname></lastname>
+<telephone>+38(456)-687-67-85</telephone>
+<email>nastia21_11@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Анастасия</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Транспортная</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Анастасия</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Транспортная</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Самовывоз</shippingmethod>
+<Товары>
+<Товар>
+<category>Еврорубероид</category>
+<categoryid>196</categoryid>
+<subcategories>
+<subcategory>Cайдинг FaSiding</subcategory>
+<subcategoryid>209</subcategoryid>
+</subcategories>
+<articul>Sparky BR 100E	</articul>
+<Наименование>Электродрель Sparky BR 100E	</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/ обычные/main1.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Мощность</Ид>
+<Значение>350 Вт</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-3000 об/мин</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм; древесина - 20 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажымной 0,8-10 мм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,2 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Сфера использования</Ид>
+<Значение>Бытовой</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul>002</articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Клондайк</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Клондайк&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля
+&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+используется как основное кровельное
+покрытие на скатных крышах, при угле
+наклона от 12 градусов до отрицательных
+углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель
+&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы
+Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает
+гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p lang=&quot;en-US&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_klondayk.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.к.в</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>светло-коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>клондайк</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>64</orderid>
+<firstname>Коля</firstname>
+<lastname></lastname>
+<telephone>+38(095)-199-91-20</telephone>
+<email>m@budsite.com.ua</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Коля</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Краснознаменная, 34 (Корчеватое)</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Киев (Киевская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Коля</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Краснознаменная, 34 (Корчеватое)</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Киев (Киевская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category>Гидроизоляция</category>
+<categoryid>213</categoryid>
+<subcategories>
+</subcategories>
+<articul>Bosch PMD 7</articul>
+<Наименование>Детектор Bosch PMD 7</Наименование>
+<Описание>&lt;p&gt;&lt;span style=&quot;font-family: Verdana;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;При проведении ремонтных работ в помещении удобно обнаружить в стенах и потолках электрическую проводку, металлические элементы из стали и цветных металлов компактным детектором Bosch PMD 7. Прибор автоматически калибруется, что позволяет получать наиболее точные значения.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Небольшой детектор Bosch PMD 7 поставляется в металлическом кейсе Tinbox. Для запитывания устройства достаточно трех мизинчиковых батареек 1,5 В LR03 (AAA). Используя детектор металлов и проводки, можно обнаружить сталь на глубине до 70 мм, медь на глубине до 60 мм.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Понятная индикация «светофор» дает возможность узнать местонахождение проводов и металлических объектов, чтобы безопасно выполнить сверление отверстий и выполнение прочих ремонтно-строительных работ. Звуковой сигнал дополняет систему индикации аппарата. Корпус детектора Bosch PMD 7 с мягкой накладкой предназначен для удобного использования в бытовой сфере.&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: small; line-height: normal;&quot;&gt;Бытовой детектор отличается простотой эксплуатации. Чтобы обнаружить провода и арматуру, достаточно нажатия всего одной кнопки детектора. Световая индикация, осуществляемая светодиодом детектора металлов, интуитивно понятна каждому пользователю.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/Bosch_PMD_7.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>0,15 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Источник питания</Ид>
+<Значение>3 x 1,5 В LR03 (AAA)</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Сфера использования</Ид>
+<Значение>Профессиональный инструмент</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Глубина обнаружения</Ид>
+<Значение>70 мм MAX</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Глубина сканирования</Ид>
+<Значение>меди 60 мм;  проводки 50 мм;  стали 70 мм.</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul>002</articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Клондайк</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Клондайк&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля
+&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+используется как основное кровельное
+покрытие на скатных крышах, при угле
+наклона от 12 градусов до отрицательных
+углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель
+&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы
+Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает
+гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p lang=&quot;en-US&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_klondayk.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.к.в</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>светло-коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>клондайк</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>65</orderid>
+<firstname>Валентин</firstname>
+<lastname></lastname>
+<telephone>+38(067)-432-13-13</telephone>
+<email>m@budsite.com.ua</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Валентин</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №1 : ул. Ленина, 100</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Авдеевка (Донецкая область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Оплата при доставке</paymentmethod>
+<paymentcode>cod</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Валентин</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №1 : ул. Ленина, 100</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Авдеевка (Донецкая область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul>002</articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Клондайк</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Клондайк&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля
+&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+используется как основное кровельное
+покрытие на скатных крышах, при угле
+наклона от 12 градусов до отрицательных
+углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель
+&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы
+Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает
+гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p lang=&quot;en-US&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_klondayk.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.к.в</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>светло-коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>клондайк</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>66</orderid>
+<firstname>Вячеслав</firstname>
+<lastname></lastname>
+<telephone>+38(977)-777-77-77</telephone>
+<email>thq@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Вячеслав</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Гайдара 3</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Вячеслав</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Гайдара 3</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Самовывоз</shippingmethod>
+<Товары>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul>002</articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Клондайк</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Клондайк&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля
+&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+используется как основное кровельное
+покрытие на скатных крышах, при угле
+наклона от 12 градусов до отрицательных
+углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель
+&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы
+Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает
+гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p lang=&quot;en-US&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_klondayk.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.к.в</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>светло-коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>клондайк</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>67</orderid>
+<firstname>Лилия</firstname>
+<lastname></lastname>
+<telephone>+38(256)-875-25-95</telephone>
+<email>zolotayalilia1212@gmail.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Лилия</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>Отделение №20 : ул. Малая Арнаутская 119</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса (Одесская область)</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>Лилия</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>Отделение №20 : ул. Малая Арнаутская 119</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>Одесса (Одесская область)</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Новая Почта</shippingmethod>
+<Товары>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul></articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Каньон</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Каньон&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля&amp;nbsp;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;используется как основное кровельное покрытие на скатных крышах, при угле наклона от 12 градусов до отрицательных углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель&amp;nbsp;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;en-US&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_kanjon.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.кв.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>каньон</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>68</orderid>
+<firstname>гблгд</firstname>
+<lastname></lastname>
+<telephone>+38(097)-564-33-45</telephone>
+<email>nastia21_11@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>гблгд</paymentfirstname>
+<paymentlastname></paymentlastname>
+<paymentcompany></paymentcompany>
+<paymentaddress1>веншвл</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>но</paymentcity>
+<paymentpostcode></paymentpostcode>
+<paymentcountry>Украина</paymentcountry>
+<paymentzone>0</paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>гблгд</shippingfirstname>
+<shippinglastname></shippinglastname>
+<shippingcompany></shippingcompany>
+<shippingaddress1>веншвл</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>но</shippingcity>
+<shippingpostcode></shippingpostcode>
+<shippingcountry>Украина</shippingcountry>
+<shippingzone>0</shippingzone>
+<shippingmethod>Самовывоз</shippingmethod>
+<Товары>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul>002</articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Клондайк</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Клондайк&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля
+&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;
+используется как основное кровельное
+покрытие на скатных крышах, при угле
+наклона от 12 градусов до отрицательных
+углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель
+&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы
+Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает
+гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p lang=&quot;en-US&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p lang=&quot;ru-RU&quot; style=&quot;margin-bottom: 0cm;&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_klondayk.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.к.в</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>светло-коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>клондайк</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>69</orderid>
+<firstname>Лилия Вадимовна</firstname>
+<lastname>Пономарь</lastname>
+<telephone>0636365150</telephone>
+<email>zolotayalilia1212@gmail.com</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>Лилия Вадимовна</paymentfirstname>
+<paymentlastname>Пономарь</paymentlastname>
+<paymentcompany>Будсайт</paymentcompany>
+<paymentaddress1>Одесса</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>Одесса</paymentcity>
+<paymentpostcode>256365</paymentpostcode>
+<paymentcountry></paymentcountry>
+<paymentzone></paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>прроопп ппп</shippingfirstname>
+<shippinglastname>аапр</shippinglastname>
+<shippingcompany>аа</shippingcompany>
+<shippingaddress1>ваит</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>ываа</shippingcity>
+<shippingpostcode>45678</shippingpostcode>
+<shippingcountry></shippingcountry>
+<shippingzone></shippingzone>
+<shippingmethod></shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>DF330DWE</articul>
+<Наименование>Аккумуляторный шуруповерт Makita DF330DWE</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/nature-wallpapers-hd.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>1 скорость - 0-350 об/мин; 2 скорость - 0-1300 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>твердый материал - 24 Нм;
+мягкий материал - 14 Нм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм;
+древесина - 21 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>10,8 В; 1,3 А/час</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>+ только для модели DWLE</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>+</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>Sparky BR 12E</articul>
+<Наименование>Аккумуляторный шуруповерт Sparky BR 12E</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/i.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-350 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>22 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 8 мм; древесина - 25 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12 В; 1.5 А/час, NiCd</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,5 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>Подсветка рабочей зоны.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>-</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>ТИТАН ПДША 11+	</articul>
+<Наименование>Аккумуляторный шуруповерт ТИТАН ПДША 11+	</Наименование>
+<Описание>&lt;p&gt;&lt;span style=&quot;font-family: Verdana;&quot;&gt;Дрель-шуруповёрт аккумуляторная Titan ПДША 11 + 2 аккум.+ фонарь - профессиональная аккумуляторная двускоростная дрель-шуруповерт с самозажимным патроном. 17+1 позиций регулировки крутящего момента. Мягкое покрытие рукоятки. Полное время зарядки 1,3 Ач литий-ионного аккумулятора 1 час. Среднее время работы 1 час.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Verdana;&quot;&gt;Часто применяют в авто-слесарных мастерских для сборки и разборки салона автомобилей. Широко применим при монтаже строительных конструкций и стен из гипсокартона. Незаменимый помощник при работе с различными крепежами, где необходимо завинчивание или сверление.&lt;/span&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/ инстр/main_24.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>0-600 об/мин
+</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>12/24 Нм</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм; древесина - 20 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>0,8-10 мм Самозажымной</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>12В; 1,3 А/час
+</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1,1 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>LED</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>+</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>70</orderid>
+<firstname>nastia</firstname>
+<lastname>nastia</lastname>
+<telephone>32565476879879</telephone>
+<email>nastia21_11@mail.ru</email>
+<order_status_id>1</order_status_id>
+<paymentfirstname>dhg</paymentfirstname>
+<paymentlastname>hf</paymentlastname>
+<paymentcompany>dhj</paymentcompany>
+<paymentaddress1>djhjy</paymentaddress1>
+<paymentaddress2></paymentaddress2>
+<paymentcity>tyku</paymentcity>
+<paymentpostcode>yku</paymentpostcode>
+<paymentcountry></paymentcountry>
+<paymentzone></paymentzone>
+<paymentmethod>Банковский перевод</paymentmethod>
+<paymentcode>bank_transfer</paymentcode>
+<currencycode>UAH</currencycode>
+<currencyvalue>1.00000000</currencyvalue>
+<shippingfirstname>ваврпар</shippingfirstname>
+<shippinglastname>раер</shippinglastname>
+<shippingcompany>ароаеп</shippingcompany>
+<shippingaddress1>ероекр</shippingaddress1>
+<shippingaddress2></shippingaddress2>
+<shippingcity>еорео</shippingcity>
+<shippingpostcode>ео</shippingpostcode>
+<shippingcountry></shippingcountry>
+<shippingzone></shippingzone>
+<shippingmethod></shippingmethod>
+<Товары>
+<Товар>
+<category></category>
+<categoryid>0</categoryid>
+<subcategories>
+</subcategories>
+<articul>DF330DWE</articul>
+<Наименование>Аккумуляторный шуруповерт Makita DF330DWE</Наименование>
+<Описание>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/nature-wallpapers-hd.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Обороты холостого хода </Ид>
+<Значение>1 скорость - 0-350 об/мин; 2 скорость - 0-1300 об/мин.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Крутящий момент</Ид>
+<Значение>твердый материал - 24 Нм;
+мягкий материал - 14 Нм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Диаметр сверления</Ид>
+<Значение>сталь - 10 мм;
+древесина - 21 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Патрон</Ид>
+<Значение>Самозажимной 0,8-10 мм.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Аккумулятор</Ид>
+<Значение>10,8 В; 1,3 А/час</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Вес</Ид>
+<Значение>1 кг</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Фонарь</Ид>
+<Значение>+ только для модели DWLE</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Кейс</Ид>
+<Значение>+</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+<Товар>
+<category>Битумная черепица</category>
+<categoryid>197</categoryid>
+<subcategories>
+</subcategories>
+<articul></articul>
+<Наименование>Битумная черепица SHINGLAS Вестерн Каньон</Наименование>
+<Описание>&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Битумная черепица
+SHINGLAS Вестерн Каньон&lt;/b&gt; – &lt;span lang=&quot;ru-RU&quot;&gt;это
+двухслойная гибкая черепица, воплощающая
+в себе классические традиции кровли.
+Форма черепицы уникальна, кровля с ее
+использованием создает прекрасный,
+эстетичный рельеф. Для тех, кто идет в
+ногу со временем, представляем &lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;гибкую
+черепицу&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Шинглас&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;нового поколения.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Кровля&amp;nbsp;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;Shinglas&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;используется как основное кровельное покрытие на скатных крышах, при угле наклона от 12 градусов до отрицательных углов.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Производитель&amp;nbsp;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;битумной черепицы Shinglas&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;дает гарантию на продукцию Вестерн — 55 лет.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;	&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Преимущества
+черепицы Shinglas серии «Вестерн»:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;
+	&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;en-US&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;изящный&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;
+	внешний вид;&lt;/span&gt;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;объемная
+	структура материала;&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;долговечность
+	(гарантия 55 лет);&lt;/p&gt;
+	&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin-bottom: 0cm;&quot; lang=&quot;ru-RU&quot;&gt;множество
+	вариаций цветовых оттенков.&lt;/p&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;margin-bottom: 0cm&quot;&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Цены
+на битумную черепицу &lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;en-US&quot;&gt;&lt;b&gt;Shinglas
+&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;&lt;b&gt;Вестерн&lt;/b&gt;&lt;/span&gt;&lt;span lang=&quot;ru-RU&quot;&gt;,
+условия доставки и оплаты Вы можете
+узнать прямо сейчас, позвонив нашим
+менеджерам.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</Описание>
+<Картинка>catalog/bitum/shinglas_kanjon.jpg</Картинка>
+<links>
+<manufacturer></manufacturer>
+</links>
+<ЗначенияСвойств>
+<ЗначенияСвойства>
+<Ид>Вес 1 м.кв.</Ид>
+<Значение>8 кг.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Площадь 1 уп.</Ид>
+<Значение>10 м.кв.</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Цвет</Ид>
+<Значение>коричневый</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Тип битума</Ид>
+<Значение>окисленный</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Форма листа</Ид>
+<Значение>вестерн</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Бренд</Ид>
+<Значение>Shinglas</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Страна-изготовитель</Ид>
+<Значение>Россия</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Оттенок</Ид>
+<Значение>каньон</Значение>
+</ЗначенияСвойства>
+<ЗначенияСвойства>
+<Ид>Гарантия</Ид>
+<Значение>55 лет</Значение>
+</ЗначенияСвойства>
+</ЗначенияСвойств>
+</Товар>
+</Товары>
+</order>
+</orders>

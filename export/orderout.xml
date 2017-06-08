@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+<order>
+<orderid>235</orderid>
+<createdon>2016-05-31 15:22:33</createdon>
+<ordertotal>1541.2500</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Курьерскими службами: Новая	Почта, Интайм, Mist Express</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наложенный	платеж (наличными курьеру, при получении)</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>0</customer_id>
+<last_name>Скрипник</last_name>
+<first_name>Николай</first_name>
+<phone_1>+38(095)-199-91-20</phone_1>
+<region>0</region>
+<city>Симферополь</city>
+<address_1>не скажу</address_1>
+<address_2></address_2>
+<email>m@budsite.com.ua</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>758a78f5-1e7a-11e6-80cf-00155dca1902</Ид>
+<quontity>75</quontity>
+<price>20.5500</price>
+<total>1541.2500</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>236</orderid>
+<createdon>2016-05-31 16:20:13</createdon>
+<ordertotal>404.0000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Курьерскими службами: Новая	Почта, Интайм, Mist Express</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наличными при получении в Одессе</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>db4230e4-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>104.0000</price>
+<total>104.0000</total>
+</Товар>
+<Товар>
+<Ид>8b400bb6-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>300.0000</price>
+<total>300.0000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>237</orderid>
+<createdon>2016-05-31 17:12:31</createdon>
+<ordertotal>108.1200</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>2</shipmentmethod_id>
+<shipmentmethod_name>Самовывоз</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Оплата на карту ПриватБанка</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>0</customer_id>
+<last_name>Пономарь</last_name>
+<first_name>Лилия</first_name>
+<phone_1>+38(666)-666-66-66</phone_1>
+<region>0</region>
+<city>прпр</city>
+<address_1>кеке56</address_1>
+<address_2></address_2>
+<email>zolotayalilia1212@gmail.com</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>858cde45-1e7c-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>108.1200</price>
+<total>108.1200</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>238</orderid>
+<createdon>2016-05-31 17:51:35</createdon>
+<ordertotal>115.0000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Адресная доставка по Одессе</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наличными при получении в Одессе</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>d509b541-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>115.0000</price>
+<total>115.0000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>239</orderid>
+<createdon>2016-05-31 17:58:22</createdon>
+<ordertotal>167770.8900</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Адресная доставка по Одессе</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Кредитная карта Visa/MasterCard</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>0</customer_id>
+<last_name>Скрипник</last_name>
+<first_name>Михаил</first_name>
+<phone_1>+38(095)-199-91-20</phone_1>
+<region>0</region>
+<city>Одесса</city>
+<address_1>не скажу</address_1>
+<address_2></address_2>
+<email>m@budsite.com.ua</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>ce08c206-1e7a-11e6-80cf-00155dca1902</Ид>
+<quontity>657</quontity>
+<price>182.5700</price>
+<total>119948.4900</total>
+</Товар>
+<Товар>
+<Ид>ce08c1fb-1e7a-11e6-80cf-00155dca1902</Ид>
+<quontity>123</quontity>
+<price>388.8000</price>
+<total>47822.4000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>240</orderid>
+<createdon>2016-06-01 09:26:19</createdon>
+<ordertotal>133.2000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Курьерскими службами: Новая	Почта, Интайм, Mist Express</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Кредитная карта Visa/MasterCard</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>af11619a-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>133.2000</price>
+<total>133.2000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>241</orderid>
+<createdon>2016-06-01 09:35:58</createdon>
+<ordertotal>133.2000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Адресная доставка по Одессе</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наличными при получении в Одессе</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>af11619a-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>133.2000</price>
+<total>133.2000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>242</orderid>
+<createdon>2016-06-01 09:36:18</createdon>
+<ordertotal>300.0000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>2</shipmentmethod_id>
+<shipmentmethod_name>Самовывоз</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наложенный  платеж (наличными при получении)</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>80c5cdf3-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>300.0000</price>
+<total>300.0000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>243</orderid>
+<createdon>2016-06-01 09:36:45</createdon>
+<ordertotal>407.7600</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>2</shipmentmethod_id>
+<shipmentmethod_name>Самовывоз</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Безналичный	расчет</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>7acd866f-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>407.7600</price>
+<total>407.7600</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>244</orderid>
+<createdon>2016-06-01 09:37:00</createdon>
+<ordertotal>407.7600</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>2</shipmentmethod_id>
+<shipmentmethod_name>Самовывоз</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Оплата на карту ПриватБанка</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>7acd866f-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>407.7600</price>
+<total>407.7600</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>245</orderid>
+<createdon>2016-06-01 10:16:05</createdon>
+<ordertotal>115.0000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Адресная доставка по Одессе</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Наличными при получении в Одессе</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>d509b541-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>115.0000</price>
+<total>115.0000</total>
+</Товар>
+</Товары>
+</order>
+<order>
+<orderid>246</orderid>
+<createdon>2016-06-01 10:48:33</createdon>
+<ordertotal>133.2000</ordertotal>
+<order_status>1</order_status>
+<shipmentmethod><shipmentmethod_id>0</shipmentmethod_id>
+<shipmentmethod_name>Адресная доставка по Одессе</shipmentmethod_name>
+</shipmentmethod><paymentmethod><paymentmethod_id>0</paymentmethod_id>
+<paymentmethod_name>Безналичный	расчет</paymentmethod_name>
+</paymentmethod><customer>
+<customer_id>37</customer_id>
+<last_name>Пидопригора</last_name>
+<first_name>Анастасия</first_name>
+<phone_1>+380975643345</phone_1>
+<region>0</region>
+<city>odessa</city>
+<address_1>odessa 6</address_1>
+<address_2></address_2>
+<email>nastia21_11@mail.ru</email>
+<company></company>
+</customer>
+<customer_note></customer_note>
+<Товары>
+<Товар>
+<Ид>a8f3196b-1e79-11e6-80cf-00155dca1902</Ид>
+<quontity>1</quontity>
+<price>133.2000</price>
+<total>133.2000</total>
+</Товар>
+</Товары>
+</order>
+</orders>

@@ -1,0 +1,27 @@
+<?php
+// HTTP
+define('HTTP_SERVER', 'http://budsite.loc/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://budsite.loc/');
+
+// DIR
+define('DIR_APPLICATION', '/home/edgar/PhpstormProjects/budsite/catalog/');
+define('DIR_SYSTEM', '/home/edgar/PhpstormProjects/budsite/system/');
+define('DIR_LANGUAGE', '/home/edgar/PhpstormProjects/budsite/catalog/language/');
+define('DIR_TEMPLATE', '/home/edgar/PhpstormProjects/budsite/catalog/view/theme/');
+define('DIR_CONFIG', '/home/edgar/PhpstormProjects/budsite/system/config/');
+define('DIR_IMAGE', '/home/edgar/PhpstormProjects/budsite/image/');
+define('DIR_CACHE', '/home/edgar/PhpstormProjects/budsite/system/cache/');
+define('DIR_DOWNLOAD', '/home/edgar/PhpstormProjects/budsite/system/download/');
+define('DIR_UPLOAD', '/home/edgar/PhpstormProjects/budsite/system/upload/');
+define('DIR_MODIFICATION', '/home/edgar/PhpstormProjects/budsite/system/modification/');
+define('DIR_LOGS', '/home/edgar/PhpstormProjects/budsite/system/logs/');
+
+// DB
+define('DB_DRIVER', 'mysqli');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '4ghjcnjrdfibyj');
+define('DB_DATABASE', 'budsite');
+define('DB_PREFIX', 'oc_');

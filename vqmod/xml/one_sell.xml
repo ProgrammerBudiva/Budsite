@@ -1,0 +1,96 @@
+<modification>
+	<id><![CDATA[allow only one sell]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.4.1]]></vqmver>
+	<author><![CDATA[phpdevzone]]></author>
+
+    <file name="catalog/controller/checkout/login.php">
+        <operation>
+            <search position="before"><![CDATA[
+$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
+			]]></search>
+            <add><![CDATA[
+$this->cart->clear();
+			]]></add>
+		</operation>			        
+	</file>
+
+    <file name="catalog/controller/account/order.php">
+        <operation>
+            <search position="before"><![CDATA[
+$this->cart->add($order_product_info['product_id'], $order_product_info['quantity'], $option_data);
+			]]></search>
+            <add><![CDATA[
+$this->cart->clear();
+			]]></add>
+		</operation>			        
+	</file>
+
+    <file name="catalog/controller/checkout/cart.php">
+        <operation>
+            <search position="before"><![CDATA[
+$this->cart->add($this->request->post['product_id'],
+			]]></search>
+            <add><![CDATA[
+$this->cart->clear();
+			]]></add>
+		</operation>			        
+	</file>
+
+    <file name="system/library/customer.php">
+        <operation>
+            <search position="replace"><![CDATA[
+            $this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . $this->db->escape(isset($this->session->data['cart']) ? serialize($this->session->data['cart']) : '') . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "', ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "' WHERE customer_id = '" . (int)$this->customer_id . "'");
+            ]]></search>
+            <add><![CDATA[
+$this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "', ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "' WHERE customer_id = '" . (int)$this->customer_id . "'");            
+            ]]></add>
+        </operation>       
+        <operation>
+            <search position="replace"><![CDATA[
+            $this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . $this->db->escape(isset($this->session->data['cart']) ? serialize($this->session->data['cart']) : '') . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "' WHERE customer_id = '" . (int)$this->customer_id . "'");
+            ]]></search>
+            <add><![CDATA[
+$this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "' WHERE customer_id = '" . (int)$this->customer_id . "'");            
+            ]]></add>
+        </operation>
+    </file>
+    
+	<file name="catalog/language/english/account/logout.php">
+        <operation>
+            <search position="replace"><![CDATA[
+            $_['text_message']  = '<p>You have been logged off your account. It is now safe to leave the computer.</p><p>Your shopping cart has been saved, the items inside it will be restored whenever you log back into your account.</p>';
+            ]]></search>
+            <add><![CDATA[$_['text_message']  = '<p>You have been logged off your account. Your shopping cart has been cleared.</p>';]]></add>
+        </operation>
+    </file>
+
+	<file name="catalog/language/english/default.php">
+        <operation>
+            <search position="replace"><![CDATA[
+            $_['button_cart']           = 'Add to Cart';
+            ]]></search>
+            <add><![CDATA[$_['button_cart']           = 'Buy Now';]]></add>
+        </operation>
+    </file>
+	
+	<file name="system/library/customer.php">
+		<operation error="abort">
+			<search position="before"><![CDATA[$this->session->data['customer_id'] = $customer_query->row['customer_id'];]]></search>
+			<add><![CDATA[
+			
+			if (!empty($this->session->data['cart']))
+			{
+				if( $this->db->query("UPDATE ". DB_PREFIX . "customer SET cart='".serialize(array())."' WHERE customer_id='".$customer_query->row['customer_id']."'"))
+				{
+					$customer_query->row['cart'] = serialize(array());
+				}
+			}
+			
+			]]></add>
+		</operation>
+	</file>
+
+</modification>
+
+
