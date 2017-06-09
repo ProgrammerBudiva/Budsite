@@ -560,7 +560,7 @@
         }
         //Функция отображения API формы Новой Почты
         function clickDelivery() {
-            $('.jq-radio').click(function(){
+            $('.only-delivery-field .jq-radio').click(function(){
                 var valueRadio = $(this).children('[name=shipping_method]').val();
                 if(valueRadio == 'Курьерскими службами: Новая	Почта, Интайм, Mist Express'){
                     setTimeout('$(".new_post_delivery_form").show();', 0);
