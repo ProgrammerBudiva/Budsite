@@ -753,7 +753,7 @@ class ControllerCheckoutCheckout extends Controller {
         isset($this->session->data['shipping_methods'][$method[0]]['title'])
           ? $this->session->data['shipping_methods'][$method[0]]['title']
           : $this->request->post['method'];
-
+        $this->session->data['guest']['address_shipping'] = $this->request->post['city'] . ' ' . $this->request->post['point'] ;
       if ($this->session->data['payment_address']['isNewPost'] == TRUE) {
         $this->session->data['payment_address']['city'] = $this->request->post['city'];
         $this->session->data['payment_address']['address_1'] = $this->request->post['point'];
