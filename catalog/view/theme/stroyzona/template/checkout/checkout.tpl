@@ -454,7 +454,9 @@
             if ($("#new_post_checked").hasClass("checked")) {
               //$("#new_post_checked option:first").attr('selected', 'selected');
               isNewPost = true;
-            }}
+            }}else{
+                var city = 'Не указан';
+            }
 //            console.log(city + '  ' + point);
             var error = false;
 
