@@ -121,7 +121,9 @@ class ControllerCheckoutConfirm extends Controller {
 
       $order_data['address_1']          = $this->session->data['guest']['address_1'];
       $order_data['payment_address_1']  = $order_data['address_1'];
-      $order_data['shipping_address_1'] = $order_data['address_1'];
+//      $order_data['shipping_address_1'] = $order_data['address_1'];
+      $order_data['shipping_address_1'] = $this->session->data['guest']['address_shipping'];
+      $order_data['shipping_lastname'] = $this->session->data['guest']['lastname'];
 
       $this->load->model('localisation/country');
       $this->load->model('localisation/zone');
@@ -129,7 +131,7 @@ class ControllerCheckoutConfirm extends Controller {
       $order_data['payment_firstname']  = $name[0];
       $order_data['payment_lastname']   = $lastname;
       $order_data['shipping_firstname'] = $name[0];
-      $order_data['shipping_lastname']  = $lastname;
+//      $order_data['shipping_lastname']  = $lastname;
       $order_data['payment_city']       = $this->session->data['payment_address']['city'];
       $order_data['shipping_city']      = $this->session->data['payment_address']['city'];
 
