@@ -96,7 +96,7 @@ class ControllerProductCategory extends Controller
             $category_id = (int)array_pop($parts);
 
         } else {
-            $category_id = $this->request->get['category_id'];
+            $category_id = 0;
         }
 
         $category_info = $this->model_catalog_category->getCategory($category_id);
@@ -519,10 +519,15 @@ class ControllerProductCategory extends Controller
               $result = [];
               foreach ($ids as $category_id) {
                 $category = $this->model_catalog_category->getCategory($category_id);
+
+                     $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` = 'category_id=" . (int)$category_id . "'");
+                     $seo_url_query_for_tag_categories = $query->row['keyword'];
+
                 $result[] = [
                   'category_id' => $category_id,
                   'name' => $category['name'],
-                  'href' => $this->url->link('product/category', 'category_id=' . $category_id),
+//                  'href' => $this->url->link('product/category', 'category_id=' . $category_id),
+                  'href' => '/' . $seo_url_query_for_tag_categories,
                 ];
               }
               return $result;
