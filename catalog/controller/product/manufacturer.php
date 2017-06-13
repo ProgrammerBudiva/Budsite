@@ -119,7 +119,7 @@ class ControllerProductManufacturer extends Controller {
 		$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($manufacturer_id);
 
 		$manufacturerdesc_info = current($this->model_catalog_manufacturer->getManufacturerDescriptions($manufacturer_id));
-
+        $this->document->addLink('/'.$this->request->get['_route_'], 'canonical');
 		if ($manufacturer_info) {
 			$this->document->setTitle($manufacturerdesc_info['meta_title']);
 			$this->document->setDescription($manufacturerdesc_info['meta_description']);
