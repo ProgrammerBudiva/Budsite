@@ -96,7 +96,7 @@ class ControllerProductCategory extends Controller
             $category_id = (int)array_pop($parts);
 
         } else {
-            $category_id = 0;
+            $category_id = $this->request->get['category_id'];
         }
 
         $category_info = $this->model_catalog_category->getCategory($category_id);
@@ -368,7 +368,7 @@ class ControllerProductCategory extends Controller
             if ($category_id == 494) {
               $this->document->setNoindex(TRUE);
             }
-          
+
             $url = '';
 
             if (isset($this->request->get['filter'])) {
