@@ -48,8 +48,8 @@
           <div class="box-heading"><p><?php echo $text_socials;?></p></div>
           <ul class="list-unstyled">
             <?php /*<li><a rel="nofollow" target="_blank" href="https://www.vk.com/budsite" class="vk"><i class="fa fa-vk"></i></a></li>*/ ?>
-            <li><a rel="nofollow" target="_blank" href="https://www.facebook.com/budsite" class="fb"><i class="fa fa-facebook"></i></a></li>
             <li><a rel="nofollow" target="_blank" href="https://www.instagram.com/budsite_expert" class="ins"><i class="fa fa-instagram"></i></a></li>
+            <li><a rel="nofollow" target="_blank" href="https://www.facebook.com/budsite" class="fb"><i class="fa fa-facebook"></i></a></li>
             <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UCYK71g3ga1GUyUtqfLK5bLQ" class="you"><i class="fa fa-youtube"></i></a></li>
           </ul>
         </div>
