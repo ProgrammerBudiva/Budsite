@@ -123,7 +123,7 @@
         <div class="clear"></div>
 
         <div class="pay-field">
-            <div class="choose-delivery-field">
+            <div class="choose-delivery-field only-delivery-field">
                 <h3><?php echo $entry_new_post;?></h3>
                 <form>
                 <?php if ($shipping_methods) { ?>
@@ -447,15 +447,17 @@
             var comment = $('#textarea-payment-comment').val();
 
             $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
-
+            if (method == 'Курьерскими службами: Новая	Почта, Интайм, Mist Express'){
             var isNewPost = false;
             var city = $("#input-country-new-post option:selected").text();
             var point = $("#input-point-new-post option:selected").text();
             if ($("#new_post_checked").hasClass("checked")) {
               //$("#new_post_checked option:first").attr('selected', 'selected');
               isNewPost = true;
+            }}else{
+                var city = 'Не указан';
             }
-            console.log(city + '  ' + point);
+//            console.log(city + '  ' + point);
             var error = false;
 
             if (!$('.input-delivery:checked')) {
@@ -509,19 +511,19 @@
             payCard();
           });
 
-          function newPostDelivery() {
-            if ($('input[value^="newpost2.newpost2"]').is(":checked")) {
-              $(".new_post_delivery_form").show();
-            } else {
-              $(".new_post_delivery_form").hide();
-            }
-          };
-
-          newPostDelivery();
-
-          $(".choose-delivery-field .radio").click(function () {
-            newPostDelivery();
-          });
+//          function newPostDelivery() {
+//            if ($('input[value^="newpost2.newpost2"]').is(":checked")) {
+//              $(".new_post_delivery_form").show();
+//            } else {
+//              $(".new_post_delivery_form").hide();
+//            }
+//          };
+//
+//          newPostDelivery();
+//
+//          $(".choose-delivery-field .radio").click(function () {
+//            newPostDelivery();
+//          });
 
         });
 
@@ -556,6 +558,18 @@
                     }
             );
         }
+        //Функция отображения API формы Новой Почты
+        function clickDelivery() {
+            $('.only-delivery-field .jq-radio').click(function(){
+                var valueRadio = $(this).children('[name=shipping_method]').val();
+                if(valueRadio == 'Курьерскими службами: Новая	Почта, Интайм, Mist Express'){
+                    setTimeout('$(".new_post_delivery_form").show();', 0);
+                }else{
+                    $(".new_post_delivery_form").hide();
+                }
+            });
+        }
+        setTimeout('clickDelivery();', 2000);
 
     </script>
 <script type="text/javascript"><!--
