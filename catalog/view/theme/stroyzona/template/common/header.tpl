@@ -6,6 +6,7 @@
 <html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <!--<![endif]-->
 <head>
+    <meta name="yandex-verification" content="a9df9342383762a2" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $title; ?></title>
