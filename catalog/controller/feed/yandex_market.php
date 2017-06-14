@@ -146,7 +146,7 @@ class ControllerFeedYandexMarket extends Controller {
         }
         //$data['store'] = 'true';
         $data['pickup'] = 'true';
-        $data['description'] = htmlentities($product['description']);
+        $data['description'] = $product['description'];
         //$data['manufacturer_warranty'] = 'true';
         //$data['barcode'] = $product['sku'];
         if (!empty($product['image'])) {
