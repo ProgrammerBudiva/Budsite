@@ -134,3 +134,6 @@ RewriteCond %{HTTP_USER_AGENT} DotBot [OR]
 RewriteCond %{HTTP_USER_AGENT} simple-share-buttons
 RewriteRule ^(.*)$ – [F,L]
 ## ##############################  BOT BANNING #################################
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/cayding-fasiding/forma/ugol-vnutrennij$
+RewriteRule ^.*$ https://budsite.ua/cayding-fasiding/forma? [R=301,L]
