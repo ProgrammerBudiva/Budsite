@@ -475,14 +475,14 @@
                         <div class="col-sm-4 col-xs-12 delivery-pay-popup-wrap similar-responce">
                             <div class="delivery-pay-popup">
                                 <h4><b>Доставка</b></h4>
-                                <ul>
+                                <ul  style="margin-bottom: 0">
                                     <li>Курьерскими службами:</li>
                                     </ul>
-                                        <img width="90" height="50" style="margin: 0 3px 3px 0" alt="Доставка строительных материалов Новой Почтой" src="/image/catalog/Info/NewPost/nave-poshta.png">
-                                        <img width="90" height="50" style="margin: 0 0 3px 0" alt="Купить стройматериалы с доставкой Интайм" src="/image/catalog/Info/NewPost/intime.png">
-                                        <img width="90" height="50" style="margin: 0 3px 5px 0" alt="Стройматериалы с доставкой Деливери по Украине" src="/image/catalog/Info/NewPost/delivery.png">
+                                        <img width="90" height="50"  alt="Доставка строительных материалов Новой Почтой" src="/image/catalog/Info/NewPost/nave-poshta.png">
+                                        <img width="90" height="50"  alt="Купить стройматериалы с доставкой Интайм" src="/image/catalog/Info/NewPost/intime.png">
+                                        <img width="90" height="50"  alt="Стройматериалы с доставкой Деливери по Украине" src="/image/catalog/Info/NewPost/delivery.png">
                                         <img width="90" height="50"   alt="Интернет магазин строительных и отделочных материалов с доставкой Мист-экспресс" src="/image/catalog/Info/NewPost/meest-express.png">
-                                <ul style="padding-top: 10px;">
+                                <ul style="padding-top: 2px;">
                                     <li>Курьером budsite в Одессе и  Киеву</li>
                                     <li>Самовывоз в Одессе, Киеве и Днепре</li>
                                 </ul>
