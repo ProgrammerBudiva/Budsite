@@ -478,10 +478,10 @@
                                 <ul  style="margin-bottom: 0">
                                     <li>Курьерскими службами:</li>
                                     </ul>
-                                        <img width="90" height="50"  alt="Доставка строительных материалов Новой Почтой" src="/image/catalog/Info/NewPost/nave-poshta.png">
-                                        <img width="90" height="50"  alt="Купить стройматериалы с доставкой Интайм" src="/image/catalog/Info/NewPost/intime.png">
-                                        <img width="90" height="50"  alt="Стройматериалы с доставкой Деливери по Украине" src="/image/catalog/Info/NewPost/delivery.png">
-                                        <img width="90" height="50"   alt="Интернет магазин строительных и отделочных материалов с доставкой Мист-экспресс" src="/image/catalog/Info/NewPost/meest-express.png">
+                                        <img width="100"  alt="Доставка строительных материалов Новой Почтой" src="/image/catalog/Info/NewPost/nave-poshta.png">
+                                        <img width="100"  alt="Купить стройматериалы с доставкой Интайм" src="/image/catalog/Info/NewPost/intime.png">
+                                        <img width="100"  alt="Стройматериалы с доставкой Деливери по Украине" src="/image/catalog/Info/NewPost/delivery.png">
+                                        <img width="100"  alt="Интернет магазин строительных и отделочных материалов с доставкой Мист-экспресс" src="/image/catalog/Info/NewPost/meest-express.png">
                                 <ul style="padding-top: 2px;">
                                     <li>Курьером budsite в Одессе и  Киеву</li>
                                     <li>Самовывоз в Одессе, Киеве и Днепре</li>
