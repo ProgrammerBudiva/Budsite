@@ -12,6 +12,7 @@
             <span itemprop="name"><?php echo $breadcrumb['text']; ?></span>
           </a>
         <?php } ?>
+
         <meta itemprop="position" content="<?= ++$key ?>">
       </li>
     <?php } ?>

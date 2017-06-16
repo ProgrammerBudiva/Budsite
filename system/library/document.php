@@ -8,6 +8,7 @@ class Document {
 	private $scripts = array();
 	private $headScripts = array();
 	private $asyncScripts = array();
+    private $robots;
 
 	public function setTitle($title) {
 		$this->title = $title;
@@ -106,4 +107,13 @@ class Document {
 
     return FALSE;
   }
+
+  public function setRobots($robots) {
+        $this->robots = $robots;
+  }
+
+  public function getRobots() {
+        return $this->robots;
+  }
+
 }
