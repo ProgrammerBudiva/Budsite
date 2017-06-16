@@ -6,6 +6,9 @@
 <html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <!--<![endif]-->
 <head>
+    <?php if ($robots) { ?>
+        <meta name="robots" content="<?php echo $robots; ?>" />
+    <?php } ?>
     <meta name="yandex-verification" content="a9df9342383762a2" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -19,12 +19,14 @@ class ControllerProductCategory extends Controller
 
         if (isset($this->request->get['sort'])) {
             $sort = $this->request->get['sort'];
+            $data['no_follow'] = true;
         } else {
             $sort = 'p.sort_order';
         }
 
         if (isset($this->request->get['order'])) {
             $order = $this->request->get['order'];
+            $data['no_follow'] = true;
         } else {
             $order = 'ASC';
         }
@@ -37,8 +39,13 @@ class ControllerProductCategory extends Controller
 
         if (isset($this->request->get['limit'])) {
             $limit = $this->request->get['limit'];
+            $data['no_follow'] = true;
         } else {
             $limit = $this->config->get('config_product_limit');
+        }
+
+        if($data['no_follow'] == 1){
+            $this->document->setRobots('noindex,follow');
         }
 
         if (isset($this->request->get['price'])) {
