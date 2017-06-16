@@ -83,7 +83,10 @@
         <div class="desktop-banner">
             <img class="desktop-banner-img" src="/image/catalog/Banner/poliv-i-oroshenie-category.jpg" alt="Минимальный заказ 300 грн">
         </div>
-        <?php }?>
+        <div class="mobile-banner">
+            <img class="mobile-banner-img" src="/image/catalog/Banner/test.jpg" alt="Минимальный заказ 300 грн">
+        </div>
+        <?php } ?>
         <?php } ?>
       <div class="row category-products">
         <?php foreach ($products as $product) { ?>
