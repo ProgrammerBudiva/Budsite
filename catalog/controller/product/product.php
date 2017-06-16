@@ -40,6 +40,16 @@ class ControllerProductProduct extends Controller
                 }
             }
 
+            //banner categories
+            $categories_for_banner = [
+                257, 325, 507, 324, 506, 509, 508
+            ];
+
+            $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
+            if($banner_boolean !== false) {
+                $data['banner'] = true;
+            }
+
             // Set the last category breadcrumb
             $category_info = $this->model_catalog_category->getCategory($category_id);
 
