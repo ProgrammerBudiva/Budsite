@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /*route=account/
+Disallow: /*?*
 Disallow: /*route=information/
 Disallow: /*route=affiliate/
 Disallow: /*route=checkout/
@@ -16,6 +16,11 @@ Disallow: /shopping-cart
 Disallow: /login
 Disallow: /index.php?route=information/contact/success
 Disallow: /search
+Allow: /*.js
+Allow: /*.css
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.png
 Sitemap: https://budsite.ua/sitemap.xml
 
 User-agent: Yandex
@@ -27,7 +32,7 @@ Disallow: /*route=product/search
 Disallow: /index.php?route=product/product*&manufacturer_id=
 Disallow: /admin
 Disallow: /stop
-Disallow: /download
+Disallow: /*?*
 Disallow: /forgot-password
 Disallow: /compare-products
 Disallow: /checkout
@@ -48,6 +53,11 @@ Disallow: /*?filter_sub_category=
 Disallow: /*&filter_sub_category=
 Disallow: /*?filter_description=
 Disallow: /*&filter_description=
+Allow: /*.js
+Allow: /*.css
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.png
 
 Host: https://budsite.ua
 Sitemap: https://budsite.ua/sitemap.xml
