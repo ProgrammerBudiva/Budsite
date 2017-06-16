@@ -47,7 +47,16 @@ class ControllerProductCategory extends Controller
         if($data['no_follow'] == 1){
             $this->document->setRobots('noindex,follow');
         }
+        //banner categories
+        $categories_for_banner = [
+            257, 325, 507, 324, 506, 509, 508
+        ];
 
+        $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
+        if($banner_boolean !== false) {
+            $data['banner'] = true;
+        }
+        // end banner categories
         if (isset($this->request->get['price'])) {
             $price_filter = explode('-', $this->request->get['price']);
             $price_from = (int)($price_filter[0] / $this->currency->getValue());
