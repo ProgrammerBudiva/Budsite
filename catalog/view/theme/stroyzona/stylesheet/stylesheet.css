@@ -5874,8 +5874,25 @@ div.alert-success {
 }
 
 .desktop-banner {
-	margin-bottom: 15px;
+	margin-bottom: 26px;
 }
 .desktop-banner-img {
 	max-width: 100%;
+}
+.mobile-banner {
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	.mobile-banner {
+		display: block;
+		margin-bottom: 26px;
+	}
+	.mobile-banner-img {
+		max-width: 100%;
+	}
+	.desktop-banner {
+		display: none;
+	}
+
+
 }
