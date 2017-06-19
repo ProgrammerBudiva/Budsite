@@ -155,11 +155,11 @@
                                 <?php } ?>
                             </li>
                         </ul>
-                        <?php if($banner){ ?>
 
 
 
-                        <?php }?>
+
+
                         <?php if ($price) { ?>
                         <?php
                             $price = preg_split('/\s+/ui', $price);
@@ -168,14 +168,15 @@
                             }
                         ?>
                         <div class="block-for-banner">
-                            <div class="desktop-banner">
-                                <img class="desktop-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
-                            </div>
+                            <?php if($banner){ ?>
+                                <div class="desktop-banner">
+                                    <img class="desktop-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
+                                </div>
 
-                            <div class="mobile-banner">
-                                <img class="mobile-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
-                            </div>
-
+                                <div class="mobile-banner">
+                                    <img class="mobile-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
+                                </div>
+                            <?php }?>
                             <div class="product-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
 
                                 <div class="instock" itemprop="availability" href="http://schema.org/InStock" >В наличии</div>
