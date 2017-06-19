@@ -139,7 +139,7 @@ class ControllerFeedYandexMarket extends Controller {
         }
         $data['vendor'] = $vendor;
         $data['vendorCode'] = $product['sku'];
-          $attribute_groups = $this->model_catalog_product->getProductAttributes(6160);
+          $attribute_groups = $this->model_catalog_product->getProductAttributes($product['product_id']);
           $attributes_id = '';
 //          $data['measure'];
 
