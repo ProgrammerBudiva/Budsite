@@ -42,7 +42,8 @@ class ControllerProductProduct extends Controller
 
             //banner categories
             $categories_for_banner = [
-                257, 325, 507, 324, 506, 509, 508
+                257, 325, 507, 324, 506, 509, 508, 532, 533, 531, 530, 529,
+                510, 511, 512, 255, 514, 513, 515, 516, 519, 518, 520, 521
             ];
 
             $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
