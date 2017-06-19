@@ -357,7 +357,6 @@ class ControllerFeedYandexMarket extends Controller {
       'currencyId'          => 1,
       'xCategory'           => 0,
       'categoryId'          => 1,
-      'mesure'              => 1,
       'picture'             => 0,
       'delivery'            => 0,
       'delivery-options'    => 0,
