@@ -156,12 +156,8 @@
                             </li>
                         </ul>
                         <?php if($banner){ ?>
-                            <div class="desktop-banner">
-                                <img class="desktop-banner-img" src="/image/catalog/Banner/poliv-i-oroshenie-product.jpg" alt="Минимальный заказ 300 грн">
-                            </div>
-                            <div class="mobile-banner">
-                                <img class="mobile-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
-                            </div>
+
+
 
                         <?php }?>
                         <?php if ($price) { ?>
@@ -171,92 +167,102 @@
                               $special = preg_split('/\s+/ui', $special);
                             }
                         ?>
-                        <div class="product-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                            <div class="instock" itemprop="availability" href="http://schema.org/InStock" >В наличии</div>
-                            <?php if (!$special) { ?>
-                            <div class="price-wrap">
-                                <span><?php echo $text_price;?></span>
-                                <?php if ($lower_price) { ?>
-                                  <s><?= $lower_price; ?></s>
-                                <?php } ?>
-                                <span class="new-price">
-                                  <b itemprop="price">
-                                    <?= $price[0]; ?>
-                                  </b>
-                                  <b itemprop="priceCurrency" content="UAH">
-                                    <?= $price[1]; ?>
-                                  </b>
-                                </span>
-                                <div class="unit"><span>/</span><span><?= $unit ?></span></div>
-                                <input type="hidden" name="new-price" value="<?php echo $price[0] ?>">
+                        <div class="block-for-banner">
+                            <div class="desktop-banner">
+                                <img class="desktop-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
                             </div>
-                            <?php } else { ?>
-                            <div class="price-wrap">
-                                <span class="title"><?php echo $text_price;?></span>
-                                <span class="old-price"><?= $price[0] . ' ' . $price[1]; ?></span>
-                                <span class="new-price">
-                                  <b itemprop="price">
-                                    <?= $special[0]; ?>
-                                  </b>
-                                  <b itemprop="priceCurrency" content="UAH">
-                                    <?= $special[1]; ?>
-                                  </b>
-                                </span>
-                                <div class="unit"><span>/</span><span><?= $unit ?></span></div>
-                                <input type="hidden" name="new-price" value="<?= $special[0] ?>">
 
-                                <?php if($special) { ?>
-                                <span class="discount"><?php echo $discount_percent;?>%</span>
-                                <?php } ?>
+                            <div class="mobile-banner">
+                                <img class="mobile-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
                             </div>
-                            <?php } ?>
-                            <?php if ($tax) { ?>
-                            <div class="price-wrap">
-                                <?php echo $text_tax; ?> <?php echo $tax; ?>
-                            </div>
-                            <?php } ?>
-                            <?php if ($points) { ?>
-                            <div class="price-wrap">
-                                <?php echo $text_points; ?> <?php echo $points; ?>
-                            </div>
-                            <?php } ?>
-                            <?php if ($discounts) { ?>
-                            <?php foreach ($discounts as $discount) { ?>
-                            <div class="price-wrap">
-                                <?php echo $discount['quantity']; ?><?php echo $text_discount; ?><?php echo $discount['price']; ?>
-                            </div>
-                            <?php } ?>
-                            <?php } ?>
 
-                            <div class="product-btn-group">
-                                <button class="add-to-cart <?php if (!is_numeric($stock)) { ?> disabled <?php } ?>" <?php if (!is_numeric($stock)) { ?> disabled <?php } ?>
-                                        type="button" id="button-cart"
-                                        data-loading-text="<?php echo $text_loading; ?>"
-                                        class="btn btn-primary">
-                                    <span>
-                                        <div><i class="fa fa-shopping-cart"></i><i style="<?php echo $in_cart ? '':'display:none'; ?>" class="fa fa-check-circle"></i></div>
-                                        <div><?= is_numeric($stock) ? ($in_cart ? 'В корзине' : $button_cart) : $button_cart_disable ?></div>
+                            <div class="product-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+
+                                <div class="instock" itemprop="availability" href="http://schema.org/InStock" >В наличии</div>
+                                <?php if (!$special) { ?>
+                                <div class="price-wrap">
+                                    <span><?php echo $text_price;?></span>
+                                    <?php if ($lower_price) { ?>
+                                      <s><?= $lower_price; ?></s>
+                                    <?php } ?>
+                                    <span class="new-price">
+                                      <b itemprop="price">
+                                        <?= $price[0]; ?>
+                                      </b>
+                                      <b itemprop="priceCurrency" content="UAH">
+                                        <?= $price[1]; ?>
+                                      </b>
                                     </span>
-                                </button>
-                                <div class="buy-1-click">
-                                    <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
-                                    <span>
-                                        <div><img src="image/pointer.png" alt="pointer"></div>
-                                        <div><?php echo $text_buy_one_click; ?></div>
+                                    <div class="unit"><span>/</span><span><?= $unit ?></span></div>
+                                    <input type="hidden" name="new-price" value="<?php echo $price[0] ?>">
+                                </div>
+                                <?php } else { ?>
+                                <div class="price-wrap">
+                                    <span class="title"><?php echo $text_price;?></span>
+                                    <span class="old-price"><?= $price[0] . ' ' . $price[1]; ?></span>
+                                    <span class="new-price">
+                                      <b itemprop="price">
+                                        <?= $special[0]; ?>
+                                      </b>
+                                      <b itemprop="priceCurrency" content="UAH">
+                                        <?= $special[1]; ?>
+                                      </b>
                                     </span>
-                                    <div class="modal-wrap">
-                                        <p><?php echo $text_callback_you; ?></p>
-                                        <input id="callback_input_phone_product" name="phone" type="phone" />
-                                        <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
-                                        <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="<?php echo $text_waiting_btn?>" class="btn btn-primary" /></a>
-                                        <i class="fa fa-times"></i>
-                                        <p class="phone-alert"></p>
+                                    <div class="unit"><span>/</span><span><?= $unit ?></span></div>
+                                    <input type="hidden" name="new-price" value="<?= $special[0] ?>">
+
+                                    <?php if($special) { ?>
+                                    <span class="discount"><?php echo $discount_percent;?>%</span>
+                                    <?php } ?>
+                                </div>
+                                <?php } ?>
+                                <?php if ($tax) { ?>
+                                <div class="price-wrap">
+                                    <?php echo $text_tax; ?> <?php echo $tax; ?>
+                                </div>
+                                <?php } ?>
+                                <?php if ($points) { ?>
+                                <div class="price-wrap">
+                                    <?php echo $text_points; ?> <?php echo $points; ?>
+                                </div>
+                                <?php } ?>
+                                <?php if ($discounts) { ?>
+                                <?php foreach ($discounts as $discount) { ?>
+                                <div class="price-wrap">
+                                    <?php echo $discount['quantity']; ?><?php echo $text_discount; ?><?php echo $discount['price']; ?>
+                                </div>
+                                <?php } ?>
+                                <?php } ?>
+
+                                <div class="product-btn-group">
+                                    <button class="add-to-cart <?php if (!is_numeric($stock)) { ?> disabled <?php } ?>" <?php if (!is_numeric($stock)) { ?> disabled <?php } ?>
+                                            type="button" id="button-cart"
+                                            data-loading-text="<?php echo $text_loading; ?>"
+                                            class="btn btn-primary">
+                                        <span>
+                                            <div><i class="fa fa-shopping-cart"></i><i style="<?php echo $in_cart ? '':'display:none'; ?>" class="fa fa-check-circle"></i></div>
+                                            <div><?= is_numeric($stock) ? ($in_cart ? 'В корзине' : $button_cart) : $button_cart_disable ?></div>
+                                        </span>
+                                    </button>
+                                    <div class="buy-1-click">
+                                        <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
+                                        <span>
+                                            <div><img src="image/pointer.png" alt="pointer"></div>
+                                            <div><?php echo $text_buy_one_click; ?></div>
+                                        </span>
+                                        <div class="modal-wrap">
+                                            <p><?php echo $text_callback_you; ?></p>
+                                            <input id="callback_input_phone_product" name="phone" type="phone" />
+                                            <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
+                                            <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="<?php echo $text_waiting_btn?>" class="btn btn-primary" /></a>
+                                            <i class="fa fa-times"></i>
+                                            <p class="phone-alert"></p>
+                                        </div>
+                                        <div class="hidden" id="oneclick_success"><?= $text_success_oneclick_order ?></div>
                                     </div>
-                                    <div class="hidden" id="oneclick_success"><?= $text_success_oneclick_order ?></div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="product-to-do">
                             <div class="product-btn-group">
                                 <button type="button" data-toggle="tooltip" class="btn btn-default"
