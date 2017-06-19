@@ -138,6 +138,23 @@ class ControllerFeedYandexMarket extends Controller {
           }
         }
         $data['vendor'] = $vendor;
+        $data['vendorCode'] = $product['sku'];
+          $attribute_groups = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
+          $attributes_id = '';
+
+
+          foreach ($attribute_groups as $attribute_group) {
+              foreach ($attribute_group['attribute'] as $attribute) {
+                  $attributes_id .= $attribute['attribute_id'] . ",";
+                  $attributes_text[] = $attribute['text'];
+
+                  if ($attribute['attribute_id'] == ATTR_UNIT_ID) {
+                      $data['measure'] = $attribute['text'];
+                  }
+              }
+          }
+
+
 
         //$data['vendor'] = $product['manufacturer'];
         //$data['vendorCode'] = $product['model'];
