@@ -81,7 +81,7 @@
         </div>
         <?php if($banner){ ?>
         <div class="desktop-banner">
-            <img class="desktop-banner-img" src="/image/catalog/Banner/poliv-i-oroshenie-category.jpg" alt="Минимальный заказ 300 грн">
+            <img class="desktop-banner-img" src="/image/catalog/Banner/category.jpg" alt="Минимальный заказ 300 грн">
         </div>
         <div class="mobile-banner">
             <img class="mobile-banner-img" src="/image/catalog/Banner/test.jpg" alt="Минимальный заказ 300 грн">
