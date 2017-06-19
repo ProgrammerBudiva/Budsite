@@ -139,22 +139,22 @@ class ControllerFeedYandexMarket extends Controller {
         }
         $data['vendor'] = $vendor;
         $data['vendorCode'] = $product['sku'];
-          $attribute_groups = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
+          $attribute_groups = $this->model_catalog_product->getProductAttributes(6160);
           $attributes_id = '';
-
+//          $data['measure'];
 
           foreach ($attribute_groups as $attribute_group) {
               foreach ($attribute_group['attribute'] as $attribute) {
                   $attributes_id .= $attribute['attribute_id'] . ",";
                   $attributes_text[] = $attribute['text'];
-
-                  if ($attribute['attribute_id'] == ATTR_UNIT_ID) {
+//                  print_r($attribute);die;
+                  if ($attribute['attribute_id'] == 1) {
                       $data['measure'] = $attribute['text'];
                   }
               }
           }
 
-
+//print_r($data['measure']);die;
 
         //$data['vendor'] = $product['manufacturer'];
         //$data['vendorCode'] = $product['model'];
@@ -357,7 +357,6 @@ class ControllerFeedYandexMarket extends Controller {
       'currencyId'          => 1,
       'xCategory'           => 0,
       'categoryId'          => 1,
-      'mesure'              => 1,
       'picture'             => 0,
       'delivery'            => 0,
       'delivery-options'    => 0,
@@ -455,7 +454,7 @@ class ControllerFeedYandexMarket extends Controller {
         break;
 
       default:
-        $allowed_tags = array_merge($allowed_tags, array('name' => 1, 'vendor' => 0, 'vendorCode' => 0));
+        $allowed_tags = array_merge($allowed_tags, array('name' => 1, 'measure' =>0, 'vendor' => 0, 'vendorCode' => 0));
         break;
     }
 
