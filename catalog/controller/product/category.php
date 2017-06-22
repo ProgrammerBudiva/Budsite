@@ -143,8 +143,8 @@ class ControllerProductCategory extends Controller
             ];
 
             $title_array[] = [
-                'BudSite',
-                'БудСайт',
+                'budsite',
+                'Будсайт',
             ];
 
             $key = array_rand($title_array['0'], 1);
@@ -172,9 +172,9 @@ class ControllerProductCategory extends Controller
 
             $description_array[] = [
               ' budsite.ua',
-              ' Budsite',
+              ' budsite',
               ' Будсайт.юа',
-              ' БудСайт',
+              ' Будсайт',
             ];
 
             $description_array[] = [
@@ -228,7 +228,7 @@ class ControllerProductCategory extends Controller
 
             //////////////////////////// meta keyword generator
 
-            $meta_keyword = $category_info['name'] . ', Budsite, купить';
+            $meta_keyword = $category_info['name'] . ', budsite, купить';
             $this->document->setKeywords($meta_keyword);
             //////////////////////////// end of meta keyword generator
 
