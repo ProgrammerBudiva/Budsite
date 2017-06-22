@@ -121,25 +121,128 @@ class ControllerProductCategory extends Controller
         $category_info = $this->model_catalog_category->getCategory($category_id);
 
         if ($category_info) {
-            $meta_title = empty($category_info['meta_title']) ?
-              $category_info['name'] . ' - цены, характеристики, отзывы | budsite.ua' :
-              $category_info['meta_title'];
+
+//            print_r($category_info['name']);die;
+            ////////////////////////////meta title generator
+            $title_array[] = [
+                'по отличной цене',
+                'по низким ценам',
+                'по специальной цене',
+                'с хорошей скидкой ',
+                'с ценой от склада',
+                'по оптовой цене',
+            ];
+
+            $title_array[] = [
+              'с доставкой на дом',
+              'в любой город Украины',
+              'по Украине',
+              'с бесплатной доставкой',
+              'без оплаты за доставку',
+              'курьером и почтой',
+            ];
+
+            $title_array[] = [
+                'BudSite',
+                'БудСайт',
+            ];
+
+            $key = array_rand($title_array['0'], 1);
+            $part1 = $title_array['0'][$key];
+
+            $key = array_rand($title_array['1'], 1);
+            $part2 = $title_array['1'][$key];
+
+            $key = array_rand($title_array['2'], 1);
+            $part3 = $title_array['2'][$key];
+
+            $meta_title = $category_info['name'] . ' ' . $part1 . ' ' . $part2 .' | ' . $part3 . ' ᐊ';
+
             $this->document->setTitle($meta_title);
+            ///////////////////////////end of meta title generator
 
-            $meta_description = empty($category_info['meta_description']) ?
-              $category_info['name'] . ' в интернет магазине строительных материалов budsite. Огромный ассортимент качественной продукции по доступным ценам.' :
-              $category_info['meta_description'];
+            ////////////////////////////meta description generator
+            $description_array[] = [
+              'Ищете ' . $category_info['name'] .'? | На',
+              'Выбираете ' . $category_info['name'] .'? | На',
+              'Подбираете ' . $category_info['name'] .'? | На',
+              'Купить ' . $category_info['name'] .'? | На',
+              'Заказать ' . $category_info['name'] .'? | На',
+            ];
+
+            $description_array[] = [
+              ' budsite.ua',
+              ' Budsite',
+              ' Будсайт.юа',
+              ' БудСайт',
+            ];
+
+            $description_array[] = [
+                ' ✔ Приятные цены',
+                ' ✔ Низкие цены',
+                ' ✔ Лучшие цены',
+                ' ✔ Доступные цены',
+            ];
+
+            $description_array[] = [
+                ' ✉️ Сжатые сроки доставки',
+                ' ✉️ Быстрая доставка',
+                ' ✉️ Доставка в Ваш город',
+                ' ✉️ Доставка по всей Украине',
+                ' ✉️ Курьерская доставка',
+                ' ✉️ Быстрая отправка',
+                ' ✉️ Моментальная отправка',
+            ];
+
+            $description_array[] = [
+                ' ➔ Большой выбор материалов.',
+                ' ➔ Широкий ассортимент.',
+                ' ➔ Огромный выбор.',
+                ' ➔ Скидки до -30%!',
+                ' ➔ В наличии!',
+            ];
+
+            $description_array[] = [
+                ' ✪ Сделайте заказ прямо сейчас! ☏  (044) 390-20-40',
+                ' ✪ Делайте заказ сейчас! ☏  (044) 390-20-40',
+                ' ✪ Заказывайте уже сейчас! ☏  (044) 390-20-40',
+                ' ✪ Успейте купить! ☏  (044) 390-20-40',
+                ' ✪ Торопитесь! ☏  (044) 390-20-40',
+                ' ✪ Не пропустите! ☏  (044) 390-20-40',
+                ' ✪ Закажите онлайн ☏  (044) 390-20-40',
+                ' ✪ Купить в один клик ☏  (044) 390-20-40',
+            ];
+
+            $meta_description = '';
+
+            foreach ($description_array as $value){
+
+                $key = array_rand($value, 1);
+                $part = $value[$key];
+                $meta_description .= $part;
+            }
+
             $this->document->setDescription($meta_description);
+            //////////////////////////// end of meta description generator
 
-            $meta_keyword = empty($category_info['meta_keyword']) ?
-              $category_info['name'] :
-              $category_info['meta_keyword'];
+
+            //////////////////////////// meta keyword generator
+
+            $meta_keyword = $category_info['name'] . ', Budsite, купить';
             $this->document->setKeywords($meta_keyword);
+            //////////////////////////// end of meta keyword generator
+
+            ////////////////////////////meta h1 generator
+
+            $h1_meta = 'Купить ' . mb_strtolower($category_info['name']) . ' для дома и дачи';
+
+            //////////////////////////// end of meta h1 generator
+
 
             $this->document->addLink($this->url->link('product/category', 'path=' . $this->request->get['path']), 'canonical');
 
             $data['heading_title'] = $category_info['name'];
-            $data['h1'] = $category_info['meta_h1'];
+            $data['h1'] = $h1_meta;
             $data['text_more'] = $this->language->get('text_more');
 
             $data['text_refine'] = $this->language->get('text_refine');
