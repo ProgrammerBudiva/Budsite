@@ -462,6 +462,9 @@ class ControllerModuleOCFilter extends Controller {
 //        	continue;
 //        }
 
+          if ($hideOptionByValuesCount()){
+              continue;
+          }
 
         if ($values && $option['type'] == 'select' || $option['type'] == 'radio') {
           $params = $this->cancelOptionParams($option['option_id']);
