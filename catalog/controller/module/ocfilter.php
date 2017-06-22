@@ -458,9 +458,9 @@ class ControllerModuleOCFilter extends Controller {
           return !($this_option || count($values) > 1);
         };
 
-        if (($option['type'] != 'slide' && $option['type'] != 'slide_dual' && !$values) || $hideOptionByValuesCount()) {
-        	continue;
-        }
+//        if (($option['type'] != 'slide' && $option['type'] != 'slide_dual' && !$values) || $hideOptionByValuesCount()) {
+//        	continue;
+//        }
 
 
         if ($values && $option['type'] == 'select' || $option['type'] == 'radio') {
