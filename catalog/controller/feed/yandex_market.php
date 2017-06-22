@@ -168,8 +168,16 @@ class ControllerFeedYandexMarket extends Controller {
         //$data['barcode'] = $product['sku'];
         if (!empty($product['image'])) {
           //$data['picture'] = $this->model_tool_image->resize($product['image'], 100, 100);
-          $data['picture'] = HTTPS_SERVER . 'image/'.$product['image'];
+          $data['picture'][] = HTTPS_SERVER . 'image/'.$product['image'];
         }
+
+
+          $img_addit = $this->model_catalog_product->getProductImages($product['product_id']);
+          if(!empty($img_addit)){
+              foreach ($img_addit as $picture){
+                  $data['picture'][] = HTTPS_SERVER . 'image/'.$picture['image'];
+              }
+          }
         /*
                 // пример структуры массива для вывода параметров
                 $data['param'] = array(
@@ -187,6 +195,7 @@ class ControllerFeedYandexMarket extends Controller {
                   )
                 );
         */
+
         $this->setOffer($data);
       }
 
@@ -491,7 +500,13 @@ class ControllerFeedYandexMarket extends Controller {
     // поэтому важно соблюдать его в соответствии с порядком описанным в DTD
     $offer['data'] = array();
     foreach ($allowed_tags as $key => $value) {
+        if(is_array($data[$key])){
+            $offer['data'][$key] = $data[$key];
+        }else{
       $offer['data'][$key] = $this->prepareField($data[$key]);
+        }
+
+
     }
 
     $this->offers[] = $offer;
@@ -576,6 +591,11 @@ class ControllerFeedYandexMarket extends Controller {
   private function array2Tag($tags) {
     $retval = '';
     foreach ($tags as $key => $value) {
+        if (is_array($value)){
+            foreach ($value as $value1){
+                $retval .= '<' . $key . '>' . $value1 . '</' . $key . '>;' . $this->eol;
+            }
+        }else
       $retval .= '<' . $key . '>' . $value . '</' . $key . '>' . $this->eol;
     }
 
