@@ -462,7 +462,7 @@ class ControllerModuleOCFilter extends Controller {
 //        	continue;
 //        }
 
-          if ($hideOptionByValuesCount()){
+          if ($hideOptionByValuesCount() &&  ($option['type'] != 'slide' && $option['type'] != 'slide_dual' )){
               continue;
           }
 
