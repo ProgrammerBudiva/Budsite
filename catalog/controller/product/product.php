@@ -15,7 +15,18 @@ class ControllerProductProduct extends Controller
         );
 
         $this->load->model('catalog/category');
+        //banner categories
+        $categories_for_banner = [
+            257, 325, 507, 324, 506, 509, 508, 532, 533, 531, 530, 529,
+            510, 511, 512, 255, 514, 513, 515, 516, 519, 518, 520, 521,
+            542, 543, 553, 552, 551, 550, 549, 548, 544, 545, 546, 547,
+            541, 540, 539, 534, 535, 536, 537, 538
+        ];
 
+        $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
+        if($banner_boolean !== false) {
+            $data['banner'] = true;
+        }
         if (isset($this->request->get['path'])) {
             $path = '';
 
@@ -38,19 +49,6 @@ class ControllerProductProduct extends Controller
                         'href' => $this->url->link('product/category', 'path=' . $path)
                     );
                 }
-            }
-
-            //banner categories
-            $categories_for_banner = [
-                257, 325, 507, 324, 506, 509, 508, 532, 533, 531, 530, 529,
-                510, 511, 512, 255, 514, 513, 515, 516, 519, 518, 520, 521,
-                542, 543, 553, 552, 551, 550, 549, 548, 544, 545, 546, 547,
-                541, 540, 539, 534, 535, 536, 537, 538
-            ];
-
-            $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
-            if($banner_boolean !== false) {
-                $data['banner'] = true;
             }
 
             // Set the last category breadcrumb
