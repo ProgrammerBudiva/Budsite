@@ -22,8 +22,8 @@ class ControllerProductProduct extends Controller
             542, 543, 553, 552, 551, 550, 549, 548, 544, 545, 546, 547,
             541, 540, 539, 534, 535, 536, 537, 538
         ];
-
-        $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
+        $query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "product_to_category WHERE product_id=" . $this->request->get['product_id'] );
+        $banner_boolean = array_intersect($query->rows, $categories_for_banner);
         if($banner_boolean !== false) {
             $data['banner'] = true;
         }
