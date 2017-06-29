@@ -8,9 +8,19 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	//config.language='en';
-	config.height=450;
-	config.extraPlugins = 'codemirror,textselection,oembed,widget,lineutils,youtube,slideshow,widgetbootstrap,widgettemplatemenu,quicktable,tableresize,autocorrect,wordcount,lineheight,zoom,backgrounds,ckeditor-gwf-plugin,letterspacing,nbsp,simplebutton,wenzgmap,osem_googlemaps,videosnapshot,qrc,symbol,html5validation,extraformattributes';//
-	//widget required by oembed, lineutils required by widget
+	config.height=400;
+  config.entities = false;
+
+  config.entities_greek = false;
+  config.entities_latin = false;
+  config.htmlEncodeOutput = false;
+	config.extraPlugins = 'image2,btgrid,colordialog,pbckcode,codemirror,textselection,oembed,widget,lineutils,youtube,slideshow,widgetbootstrap,widgettemplatemenu,quicktable,tableresize,autocorrect,wordcount,lineheight,zoom,backgrounds,ckeditor-gwf-plugin,letterspacing,nbsp,simplebutton,wenzgmap,osem_googlemaps,videosnapshot,qrc,symbol,html5validation,extraformattributes';
+  config.pbckcode = {
+         cls : '',
+         highlighter : 'PRETTIFY',
+         modes :  [ ['HTML', 'html'], ['CSS', 'css'], ['PHP', 'php'], ['JS', 'javascript'] ],
+         tab_size : '4'
+     };
 	
 	config.codemirror_theme='paraiso-light';
 	config.oembed_maxWidth = '560';
@@ -28,61 +38,23 @@ CKEDITOR.editorConfig = function( config ) {
 			'Verdana/Verdana, Geneva, sans-serif';
 
 	config.allowedContent = true; 
-	
-	config.removePlugins = 'magicline';
-	
 	config.wordcount_showCharCount =  true;
-
-    config.fillEmptyBlocks = false;
-
-    config.basicEntities = false;
-
-	config.toolbar = [
-		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', '-', 'autoFormat','CommentSelectedRange','UncommentSelectedRange','AutoComplete','-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ] },
+  
+  	config.toolbar = [
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'pbckcode', 'Source', '-', 'autoFormat','CommentSelectedRange','UncommentSelectedRange','AutoComplete','-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ] },
 		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
 		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt','AutoCorrect' ] },
 		{ name: 'forms', items: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] },
 		'/',
 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
 		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-' ] },
-		{ name: 'insert', items: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar','Symbol', 'PageBreak', 'Iframe', '-', 'Youtube','oembed','videosnapshot', '-','wenzgmap','osem_googlemaps', '-','qrc','simplebutton','WidgetTemplateMenu','Slideshow' ] },
+		{ name: 'insert', items: ['Image', 'Flash', 'btgrid', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar','Symbol', 'PageBreak', 'Iframe', '-', 'Youtube','oembed','videosnapshot', '-','wenzgmap','osem_googlemaps', '-','qrc','simplebutton','WidgetTemplateMenu','Slideshow' ] },
 		'/',
 		{ name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize','lineheight','letterspacing' ] },
 		{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
 		{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
 		{ name: 'tools', items: [ 'Zoom','Maximize', 'ShowBlocks' ] },
 		{ name: 'others', items: [ '-', 'BidiLtr', 'BidiRtl','Language' ] },
-		{ name: 'about', items: [ 'About' ] }
 	];
 
 };
-
-/*
- * Remove &nbsp; entities which were inserted ie. when removing a space and
- * immediately inputting a space.
- *
- * NB: We could also set config.basicEntities to false, but this is stongly
- * adviced against since this also does not turn ie. < into &lt;.
- * @link http://stackoverflow.com/a/16468264/328272
- *
- * Based on StackOverflow answer.
- * @link http://stackoverflow.com/a/14549010/328272
- */
-CKEDITOR.plugins.add('removeRedundantNBSP', {
-    afterInit: function(editor) {
-        var config = editor.config,
-            dataProcessor = editor.dataProcessor,
-            htmlFilter = dataProcessor && dataProcessor.htmlFilter;
-
-        if (htmlFilter) {
-            htmlFilter.addRules({
-                text: function(text) {
-                    return text.replace(/(\w)&nbsp;/g, '$1 ');
-                }
-            }, {
-                applyToAll: true,
-                excludeNestedEditable: true
-            });
-        }
-    }
-});
