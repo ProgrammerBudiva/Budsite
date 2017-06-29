@@ -86,11 +86,14 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" src="/admin/view/javascript/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
 $('#language a:first').tab('show');
 
 <?php foreach ($languages as $language) { ?>
 $('#input-description<?php echo $language['language_id']; ?>').summernote({height: 300});
+	$('.note-editor').remove();
+    CKEDITOR.replace('input-description2');
 <?php } ?>
 </script>
 <?php echo $footer; ?>
