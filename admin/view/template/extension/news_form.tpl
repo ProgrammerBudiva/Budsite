@@ -93,7 +93,7 @@
 					<input type="text" name="meta-title" value="<?php echo $meta_title ?>" placeholder="Мета-тег Title" id="meta-title" class="form-control" />
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group" style="display: none">
 				<label class="col-sm-2 control-label" for="meta-h1">Мета-тег H1</label>
 				<div class="col-sm-10">
 					<input type="text" name="meta-h1" value="<?php echo $meta_h1?>" placeholder="Мета-тег H1" id="meta-h1" class="form-control" />
