@@ -12,11 +12,35 @@ class ModelExtensionNews extends Model {
 		if ($data['keyword']) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'news_id=" . (int)$news_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
 		}
+
+        if ($data['meta-keyword'] || $data['meta-title'] || $data['meta-h1'] || $data['meta-description']){
+            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "news_meta WHERE news_id = '" . (int)$news_id . "'");
+            if ($query->num_rows == 0){
+                $this->db->query("INSERT INTO " . DB_PREFIX . "news_meta SET news_id = '" . (int)$news_id . "'");
+            }
+
+        }
+
+        if ($data['meta-keyword']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_keyword = '" . $data['meta-keyword'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-title']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_title = '" . $data['meta-title'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-h1']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_h1 = '" . $data['meta-h1'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-description']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_description = '" . $data['meta-description'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
 	}
 	
 	public function editNews($news_id, $data) {
 		$this->db->query("UPDATE " . DB_PREFIX . "news SET image = '" . $this->db->escape($data['image']) . "', status = '" . (int)$data['status'] . "' WHERE news_id = '" . (int)$news_id . "'");
-		
+
 		$this->db->query("DELETE FROM " . DB_PREFIX . "news_description WHERE news_id = '" . (int)$news_id. "'");
 		
 		foreach ($data['news'] as $key => $value) {
@@ -28,6 +52,30 @@ class ModelExtensionNews extends Model {
 		if ($data['keyword']) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'news_id=" . (int)$news_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
 		}
+
+		if ($data['meta-keyword'] || $data['meta-title'] || $data['meta-h1'] || $data['meta-description']){
+		    $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "news_meta WHERE news_id = '" . (int)$news_id . "'");
+		    if ($query->num_rows == 0){
+		        $this->db->query("INSERT INTO " . DB_PREFIX . "news_meta SET news_id = '" . (int)$news_id . "'");
+            }
+
+        }
+
+		if ($data['meta-keyword']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_keyword = '" . $data['meta-keyword'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-title']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_title = '" . $data['meta-title'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-h1']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_h1 = '" . $data['meta-h1'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
+
+        if ($data['meta-description']) {
+            $this->db->query("UPDATE " . DB_PREFIX . "news_meta SET meta_description = '" . $data['meta-description'] . "' WHERE news_id = '" . (int)$news_id . "'");
+        }
 	}
 	
 	public function getNews($news_id) {
@@ -39,6 +87,12 @@ class ModelExtensionNews extends Model {
 			return false;
 		}
 	}
+
+	public function getNewsMeta($news_id)
+    {
+	    $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "news_meta WHERE news_id = " . (int)$news_id);
+	    return $query->row;
+    }
    
 	public function getNewsDescription($news_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "news_description WHERE news_id = '" . (int)$news_id . "'"); 

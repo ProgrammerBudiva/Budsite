@@ -131,6 +131,7 @@ class ControllerExtensionNews extends Controller {
   }
 
   public function edit() {
+
     $this->language->load('extension/news');
 
     $this->load->model('extension/news');
@@ -289,6 +290,13 @@ class ControllerExtensionNews extends Controller {
     $data['header'] = $this->load->controller('common/header');
     $data['column_left'] = $this->load->controller('common/column_left');
     $data['footer'] = $this->load->controller('common/footer');
+
+    $news_meta = $this->model_extension_news->getNewsMeta($this->request->get['news_id']);
+
+    $data['meta_title'] = $news_meta['meta_title'];
+    $data['meta_h1'] = $news_meta['meta_h1'];
+    $data['meta_keyword'] = $news_meta['meta_keyword'];
+    $data['meta_description'] = $news_meta['meta_description'];
 
     $this->response->setOutput($this->load->view('extension/news_form.tpl', $data));
   }

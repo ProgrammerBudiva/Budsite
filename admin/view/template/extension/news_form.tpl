@@ -81,6 +81,30 @@
 			  </select>
 			</div>
 		  </div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="meta-keyword">Мета-тег Keyword</label>
+				<div class="col-sm-10">
+					<input type="text" name="meta-keyword" value="<?php echo $meta_keyword?>" placeholder="Мета-тег Keyword" id="meta-keyword" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="meta-title">Мета-тег Title</label>
+				<div class="col-sm-10">
+					<input type="text" name="meta-title" value="<?php echo $meta_title ?>" placeholder="Мета-тег Title" id="meta-title" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="meta-h1">Мета-тег H1</label>
+				<div class="col-sm-10">
+					<input type="text" name="meta-h1" value="<?php echo $meta_h1?>" placeholder="Мета-тег H1" id="meta-h1" class="form-control" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="meta-description">Мета-тег Description</label>
+				<div class="col-sm-10">
+					<textarea rows="5" name="meta-description" value="<?php echo $meta_description ?>" placeholder="Мета-тег Description" id="meta-description" class="form-control"><?php echo $meta_description ?></textarea>
+				</div>
+			</div>
         </form>
       </div>
     </div>

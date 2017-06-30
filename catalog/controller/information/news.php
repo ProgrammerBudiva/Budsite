@@ -86,7 +86,7 @@ class ControllerInformationNews extends Controller {
  
 	public function news() {
 		$this->load->model('extension/news');
-	  
+
 		$this->language->load('information/news');
  
 		if (isset($this->request->get['news_id']) && !empty($this->request->get['news_id'])) {
@@ -94,7 +94,13 @@ class ControllerInformationNews extends Controller {
 		} else {
 			$news_id = 0;
 		}
- 
+
+		$news_meta = $this->model_extension_news->getNewsMeta($news_id);
+
+        $this->document->setTitle($news_meta['meta_title']);
+        $this->document->setDescription($news_meta['meta_description']);
+        $this->document->setKeywords($news_meta['meta_keyword']);
+
 		$news = $this->model_extension_news->getNews($news_id);
  
 		$data['breadcrumbs'] = array();
@@ -115,7 +121,7 @@ class ControllerInformationNews extends Controller {
 				'href' 		=> $this->url->link('information/news/news', 'news_id=' . $news_id)
 			);
  
-			$this->document->setTitle($news['title']);
+//			$this->document->setTitle($news['title']);
 			
 			$this->load->model('tool/image');
 			

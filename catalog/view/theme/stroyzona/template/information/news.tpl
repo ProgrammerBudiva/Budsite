@@ -15,7 +15,7 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <div class="title-wrap-bord">
-                              <a class="title-module"><span><?php echo $heading_title;?></span></a>
+                              <a class="title-module"><h1 style="color: #f60"><?php echo $heading_title;?></h1></a>
                           </div>
 	  <?php if ($image) { ?>
 	  <div class="text-left news-img-wrap">

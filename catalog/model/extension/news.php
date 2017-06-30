@@ -25,7 +25,13 @@ class ModelExtensionNews extends Model {
 		
 		return $query->rows;
 	}
-	
+
+    public function getNewsMeta($news_id)
+    {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "news_meta WHERE news_id = " . (int)$news_id);
+        return $query->row;
+    }
+
 	public function getTotalNews() {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "news");
 	
