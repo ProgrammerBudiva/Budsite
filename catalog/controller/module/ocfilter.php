@@ -242,11 +242,11 @@ class ControllerModuleOCFilter extends Controller {
       $data['show_price_selected'] = 0;
     }
 
-		if ($this->config->get('ocfilter_show_options_limit') && $this->config->get('ocfilter_show_options_limit') < count($data['options'])) {
-    	$data['show_options_limit'] = $this->config->get('ocfilter_show_options_limit');
-		} else {
-      $data['show_options_limit'] = false;
-		}
+//		if ($this->config->get('ocfilter_show_options_limit') && $this->config->get('ocfilter_show_options_limit') < count($data['options'])) {
+//    	$data['show_options_limit'] = $this->config->get('ocfilter_show_options_limit');echo "<pre>"; print_r($data['show_options_limit']); echo "</pre>";die;
+//		} else {
+//      $data['show_options_limit'] = false;
+//		}
 
     $style = 'catalog/view/theme/default/stylesheet/ocfilter/ocfilter.css';
 
@@ -502,6 +502,7 @@ class ControllerModuleOCFilter extends Controller {
           'slide_value_max_get' => (isset($option['slide_value_max']) ? $option['slide_value_max'] : 0),
           'type'                => $option['type'],
           'selected'            => $this_option,
+          'sort_order'          => $option['sort_order'],
           'values'              => $values
         );
 
@@ -581,6 +582,9 @@ class ControllerModuleOCFilter extends Controller {
     uasort($options_data, function($v1, $v2){
       return strcmp(mb_strtoupper($v1['name']), mb_strtoupper($v2['name']));
     });
+        uasort($options_data, function($a, $b){
+            return $a["sort_order"] <=  $b["sort_order"];
+        });
 
     return $options_data;
   }
