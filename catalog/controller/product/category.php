@@ -234,7 +234,7 @@ class ControllerProductCategory extends Controller
 
             ////////////////////////////meta h1 generator
 
-            $h1_meta = 'Купить ' . mb_strtolower($category_info['name']) . ' для дома и дачи';
+            $h1_meta = 'Купить ' . mb_strtolower($category_info['meta_h1']) . ' для дома и дачи';
 
             //////////////////////////// end of meta h1 generator
 
