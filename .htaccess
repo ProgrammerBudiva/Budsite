@@ -9,10 +9,10 @@ Options +SymLinksIfOwnerMatch
 Options -Indexes
 
 # Prevent Direct Access to files
-<FilesMatch "\.(tpl|ini|log)">
- Order deny,allow
- Deny from all
-</FilesMatch>
+#<FilesMatch "\.(tpl|ini|log)">
+# Order deny,allow
+# Deny from all
+#</FilesMatch>
 
 # SEO URL Settings
 RewriteEngine On
