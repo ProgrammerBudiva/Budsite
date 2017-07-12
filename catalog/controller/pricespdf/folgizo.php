@@ -6,11 +6,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/system/library/dompdf-master/autoload
  * Date: 10.07.17
  * Time: 14:36
  */
-class ControllerPricespdfAcusticmat extends Controller
+class ControllerPricespdfFolgizo extends Controller
 {
     public function index()
     {
-        $data = ['filter_category_id' => 481 ];
+        $data = ['filter_category_id' => 480 ];
         $results = $this->model_catalog_product->getProducts($data);
 
         $html = '
@@ -30,7 +30,7 @@ class ControllerPricespdfAcusticmat extends Controller
             }
             .main{
                 position: relative;
-                top:213px;
+                top:194px;
                 width: 766px;
             }
             .main1 {
@@ -46,7 +46,6 @@ class ControllerPricespdfAcusticmat extends Controller
             }
             table td { word-wrap: break-word;
               }
-
         </style>
         </head>
         
@@ -59,8 +58,8 @@ class ControllerPricespdfAcusticmat extends Controller
                     <td width="9%">Артикул</td>
                     <td width="11%">Фото</td>
                     <td>Название</td>
-                    <td width="15%">Размер рулона /Площадь в упаковке</td>
-                    <td width="14%">Материал</td>
+                    <td width="10%">Размер рулона, м</td>
+                    <td width="10%">Толщина, мм</td>
                     <td width="7%">Ед. изм.</td>
                     <td width="11%">Цена</td>
                 </tr>
@@ -77,20 +76,19 @@ class ControllerPricespdfAcusticmat extends Controller
 
                 $attr_valid[$attr['attribute_id']] = $attr['text'];
             }
-
-            $volume = isset( $attr_valid[18])?$attr_valid[18] .' м.кв.':$attr_valid[8];
-            $material = isset($attr_valid[13])?$attr_valid[13]: '-';
+            $width = isset($attr_valid[9])? $attr_valid[9] : '-';
+            $volume = isset( $attr_valid[18])?$attr_valid[18]:$attr_valid[8];
             $query = $this->db->query("SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=". $productId."'");
 
             $test .= '
             <tr class="">
                 <td width="9%">' . $product['sku'] . '</td>
-                <td width="11%"><img style="max-width: 100%; height: auto; text-align: center; "  align="center"  src="image/' . $product['image'] . '"></td>
+                <td width="11%"><img style="max-width: 100%; height: auto; text-align: center; " align="center"  src="image/' . $product['image'] . '"></td>
                 <td> <a href="https://budsite.ua/'. $query->row['keyword'] .'">'. $product['name'] . '</td>
 
 
-                <td width="15%">' . $volume . '</td>
-                <td width="14%">' . $material . '</td>
+                <td width="10%">' . $volume . '</td>
+                <td width="10%">' . $width . '</td>
                 <td width="7%">' . $attr_valid[1] . '</td>
                 <td width="11%">'. number_format($product['price'], 2, '.', '') .'</td>
 
@@ -107,7 +105,7 @@ class ControllerPricespdfAcusticmat extends Controller
 
 //        $dompdf->stream("dompdf_out.pdf", array("Attachment" => false));
 //        $output = $dompdf->output();
-        file_put_contents('gen_prices/acusticmat.pdf', $dompdf->output());
+        file_put_contents('gen_prices/folgizo.pdf', $dompdf->output());
         exit(0);
     }
 }

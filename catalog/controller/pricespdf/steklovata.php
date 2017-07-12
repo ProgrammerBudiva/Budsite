@@ -30,7 +30,7 @@ class ControllerPricespdfSteklovata extends Controller
             }
             .main{
                 position: relative;
-                top:214px;
+                top:213px;
                 width: 766px;
             }
             .main1 {
@@ -58,7 +58,8 @@ class ControllerPricespdfSteklovata extends Controller
                     <td width="9%">Артикул</td>
                     <td width="11%">Фото</td>
                     <td>Название</td>
-                    <td width="14%">Равзмер рулона /упаковки</td>
+                    <td width="14%">Размер рулона /Площадь в упаковке</td>
+                    <td width="10%">Толщина</td>
                     <td width="7%">Ед. изм.</td>
                     <td width="11%">Цена</td>
                 </tr>
@@ -66,27 +67,28 @@ class ControllerPricespdfSteklovata extends Controller
         </header><div class="main">
             <table class="table  table-bordered">
         ';
-//echo "<pre>"; print_r($results); echo "</pre>";die;
+
         foreach ($results as $productId => $product){
             $attr_valid;
             $attrs = $this->model_catalog_product->getProductAttributes($productId);
-
+//echo "<pre>"; print_r($attrs); echo "</pre>";die;
             foreach ($attrs[0]['attribute'] as $attr) {
 
                 $attr_valid[$attr['attribute_id']] = $attr['text'];
             }
 
-            $volume = isset( $attr_valid[18])?$attr_valid[18]:$attr_valid[8];
+            $volume = isset( $attr_valid[18])?$attr_valid[18] . ' м.кв.':$attr_valid[8];
             $query = $this->db->query("SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=". $productId."'");
 
             $test .= '
             <tr class="">
-                <td width="9%">' . $productId . '</td>
-                <td width="11%"><img width="70" align="center" height="60" src="image/' . $product['image'] . '"></td>
+                <td width="9%">' . $product['sku'] . '</td>
+                <td width="11%"><img style="max-width: 100%; height: auto; text-align: center; " align="center"  src="image/' . $product['image'] . '"></td>
                 <td> <a href="https://budsite.ua/'. $query->row['keyword'] .'">'. $product['name'] . '</td>
 
 
                 <td width="14%">' . $volume . '</td>
+                <td width="10%">' . $attr_valid[9] . '</td>
                 <td width="7%">' . $attr_valid[1] . '</td>
                 <td width="11%">'. number_format($product['price'], 2, '.', '') .'</td>
 
