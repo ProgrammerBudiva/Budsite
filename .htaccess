@@ -8,7 +8,7 @@ Options +SymLinksIfOwnerMatch
 # Prevent Directoy listing
 Options -Indexes
 
- Prevent Direct Access to files
+ #Prevent Direct Access to files
 <FilesMatch "\.(tpl|ini|log)">
  Order deny,allow
  Deny from all
