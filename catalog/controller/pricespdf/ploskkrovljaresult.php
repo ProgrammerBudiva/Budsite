@@ -5,7 +5,7 @@
  * Date: 10.07.17
  * Time: 13:49
  */
-class ControllerPricespdfTest extends Controller
+class ControllerPricespdfPloskkrovljaresult extends Controller
 {
     public function index()
     {
@@ -14,7 +14,7 @@ class ControllerPricespdfTest extends Controller
 
         $pdf = new FPDI();
 
-        $files = array("acusticmat.pdf", "filename.pdf");
+        $files = array("gen_prices/ploskaya_krovlya/pvhmembrany.pdf", "gen_prices/ploskaya_krovlya/kompl.pdf");
         $pageCount = 0;
 
 
@@ -48,6 +48,6 @@ class ControllerPricespdfTest extends Controller
 
 
 //        file_put_contents('test.pdf', $pdf->Output());
-        $pdf->Output($_SERVER['DOCUMENT_ROOT'] .'/test.pdf', 'F');
+        $pdf->Output($_SERVER['DOCUMENT_ROOT'] .'prices/ploskajakrovlja.pdf', 'F');
     }
 }
