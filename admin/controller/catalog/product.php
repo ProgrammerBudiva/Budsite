@@ -859,9 +859,9 @@ class ControllerCatalogProduct extends Controller {
 		}
 
 		if (isset($this->request->post['keyword'])) {
-			$data['keyword'] = $this->request->post['keyword'];
+			$data['keyword'] = strtolower($this->request->post['keyword']);
 		} elseif (!empty($product_info)) {
-			$data['keyword'] = $product_info['keyword'];
+			$data['keyword'] = strtolower($product_info['keyword']);
 		} else {
 			$data['keyword'] = '';
 		}
