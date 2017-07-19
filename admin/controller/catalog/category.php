@@ -534,9 +534,9 @@ class ControllerCatalogCategory extends Controller {
 		}
 
 		if (isset($this->request->post['keyword'])) {
-			$data['keyword'] = $this->request->post['keyword'];
+			$data['keyword'] = strtolower($this->request->post['keyword']);
 		} elseif (!empty($category_info)) {
-			$data['keyword'] = $category_info['keyword'];
+			$data['keyword'] = strtolower($category_info['keyword']);
 		} else {
 			$data['keyword'] = '';
 		}

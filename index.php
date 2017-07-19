@@ -254,6 +254,9 @@ $controller = new Front($registry);
 // Simple Redirect Master
 $controller->addPreAction(new Action('startup/simple_redirect_master'));
 
+//Making url lowercase
+$controller->addPreAction(new Action('startup/lowercase_url'));
+
 // Maintenance Mode
 $controller->addPreAction(new Action('common/maintenance'));
 
