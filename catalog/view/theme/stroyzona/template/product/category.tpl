@@ -20,6 +20,15 @@
   <div class="title-wrap-bord">
     <div class="title-module"><h1><?= empty($h1) ? $heading_title : $h1 ?></h1></div>
   </div>
+
+
+  <div style="display: flex; flex-direction: column-reverse;">
+    <?php if (!$this->registry->get('request')->hasRestrictedParams()) { ?>
+    <div class="desc category-description-field">
+        <?php echo $description?>
+    </div>
+    <?php } ?>
+
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -204,13 +213,10 @@
             </div>
         </div>
       <?php } ?>
-      <?php if (!$this->registry->get('request')->hasRestrictedParams()) { ?>
-        <div class="desc category-description-field">
-          <?php echo $description?>
-        </div>
-      <?php } ?>
+
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
+  </div>
 </div>
 
 <div class="modal-popup" id="wishlist-popup">
