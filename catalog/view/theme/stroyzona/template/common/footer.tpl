@@ -27,12 +27,12 @@
           <div class="fb-wrapper"><div class="fb-page" data-href="https://www.facebook.com/budsite" data-width="230" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/budsite" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/budsite">budsite.com.ua</a></blockquote></div></div>
             </div>
         <div class="footer-module">
-          <a href="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></a>
-          <a href="<?php echo $link_shipping;?>"><?php echo $text_shipping;?></a>
-          <a href="<?php echo $link_blog;?>"><?php echo $text_blog;?></a>
-          <a href="<?php echo $link_contacts;?>"><?php echo $text_contacts;?></a>
-          <a href="<?php echo $link_cooperation;?>"><?php echo $text_cooperation;?></a>
-          <a href="/garantii">Гарантии</a>
+          <a rel="nofollow" href="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></a>
+          <a rel="nofollow" href="<?php echo $link_shipping;?>"><?php echo $text_shipping;?></a>
+          <a rel="nofollow" href="<?php echo $link_blog;?>"><?php echo $text_blog;?></a>
+          <a rel="nofollow" href="<?php echo $link_contacts;?>"><?php echo $text_contacts;?></a>
+          <a rel="nofollow" href="<?php echo $link_cooperation;?>"><?php echo $text_cooperation;?></a>
+          <a rel="nofollow" href="/garantii">Гарантии</a>
         </div>
         <div class="footer-module">
           <a href="/obogrevateli">Обогреватели</a>
