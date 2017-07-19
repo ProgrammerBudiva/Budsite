@@ -135,3 +135,6 @@ RewriteCond %{HTTP_USER_AGENT} DotBot [OR]
 RewriteCond %{HTTP_USER_AGENT} simple-share-buttons
 RewriteRule ^(.*)$ – [F,L]
 ## ##############################  BOT BANNING #################################
+
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule ^(.*)$ /${lc:$1} [R=301,L]
