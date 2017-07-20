@@ -50,7 +50,7 @@
                     <?php } ?>
                 </table>
                 <p class="text-center cart-resp-btn">
-                    <button data-link="<?php echo $cart; ?>"onclick="location.href='index.php?route=checkout/cart'" class="btn-primary text-left shopping-cart-link">
+                    <button data-link="<?php echo $cart; ?>" class="btn-primary text-left shopping-cart-link">
                       <strong><i class="fa fa-shopping-cart"></i><span style="font-family:Arial"><?php echo $text_cart; ?></span></strong>
                     </button>
 
