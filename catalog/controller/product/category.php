@@ -482,7 +482,8 @@ class ControllerProductCategory extends Controller
                     'in_compared' => $in_compared,
                     //'attribute_groups' => $attribute_groups,
                     'rating' => $result['rating'],
-                    'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id']),
+//                    'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id']),
+                    'href' => $this->url->link('product_id=' . $result['product_id']),
                     'brand' => $brandName,
                 );
             }
