@@ -250,6 +250,8 @@ foreach ($query->rows as $result) {
 // Front Controller
 $controller = new Front($registry);
 
+// Redirect custom /category/product -> /product
+$controller->addPreAction(new Action('startup/redirect_custom'));
 
 // Simple Redirect Master
 $controller->addPreAction(new Action('startup/simple_redirect_master'));
