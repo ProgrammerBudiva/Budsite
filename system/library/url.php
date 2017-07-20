@@ -14,7 +14,9 @@ class Url {
 	}
 
 	public function link($route, $args = '', $secure = false) {
-        $seo_url = $this->getUrlDetail($route);
+	    if($_SERVER['PHP_SELF'] != '/admin/index.php') {
+        $seo_url = $this->getUrlDetail1($route);
+        }
 
         if($seo_url === NULL) {
             if (!$secure) {
