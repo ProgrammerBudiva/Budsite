@@ -197,8 +197,8 @@ class ControllerCommonCart extends Controller {
       );
     }
       $this->load->model('catalog/seo_url');
-    $data['cart'] = $this->model_catalog_seo_url->getUrlKeyword('checkout/cart');
-    $data['checkout'] = $this->model_catalog_seo_url->getUrlKeyword('checkout/checkout');
+    $data['cart'] = $this->url->link('checkout/cart');
+    $data['checkout'] = $this->url->link('checkout/checkout');
     $data['action'] = $this->url->link('checkout/cart/ajax_edit', '', 'SSL');
 
     if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/cart.tpl')) {
