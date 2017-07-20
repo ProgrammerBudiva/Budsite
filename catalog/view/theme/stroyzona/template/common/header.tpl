@@ -68,7 +68,7 @@
         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
         document,'script','https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '260299927704047', {
-        em: 'insert_email_variable,'
+        em: 'marketing@budsite.ua'
       });
       fbq('track', 'PageView');
     </script>
