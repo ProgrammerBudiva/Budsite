@@ -14,22 +14,38 @@ class Url {
 	}
 
 	public function link($route, $args = '', $secure = false) {
-		if (!$secure) {
-			$url = $this->domain;
-		} else {
-			$url = $this->ssl;
-		}
+        $seo_url = $this->getUrlDetail($route);
 
-		$url .= 'index.php?route=' . $route;
+        if($seo_url === NULL) {
+            if (!$secure) {
+                $url = $this->domain;
+            } else {
+                $url = $this->ssl;
+            }
 
-		if ($args) {
-			$url .= str_replace('&', '&amp;', '&' . ltrim($args, '&'));
-		}
+            $url .= 'index.php?route=' . $route;
 
-		foreach ($this->rewrite as $rewrite) {
-			$url = $rewrite->rewrite($url);
-		}
+            if ($args) {
+                $url .= str_replace('&', '&amp;', '&' . ltrim($args, '&'));
+            }
 
-		return $url;
+            foreach ($this->rewrite as $rewrite) {
+                $url = $rewrite->rewrite($url);
+            }
+
+            return $url;
+        }else{
+            return $seo_url;
+        }
 	}
+
+    public function getUrlDetail($query) {
+        global $loader, $registry;
+        $loader->model('catalog/seo_url');
+        $model = $registry->get('model_catalog_seo_url');
+
+        $result = $model->getUrlKeyword($query);
+        return $result;
+    }
+
 }
