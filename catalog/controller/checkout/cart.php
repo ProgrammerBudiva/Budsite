@@ -326,7 +326,10 @@ class ControllerCheckoutCart extends Controller {
 
       $data['continue'] = $this->url->link('common/home');
 
-      $data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
+      $this->load->model('catalog/seo_url');
+      $this->model_catalog_seo_url->getUrlKeyword('checkout/checkout');
+//      $data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
+      $data['checkout'] = $this->model_catalog_seo_url->getUrlKeyword('checkout/checkout');
 
       $this->load->model('extension/extension');
 
