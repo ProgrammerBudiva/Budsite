@@ -14,6 +14,23 @@ class ControllerProductProduct extends Controller
             'href' => $this->url->link('common/home')
         );
 
+        $this->load->model('catalog/seo_url');
+
+        $string_url = $_SERVER['HTTP_REFERER'];
+        $exp = explode('/', $string_url);
+
+        $query = $this->model_catalog_seo_url->GetUrlQuery(end($exp));
+
+        $category_id = preg_replace('~[^0-9]+~','',$query);
+        $result_crumbs = $this->model_catalog_seo_url->GetProductBreadcrumbs($category_id);
+
+        foreach ($result_crumbs as $value){
+            $data['breadcrumbs'][] = array(
+                'text' => $value['name'],
+                'href' => $value['link']
+            );
+        }
+
         $this->load->model('catalog/category');
         //banner categories
         $categories_for_banner = [
