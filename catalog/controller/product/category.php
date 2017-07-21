@@ -94,6 +94,17 @@ class ControllerProductCategory extends Controller
 
             $parts = explode('_', (string)$this->request->get['path']);
 
+            $this->load->model('catalog/seo_url');
+            $crumbs = $this->model_catalog_seo_url->GetCategoryBreadcrumbs($parts[0]);
+
+            foreach ($crumbs as $value){
+                $data['breadcrumbs'][] = array(
+                    'text' => $value['name'],
+                    'href' => $value['link']
+                );
+            }
+
+
             foreach ($parts as $path_id) {
                 if (!$path) {
                     $path = (int)$path_id;
