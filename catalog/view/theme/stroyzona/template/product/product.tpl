@@ -888,66 +888,69 @@
     //--></script>
 <script type="text/javascript"><!--
     $('#button-cart').on('click', function () {
-        $.ajax({
-            url: 'index.php?route=checkout/cart/add',
-            type: 'post',
-            data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
-            dataType: 'json',
+        if($('#button-cart span div:eq(1)').html() == 'Купить') {
+            $.ajax({
+                url: 'index.php?route=checkout/cart/add',
+                type: 'post',
+                data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
+                dataType: 'json',
 
-            success: function (json) {
-                $('.alert, .text-danger').remove();
-                $('.form-group').removeClass('has-error');
+                success: function (json) {
+                    $('.alert, .text-danger').remove();
+                    $('.form-group').removeClass('has-error');
 
-                if (json['error']) {
-                    if (json['error']['option']) {
-                        for (i in json['error']['option']) {
-                            var element = $('#input-option' + i.replace('_', '-'));
+                    if (json['error']) {
+                        if (json['error']['option']) {
+                            for (i in json['error']['option']) {
+                                var element = $('#input-option' + i.replace('_', '-'));
 
-                            if (element.parent().hasClass('input-group')) {
-                                element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
-                            } else {
-                                element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                if (element.parent().hasClass('input-group')) {
+                                    element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                } else {
+                                    element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                }
                             }
                         }
+
+                        if (json['error']['recurring']) {
+                            $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                        }
+
+                        // Highlight any found errors
+                        $('.text-danger').parent().addClass('has-error');
                     }
 
-                    if (json['error']['recurring']) {
-                        $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
-                    }
+                    if (json['success']) {
+                        $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-                    // Highlight any found errors
-                    $('.text-danger').parent().addClass('has-error');
-                }
+                        $('#cart-total').html(json['total']);
 
-                if (json['success']) {
-                    $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                        $('html, body').animate({scrollTop: 0}, 'slow');
+                        $('#cart > ul').load('index.php?route=common/cart/info ul li');
 
-                    $('#cart-total').html(json['total']);
+                        $('#cart').addClass("open");
 
-                    $('html, body').animate({scrollTop: 0}, 'slow');
-                    $('#cart > ul').load('index.php?route=common/cart/info ul li');
+                        $('#button-cart span div:eq(1)').text('В корзине');
+                        $('#button-cart span div:eq(0) i:eq(1)').show();
 
-                    $('#cart').addClass("open");
+                        $('#cart .dropdown-menu').css({"opacity":"1"});
 
-                    $('#button-cart span div:eq(1)').text('В корзине');
-                    $('#button-cart span div:eq(0) i:eq(1)').show();
-
-                    $('#cart .dropdown-menu').css({"opacity":"1"});
-
-                    setTimeout(function () {
-
-                        $('#cart .dropdown-menu').animate({
-                            opacity: 0
-                        },2000);
                         setTimeout(function () {
-                            $('#cart').removeClass("open");
-                            $('#cart .dropdown-menu').css({opacity:"1"});
-                        }, 2100);
-                    }, 3000);
-                }
-            }
-        });
 
+                            $('#cart .dropdown-menu').animate({
+                                opacity: 0
+                            }, 2000);
+                            setTimeout(function () {
+                                $('#cart').removeClass("open");
+                                $('#cart .dropdown-menu').css({opacity:"1"});
+                            }, 2100);
+                        }, 3000);
+                    }
+                }
+            });
+        }else{
+            window.location.href = "/shopping-cart";
+        }
     });
     //--></script>
 
