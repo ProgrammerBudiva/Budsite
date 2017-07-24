@@ -24,7 +24,7 @@
           <div id="vk_groups"></div>
       </div>
       <div class="footer-module">
-          <div class="fb-wrapper"><div class="fb-page" data-href="https://www.facebook.com/budsite" data-width="230" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/budsite" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/budsite">budsite.com.ua</a></blockquote></div></div>
+          <div class="fb-wrapper"><div class="fb-page" data-href="https://www.facebook.com/budsite" data-width="230" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/budsite" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/budsite">budsite.ua</a></blockquote></div></div>
             </div>
         <div class="footer-module">
           <a rel="nofollow" href="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></a>
@@ -48,9 +48,9 @@
           <div class="box-heading"><p><?php echo $text_socials;?></p></div>
           <ul class="list-unstyled">
             <?php /*<li><a rel="nofollow" target="_blank" href="https://www.vk.com/budsite" class="vk"><i class="fa fa-vk"></i></a></li>*/ ?>
-            <li><a rel="nofollow" target="_blank" href="https://www.instagram.com/budsite_expert" class="ins"><i class="fa fa-instagram"></i></a></li>
             <li><a rel="nofollow" target="_blank" href="https://www.facebook.com/budsite" class="fb"><i class="fa fa-facebook"></i></a></li>
-            <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UCYK71g3ga1GUyUtqfLK5bLQ" class="you"><i class="fa fa-youtube"></i></a></li>
+            <li><a rel="nofollow" target="_blank" href="https://www.youtube.com/c/BudsiteUa" class="you"><i class="fa fa-youtube"></i></a></li>
+            <li><a rel="nofollow" target="_blank" href="https://www.instagram.com/budsite_expert" class="ins"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
