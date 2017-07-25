@@ -268,6 +268,7 @@ class ControllerCatalogReview extends Controller {
 				'review_id'  => $result['review_id'],
 				'name'       => $result['name'],
 				'author'     => $result['author'],
+				'email'      => !empty($result['email'])?$result['email']: '-',
 				'rating'     => $result['rating'],
 				'status'     => ($result['status']) ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -285,6 +286,7 @@ class ControllerCatalogReview extends Controller {
 
 		$data['column_product'] = $this->language->get('column_product');
 		$data['column_author'] = $this->language->get('column_author');
+		$data['column_author_email'] = $this->language->get('entry_author_email');
 		$data['column_rating'] = $this->language->get('column_rating');
 		$data['column_status'] = $this->language->get('column_status');
 		$data['column_date_added'] = $this->language->get('column_date_added');
@@ -592,9 +594,10 @@ class ControllerCatalogReview extends Controller {
 			$this->error['rating'] = $this->language->get('error_rating');
 		}
 
-        if (!$this->request->post['email']) {
-            $this->error['email'] = $this->language->get('email');
-        }
+//        if (!$this->request->post['email']) {
+//            $this->error['email'] = $this->language->get('email');
+//        }
+
 
 		return !$this->error;
 	}

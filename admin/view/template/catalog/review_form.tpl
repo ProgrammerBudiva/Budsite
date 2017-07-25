@@ -34,6 +34,8 @@
               <?php } ?>
             </div>
           </div>
+
+
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-product"><span data-toggle="tooltip" title="<?php echo $help_product; ?>"><?php echo $entry_product; ?></span></label>
             <div class="col-sm-10">
@@ -44,7 +46,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group required">
+    <!--      <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-plus"><?php echo $entry_plus; ?></label>
             <div class="col-sm-10">
               <textarea name="plus" cols="60" rows="8" placeholder="<?php echo $entry_plus; ?>" id="input-plus" class="form-control"><?php echo $plus; ?></textarea>
@@ -63,7 +65,7 @@
                         <?php echo $error_text; ?></span>
                         <?php } ?>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-text"><?php echo $entry_text; ?></label>
                 <div class="col-sm-10">
