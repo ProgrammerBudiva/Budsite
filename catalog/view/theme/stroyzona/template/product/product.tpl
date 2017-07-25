@@ -648,9 +648,9 @@
                                     </div>
                                     <div class="buttons">
                                         <div class="pull-right">
-                                            <button type="button" id="button-review"
+                                            <button style="border-radius: 10px; height: 45px;" type="button" id="button-review"
                                                     data-loading-text="<?php echo $text_loading; ?>"
-                                                    class="btn btn-primary"><?php echo $button_send; ?></button>
+                                                    class="review-btn btn btn-primary"><?php echo $button_send; ?></button>
                                         </div>
                                     </div>
                                     <?php } else { ?>

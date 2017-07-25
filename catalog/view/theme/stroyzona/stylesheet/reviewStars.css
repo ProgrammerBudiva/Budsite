@@ -5,7 +5,8 @@
 
 .ratingStars:not(:checked) > input {
     position:absolute;
-    top:-9999px;
+    display: none;
+    /*top:-9999px;*/
     /*clip:rect(0,0,0,0);*/
 }
 
