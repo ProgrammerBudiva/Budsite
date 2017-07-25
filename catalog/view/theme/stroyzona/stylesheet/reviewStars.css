@@ -1,0 +1,51 @@
+.ratingStars {
+    float:left;
+}
+
+
+.ratingStars:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    /*clip:rect(0,0,0,0);*/
+}
+
+.ratingStars:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    color:#ddd;
+    margin-top: -9px;
+    padding-left: 1%;
+
+}
+
+.ratingStars:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.ratingStars > input:checked ~ label {
+    color: gold;
+
+}
+
+.ratingStars:not(:checked) > label:hover,
+.ratingStars:not(:checked) > label:hover ~ label {
+    color: gold;
+
+}
+
+.ratingStars > input:checked + label:hover,
+.ratingStars > input:checked + label:hover ~ label,
+.ratingStars > input:checked ~ label:hover,
+.ratingStars > input:checked ~ label:hover ~ label,
+.ratingStars > label:hover ~ input:checked ~ label {
+    color: #ea0;
+
+}
+
+span .control-label {
+    color:#444;
+}
