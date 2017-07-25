@@ -3,7 +3,7 @@ class ModelCatalogReview extends Model {
 	public function addReview($product_id, $data) {
 		$this->event->trigger('pre.review.add', $data);
 
-		$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $this->db->escape($data['name']) . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', plus = '" . $this->db->escape($data['plus']) . "', minus = '" . $this->db->escape($data['minus']) . "',rating = '" . (int)$data['rating'] . "', date_added = NOW()");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $this->db->escape($data['name']) . "', email = '".$this->db->escape($data['email'])."', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', plus = '" . $this->db->escape($data['plus']) . "', minus = '" . $this->db->escape($data['minus']) . "',rating = '" . (int)$data['rating'] . "', date_added = NOW()");
 
 		$review_id = $this->db->getLastId();
 

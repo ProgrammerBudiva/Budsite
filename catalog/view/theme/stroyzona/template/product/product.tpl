@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<link href="catalog/view/theme/stroyzona/stylesheet/reviewStars.css" rel="stylesheet">
 <div class="container">
      <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
       <?php foreach ($breadcrumbs as $key => $breadcrumb) { ?>
@@ -566,36 +567,29 @@
                             </div>
                             <?php if ($review_status) { ?>
                             <div class="tab-pane" id="tab-review">
+<div>
                                 <form class="form-horizontal">
-                                    <div id="review"></div>
-                                    <div class="review-btn btn btn-primary"><?php echo $text_write; ?></div>
-                                    <div class="review-drop">
+                                    <div id="review" style="    margin-left: -1%;"></div>
+                                  <!--  <div class="review-btn btn btn-primary"><?php echo $text_write; ?></div> -->
+                                    <div class="review-drop col-md-12 col-sm-12 col-xs-12 ">
                                     <?php if ($review_guest) { ?>
                                     <div class="form-group required">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-3">
                                             <label class="control-label"
                                                    for="input-name"><?php echo $entry_name; ?></label>
-                                            <input type="text" name="name" value="" id="input-name"
+                                            <input  type="text" name="name" value="" id="input-name"
                                                    class="form-control"/>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-3">
                                             <label class="control-label"
-                                                   for="input-plus"><?php echo $entry_plus; ?></label>
-                                            <textarea name="plus" rows="5" value="" id="input-plus"
-                                                   class="form-control"></textarea>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="control-label"
-                                                   for="input-minus"><?php echo $entry_minus; ?></label>
-                                            <textarea name="minus" rows="5" value="" id="input-minus"
-                                                   class="form-control"></textarea>
+                                                   for="input-email">Email (не публикуется на сайте)</label>
+                                            <input  type="email" name="email" value="" id="input-email"
+                                                   class="form-control"/>
                                         </div>
                                     </div>
 
                                     <div class="form-group required">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-6">
                                             <label class="control-label"
                                                    for="input-review"><?php echo $entry_review; ?></label>
                                             <textarea name="text" rows="5" id="input-review"
@@ -605,32 +599,52 @@
                                         </div>
                                     </div>
                                     <div class="form-group required">
-                                        <div class="col-sm-4">
-                                            <label class="control-label"><?php echo $entry_rating; ?></label>
-                                            &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                                            <input type="radio" name="rating" value="1" id="rating-1"/><label
-                                                    for="rating-1"></label>
-                                            &nbsp;
-                                            <input type="radio" name="rating" value="2" id="rating-2"/><label
-                                                    for="rating-2"></label>
-                                            &nbsp;
-                                            <input type="radio" name="rating" value="3" id="rating-3"/><label
-                                                    for="rating-3"></label>
-                                            &nbsp;
-                                            <input type="radio" name="rating" value="4" id="rating-4"/><label
-                                                    for="rating-4"></label>
-                                            &nbsp;
-                                            <input type="radio" name="rating" value="5" id="rating-5"/><label
-                                                    for="rating-5"></label>
-                                            &nbsp;<?php echo $entry_good; ?>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <label class="control-label"
-                                                   for="input-captcha"><?php echo $entry_captcha; ?></label>
-                                            <input type="text" name="captcha" value="" id="input-captcha"
-                                                   class="form-control"/>
-                                           <img src="index.php?route=tool/captcha" alt="" id="captcha"/>
-                                        </div>
+                                           <div class="col-sm-4">
+                                               <!--     <label class="control-label"><?php echo $entry_rating; ?></label>
+                                                   &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+                                                   <input type="radio" name="rating" value="1" id="rating-1"/><label
+                                                           for="rating-1"></label>
+                                                   &nbsp;
+                                                   <input type="radio" name="rating" value="2" id="rating-2"/><label
+                                                           for="rating-2"></label>
+                                                   &nbsp;
+                                                   <input type="radio" name="rating" value="3" id="rating-3"/><label
+                                                           for="rating-3"></label>
+                                                   &nbsp;
+                                                   <input type="radio" name="rating" value="4" id="rating-4"/><label
+                                                           for="rating-4"></label>
+                                                   &nbsp;
+                                                   <input type="radio" name="rating" value="5" id="rating-5"/><label
+                                                           for="rating-5"></label>
+                                                   &nbsp;<?php echo $entry_good; ?>
+                                               </div>
+                                              <div class="col-sm-8">
+                                                   <label class="control-label"
+                                                          for="input-captcha"><?php echo $entry_captcha; ?></label>
+                                                   <input type="text" name="captcha" value="" id="input-captcha"
+                                                          class="form-control"/>
+                                                  <img src="index.php?route=tool/captcha" alt="" id="captcha"/>
+                                               </div>-->
+
+                                            <div class="ratingStars" id="rating-stars">
+                                                <strong><span class="control-label">Оцените этот товар:</span></strong>
+                                                <input class="no-formstyler" type="radio" id="star5" name="rating" value="5" />
+                                                <label for="star5" title="Rocks!">5 stars</label>
+
+                                                <input class="no-formstyler" type="radio" id="star4" name="rating" value="4" />
+                                                <label for="star4" title="Pretty good">4 stars</label>
+
+                                                <input class="no-formstyler" type="radio" id="star3" name="rating" value="3" />
+                                                <label for="star3" title="Meh">3 stars</label>
+
+                                                <input class="no-formstyler" type="radio" id="star2" name="rating" value="2" />
+                                                <label for="star2" title="Kinda bad">2 stars</label>
+
+                                                <input class="no-formstyler" type="radio" id="star1" name="rating" value="1" />
+                                                <label for="star1" title="Sucks big time">1 star</label>
+
+                                            </div>
+                                       </div>
                                     </div>
                                     <div class="buttons">
                                         <div class="pull-right">
@@ -644,6 +658,7 @@
                                     <?php } ?>
                                     </div>
                                 </form>
+</div>
                             </div>
                             <?php } ?>
                             <?php if ($analogs) { ?>
@@ -1040,12 +1055,13 @@
             data: 'name=' + encodeURIComponent($('input[name=\'name\']').val()) + '&text=' + encodeURIComponent($('textarea[name=\'text\']').val()) +
             '&plus=' + encodeURIComponent($('#input-plus').val()) + '&minus=' + encodeURIComponent($('#input-minus').val()) +
             '&rating=' + encodeURIComponent($('input[name=\'rating\']:checked').val() ? $('input[name=\'rating\']:checked').val() : '') +
-            '&captcha=' + encodeURIComponent($('input[name=\'captcha\']').val()),
-            complete: function () {
-                $('#captcha').attr('src', 'index.php?route=tool/captcha#' + new Date().getTime());
-                $('input[name=\'captcha\']').val('');
-                $('#button-review').button('reset');
-            },
+            '&email=' + encodeURIComponent($('#input-email').val()),
+//            '&captcha=' + encodeURIComponent($('input[name=\'captcha\']').val()),
+//            complete: function () {
+//                $('#captcha').attr('src', 'index.php?route=tool/captcha#' + new Date().getTime());
+//                $('input[name=\'captcha\']').val('');
+//                $('#button-review').button('reset');
+//            },
             success: function (json) {
                 $('.alert-success, .alert-danger').remove();
 
@@ -1182,5 +1198,11 @@
           list: $pItem.data('list') ? $pItem.data('list') : "product/common_slider"
         }
       };
+    </script>
+     <!--   destroy formstyler on radioStars -->
+    <script>
+        setTimeout(function () {
+            $('.no-formstyler').styler('destroy');
+        }, 1000);
     </script>
 <?php echo $footer; ?>
