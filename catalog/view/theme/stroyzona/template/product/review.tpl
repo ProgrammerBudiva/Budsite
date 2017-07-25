@@ -1,7 +1,7 @@
 <?php if ($reviews) { ?>
 <?php foreach ($reviews as $review) { ?>
 <div class=" padding col-md-12 col-sm-12 col-xs-12 ">
-    <div class="col-md-3 col-sm-3 col-xs-3 " style="width: 7%;">
+    <div class="col-md-3 col-sm-3 col-xs-3 " style="width: 7%; color: #444">
       <strong><?php echo $review['author']; ?></strong>
     </div>
   <div class="text-left">
