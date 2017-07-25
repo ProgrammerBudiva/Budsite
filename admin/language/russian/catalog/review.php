@@ -19,6 +19,7 @@ $_['column_action']     = 'Действие';
 // Entry
 $_['entry_product']     = 'Товар';
 $_['entry_author']      = 'Автор';
+$_['entry_author_email']      = 'Email';
 $_['entry_rating']      = 'Рейтинг';
 $_['entry_status']      = 'Статус';
 $_['entry_text']        = 'Текст';

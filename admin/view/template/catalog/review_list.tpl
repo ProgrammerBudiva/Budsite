@@ -86,6 +86,9 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_author; ?>"><?php echo $column_author; ?></a>
                     <?php } ?></td>
+                  <td class="text-left">
+                    <span style="color: #1e91cf;"><?php echo $column_author_email; ?></span>
+                  </td>
                   <td class="text-right"><?php if ($sort == 'r.rating') { ?>
                     <a href="<?php echo $sort_rating; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_rating; ?></a>
                     <?php } else { ?>
@@ -115,6 +118,7 @@
                     <?php } ?></td>
                   <td class="text-left"><?php echo $review['name']; ?></td>
                   <td class="text-left"><?php echo $review['author']; ?></td>
+                  <td class="text-left"><?php echo $review['email']; ?></td>
                   <td class="text-right"><?php echo $review['rating']; ?></td>
                   <td class="text-left"><?php echo $review['status']; ?></td>
                   <td class="text-left"><?php echo $review['date_added']; ?></td>
