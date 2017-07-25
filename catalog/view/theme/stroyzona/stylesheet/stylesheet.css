@@ -617,7 +617,7 @@ footer .subscribe-email span{display:none;}
 #tab-specification{font-size:14px;}
 #tab-specification table tbody tr:nth-child(2n+1){background-color:#c3c3c3;}
 .if-attribute.col-left{padding-right:15px;box-sizing:border-box;border-right:1px solid #ccc;}
-.review-drop{display:none;}
+/*.review-drop{display:none;}*/
 #button-review{height:50px;position:relative;color:#fff;background-color:#F18A36;background-image:none!important;border:none;border-radius:0;box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;-webkit-box-shadow:none;font-size:16px;}
 #button-review:hover{background-color:#C87F00;}
 #button-review:focus, #button-review:active{border:none;outline:none;}

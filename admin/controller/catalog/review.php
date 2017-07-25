@@ -592,6 +592,10 @@ class ControllerCatalogReview extends Controller {
 			$this->error['rating'] = $this->language->get('error_rating');
 		}
 
+        if (!$this->request->post['email']) {
+            $this->error['email'] = $this->language->get('email');
+        }
+
 		return !$this->error;
 	}
 

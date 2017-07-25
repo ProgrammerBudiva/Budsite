@@ -1031,7 +1031,7 @@ class ControllerProductProduct extends Controller
     public function write()
     {
         $this->load->language('product/product');
-
+//echo "<pre>"; print_r($this->request); echo "</pre>";die;
         $json = array();
 
         if ($this->request->server['REQUEST_METHOD'] == 'POST') {
@@ -1047,9 +1047,12 @@ class ControllerProductProduct extends Controller
                 $json['error'] = $this->language->get('error_rating');
             }
 
-            if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
-                $json['error'] = $this->language->get('error_captcha');
+            if (empty($this->request->post['email'])){
+                $json['error'] = $this->language->get('error_email');
             }
+//            if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
+//                $json['error'] = $this->language->get('error_captcha');
+//            }
 
             unset($this->session->data['captcha']);
 
