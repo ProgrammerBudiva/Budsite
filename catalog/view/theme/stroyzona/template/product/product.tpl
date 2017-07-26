@@ -573,16 +573,16 @@
                                   <!--  <div class="review-btn btn btn-primary"><?php echo $text_write; ?></div> -->
                                     <div class="review-drop col-md-12 col-sm-12 col-xs-12 ">
                                     <?php if ($review_guest) { ?>
-                                    <div class="form-group required">
-                                        <div class="col-sm-3">
-                                            <label class="control-label"
+                                    <div class="form-group">
+                                        <div class="col-sm-3 required">
+                                            <label class=" required control-label"
                                                    for="input-name"><?php echo $entry_name; ?></label>
                                             <input  type="text" name="name" value="" id="input-name"
                                                    class="form-control"/>
                                         </div>
                                         <div class="col-sm-3">
-                                            <label class="control-label"
-                                                   for="input-email">Email (не публикуется на сайте)</label>
+                                            <label class="control-label email-label"
+                                                   for="input-email">Email (для ответа)</label>
                                             <input  type="email" name="email" value="" id="input-email"
                                                    class="form-control"/>
                                         </div>
@@ -599,7 +599,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group required">
-                                           <div class="col-sm-4">
+                                           <div class="col-md-4">
                                                <!--     <label class="control-label"><?php echo $entry_rating; ?></label>
                                                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
                                                    <input type="radio" name="rating" value="1" id="rating-1"/><label
@@ -625,9 +625,10 @@
                                                           class="form-control"/>
                                                   <img src="index.php?route=tool/captcha" alt="" id="captcha"/>
                                                </div>-->
-
+                                            <div class="ratingWrap">
+                                            <div for="rating-stars" class="control-label padding-label"><strong>Оцените этот товар:</strong></div>
                                             <div class="ratingStars" id="rating-stars">
-                                                <strong><span class="control-label">Оцените этот товар:</span></strong>
+
                                                 <input class="no-formstyler" type="radio" id="star5" name="rating" value="5" />
                                                 <label for="star5" title="Rocks!">5 stars</label>
 
@@ -644,10 +645,11 @@
                                                 <label for="star1" title="Sucks big time">1 star</label>
 
                                             </div>
+                                            </div>
                                        </div>
                                     </div>
                                     <div class="buttons">
-                                        <div class="pull-right">
+                                        <div class="pull-left">
                                             <button style="border-radius: 10px; height: 45px;" type="button" id="button-review"
                                                     data-loading-text="<?php echo $text_loading; ?>"
                                                     class="review-btn btn btn-primary"><?php echo $button_send; ?></button>
@@ -1063,10 +1065,13 @@
 //                $('#button-review').button('reset');
 //            },
             success: function (json) {
+                $('#button-review').button('reset');
+
                 $('.alert-success, .alert-danger').remove();
 
                 if (typeof json['error'] != "undefined") {
                     $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                    $('.review-drop').show();
                 }
 
                 if (typeof json['success'] != "undefined") {
@@ -1075,7 +1080,7 @@
                     $('input[name=\'name\']').val('');
                     $('textarea[name=\'text\']').val('');
                     $('input[name=\'rating\']:checked').prop('checked', false);
-                    $('input[name=\'captcha\']').val('');
+//                    $('input[name=\'captcha\']').val('');
                 }
             }
         });
