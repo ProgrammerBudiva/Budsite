@@ -4,7 +4,7 @@
     <div class="col-md-3 col-sm-3 col-xs-3 " style="width: 7%; color: #444">
       <strong><?php echo $review['author']; ?></strong>
     </div>
-  <div class="text-left">
+  <div class="text-left reviewStars">
 <?php for($i=0; $i < $review['rating']; $i++) { ?>
     <span class="stars">★</span>
 <?php } ?>
@@ -12,7 +12,7 @@
    <!-- <div class="review-date col-md-9 col-sm-9 col-xs-9 text-right"><?php echo $review['date_added']; ?></div>-->
 
   <div class="review-field ">
-    <div class="col-md-9 col-sm-9 col-xs-9 text-left">
+    <div class="col-md-9 col-sm-9 col-xs-9 text-left single-review">
       <p><?php echo $review['text']; ?></p>
     </div>
   </div>

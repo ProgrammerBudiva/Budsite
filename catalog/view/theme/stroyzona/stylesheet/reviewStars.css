@@ -1,5 +1,6 @@
 .ratingStars {
     float:left;
+    padding-top: 2%;
 }
 
 
@@ -49,4 +50,58 @@
 
 span .control-label {
     color:#444;
+}
+
+.ratingWrap {
+    display: inline-flex;
+}
+
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .col-sm-3{
+        width: 50%;
+    }
+
+    .col-sm-6 {
+        width: 100%;
+    }
+
+    .reviewStars {
+        padding-left: 10%;
+    }
+    .padding {
+        padding-left: 10px;
+    }
+
+    .single-review {
+        width:100%;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .ratingWrap {
+        display: inline;
+    }
+    .reviewStars {
+        padding-left: 25%;
+    }
+    .padding {
+        padding-left: 4px;
+    }
+    .single-review {
+        width:100%;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .ratingWrap {
+        display: inline-block;
+    }
 }
