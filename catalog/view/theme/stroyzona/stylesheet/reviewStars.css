@@ -79,6 +79,9 @@ and (max-device-width : 1024px)  {
     .single-review {
         width:100%;
     }
+    .review-field {
+        width: 100%!important;
+    }
 }
 
 @media only screen
@@ -95,6 +98,9 @@ and (max-device-width : 568px) {
     }
     .single-review {
         width:100%;
+    }
+    .review-field {
+        width: 100%!important;
     }
 }
 
