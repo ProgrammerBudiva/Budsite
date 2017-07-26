@@ -20,7 +20,7 @@
 <?php } ?>
 <div class="col-sm-12 text-center"><?php echo $pagination; ?></div>
 <?php } else { ?>
-<p><?php echo $text_no_reviews; ?></p>
+<p style="padding-left: 30px;"><?php echo $text_no_reviews; ?></p>
 <?php } ?>
 <div class="clear"></div>
 <style>
@@ -35,3 +35,9 @@
         padding-bottom: 2%;
     }
 </style>
+<!--   destroy formstyler on radioStars -->
+<script>
+    setTimeout(function () {
+        $('.no-formstyler').styler('destroy');
+    }, 1000);
+</script>
