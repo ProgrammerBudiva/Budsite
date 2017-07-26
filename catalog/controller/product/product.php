@@ -1044,6 +1044,7 @@ class ControllerProductProduct extends Controller
             }
 
             if (empty($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
+                echo "<pre>"; print_r($this->request); echo "</pre>";die;
                 $json['error'] = $this->language->get('error_rating');
             }
 

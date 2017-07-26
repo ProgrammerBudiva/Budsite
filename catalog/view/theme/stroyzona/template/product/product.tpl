@@ -629,7 +629,7 @@
                                             <div for="rating-stars" class="control-label padding-label"><strong>Оцените этот товар:</strong></div>
                                             <div class="ratingStars" id="rating-stars">
 
-                                                <input class="no-formstyler" type="radio" id="star5" name="rating" value="5" />
+                                                <input class="no-formstyler" type="radio" id="star5" checked name="rating" value="5" />
                                                 <label for="star5" title="Rocks!">5 stars</label>
 
                                                 <input class="no-formstyler" type="radio" id="star4" name="rating" value="4" />
@@ -1050,6 +1050,7 @@
 
     $('#button-review').on('click', function () {
         $('#button-review').button('loading');
+        $('.alert-danger').remove();
         $.ajax({
             url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
             type: 'post',
@@ -1066,7 +1067,6 @@
 //            },
             success: function (json) {
                 $('#button-review').button('reset');
-                $('.review-drop').show();
                 $('.alert-success, .alert-danger').remove();
 
                 if (typeof json['error'] != "undefined") {
@@ -1076,7 +1076,7 @@
 
                 if (typeof json['success'] != "undefined") {
                     $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
-
+                    $('.review-drop').hide();
                     $('input[name=\'name\']').val('');
                     $('input[name=\'email\']').val('');
                     $('textarea[name=\'text\']').val('');
