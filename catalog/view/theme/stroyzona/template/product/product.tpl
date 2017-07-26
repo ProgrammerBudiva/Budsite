@@ -754,7 +754,7 @@
 
 
                     <?php if ($products) { ?>
-                    <div class="related" style="clear: both">
+                    <div class="related" style="clear: both; padding-top: 15px;">
                         <div class="title-wrap-bord">
                             <a class="title-module"><span><?php echo $text_related;?></span></a>
                         </div>
@@ -1066,18 +1066,19 @@
 //            },
             success: function (json) {
                 $('#button-review').button('reset');
-
+                $('.review-drop').show();
                 $('.alert-success, .alert-danger').remove();
 
                 if (typeof json['error'] != "undefined") {
                     $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
-                    $('.review-drop').show();
+
                 }
 
                 if (typeof json['success'] != "undefined") {
                     $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
 
                     $('input[name=\'name\']').val('');
+                    $('input[name=\'email\']').val('');
                     $('textarea[name=\'text\']').val('');
                     $('input[name=\'rating\']:checked').prop('checked', false);
 //                    $('input[name=\'captcha\']').val('');
@@ -1204,10 +1205,5 @@
         }
       };
     </script>
-     <!--   destroy formstyler on radioStars -->
-    <script>
-        setTimeout(function () {
-            $('.no-formstyler').styler('destroy');
-        }, 1000);
-    </script>
+
 <?php echo $footer; ?>
