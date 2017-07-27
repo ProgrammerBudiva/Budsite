@@ -1044,13 +1044,13 @@ class ControllerProductProduct extends Controller
             }
 
             if (empty($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
-                echo "<pre>"; print_r($this->request); echo "</pre>";die;
+//                echo "<pre>"; print_r($this->request); echo "</pre>";die;
                 $json['error'] = $this->language->get('error_rating');
             }
 
-            if (empty($this->request->post['email'])){
-                $json['error'] = $this->language->get('error_email');
-            }
+//            if (empty($this->request->post['email'])){
+//                $json['error'] = $this->language->get('error_email');
+//            }
 //            if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
 //                $json['error'] = $this->language->get('error_captcha');
 //            }
