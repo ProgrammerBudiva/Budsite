@@ -125,8 +125,6 @@
                   <td class="text-right"><a href="<?php echo $review['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>
-
-
                 <?php } else { ?>
                 <tr>
                   <td class="text-center" colspan="7"><?php echo $text_no_results; ?></td>

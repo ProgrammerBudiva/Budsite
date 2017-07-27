@@ -88,17 +88,12 @@ class ControllerInformationNews extends Controller {
 		$this->load->model('extension/news');
 
 		$this->language->load('information/news');
-
-        $this->load->model('extension/news_review');
-
-
+ 
 		if (isset($this->request->get['news_id']) && !empty($this->request->get['news_id'])) {
 			$news_id = $this->request->get['news_id'];
 		} else {
 			$news_id = 0;
 		}
-
-        $reviews = $this->model_extension_news_review->getReviews($news_id);
 
 		$news_meta = $this->model_extension_news->getNewsMeta($news_id);
 
@@ -119,7 +114,7 @@ class ControllerInformationNews extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('information/news')
 		);
-
+ 
 		if ($news) {
 			$data['breadcrumbs'][] = array(
 				'text' 		=> $news['title'],
@@ -134,21 +129,13 @@ class ControllerInformationNews extends Controller {
  
 			$data['heading_title'] = html_entity_decode($news['title'], ENT_QUOTES);
 			$data['description'] = html_entity_decode($news['description'], ENT_QUOTES);
-            $data['test'] = $reviews[0]['author'];
+	 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-            $data['news_id'] = $news_id;
-
-            $data['button_send'] = $this->language->get('button_send');
-            $data['entry_name'] = $this->language->get('entry_name');
-            $data['entry_email'] = $this->language->get('entry_email');
-            $data['entry_review'] = $this->language->get('entry_review');
-
-			$data['reviews'] = $reviews;
 
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/news.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/information/news.tpl', $data));
@@ -167,7 +154,7 @@ class ControllerInformationNews extends Controller {
 			$data['text_error'] = $this->language->get('text_error');
 			$data['button_continue'] = $this->language->get('button_continue');
 			$data['continue'] = $this->url->link('common/home');
-
+	 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
@@ -182,32 +169,4 @@ class ControllerInformationNews extends Controller {
 			}
 		}
 	}
-
-    public function addReview(){
-        $this->load->language('information/news');
-
-        $json = array();
-
-        if ($this->request->server['REQUEST_METHOD'] == 'POST') {
-            if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 25)) {
-                $json['error'] = $this->language->get('error_name');
-            }
-
-            if ((utf8_strlen($this->request->post['text']) < 25) || (utf8_strlen($this->request->post['text']) > 1000)) {
-                $json['error'] = $this->language->get('error_text');
-            }
-
-
-            if (!isset($json['error'])) {
-                $this->load->model('extension/news_review');
-
-                $this->model_extension_news_review->addReview($this->request->get['news_id'], $this->request->post);
-
-                $json['success'] = $this->language->get('text_success');
-            }
-        }
-
-        $this->response->addHeader('Content-Type: application/json');
-        $this->response->setOutput(json_encode($json));
-    }
 }
