@@ -15,7 +15,7 @@ class ModelExtensionNewsReview extends Model
         $this->event->trigger('pre.review.add', $data);
 
         $this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $this->db->escape($data['name']) .
-            "', email = '".$this->db->escape($data['email'])."', news_id = '" . (int)$news_id .
+            "', news_id = '" . (int)$news_id .
             "', text = '" . $this->db->escape($data['text']) . "', date_added = NOW()");
 
     }
