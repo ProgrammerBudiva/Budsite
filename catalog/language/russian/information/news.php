@@ -13,7 +13,7 @@ $_['text_error'] 		= 'Страница не найдена!';
 $_['button_send'] 		= 'Комментировать';
 $_['entry_name'] 		= 'Ваше имя:';
 $_['entry_email'] 		= 'Email (для ответа):';
-$_['entry_review'] 		= 'Ваш отзыв:';
+$_['entry_review'] 		= 'Ваш комментарий:';
 
 // Error
 
