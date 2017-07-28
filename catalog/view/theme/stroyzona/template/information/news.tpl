@@ -70,16 +70,10 @@
             <div class="review-drop col-md-12 col-sm-12 col-xs-12 ">
 
                 <div class="form-group">
-                    <div class="col-sm-3 required">
+                    <div class="col-sm-6 required">
                         <label class=" required control-label"
                                for="input-name"><?php echo $entry_name; ?></label>
                         <input  type="text" name="name" value="" id="input-name"
-                                class="form-control"/>
-                    </div>
-                    <div class="col-sm-3">
-                        <label class="control-label email-label"
-                               for="input-email"><?php echo $entry_email; ?></label>
-                        <input  type="email" name="email" value="" id="input-email"
                                 class="form-control"/>
                     </div>
                 </div>
@@ -142,7 +136,6 @@
                     $('#reviewnews').html('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
                     $('.review-drop').hide();
                     $('input[name=\'name\']').val('');
-                    $('input[name=\'email\']').val('');
                     $('textarea[name=\'text\']').val('');
                     $('input[name=\'rating\']:checked').prop('checked', false);
 //                    $('input[name=\'captcha\']').val('');
