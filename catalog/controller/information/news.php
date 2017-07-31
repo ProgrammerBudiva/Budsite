@@ -55,7 +55,7 @@ class ControllerInformationNews extends Controller {
 		$data['text_view'] = $this->language->get('text_view');
 	 
 		$all_news = $this->model_extension_news->getAllNews($filter_data);
-	 
+
 		$data['all_news'] = array();
 		
 		$this->load->model('tool/image');
@@ -64,12 +64,14 @@ class ControllerInformationNews extends Controller {
          			$data['all_news'][] = array (
          				'title' 		=> html_entity_decode($news['title'], ENT_QUOTES),
          				'image'			=> $this->model_tool_image->resize($news['image'], 400, 200),
-         				'description' 	=> (strlen(strip_tags(html_entity_decode($news['short_description'], ENT_QUOTES))) > 50 ? substr(strip_tags(html_entity_decode($news['short_description'], ENT_QUOTES)), 0, 50) . '...' : strip_tags(html_entity_decode($news['short_description'], ENT_QUOTES))),
+         				'description' 	=> (strlen(strip_tags(html_entity_decode($news['short_description'], ENT_QUOTES))) > 50 ?
+                            mb_substr(strip_tags(htmlspecialchars_decode($news['short_description'], ENT_QUOTES)), 0, 50) . '...' :
+                            strip_tags(htmlspecialchars_decode($news['short_description'], ENT_QUOTES))),
          				'view' 			=> $this->url->link('information/news/news', 'news_id=' . $news['news_id']),
          				'date_added' 	=> date($this->language->get('date_format_short'), strtotime($news['date_added']))
          			);
          		}
-	 
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -107,7 +109,7 @@ class ControllerInformationNews extends Controller {
         $this->document->setKeywords($news_meta['meta_keyword']);
 
 		$news = $this->model_extension_news->getNews($news_id);
- 
+
 		$data['breadcrumbs'] = array();
 	  
 		$data['breadcrumbs'][] = array(
