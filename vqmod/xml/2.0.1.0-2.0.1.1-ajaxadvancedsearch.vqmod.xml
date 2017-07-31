@@ -588,149 +588,151 @@
 				-->
 				<script type="text/javascript" language="javascript"><!--
 					// Ajax advanced search starts
-					$(document).ready(function(){
-					var afaxAdvancedSearch = $('#search input[name="search"]');
-						var customAutocomplete = null , allRequest = null;
-						afaxAdvancedSearch.autocomplete({
-							delay: 500,
-							responsea : function (items){
-								if(typeof this.items=='undefined'){
-									this.items = new Array();
-								}
-								if (items.length) {
-									for (i = 0; i < items.length; i++) {
-										this.items[items[i]['value']] = items[i];
+					setTimeout({function(){
+						$(document).ready(function(){
+						var afaxAdvancedSearch = $('#search input[name="search"]');
+							var customAutocomplete = null , allRequest = null;
+							afaxAdvancedSearch.autocomplete({
+								delay: 500,
+								responsea : function (items){
+									if(typeof this.items=='undefined'){
+										this.items = new Array();
 									}
-								}
-								var html='';
-								if(items.length){
-									$.each(items,function(key,item){
-										if(item.product_id!=0){
-										html += '<li data-value="' + item['value'] + '"><a href="#">';
-										html += '<div class="ajaxadvance">';
-										html += '<div class="image">';
-											if(item.image){
-											html += '<img title="'+item.name+'" src="'+item.image+'"/>';
-											}
-											html += '</div>';
-											html += '<div class="content">';
-											html += 	'<h4 class="name">'+item.label+'</h4>';
-											if(item.model){
-											html += 	'<div class="model">';
-											html +=		'<?php echo $ajaxadvancedsearch_model; ?> '+ item.model;
-											html +=		'</div>';
-											}
-											if(item.manufacturer){
-											html += 	'<div class="manufacturer">';
-											html +=		'<?php echo $ajaxadvancedsearch_manufacturer; ?> '+ item.manufacturer;
-											html +=		'</div>';
-											}
-											if(item.price){
-											html += 	'<div class="price"> <?php echo $ajaxadvancedsearch_price; ?> ';
-												if (!item.special) {
-											html +=			 item.price;
-												} else {
-											html +=			'<span class="price-old">'+ item.price +'</span> <span class="price-new">'+ item.special +'</span>';
+									if (items.length) {
+										for (i = 0; i < items.length; i++) {
+											this.items[items[i]['value']] = items[i];
+										}
+									}
+									var html='';
+									if(items.length){
+										$.each(items,function(key,item){
+											if(item.product_id!=0){
+											html += '<li data-value="' + item['value'] + '"><a href="#">';
+											html += '<div class="ajaxadvance">';
+											html += '<div class="image">';
+												if(item.image){
+												html += '<img title="'+item.name+'" src="'+item.image+'"/>';
 												}
-											html +=		'</div>';
+												html += '</div>';
+												html += '<div class="content">';
+												html += 	'<h4 class="name">'+item.label+'</h4>';
+												if(item.model){
+												html += 	'<div class="model">';
+												html +=		'<?php echo $ajaxadvancedsearch_model; ?> '+ item.model;
+												html +=		'</div>';
+												}
+												if(item.manufacturer){
+												html += 	'<div class="manufacturer">';
+												html +=		'<?php echo $ajaxadvancedsearch_manufacturer; ?> '+ item.manufacturer;
+												html +=		'</div>';
+												}
+												if(item.price){
+												html += 	'<div class="price"> <?php echo $ajaxadvancedsearch_price; ?> ';
+													if (!item.special) {
+												html +=			 item.price;
+													} else {
+												html +=			'<span class="price-old">'+ item.price +'</span> <span class="price-new">'+ item.special +'</span>';
+													}
+												html +=		'</div>';
+												}
+												if(item.stock_status){
+												html += 	'<div class="stock_status">';
+												html +=		'<?php echo $ajaxadvancedsearch_stock; ?> '+ item.stock_status;
+												html +=		'</div>';
+												}
+												if(item.quantity){
+												html += 	'<div class="quantity">';
+												html +=		'<?php echo $ajaxadvancedsearch_quantity; ?> '+ item.quantity;
+												html +=		'</div>';
+												}
+												if (item.rating) {
+												html +=		'<div class="ratings"> <?php echo $ajaxadvancedsearch_rating; ?>';
+												for (var i = 1; i <= 5; i++) {
+												if (item.rating < i) {
+													html +=		'<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>';
+												} else {
+													html +=		'<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>';
+												}
+												}
+												html +=		'</div>';
+												}
+												if(item.allresults){
+												html += '<div class="allresults">'+ allRequest.trim()+'</div>';
+												}
+												html +='</div>';
+												html += '</div></a></li>'
 											}
-											if(item.stock_status){
-											html += 	'<div class="stock_status">';
-											html +=		'<?php echo $ajaxadvancedsearch_stock; ?> '+ item.stock_status;
-											html +=		'</div>';
-											}
-											if(item.quantity){
-											html += 	'<div class="quantity">';
-											html +=		'<?php echo $ajaxadvancedsearch_quantity; ?> '+ item.quantity;
-											html +=		'</div>';
-											}
-											if (item.rating) {
-											html +=		'<div class="ratings"> <?php echo $ajaxadvancedsearch_rating; ?>';
-											for (var i = 1; i <= 5; i++) {
-											if (item.rating < i) {
-												html +=		'<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>';
-											} else {
-												html +=		'<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>';
-											}
-											}
-											html +=		'</div>';
-											}
-											if(item.allresults){
-											html += '<div class="allresults">'+ allRequest.trim()+'</div>';
-											}
-											html +='</div>';
-											html += '</div></a></li>'
+										});
+									}
+
+									if (html) {
+										afaxAdvancedSearch.siblings('ul.dropdown-menu').show();
+									} else {
+										afaxAdvancedSearch.siblings('ul.dropdown-menu').hide();
+									}
+
+									$(afaxAdvancedSearch).siblings('ul.dropdown-menu').html(html);
+								},
+								source: function(request, response) {
+								customAutocomplete = this;
+								if(request.trim().length >= <?php echo $ajaxadvancesearch_charlimit ?>) {
+									allRequest = request;
+									$.ajax({
+										url: 'index.php?route=common/header/ajaxLiveSearch&filter_name=' +  encodeURIComponent(request.split('')),
+										dataType : 'json',
+										success : function(json) {
+											customAutocomplete.responsea($.map(json, function(item) {
+												return {
+													label: item.name,
+													name: item.name1,
+													value: item.product_id,
+													model: item.model,
+													stock_status: item.stock_status,
+													quantity: item.quantity,
+													// seo friendly starts
+													url: item.url,
+													// seo friendly ends
+													image: item.image,
+													manufacturer: item.manufacturer,
+													price: item.price,
+													special: item.special,
+													category: item.category,
+													rating: item.rating,
+													allresults: item.allresults,
+													reviews: item.reviews,
+												}
+											}));
 										}
 									});
-								}
-								
-								if (html) {
-									afaxAdvancedSearch.siblings('ul.dropdown-menu').show();
-								} else {
-									afaxAdvancedSearch.siblings('ul.dropdown-menu').hide();
-								}
-
-								$(afaxAdvancedSearch).siblings('ul.dropdown-menu').html(html);
-							},
-							source: function(request, response) {
-							customAutocomplete = this;
-							if(request.trim().length >= <?php echo $ajaxadvancesearch_charlimit ?>) {
-								allRequest = request;
-								$.ajax({
-									url: 'index.php?route=common/header/ajaxLiveSearch&filter_name=' +  encodeURIComponent(request.split('')),
-									dataType : 'json',
-									success : function(json) {
-										customAutocomplete.responsea($.map(json, function(item) {
-											return {
-												label: item.name,
-												name: item.name1,
-												value: item.product_id,
-												model: item.model,
-												stock_status: item.stock_status,												
-												quantity: item.quantity,
-												// seo friendly starts
-												url: item.url,
-												// seo friendly ends
-												image: item.image,
-												manufacturer: item.manufacturer,
-												price: item.price,
-												special: item.special,
-												category: item.category,
-												rating: item.rating,
-												allresults: item.allresults,
-												reviews: item.reviews,
-											}
-										}));
 									}
-								});
+								},
+								select : function (ui){
+									return false;
+								},
+								selecta: function(ui) {
+									if(ui.value){
+										//location = 'index.php?route=product/product/&product_id='+ui.value;
+										location = ui.url.replace('&amp;','&');
+									}else{
+									$('#search input[name=\'search\']').parent().find('button').trigger('click');
+									}
+									return false;
+								},
+								focus: function(event, ui) {
+									return false;
 								}
-							},
-							select : function (ui){
-								return false;
-							},
-							selecta: function(ui) {
-								if(ui.value){
-									//location = 'index.php?route=product/product/&product_id='+ui.value;
-									location = ui.url.replace('&amp;','&');
-								}else{
-								$('#search input[name=\'search\']').parent().find('button').trigger('click');
-								}
-								return false;
-							},
-							focus: function(event, ui) {
-								return false;
-							}
-						});
+							});
 
-						afaxAdvancedSearch.siblings('ul.dropdown-menu').delegate('a', 'click', function(){
-							value = $(this).parent().attr('data-value');
-							if (value && customAutocomplete.items[value]) {
-								customAutocomplete.selecta(customAutocomplete.items[value]);
-							}else{
-								customAutocomplete.selecta(0);
-							}
+							afaxAdvancedSearch.siblings('ul.dropdown-menu').delegate('a', 'click', function(){
+								value = $(this).parent().attr('data-value');
+								if (value && customAutocomplete.items[value]) {
+									customAutocomplete.selecta(customAutocomplete.items[value]);
+								}else{
+									customAutocomplete.selecta(0);
+								}
+							});
 						});
-					});
+					}, 1000);
 					//Ajax advanced search ends
 				//--></script>
 				<style>
