@@ -79,7 +79,7 @@
             <?php } ?>
           </div>
         </div>
-        <div class="col-sm-6 col-xs-4">
+        <div class="col-lg-3 col-md-12 col-sm-12 hidden-xs">
           <label class="control-label vertical" for="input-limit"><?php echo $text_limit; ?></label>
           <select onchange="location = this.value;">
             <?php foreach ($limits as $limits) { ?>

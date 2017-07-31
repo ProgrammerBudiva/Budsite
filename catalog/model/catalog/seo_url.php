@@ -4,8 +4,10 @@ class ModelCatalogSeoUrl extends Model {
     public function getUrlKeyword($url) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE query = '" . $this->db->escape($url) . "'");
 
-        if($query->num_rows !== 0) {
+        if($query->num_rows !== 0 & $query->row['keyword'] != NULL) {
+
             return '/' . $query->row['keyword'];
+
         }else{
             return NULL;
         }
@@ -71,7 +73,7 @@ class ModelCatalogSeoUrl extends Model {
         $category[] = $this->GetProductQuery($category_id);
         $category[0]['link'] = $this->getUrlKeyword('category_id=' . $category[0]['category_id']);
 
-        if ($category[0]['parent_id'] != 0){
+        if ($category[0]['parent_id'] != 0 ){
             $category[] = $this->GetProductQuery($category[0]['parent_id']);
             $category[1]['link'] = $this->getUrlKeyword('category_id=' . $category[1]['category_id']);
 
@@ -87,6 +89,9 @@ class ModelCatalogSeoUrl extends Model {
             $category[] = $this->GetProductQuery($category[2]['parent_id']);
             $category[3]['link'] = $this->getUrlKeyword('category_id=' . $category[3]['category_id']);
 
+        }
+        if($category[0]['link'] == NULL){
+            unset($category[0]);
         }
 
         return array_reverse($category);
