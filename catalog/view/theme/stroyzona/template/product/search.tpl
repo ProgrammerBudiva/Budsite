@@ -163,6 +163,19 @@
       <?php } ?>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
+
+  <div class="modal-popup" id="wishlist-popup">
+    <div class="modal-popup-content">
+      <div>
+        <span class="modal-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <div class="modal-product"></div>
+        <div class="modal-link">
+          <a href="/compare-products">Перейти в список сравнения</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 <script type="text/javascript"><!--
 $('#button-search').bind('click', function() {
