@@ -10,7 +10,7 @@ $_['text_view'] 		= 'Показать';
 $_['text_error'] 		= 'Страница не найдена!';
 
 // Review
-$_['button_send'] 		= 'Комментировать';
+$_['button_send'] 		= 'Отправить';
 $_['entry_name'] 		= 'Ваше имя:';
 $_['entry_email'] 		= 'Email (для ответа):';
 $_['entry_review'] 		= 'Ваш комментарий:';
