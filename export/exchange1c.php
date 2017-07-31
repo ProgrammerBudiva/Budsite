@@ -1,6 +1,6 @@
 <?php
 // Version
-define('VERSION', '1.5.5.1.1');
+define('VERSION', '1.6.0');
 
 
 // Configuration
@@ -104,7 +104,7 @@ $registry->set('response', $response);
 $registry->set('session', new Session());
 
 // Cache
-$registry->set('cache', new Cache());
+$registry->set('cache', new Cache('file'));
 
 // Document
 $registry->set('document', new Document());
@@ -120,15 +120,14 @@ foreach ($query->rows as $result) {
 		'name'		=> $result['name'],
 		'code'		=> $result['code'],
 		'locale'	=> $result['locale'],
-		'directory'	=> $result['directory'],
-		'filename'	=> $result['filename']
+		'directory'	=> $result['directory']
 	);
 }
 
 $config->set('config_language_id', $languages[$config->get('config_admin_language')]['language_id']);
 
 $language = new Language($languages[$config->get('config_admin_language')]['directory']);
-$language->load($languages[$config->get('config_admin_language')]['filename']);	
+//$language->load($languages[$config->get('config_admin_language')]['filename']);	
 $registry->set('language', $language);
 
 // Currency
@@ -184,6 +183,10 @@ if (isset($request->get['mode']) && $request->get['type'] == 'catalog') {
 
 		case 'query':
 			$action = new Action('module/exchange1c/modeQueryOrders');
+		break;
+
+		case 'success':
+			$action = new Action('module/exchange1c/modeOrdersChangeStatus');
 		break;
 
 		default:

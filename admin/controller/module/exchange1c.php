@@ -1,6 +1,4 @@
 <?php
-
-
 class ControllerModuleExchange1c extends Controller {
 	private $error = array(); 
 
@@ -18,20 +16,22 @@ class ControllerModuleExchange1c extends Controller {
 			$this->request->post['exchange1c_order_date'] = $this->config->get('exchange1c_order_date');
 			$this->model_setting_setting->editSetting('exchange1c', $this->request->post);
 			$this->session->data['success'] = $this->language->get('text_success');
-			$this->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
+			$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
 		}
 
-		$data['version'] = 'Version 2.0.1.1';
+		$data['version'] = 'Version 1.6.0';
 
 		$data['heading_title'] = $this->language->get('heading_title');
 		$data['entry_username'] = $this->language->get('entry_username');
 		$data['entry_password'] = $this->language->get('entry_password');
 		$data['entry_allow_ip'] = $this->language->get('entry_allow_ip');
+		$data['help_allow_ip'] = $this->language->get('help_allow_ip');
 		$data['text_price_default'] = $this->language->get('text_price_default');
 		$data['entry_config_price_type'] = $this->language->get('entry_config_price_type');
 		$data['entry_customer_group'] = $this->language->get('entry_customer_group');
 		$data['entry_quantity'] = $this->language->get('entry_quantity');
 		$data['entry_priority'] = $this->language->get('entry_priority');
+		$data['entry_action'] = $this->language->get('entry_action');
 		$data['entry_flush_product'] = $this->language->get('entry_flush_product');
 		$data['entry_flush_category'] = $this->language->get('entry_flush_category');
 		$data['entry_flush_manufacturer'] = $this->language->get('entry_flush_manufacturer');
@@ -39,6 +39,8 @@ class ControllerModuleExchange1c extends Controller {
 		$data['entry_flush_attribute'] = $this->language->get('entry_flush_attribute');
 		$data['entry_fill_parent_cats'] = $this->language->get('entry_fill_parent_cats');
 		$data['entry_seo_url'] = $this->language->get('entry_seo_url');
+		$data['entry_seo_url_deadcow'] = $this->language->get('entry_seo_url_deadcow');
+		$data['entry_seo_url_translit'] = $this->language->get('entry_seo_url_translit');
 		$data['entry_full_log'] = $this->language->get('entry_full_log');
 		$data['entry_apply_watermark'] = $this->language->get('entry_apply_watermark');
 		$data['no_image'] = $this->model_tool_image->resize('no_image.jpg', 100, 100);
@@ -52,6 +54,7 @@ class ControllerModuleExchange1c extends Controller {
 		$data['entry_relatedoptions_help'] = $this->language->get('entry_relatedoptions_help');
 		$data['entry_order_status_to_exchange'] = $this->language->get('entry_order_status_to_exchange');
 		$data['entry_order_status_to_exchange_not'] = $this->language->get('entry_order_status_to_exchange_not');
+		$data['entry_dont_use_artsync'] = $this->language->get('entry_dont_use_artsync');
 
 		$data['text_yes'] = $this->language->get('text_yes');
 		$data['text_no'] = $this->language->get('text_no');
@@ -64,6 +67,7 @@ class ControllerModuleExchange1c extends Controller {
 		$data['text_empty'] = $this->language->get('text_empty');
 		$data['text_max_filesize'] = sprintf($this->language->get('text_max_filesize'), @ini_get('max_file_uploads'));
 		$data['text_homepage'] = $this->language->get('text_homepage');
+		$data['source_code'] = $this->language->get('source_code');
 		$data['entry_status'] = $this->language->get('entry_status');
 		$data['entry_order_status'] = $this->language->get('entry_order_status');
 		$data['entry_order_currency'] = $this->language->get('entry_order_currency');
@@ -74,8 +78,25 @@ class ControllerModuleExchange1c extends Controller {
 		$data['button_save'] = $this->language->get('button_save');
 		$data['button_cancel'] = $this->language->get('button_cancel');
 		$data['button_insert'] = $this->language->get('button_insert');
+		$data['text_confirm'] = $this->language->get('text_confirm');
 		$data['button_remove'] = $this->language->get('button_remove');
+		
+		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		
+		if (isset($this->request->post['config_icon'])) {
+			$data['config_icon'] = $this->request->post['config_icon'];
+		} else {
+			$data['config_icon'] = $this->config->get('config_icon');
+		}
 
+		if (isset($this->request->post['config_icon']) && is_file(DIR_IMAGE . $this->request->post['config_icon'])) {
+			$data['thumb'] = $this->model_tool_image->resize($this->request->post['config_logo'], 100, 100);
+		} elseif ($this->config->get('config_icon') && is_file(DIR_IMAGE . $this->config->get('config_icon'))) {
+			$data['thumb'] = $this->model_tool_image->resize($this->config->get('config_icon'), 100, 100);
+		} else {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+		
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
 		}
@@ -226,6 +247,12 @@ class ControllerModuleExchange1c extends Controller {
 		} else {
 			$data['exchange1c_order_status_to_exchange'] = $this->config->get('exchange1c_order_status_to_exchange');
 		}
+		
+		if (isset($this->request->post['exchange1c_dont_use_artsync'])) {
+			$data['exchange1c_dont_use_artsync'] = $this->request->post['exchange1c_dont_use_artsync'];
+		} else {
+			$data['exchange1c_dont_use_artsync'] = $this->config->get('exchange1c_dont_use_artsync');
+		}
 
 		if (isset($this->request->post['exchange1c_seo_url'])) {
 			$data['exchange1c_seo_url'] = $this->request->post['exchange1c_seo_url'];
@@ -299,12 +326,14 @@ class ControllerModuleExchange1c extends Controller {
 		}
 
 		$this->template = 'module/exchange1c.tpl';
-
+		$this->children = array(
+			'common/header',
+			'common/footer'	
+		);
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-//		$this->response->setOutput($this->render(), $this->config->get('config_compression'));
 		$this->response->setOutput($this->load->view('module/exchange1c.tpl', $data));
 	}
 
@@ -400,9 +429,9 @@ class ControllerModuleExchange1c extends Controller {
 			}
 			else {
 
-				// Читаем первые 256 байт и определяем файл по сигнатуре, ибо мало ли, какое у него имя
+				// Читаем первые 1024 байт и определяем файл по сигнатуре, ибо мало ли, какое у него имя
 				$handle = fopen($this->request->files['file']['tmp_name'], 'r');
-				$buffer = fread($handle, 256);
+				$buffer = fread($handle, 1024);
 				fclose($handle);
 
 				if (strpos($buffer, 'Классификатор')) {
@@ -428,7 +457,6 @@ class ControllerModuleExchange1c extends Controller {
 	}
 	
 	public function modeCatalogInit($echo = true) {
-		
 		$this->load->model('tool/exchange1c');
 		
 		// чистим кеш, убиваем старые данные
@@ -450,10 +478,10 @@ class ControllerModuleExchange1c extends Controller {
 
 		$limit = 100000 * 1024;
 	
-		if ($echo) {
+		//if ($echo) {
 			echo "zip=no\n";
 			echo "file_limit=".$limit."\n";
-		}
+		//}
 	
 	}
 
@@ -556,8 +584,8 @@ class ControllerModuleExchange1c extends Controller {
 			if ($this->config->get('exchange1c_fill_parent_cats')) {
 				$this->model_tool_exchange1c->fillParentsCategories();
 			}
-
-			if ($this->config->get('exchange1c_seo_url')) {
+            // Только если выбран способ deadcow_seo
+			if ($this->config->get('exchange1c_seo_url') == 1) {
 				$this->load->model('module/deadcow_seo');
 				$this->model_module_deadcow_seo->generateCategories($this->config->get('deadcow_seo_categories_template'), 'Russian');
 				$this->model_module_deadcow_seo->generateProducts($this->config->get('deadcow_seo_products_template'), 'Russian');
@@ -587,6 +615,16 @@ class ControllerModuleExchange1c extends Controller {
 	}
 
 	public function modeQueryOrders() {
+		if (!isset($this->request->cookie['key'])) {
+			echo "Cookie fail\n";
+			return;
+		}
+
+		if ($this->request->cookie['key'] != md5($this->config->get('exchange1c_password'))) {
+			echo "failure\n";
+			echo "Session error";
+			return;
+		}
 
 		$this->load->model('tool/exchange1c');
 
@@ -598,13 +636,44 @@ class ControllerModuleExchange1c extends Controller {
 			,'currency'		=> $this->config->get('exchange1c_order_currency') ? $this->config->get('exchange1c_order_currency') : 'руб.'
 		));
 
-		// Обновляем данные о последнем запросе заказов
-		$this->load->model('setting/setting');
-		$config = $this->model_setting_setting->getSetting('exchange1c');
-		$config['exchange1c_order_date'] = date('Y-m-d H:i:s');
-		$this->model_setting_setting->editSetting('exchange1c', $config);
-		
 		echo iconv('utf-8', 'cp1251', $orders);
+	}
+
+	/**
+	 * Changing order statuses.
+	 */
+	public function modeOrdersChangeStatus(){
+		if (!isset($this->request->cookie['key'])) {
+			echo "Cookie fail\n";
+			return;
+		}
+
+		if ($this->request->cookie['key'] != md5($this->config->get('exchange1c_password'))) {
+			echo "failure\n";
+			echo "Session error";
+			return;
+		}
+
+		$this->load->model('tool/exchange1c');
+
+		$result = $this->model_tool_exchange1c->queryOrdersStatus(array(
+			'from_date' 		=> $this->config->get('exchange1c_order_date'),
+			'exchange_status'	=> $this->config->get('exchange1c_order_status_to_exchange'),
+			'new_status'		=> $this->config->get('exchange1c_order_status'),
+			'notify'			=> $this->config->get('exchange1c_order_notify')
+		));
+
+		if($result){
+			$this->load->model('setting/setting');
+			$config = $this->model_setting_setting->getSetting('exchange1c');
+			$config['exchange1c_order_date'] = date('Y-m-d H:i:s');
+			$this->model_setting_setting->editSetting('exchange1c', $config);
+		}
+
+		if($result)
+			echo "success\n";
+		else
+			echo "fail\n";
 	}
 
 
