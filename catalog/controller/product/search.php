@@ -3,6 +3,7 @@ class ControllerProductSearch extends Controller {
   const UNIT_ID = 1;
 
 	public function index() {
+
 		$this->load->language('product/search');
 
 		$this->load->model('catalog/category');
@@ -444,7 +445,7 @@ class ControllerProductSearch extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('product/search', $url . '&page={page}');
+			$pagination->url = $this->url->link('product/search') . $url . '?page={page}';
 
 			$data['pagination'] = $pagination->render();
 
