@@ -65,6 +65,12 @@
       </div>
       <?php if ($products) { ?>
       <div class="row more-sort">
+        <div class="col-lg-2 col-md-3 col-sm-12 hidden-xs">
+          <div class="btn-group list-grid-group">
+            <button type="button" id="list-view" class="btn btn-primary list-grid" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
+            <button type="button" id="grid-view" class="btn btn-primary list-grid" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+          </div>
+        </div>
         <div class="col-sm-6 col-xs-8">
           <label class="vertical filter-label" for="input-sort"><?php echo $text_sort; ?></label>
           <div class="filter-head" id="input-sort" onclick="location = this.value">
@@ -101,7 +107,7 @@
               </a>
               <div class="hovering-info">
                 <?php if ($product['price']) { ?>
-                <p class="price">
+                <p class="price" data-price="<?= $product['special'] ?: $product['price'] ?>">
                     <?php if (!$product['special']) { ?>
                     <?php echo $product['price']; ?><span class="unit"><?= $product['unit'] ?></span>
                     <?php } else { ?>
@@ -122,7 +128,7 @@
             <div class="caption">
               <p class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></p>
               <?php if ($product['price']) { ?>
-              <p class="price">
+              <p class="price" >
                  <?php if (!$product['special']) { ?>
                     <?php echo $product['price']; ?><span class="unit"><?= $product['unit'] ?></span>
                  <?php } else { ?>
@@ -130,6 +136,20 @@
                  <?php } ?>
               </p>
               <?php } ?>
+            </div>
+            <button <?php if($product['in_cart']) echo "style='display:none'" ?> class="add-to-cart <?php if($product['quantity'] == 0) echo 'disabled' ?>" <?php if ($product['quantity'] == 0) { ?> disabled="disabled" <?php } ?> type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '1', this);">
+            <span>
+                        <?php if ($product['quantity'] == 0) { echo $button_cart_disable; } else { ?><i class="fa fa-shopping-cart"></i><?php echo $button_cart; } ?>
+                    </span>
+            </button>
+            <button <?php if(!$product['in_cart']) echo "style='display:none'" ?> class="go-to-cart" type="button" onclick="location.href='shopping-cart'">
+            <span>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i><?php echo 'В корзине' ?>
+                    </span>
+            </button>
+            <div class="tooltips">
+              <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>', this);"><i class="fa fa-heart"></i></button>
+              <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>', this);"><?php if($product['in_compared']) echo '<i class="fa fa-check-square"></i>'; else echo '<i class="fa fa-exchange" aria-hidden="true"></i>'; ?></button>
             </div>
           </div>
         </div>
@@ -190,49 +210,60 @@ $('select[name=\'category_id\']').on('change', function() {
 });
 
 $('select[name=\'category_id\']').trigger('change');
---></script> 
-
+--></script>
 <script>
-  /**
-   * Обработка событий расширенной торговли в странице поиска товаров
-   */
-  $(function(){
+    /**
+     * Обработка событий расширенной торговли в категории товаров
+     */
+    $(function(){
 
-    /* Событие productClick в списке товаров поиска */
-    $('.search-page .product-thumb a').click(function (e) {
-      e.preventDefault();
-      var product = getProductInCategory($(this).parents('div.product-thumb'));
-      var url = $(this).attr('href');
-      EEProcessor.productClick([product], url);
+      /* Событие AddToCart в списке товаров категории */
+        $(' .add-to-cart').click(function () {
+            var product = getProductInCategory($(this).parents('div.product-thumb'));
+            EEProcessor.addToCart([product]);
+        });
+
+      /* Событие productClick в списке товаров категории */
+        $(' .product-thumb a').click(function (e) {
+            e.preventDefault();
+            var product = getProductInCategory($(this).parents('div.product-thumb'));
+            var url = $(this).attr('href');
+            EEProcessor.productClick([product], url);
+        });
+
+      /* Событие productImpressions в списке товаров категории */
+        (function(){
+            var products = [];
+            for (var i = 0; i < $(' .product-thumb').length; i++){
+                var elem = $(' .product-thumb')[i];
+                var product = getProductInCategory($(elem));
+                products.push(product);
+            }
+            console.log('/* Событие productImpressions в списке товаров категории */');
+            if (products.length > 0) {
+                EEProcessor.productImpressions(products);
+            }
+        })();
     });
 
-    /* Событие productImpressions в списке товаров поиска */
-    (function(){
-      var products = [];
-      for (var i = 0; i < $('.search-page .product-thumb').length; i++){
-        var elem = $('.search-page .product-thumb')[i];
-        var product = getProductInCategory($(elem));
-        products.push(product);
-      }
-      console.log('/* Событие productImpressions в списке товаров категории */');
-      if (products.length > 0) {
-        EEProcessor.productImpressions(products);
-      }
-    })();
-  });
+    /* Получить объект товара из списка товаров категории */
+    getProductInCategory = function($pItem){
+        return {
+            name: $pItem.find('.caption .name a').text(),
+            id: $pItem.find('.add-to-cart').attr('onclick').replace(/[^\d]/gi, ''),
+//            price: $pItem.find('p .price').data('price').replace(/[^\d\.]/gi, ''),
+            brand: $pItem.data('brand'),
+            category: $('.breadcrumb li:last').text().trim(),
+            quantity: 1,
+            position: $pItem.parent().index() + 1, // индекс с 1 мануалу
+            list: "<?= $this->registry->get('request')->get['route'] ?>"
+        }
+    };
 
-  /* Получить объект товара из списка товаров поиска */
-  getProductInCategory = function($pItem){
-    return {
-      name: $pItem.find('.caption .name a').text(),
-      id: $pItem.data('id'),
-      price: $pItem.find('.caption p').clone().find('*').remove().end().text().replace(/[^\d\.]/gi, ''),
-      brand: $pItem.data('brand'),
-      category: $pItem.data('category'),
-      quantity: 1,
-      position: $pItem.parent().index() + 1, // индекс с 1 мануалу
-      list: "<?= $this->registry->get('request')->get['route'] ?>"
-    }
-  };
+
+  $(' .add-to-cart').on('click',function()
+          {
+              $(this).hide();$(this).next().show();
+          });
 </script>
 <?php echo $footer; ?>
