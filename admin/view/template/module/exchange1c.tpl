@@ -1,273 +1,472 @@
-<?php echo $header; ?>
-<?php echo $column_left; ?>
+<?php echo $header; ?><?php echo $column_left; ?>
 
 <div id="content">
-
-  <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
+	
+<div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form-featured" data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+      <h1><?php echo $heading_title; ?></h1>
+      <ul class="breadcrumb">
+        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+        <?php } ?>
+      </ul>
+    </div>
   </div>
-
-  <?php if ($error_warning) { ?>
-  <div class="warning"><?php echo $error_warning; ?></div>
-  <?php } ?>
-
-  <div class="box">
-    <div class="left"></div>
-    <div class="right"></div>
-    <div class="heading">
-      <h1 style="background-image: url('view/image/feed.png') no-repeat;"><?php echo $heading_title; ?></h1>
-      <div class="buttons"><a onclick="$('#form').submit();" class="button"><span><?php echo $button_save; ?></span></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><span><?php echo $button_cancel; ?></span></a></div>
+  
+  <div class="container-fluid">
+	<?php if ($error_warning) { ?>
+    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
-    <div class="content">
-      <div id="tabs" class="htabs">
-        <a href="#tab-general"><?php echo $text_tab_general; ?></a>
-        <a href="#tab-product"><?php echo $text_tab_product; ?></a>
-        <a href="#tab-order"><?php echo $text_tab_order; ?></a>
-        <a href="#tab-manual"><?php echo $text_tab_manual; ?></a>
-      </div>
+    <?php } ?>
+    <div class="panel panel-default">
+		<div class="panel-heading">
+		  <h3 class="panel-title"><i class="fa fa-pencil"></i><?php echo $heading_title; ?></h3>
+		</div>
+		<div class="panel-body">
+		  <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $text_tab_general; ?></a></li>
+            <li><a href="#tab-product" data-toggle="tab"><?php echo $text_tab_product; ?></a></li>
+            <li><a href="#tab-order" data-toggle="tab"><?php echo $text_tab_order; ?></a></li>
+            <li><a href="#tab-manual" data-toggle="tab"><?php echo $text_tab_manual; ?></a></li>
+          </ul>
 
-
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
-
-        <div id="tab-general">
-          <table class="form">
-            <tr>
-              <td><?php echo $entry_username; ?></td>
-              <td><input name="exchange1c_username" type="text" value="<?php echo $exchange1c_username; ?>" /></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_password; ?></td>
-              <td><input name="exchange1c_password" type="password" value="<?php echo $exchange1c_password; ?>" /></td>
-            </tr>
-
-            <tr>
-              <td><?php echo $entry_status; ?></td>
-              <td><select name="exchange1c_status">
-                  <?php if ($exchange1c_status) { ?>
-                    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                    <option value="0"><?php echo $text_disabled; ?></option>
-                  <?php } else { ?>
-                    <option value="1"><?php echo $text_enabled; ?></option>
-                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
-                  <?php } ?>
-                </select></td>
-            </tr>
-
-            <tr>
-              <td><?php echo $entry_allow_ip; ?></td>
-              <td>
-                <textarea name="exchange1c_allow_ip" style="width: 200px; height: 50px;"><?php echo $exchange1c_allow_ip; ?></textarea>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div id="tab-product">
-
-        <table id="exchange1c_price_type_id" class="list" style="width: auto">
-            <thead>
-              <tr>
-                <td class="left"><?php echo $entry_config_price_type; ?></td>
-                <td class="left"><?php echo $entry_customer_group; ?></td>
-                <td class="right"><?php echo $entry_quantity; ?></td>
-                <td class="right"><?php echo $entry_priority; ?></td>
-                <td></td>
-              </tr>
-            </thead>
-            <tbody>
-              <?php $price_row = 0; ?>
-              <?php foreach ($exchange1c_price_type as $obj) { ?>
-                <?php if ($price_row == 0) { ?>
-                  <tr id="exchange1c_price_type_row<?php echo $price_row; ?>">
-                    <td class="left"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][keyword]" value="<?php echo $obj['keyword']; ?>" /></td>
-                    <td class="left"><?php  echo $text_price_default; ?><input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][customer_group_id]" value="0" /></td>
-                    <td class="center">-<input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][quantity]" value="0" /></td>
-                    <td class="center">-<input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][priority]" value="0" /></td>
-                    <td class="left">&nbsp;</td>
-                  </tr>
-                <?php } else { ?>
-                  <tr id="exchange1c_price_type_row<?php echo $price_row; ?>">
-                    <td class="left"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][keyword]" value="<?php echo $obj['keyword']; ?>" /></td>
-                    <td class="left"><select name="exchange1c_price_type[<?php echo $price_row; ?>][customer_group_id]">
-                      <?php foreach ($customer_groups as $customer_group) { ?>
-                        <?php if ($customer_group['customer_group_id'] == $obj['customer_group_id']) { ?>
-                          <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
-                        <?php } else { ?>
-                          <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
-                        <?php } ?>
-                      <?php } ?>
-                      </select></td>
-                    <td class="center"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][quantity]" value="<?php echo $obj['quantity']; ?>" size="2" /></td>
-                    <td class="center"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][priority]" value="<?php echo $obj['priority']; ?>" size="2" /></td>
-                    <td class="center"><a onclick="$('#exchange1c_price_type_row<?php echo $price_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
-                  </tr>
-                <?php } ?>
-                <?php $price_row++; ?>
-              <?php } ?>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="4"></td>
-                <td class="left"><a onclick="addConfigPriceType();" class="button"><?php echo $button_insert; ?></a></td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <table class="form">
-            <tr>
-              <td><label for="exchange1c_flush_product"><?php echo $entry_flush_product; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_flush_product" name="exchange1c_flush_product" <?php echo ($exchange1c_flush_product == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_flush_category"><?php echo $entry_flush_category; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_flush_category" name="exchange1c_flush_category" <?php echo ($exchange1c_flush_category == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_flush_manufacturer"><?php echo $entry_flush_manufacturer; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_flush_manufacturer" name="exchange1c_flush_manufacturer" <?php echo ($exchange1c_flush_manufacturer == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_flush_attribute"><?php echo $entry_flush_attribute; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_flush_attribute" name="exchange1c_flush_attribute" <?php echo ($exchange1c_flush_attribute == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_flush_quantity"><?php echo $entry_flush_quantity; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_flush_quantity" name="exchange1c_flush_quantity" <?php echo ($exchange1c_flush_quantity == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_fill_parent_cats"><?php echo $entry_fill_parent_cats; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_fill_parent_cats" name="exchange1c_fill_parent_cats" <?php echo ($exchange1c_fill_parent_cats == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_seo_url"><?php echo $entry_seo_url; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_seo_url" name="exchange1c_seo_url" <?php echo ($exchange1c_seo_url == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-            
-            <tr>
-              <td><label for="exchange1c_relatedoptions"><?php echo $entry_relatedoptions; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_relatedoptions" name="exchange1c_relatedoptions" <?php echo ($exchange1c_relatedoptions == 1)? 'checked' : ''; ?>>
-                <span class="help"><?php echo $entry_relatedoptions_help; ?></span>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_full_log"><?php echo $entry_full_log; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_full_log" name="exchange1c_full_log" <?php echo ($exchange1c_full_log == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="exchange1c_apply_watermark"><?php echo $entry_apply_watermark; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_apply_watermark" name="exchange1c_apply_watermark" <?php echo ($exchange1c_apply_watermark == 1)? 'checked' : ''; ?>>
-                <div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" />
-                  <input type="hidden" name="exchange1c_watermark" value="<?php echo $exchange1c_watermark; ?>" id="image" />
-                  <br /><a onclick="image_upload('image', 'thumb');">
-                    <?php echo $text_browse; ?>
-                  </a>
-                  &nbsp;&nbsp;|&nbsp;&nbsp;
-                  <a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');">
-                    <?php echo $text_clear; ?>
-                  </a>
+		  <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-featured" class="form-horizontal">
+			<div class="tab-content">
+			<div  class="tab-pane active" id="tab-general">
+			  <div class="form-group">
+				<label class="col-sm-2 control-label" for="exchange1c_username"><?php echo $entry_username; ?></label>
+				<div class="col-sm-10">
+				  <input type="text" name="exchange1c_username" value="<?php echo $exchange1c_username; ?>" placeholder="<?php echo $exchange1c_username; ?>" id="exchange1c_username" class="form-control" />
+				  <?php if ($error_exchange1c_username) { ?>
+				  <div class="text-danger"><?php echo $error_exchange1c_username; ?></div>
+				  <?php } ?>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-sm-2 control-label" for="exchange1c_password"><?php echo $entry_password; ?></label>
+				<div class="col-sm-10">
+				  <input type="text" name="exchange1c_password" value="<?php echo $exchange1c_password; ?>" placeholder="<?php echo $exchange1c_password; ?>" id="exchange1c_password" class="form-control" />
+				  <?php if ($error_exchange1c_password) { ?>
+				  <div class="text-danger"><?php echo $error_exchange1c_password; ?></div>
+				  <?php } ?>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-sm-2 control-label" for="exchange1c_status"><?php echo $entry_status; ?></label>
+				<div class="col-sm-10">
+				  <select name="exchange1c_status" id="exchange1c_status" class="form-control">
+					<?php if ($exchange1c_status) { ?>
+					<option value="1" selected="selected"><?php echo $text_enabled; ?></option>
+					<option value="0"><?php echo $text_disabled; ?></option>
+					<?php } else { ?>
+					<option value="1"><?php echo $text_enabled; ?></option>
+					<option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+					<?php } ?>
+				  </select>
+				</div>
+			  </div>
+			  <div class="form-group">
+                <label class="col-sm-2 control-label" for="exchange1c_allow_ip"><span data-toggle="tooltip" data-container="#tab-general" title="<?php echo $help_allow_ip; ?>"><?php echo $entry_allow_ip; ?></span></label>
+                <div class="col-sm-10">
+                  <textarea name="exchange1c_allow_ip" rows="5" placeholder="<?php echo $exchange1c_allow_ip; ?>" id="exchange1c_allow_ip" class="form-control"><?php echo $exchange1c_allow_ip; ?></textarea>
                 </div>
-                <?php if ($error_image) { ?>
-                <span class="error"><?php echo $error_image; ?></span>
-                <?php } ?>
-              </td>
-            </tr>
-          </table>
-        </div>
+              </div>
+			</div>
 
-        <div id="tab-order">
-          <table class="form">
-            
-            <tr>
-              <td><?php echo $entry_order_status_to_exchange; ?></td>
-              <td>
-                <select name="exchange1c_order_status_to_exchange">
-                  <option value="0" <?php echo ($exchange1c_order_status_to_exchange == 0)? 'selected' : '' ;?>><?php echo $entry_order_status_to_exchange_not; ?></option>
-                  <?php foreach ($order_statuses as $order_status) { ?>
-                    <option value="<?php echo $order_status['order_status_id'];?>" <?php echo ($exchange1c_order_status_to_exchange == $order_status['order_status_id'])? 'selected' : '' ;?>><?php echo $order_status['name']; ?></option>
-                  <?php } ?>
-                </select>
-              </td>
-            </tr>
-            
-            <tr>
-              <td><?php echo $entry_order_status; ?></td>
-              <td>
-                <select name="exchange1c_order_status">
-                  <?php foreach ($order_statuses as $order_status) { ?>
-                    <option value="<?php echo $order_status['order_status_id'];?>" <?php echo ($exchange1c_order_status == $order_status['order_status_id'])? 'selected' : '' ;?>><?php echo $order_status['name']; ?></option>
-                  <?php } ?>
-                </select>
-              </td>
-            </tr>
+			<div class="tab-pane" id="tab-product">
+			<div class="table-responsive">
+			<table id="exchange1c_price_type_id" class="table table-bordered table-hover">
+				<thead>
+				  <tr>
+					<td class="text-left"><?php echo $entry_config_price_type; ?></td>
+					<td class="text-left"><?php echo $entry_customer_group; ?></td>
+					<td class="text-right"><?php echo $entry_quantity; ?></td>
+					<td class="text-right"><?php echo $entry_priority; ?></td>
+					<td class="text-right"><?php echo $entry_action; ?></td>
+				  </tr>
+				</thead>
+				<tbody>
+				  <?php $price_row = 0; ?>
+				  <?php foreach ($exchange1c_price_type as $obj) { ?>
+					<?php if ($price_row == 0) {?>
+					  <tr id="exchange1c_price_type_row<?php echo $price_row; ?>">
+						<td class="left"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][keyword]" value="<?php echo $obj['keyword']; ?>" /></td>
+						<td class="left"><?php  echo $text_price_default; ?><input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][customer_group_id]" value="0" /></td>
+						<td class="center">-<input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][quantity]" value="0" /></td>
+						<td class="center">-<input type="hidden" name="exchange1c_price_type[<?php echo $price_row; ?>][priority]" value="0" /></td>
+						<td class="left">&nbsp;</td>
+					  </tr>
+					<?php } else { ?>
+					  <tr id="exchange1c_price_type_row<?php echo $price_row; ?>">
+						<td class="left"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][keyword]" value="<?php echo $obj['keyword']; ?>" /></td>
+						<td class="left"><select name="exchange1c_price_type[<?php echo $price_row; ?>][customer_group_id]">
+						  <?php foreach ($customer_groups as $customer_group) { ?>
+							<?php if ($customer_group['customer_group_id'] == $obj['customer_group_id']) { ?>
+							  <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
+							<?php } else { ?>
+							  <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
+							<?php } ?>
+						  <?php } ?>
+						  </select></td>
+						<td class="center"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][quantity]" value="<?php echo $obj['quantity']; ?>" size="2" /></td>
+						<td class="center"><input type="text" name="exchange1c_price_type[<?php echo $price_row; ?>][priority]" value="<?php echo $obj['priority']; ?>" size="2" /></td>
+						<td class="center">
+						<button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="confirm('<?php echo $text_confirm; ?>') ? $('#exchange1c_price_type_row<?php echo $price_row; ?>').remove() : false;"><i class="fa fa-trash-o"></i></button>
+						</td>
+					  </tr>
+					<?php } ?>
+					<?php $price_row++; ?>
+				  <?php } ?>
+				</tbody>
+				<tfoot>
+				  <tr>
+					<td colspan="4"></td>
+					
+					<td class="left">
+					<a onclick="addConfigPriceType();" data-toggle="tooltip" title="<?php echo $button_insert; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+					</td>
+				  </tr>
+				</tfoot>
+			  </table>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_flush_product; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_flush_product) { ?>
+					<input type="radio" name="exchange1c_flush_product" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_product" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_flush_product) { ?>
+					<input type="radio" name="exchange1c_flush_product" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_product" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_flush_category; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_flush_category) { ?>
+					<input type="radio" name="exchange1c_flush_category" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_category" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_flush_category) { ?>
+					<input type="radio" name="exchange1c_flush_category" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_category" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_flush_manufacturer; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_flush_manufacturer) { ?>
+					<input type="radio" name="exchange1c_flush_manufacturer" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_manufacturer" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_flush_manufacturer) { ?>
+					<input type="radio" name="exchange1c_flush_manufacturer" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_manufacturer" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_flush_attribute; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_flush_attribute) { ?>
+					<input type="radio" name="exchange1c_flush_attribute" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_attribute" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_flush_attribute) { ?>
+					<input type="radio" name="exchange1c_flush_attribute" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_attribute" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_flush_quantity; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_flush_quantity) { ?>
+					<input type="radio" name="exchange1c_flush_quantity" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_quantity" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_flush_quantity) { ?>
+					<input type="radio" name="exchange1c_flush_quantity" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_flush_quantity" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_fill_parent_cats; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_fill_parent_cats) { ?>
+					<input type="radio" name="exchange1c_fill_parent_cats" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_fill_parent_cats" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_fill_parent_cats) { ?>
+					<input type="radio" name="exchange1c_fill_parent_cats" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_fill_parent_cats" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+			  <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $entry_relatedoptions_help; ?>"><?php echo $entry_relatedoptions; ?></span></label>
+			  <div class="col-sm-10">
+				<label class="radio-inline">
+				  <?php if ($exchange1c_relatedoptions) { ?>
+				  <input type="radio" name="exchange1c_relatedoptions" value="1" checked="checked" />
+				  <?php echo $text_yes; ?>
+				  <?php } else { ?>
+				  <input type="radio" name="exchange1c_relatedoptions" value="1" />
+				  <?php echo $text_yes; ?>
+				  <?php } ?>
+				</label>
+				<label class="radio-inline">
+				  <?php if (!$exchange1c_relatedoptions) { ?>
+				  <input type="radio" name="exchange1c_relatedoptions" value="0" checked="checked" />
+				  <?php echo $text_no; ?>
+				  <?php } else { ?>
+				  <input type="radio" name="exchange1c_relatedoptions" value="0" />
+				  <?php echo $text_no; ?>
+				  <?php } ?>
+				</label>
+			  </div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_dont_use_artsync; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_dont_use_artsync) { ?>
+					<input type="radio" name="exchange1c_dont_use_artsync" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_dont_use_artsync" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_dont_use_artsync) { ?>
+					<input type="radio" name="exchange1c_dont_use_artsync" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_dont_use_artsync" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  <div class="form-group">
+                <label class="col-sm-2 control-label" for="exchange1c_seo_url"><?php echo $entry_seo_url; ?></label>
+                <div class="col-sm-10">
+                  <select name="exchange1c_seo_url" id="exchange1c_seo_url" class="form-control">
+                    
+					<?php if ($exchange1c_seo_url == 0) { ?>
+                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                    <?php } else { ?>
+                    <option value="0"><?php echo $text_disabled; ?></option>
+                    <?php } ?>
+					
+					<?php if ($exchange1c_seo_url == 1) { ?>
+                    <option value="1" selected="selected"><?php echo $entry_seo_url_deadcow; ?></option>
+                    <?php } else { ?>
+                    <option value="1"><?php echo $entry_seo_url_deadcow; ?></option>
+                    <?php } ?>
+					
+					<?php if ($exchange1c_seo_url == 2) { ?>
+                    <option value="2" selected="selected"><?php echo $entry_seo_url_translit; ?></option>
+                    <?php } else { ?>
+                    <option value="2"><?php echo $entry_seo_url_translit; ?></option>
+                    <?php } ?>
+					
+                  </select>
+                </div>
+              </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_full_log; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_full_log) { ?>
+					<input type="radio" name="exchange1c_full_log" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_full_log" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_full_log) { ?>
+					<input type="radio" name="exchange1c_full_log" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_full_log" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			  
+			  
+			</div>
 
-            <tr>
-              <td><label for="exchange1c_order_currency"><?php echo $entry_order_currency; ?></label></td>
-              <td>
-                <input type="text" name="exchange1c_order_currency" value="<?php echo $exchange1c_order_currency; ?>">
-              </td>
-            </tr>
+			<div class="tab-pane" id="tab-order">
+				<div class="form-group">
+                <label class="col-sm-2 control-label" for="exchange1c_order_status_to_exchange"><?php echo $entry_order_status_to_exchange; ?></label>
+                <div class="col-sm-10">
+                  <select name="exchange1c_order_status_to_exchange" class="form-control">
+				  <option value="0" <?php echo ($exchange1c_order_status_to_exchange == 0)? 'selected' : '' ;?>><?php echo $entry_order_status_to_exchange_not; ?></option>
+				  <?php foreach ($order_statuses as $order_status) { ?>
+					<?php if ($exchange1c_order_status_to_exchange == $order_status['order_status_id']) { ?>
+                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
+                    <?php } else { ?>
+                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                    <?php } ?>
+				  <?php } ?>
+                  </select>
+                </div>
+              </div>
+			  
+			  <div class="form-group">
+                <label class="col-sm-2 control-label" for="exchange1c_order_status"><?php echo $entry_order_status; ?></label>
+                <div class="col-sm-10">
+                  <select name="exchange1c_order_status" id="exchange1c_order_status" class="form-control">
+				  <?php foreach ($order_statuses as $order_status) { ?>
+					<?php if (exchange1c_order_status == $order_status['order_status_id']) { ?>
+                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
+                    <?php } else { ?>
+                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                    <?php } ?>
+				  <?php } ?>
+                  </select>
+                </div>
+              </div>
+			  
+			  <div class="form-group">
+                <label class="col-sm-2 control-label" for="exchange1c_order_currency"><?php echo $entry_order_currency; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="exchange1c_order_currency" value="<?php echo $exchange1c_order_currency; ?>" placeholder="<?php echo $entry_order_currency; ?>" id="exchange1c_order_currency" class="form-control" />
+                  
+                </div>
+              </div>
+			  
+			  <div class="form-group">
+				<label class="col-sm-2 control-label"><?php echo $entry_order_notify; ?></label>
+				<div class="col-sm-10">
+				  <label class="radio-inline">
+					<?php if ($exchange1c_order_notify) { ?>
+					<input type="radio" name="exchange1c_order_notify" value="1" checked="checked" />
+					<?php echo $text_yes; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_order_notify" value="1" />
+					<?php echo $text_yes; ?>
+					<?php } ?>
+				  </label>
+				  <label class="radio-inline">
+					<?php if (!$exchange1c_order_notify) { ?>
+					<input type="radio" name="exchange1c_order_notify" value="0" checked="checked" />
+					<?php echo $text_no; ?>
+					<?php } else { ?>
+					<input type="radio" name="exchange1c_order_notify" value="0" />
+					<?php echo $text_no; ?>
+					<?php } ?>
+				  </label>
+				</div>
+			  </div>
+			  
+			 
+			</div>
 
-            <tr>
-              <td><label for="exchange1c_order_notify"><?php echo $entry_order_notify; ?></label></td>
-              <td>
-                <input type="checkbox" value="1" id="exchange1c_order_notify" name="exchange1c_order_notify" <?php echo ($exchange1c_order_notify == 1)? 'checked' : ''; ?>>
-              </td>
-            </tr>
+			<div class="tab-pane" id="tab-manual">
+			  <table class="form">
+				<tr>
+				  <td>
+					<?php echo $entry_upload; ?>
+				  </td>
+				  <td>
+					<a id="button-upload" class="button"><?php echo $button_upload; ?></a>
+				  </td>
+				  <td>
+					<?php echo $text_max_filesize; ?>
+				  </td>
+				</tr>
+			  </table>
+			</div>
 
-          </table>
-        </div>
-
-        <div id="tab-manual">
-          <table class="form">
-            <tr>
-              <td>
-                <?php echo $entry_upload; ?>
-              </td>
-              <td>
-                <a id="button-upload" class="button"><?php echo $button_upload; ?></a>
-              </td>
-              <td>
-                <?php echo $text_max_filesize; ?>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-      </form>
-
+		  </form>
+		</div>
     </div>
 
-    <div style="text-align:center; opacity: .5">
-      <p><?php echo $version; ?> | <a href="http://zenwalker.ru/lab/opencart-exchange1c"><?php echo $text_homepage; ?></a></p>
-    </div>
   </div>
 </div>
 
@@ -275,9 +474,7 @@
 $('#tabs a').tabs();
 //--></script>
 
-<script type="text/javascript" src="view/javascript/jquery/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="view/javascript/jquery/jquery-ui.js"></script>
-<script type="text/javascript" src="view/javascript/jquery/ajaxupload.3.5.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/ajaxupload.js"></script> 
 <script type="text/javascript"><!--
 new AjaxUpload('#button-upload', {
   action: 'index.php?route=module/exchange1c/manualImport&token=<?php echo $token; ?>',
@@ -316,10 +513,10 @@ function addConfigPriceType() {
     html += '    </select></td>';
     html += '    <td class="center"><input type="text" name="exchange1c_price_type[' + price_row + '][quantity]" value="0" size="2" /></td>';
     html += '    <td class="center"><input type="text" name="exchange1c_price_type[' + price_row + '][priority]" value="0" size="2" /></td>';
-    html += '    <td class="center"><a onclick="$(\'#exchange1c_price_type_row' + price_row + '\').remove();" class="button"><?php echo $button_remove; ?></a></td>';
+    html += '    <td class="center"><button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="confirm(\'<?php echo $text_confirm; ?>\') ? $(\'#exchange1c_price_type_row<?php echo $price_row; ?>\').remove() : false;"><i class="fa fa-trash-o"></i></button></td>';
     html += '  </tr>';
 
-    $('#exchange1c_price_type_id tfoot').before(html);
+    $('#exchange1c_price_type_id tbody').append(html);
 
     $('#config_price_type_row' + price_row + ' .date').datepicker({dateFormat: 'yy-mm-dd'});
     price_row++;
