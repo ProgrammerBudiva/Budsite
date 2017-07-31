@@ -272,7 +272,7 @@ class ControllerProductSearch extends Controller {
           'unit'        => $unitText,
 					'tax'         => $tax,
 					'rating'      => $result['rating'],
-          'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url),
+          'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
           'brand'       => $this->model_catalog_product->getBrandFromAttributes($result['product_id']),
           'category'    => $this->model_catalog_product->getMainCategoryName($result['product_id']),
         );
