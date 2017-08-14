@@ -117,6 +117,13 @@
                 </div>
                 <?php } ?>
 
+                <?php if($all_led) { ?>
+                <div class="eurolamp-banner" style="    padding-bottom: 3%;">
+                    <a href="/besplatnaja-dostavka-osvechenija"><img class="desktop-banner-img" src="/catalog/view/theme/stroyzona/image/category-osveschenie.jpg" alt="Минимальный заказ 300 грн"></a>
+                </div>
+                <?php } ?>
+
+
                 <?php } ?>
                 <div class="row category-products">
                     <?php foreach ($products as $product) { ?>
