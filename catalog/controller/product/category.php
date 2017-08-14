@@ -55,9 +55,22 @@ class ControllerProductCategory extends Controller
             541, 540, 539, 534, 535, 536, 537, 538
         ];
 
+
+
         $banner_boolean = array_search($this->request->get['path'], $categories_for_banner);
         if($banner_boolean !== false) {
             $data['banner'] = true;
+        }
+
+        $banner_eurolamp = 587;
+        if($this->request->get['path'] == $banner_eurolamp){
+            $data['banner_eurolamp'] = true;
+        }
+
+        $other_led = [586, 585, 584];
+        $other_led_boolean = array_search($this->request->get['path'] ,$other_led);
+        if($other_led_boolean !== false){
+            $data['other_led'] = true;
         }
         // end banner categories
         if (isset($this->request->get['price'])) {

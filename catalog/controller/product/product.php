@@ -49,6 +49,19 @@ class ControllerProductProduct extends Controller
         if(!empty($banner_boolean)) {
             $data['banner'] = true;
         }
+
+        $banner_eurolamp = 587;
+        $eurolamp_boolean = array_search($banner_eurolamp, $res_array);
+        if(!empty($eurolamp_boolean)){
+            $data['banner_eurolamp'] = true;
+        }
+
+        $other_led = [586, 585, 584];
+        $other_led_boolean = array_intersect($res_array ,$other_led);
+        if(!empty($other_led_boolean)){
+            $data['other_led'] = true;
+
+        }
         if (isset($this->request->get['path'])) {
             $path = '';
 

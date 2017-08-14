@@ -178,6 +178,19 @@
                                     <img class="mobile-banner-img" src="/image/catalog/Banner/product.jpg" alt="Минимальный заказ 300 грн">
                                 </div>
                             <?php }?>
+
+                            <?php if($banner_eurolamp) { ?>
+                            <div class="eurolamp-banner" style="    padding-bottom: 3%;">
+                                <img class="desktop-banner-img" src="/catalog/view/theme/stroyzona/image/product-eurolamp.jpg" alt="Минимальный заказ 300 грн">
+                            </div>
+                            <?php } ?>
+
+                            <?php if($other_led) { ?>
+                            <div class="eurolamp-banner" style="    padding-bottom: 3%;">
+                                <img class="desktop-banner-img" src="/catalog/view/theme/stroyzona/image/product-maxus.jpg" alt="Минимальный заказ 300 грн">
+                            </div>
+                            <?php } ?>
+
                             <div class="product-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
 
                                 <div class="instock" itemprop="availability" href="http://schema.org/InStock" >В наличии</div>
