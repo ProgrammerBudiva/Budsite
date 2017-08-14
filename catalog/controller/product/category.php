@@ -72,6 +72,13 @@ class ControllerProductCategory extends Controller
         if($other_led_boolean !== false){
             $data['other_led'] = true;
         }
+
+        $all_led = [357, 362, 359, 360, 361, 358, 363];
+        $all_led_boolean = array_search($this->request->get['path'] ,$all_led);
+        if($all_led_boolean !== false){
+            $data['all_led'] = true;
+        }
+
         // end banner categories
         if (isset($this->request->get['price'])) {
             $price_filter = explode('-', $this->request->get['price']);
