@@ -104,6 +104,19 @@
                     <img class="mobile-banner-img" src="/image/catalog/Banner/test.jpg" alt="Минимальный заказ 300 грн">
                 </div>
                 <?php } ?>
+
+                <?php if($banner_eurolamp) { ?>
+                <div class="eurolamp-banner" style="    padding-bottom: 3%;">
+                    <img class="desktop-banner-img" src="/catalog/view/theme/stroyzona/image/osvechenie-category-EUROLAMP.jpg" alt="Минимальный заказ 300 грн">
+                </div>
+                <?php } ?>
+
+                <?php if($other_led) { ?>
+                <div class="eurolamp-banner" style="    padding-bottom: 3%;">
+                    <img class="desktop-banner-img" src="/catalog/view/theme/stroyzona/image/category-maxus.jpg" alt="Минимальный заказ 300 грн">
+                </div>
+                <?php } ?>
+
                 <?php } ?>
                 <div class="row category-products">
                     <?php foreach ($products as $product) { ?>
