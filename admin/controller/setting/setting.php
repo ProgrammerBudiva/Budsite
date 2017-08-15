@@ -1298,7 +1298,7 @@ class ControllerSettingSetting extends Controller {
 			$this->error['owner'] = $this->language->get('error_owner');
 		}
 
-		if ((utf8_strlen($this->request->post['config_address']) < 3) || (utf8_strlen($this->request->post['config_address']) > 256)) {
+		if ((utf8_strlen($this->request->post['config_address']) < 3) || (utf8_strlen($this->request->post['config_address']) > 524)) {
 			$this->error['address'] = $this->language->get('error_address');
 		}
 
