@@ -513,17 +513,16 @@
                                         <img width="100"  alt="Стройматериалы с доставкой Деливери по Украине" src="/image/catalog/Info/NewPost/delivery.png">
                                         <img width="100"  alt="Интернет магазин строительных и отделочных материалов с доставкой Мист-экспресс" src="/image/catalog/Info/NewPost/meest-express.png">
                                 <ul style="padding-top: 2px;">
-                                    <li>Курьером budsite в Одессе и  Киеву</li>
-                                    <li>Самовывоз в Одессе, Киеве и Днепре</li>
+                                    <li>Самовывоз (возможность уточняйте у менеджера)</li>
                                 </ul>
                                 <h4><b>Способы оплаты:</b></h4>
                                 <ul>
-                                    <li>Перевод на карту ПриватБанка</li>
-                                    <li>Оплата наличными при получении</li>
-                                    <li>Курьеру budsite в Одессе</li>
-                                    <li>Безналичный расчет</li>
+                                    <li>Предоплата на карту ПриватБанка</li>
+                                    <li>Наложенный платеж</li>
+                                    <li>Оплата по счёту</li>
+                                    <li>Наличными при самовывозе</li>
                                 </ul>
-                                <img width="220" src="/image/catalog/Info/cards.png">
+                                <img width="220" src="/image/catalog/Info/cards_new.png">
                             </div>
                         </div>
                     </div>
