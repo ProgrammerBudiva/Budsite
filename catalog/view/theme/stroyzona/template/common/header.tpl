@@ -158,13 +158,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="clear"></div>
                 </div>
                 <div class="description row">
-                    <?php if($telephones) { ?>
-                        <?php foreach($telephones as $phone) { ?>
+                    <!--<?php if($telephones) { ?>
+                        <?php foreach($telephones as $phone) { ?> -->
                         <div class="phone">
-                            <span class="<?php echo $phone['operator'] ?>ringo-phone fa-phone"><?php echo $phone['number']; ?></span>
+                          <!--  <span class="<?php echo $phone['operator'] ?>ringo-phone fa-phone"><?php echo $phone['number']; ?></span> -->
+                            <span class="kyivsarringo-phone fa-phone">(044) 390-20-40</span>
                         </div>
-                        <?php } ?>
-                    <?php } ?>
+                 <!--       <?php } ?>
+                    <?php } ?> -->
                     <div class="callback_dropdown to-drop">
                         <i class="fa fa-mobile"></i>
                         <span class="callback-ringo"><?php echo $callback_text?></span>
