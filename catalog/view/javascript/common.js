@@ -23,15 +23,15 @@ function getPoint(id) {
         method: 'POST',
         success: function (data) {
             var options = '';
-            $("select#input-point-new-post").children().remove().end();
+            $("#input-point-new-post").children().remove().end();
             $.each($.parseJSON(data), function (index, value) {
-                console.log(value);
+                // console.log(value);
                 options += '<option value="' + value['country_id'] + '">' + value['name'] + '</option>';
-                console.log(value['country_id'] + ' ' + value['name']);
+                // console.log(value['country_id'] + ' ' + value['name']);
             });
-            $("select#input-point-new-post").html(options);
+            $("#input-point-new-post").html(options);
             setTimeout(function () {
-                $('.new_post_delivery_form select').trigger('refresh');
+                $('#input-point-new-post').trigger('refresh');
             }, 1);
         }
     });

@@ -12,7 +12,10 @@ $_['text_contact']    = 'Телефон: %s';
 $_['text_ip']         = 'IP адрес: %s';
 $_['text_date_order'] = 'Дата заказа: %s';
 $_['text_product']    = 'Товар: %s';
+$_['text_product_link'] = 'Ссылка: %s';
+$_['text_product_quantity'] = 'Количество: %s';
 $_['text_price']      = 'Сумма: %s';
+$_['total_text_price']      = 'Итоговая сумма: %s';
 
 // Entry Fields
 $_['entry_contact']   = 'Телефон:';

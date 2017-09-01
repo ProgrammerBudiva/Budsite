@@ -1,4 +1,9 @@
 <?php echo $header; ?>
+<link href="catalog/view/theme/stroyzona/stylesheet/checkout.css" rel="stylesheet">
+<link href="catalog/view/theme/stroyzona/stylesheet/dd.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -19,13 +24,31 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?> checkout"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <div class="row step-menu">
-          <span class="active step-1"><?php echo $entry_contacts;?></span><span class="step-2"><?php echo $entry_payment_method;?></span>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 checkout-main-block">
         <div class="checkout-field">
-            <div class="menu-wrap account-menu">
+
+            <h3 class="theme-header">Хочу быстрое оформление заказа</h3>
+
+        <div class="quick">
+            <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
+            <div class="buy-1-click col-sm-4" style="float: none;">
+                <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
+                <span>
+                                            <div><img src="image/pointer.png" alt="pointer"></div>
+                                            <div>Купить в 1 клик</div>
+                                        </span>
+                <div class="modal-wrap">
+                    <p><?php echo $text_callback_you; ?></p>
+                    <input id="callback_input_phone_product" name="phone" type="phone" />
+                    <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
+                    <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="Жду звонка" class="btn btn-primary" /></a>
+                    <i class="fa fa-times"></i>
+                    <p class="phone-alert"></p>
+                </div>
+                <div class="hidden" id="oneclick_success">Жду звонка</div>
+            </div>
+        </div>
+           <!-- <div class="menu-wrap account-menu">
                 <div class="d-table">
                     <div class="d-table-cell active new-customer-btn">
                         <?php echo (!$logged)?$text_new_customer:$text_customer;?>
@@ -37,62 +60,375 @@
                     </div>
                     <?php } ?>
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-wrap new-customer">
-                <form>
-                    <div class="form-group required">
-                        <label class="col-lg-4 col-sm-12 control-label rfield" for="input-payment-firstname"><?php echo $entry_firstname;?></label>
-                        <div class="col-lg-8 col-sm-12">
-                          <input type="text" name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control" />
+                <div><h3 class="theme-header" style="display: block;">Оформление моего заказа</h3></div>
+                <form id="order-form">
+                    <div class="two-inputs">
+                    <div class="form-group custom-form-group-margin width">
+                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?></strong></label>
+                        <div class="lastname-block">
+                            <input type="text" required name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control fio-height" />
                         </div>
                     </div>
-                    <div class="form-group required">
-                        <label class="col-lg-4 col-sm-12 control-label rfield" for="input-payment-lastname"><?php echo $entry_lastname;?></label>
-                        <div class="col-lg-8 col-sm-12">
-                            <input type="text" name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control" />
+                    <div class="form-group custom-form-group-margin width ">
+                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?></strong></label>
+                        <div class="firstname-block">
+                            <input type="text" required name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control fio-height" />
                         </div>
                     </div>
-                    <div class="form-group required">
+                    </div>
+                    <div class=" additional-margin mobile-margin">
+                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?></strong></label>
+                        <div class="one-row-display phone-block">
+                            <input type="text" required name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control custom-height" />
+                        </div>
+                    </div>
+
+                 <!--   <div class="form-group required">
                         <label class="col-lg-4 col-sm-12 control-label" for="input-payment-city"><?php echo $entry_city;?></label>
                         <div class="col-lg-8 col-sm-12">
                             <div class="search-wrap">
-                                <input type="text" name="city" value="<?php echo $city?>" id="input-payment-city" class="form-control" value=""/>
+                                <input type="text" name="city" value="<?php echo $city?>" id="input-payment-city" class="form-control custom-height" value=""/>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="form-group custom-form-group-margin">
+                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?></strong></label>
+                        <div class="one-row-display email">
+                            <input type="email" required name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control custom-height" />
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group test">
+                        <label style="display: none;" class="col-lg-4 col-sm-12 control-label" for="input-payment-register"><?php echo $entry_register;?></label>
+                        <div class="checkbox-subscribe-position">
+                            <input type="checkbox" name="subscribe" value="1" id="input-payment-register" class="form-control"/>
+                        </div>
+                        <p class="additional-info-subcribe">Получать информацию о выгодных условиях покупки</p>
+                    </div>
+
+                    <h4 class="theme-header">Оплата моего заказа:</h4>
+
+                    <div class="font-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" id="payment1" value="Предоплата на карту ПриватБанка" checked>
+                                Предоплата на карту ПриватБанка
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" id="payment2" value="Наложенный платеж (доп. +2% от стоимости)" >
+                                Наложенный платеж (доп. +2% от стоимости)
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" id="payment3" value="Безналичный рассчет" >
+                                Безналичный рассчет
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="nal-payment" style="display: none; padding-left: 30px; max-width: 600px;">
+                        <div class="font-10">
+                            <div class="two-radio ">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" checked name="face" id="ur" value="1" >
+                                        Юридическое лицо (ООО, ФОП, ...)
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="face" id="fiz" value="2" >
+                                        Физическое лицо
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ur-lico" >
+                        <label for="" style="padding-right:20px ">Плательщик НДС</label>
+                        <div class="font-10 " style="display: inline-block;">
+                            <div class="two-radio ">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" checked name="nds" id="nds-yes" value="1" >
+                                        Да
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="nds" id="nds-no" value="2" >
+                                        Нет
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                            <!-- <label class="control-label custom-label-checkout" for="input-payment-company-name">Название компании на укр.яз.</label> -->
+                            <div class="one-row-display email">
+                                <input type="text"  name="company-name" value="" id="input-payment-company-name" placeholder="Название компании на укр.яз." class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                         <!--   <label class="control-label custom-label-checkout" for="edrpou">ЕДРПОУ</label> -->
+                            <div class="one-row-display email">
+                                <input type="text"  name="edrpou" value="" id="edrpou" placeholder="ЕДРПОУ" class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label  class="control-label" for="want-contract" style="padding-right: 10px;">Хочу оформить договор</label>
+
+                                <input type="checkbox" name="contract" value="1" id="want-contract" class="form-control"/>
+                        </div>
+                        <div class="want-contract" style="display: none;">
+                        <div class="form-group custom-form-group-margin">
+                            <!--<label class="control-label custom-label-checkout" fur-addraddr">Юридический адрес</label> -->
+                            <div class="one-row-display email">
+                                <input type="text" placeholder="Юридический адрес"  name="ur-addr" value="" id="ur-addr" class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <!--<div class="form-group">
+                           <label  class="control-label" for="want-contract" style="padding-right: 10px;">Почтовый адрес совпадает с юридическим</label>
+
+                            <input type="checkbox" placeholder="Почтовый адрес совпадает с юридическим" checked="checked" name="fiz-ur" value="1" id="fiz-ur" class="form-control"/>
+                        </div> -->
+                            <div class="form-group custom-form-group-margin">
+                                <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр. яз.</label>-->
+                                <div class="one-row-display email">
+                                    <input type="text"  name="post-addr" value="" id="post-addr" placeholder="Почтовый адрес" class="form-control custom-height" />
+                                </div>
+                            </div>
+
+
+                            <div class="form-group custom-form-group-margin">
+                            <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр. яз.</label>-->
+                            <div class="one-row-display email">
+                                <input type="text"  name="phone-company" value="" id="phone-company" placeholder="Телефон компании" class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin" style="display: flex;     width: 90%;">
+                            <div style="width: 49%;padding-right: 2%;">
+                           <!-- <label class="control-label custom-label-checkout" fur-addraddr">Расчетный счет</label> -->
+                            <div class="one-row-display email">
+                                <input type="text" name="payment-list" value="" id="" placeholder="Расчетный счет" class="form-control " />
+                            </div>
+                            </div>
+                            <div style="width: 49%;">
+                            <!-- <label class="control-label custom-label-checkout" fur-addraddr">МФО</label> -->
+                            <div class="one-row-display email">
+                                <input type="text"  name="mfo" placeholder="МФО" value="" id="" class="form-control " />
+                            </div></div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                            <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр.</label>-->
+                            <div class="one-row-display email">
+                                <input type="text"  name="fio-boss" value="" id="fio-boss" placeholder="ФИО руководителя на укр. яз." class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                            <!--  <label class="control-label custom-label-checkout" for="boss-position">Должность руководителя на укр.</label>-->
+                            <div class="one-row-display email">
+                                <input type="text"  name="boss-position" value="" id="boss-position" placeholder="Должность руководителя на укр. яз." class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                            <!--  <label class="control-label custom-label-checkout" for="ustav">Руководитель действует на основании (устава, доверенности и т.д.)</label>-->
+                            <div class="one-row-display email">
+                                <input type="text"  name="ustav" value="" id="ustav" placeholder="Руководитель действует на основании (устава, доверенности № и т.д.)" class="form-control custom-height" />
                             </div>
                         </div>
                     </div>
-                    <div class="form-group required">
-                        <label class="col-lg-4 col-sm-12 control-label" for="input-payment-telephone"><?php echo $entry_telephone;?></label>
-                        <div class="col-lg-8 col-sm-12">
-                          <input type="text" name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-lg-4 col-sm-12 control-label" for="input-payment-email"><?php echo $entry_email;?></label>
-                        <div class="col-lg-8 col-sm-12">
-                            <input type="text" name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control" />
+                </div>
+                        <div class="fiz-lico" style="display: none;">
+
+                            <div class="form-group custom-form-group-margin">
+                              <!--  <label class="control-label custom-label-checkout" for="fio-ukr">ФИО на укр.яз.</label> -->
+                                <div class="one-row-display email">
+                                    <input type="text"  name="fio-ukr" value="" id="fio-ukr" placeholder="ФИО на укр.яз." class="form-control custom-height" />
+                                </div>
+                            </div>
+
+                            <div class="form-group custom-form-group-margin">
+                                <!--<label class="control-label custom-label-checkout" for="inn">ИНН</label>-->
+                                <div class="one-row-display email">
+                                    <input type="text"  name="inn" value="" id="inn" placeholder="ИНН" class="form-control custom-height" />
+                                </div>
+                            </div>
 
                         </div>
                     </div>
 
-                    <?php if (!$logged) { ?>
-                    <div class="form-group">
-                        <label class="col-lg-4 col-sm-12 control-label" for="input-payment-register"><?php echo $entry_register;?></label>
-                        <div class="col-lg-8 col-sm-12">
-                            <input type="checkbox" name="register" value="1" id="input-payment-register" class="form-control"/>
+                    <h4 class="theme-header">Доставка:</h4>
+
+                    <div class="font-10 ">
+                        <div class="two-radio ">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" checked name="shipping" id="shipping-post" value="Курьерской службой" >
+                                    Курьерской службой
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="shipping" id="shipping-self" value="Самовывоз" >
+                                    Самовывоз
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <?php } ?>
+
+                    <div class="hide-select">
+                        <select class="msselect">
+                            <option value="1" name="shipping-company" data-image="image/nova_poshta.jpg">Новая Почта</option>
+                            <option value="2" name="shipping-company" data-image="image/intime.jpg">InTime</option>
+                            <option value="3" name="shipping-company" data-image="image/delivery.png">Delivery</option>
+                        </select>
+                    </div>
+
+                    <div class="self-shipping-block">
+                        <h4 class="theme-header">Адреса складов:</h4>
+                        <p> &#8226; Одесса (1-й Промышленный пер., 9)</p>
+                        <p> &#8226; Киев (ул. Стройиндустрии, 7)</p>
+                    </div>
+
+                    <div class="new_post_delivery" id="np_block">
+                        <div class="label-input">
+                            <label class="col-sm-3" for="input-country-new-post"><strong><?php echo $entry_city; ?></strong></label>
+                            <div class="col-sm-9">
+                                <select name="config_country_id" id="input-country-new-post" onchange="getPoint($(this).find(':selected').data('id'))">
+                                    <?php foreach ($countries as $country) { ?>
+                                    <option value="<?php echo $country['name']; ?>" data-id="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+                                <div class="address-shipping">
+                                    <label>
+                                        <input type="radio" checked name="np-sklad" id="np-sklad" value="1" >
+                                        На отделение:
+                                    </label>
+
+                                    <label style="padding-left: 3%;">
+                                        <input type="radio"  name="np-sklad" id="np-address" value="2" >
+                                        Адресная доставка:
+                                    </label>
+                                </div>
+                        <div id="np-point">
+                        <label class="col-sm-3 control-label" for="input-point-new-post-styler"><strong><?php echo $entry_point; ?></strong></label>
+                        <div class="col-sm-9">
+                            <select name="config_point_id" id="input-point-new-post" >
+                                <?php foreach ($entry_points as $point) { ?>
+                                <option value="<?php echo $point['name']?>"><?php echo $point['name']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        </div>
+                        <div id="np-addr" style="display: none;">
+                            <div class="form-group custom-form-group-margin">
+                                <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
+                                <div class="one-row-display">
+                                    <input type="text" name="addr" value="" id="input-addr" class="form-control custom-height" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new_post_delivery" id="delivery_post_block" style="display: none;">
+                        <div class="label-input">
+                            <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
+                            <div class="col-sm-9">
+                                <select name="delivery-city" id="input-country-delivery" class="" data-search="true" onchange="getPointDelivery($(this).find(':selected').data('id'))"></select>
+                            </div>
+                        </div>
+                        <div class="address-shipping">
+                            <label>
+                                <input type="radio" checked name="delivery-sklad" id="delivery-sklad" value="1" >
+                                На отделение:
+                            </label>
+
+                            <label style="padding-left: 3%;">
+                                <input type="radio"  name="delivery-sklad" id="delivery-address" value="2" >
+                                Адресная доставка:
+                            </label>
+                        </div>
+                        <div class="delivery-point-subblock" id="delivery-block-show">
+                        <label class="col-sm-3 control-label" for="input-point-delivery"><strong><?php echo $entry_point; ?></strong></label>
+                        <div class="col-sm-9">
+                            <select name="delivery-point" id="input-point-delivery"></select>
+                        </div>
+                        </div>
+                        <div id="delivery-addr" style="display: none;">
+                            <div class="form-group custom-form-group-margin">
+                                <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
+                                <div class="one-row-display">
+                                    <input type="text" name="delivery-addr" value="" id="delivery-addr" class="form-control custom-height" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new_post_delivery" id="intime_block" style="display:none;">
+                        <div class="label-input">
+                            <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="intime-city" value="" id="intime-city" class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="address-shipping">
+                            <label>
+                                <input type="radio" checked name="intime-sklad" id="intime-sklad" value="1" >
+                                На отделение:
+                            </label>
+
+                            <label style="padding-left: 3%;">
+                                <input type="radio"  name="intime-sklad" id="intime-address" value="2" >
+                                Адресная доставка:
+                            </label>
+                        </div>
+                        <div id="intime-addr-block" >
+                            <div class="form-group custom-form-group-margin">
+
+                                <div class="one-row-display" style="padding-top: 10px;">
+                                    <input type="text" name="intime-addr" value="" id="intime-addr" class="form-control custom-height" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="form-group required" style="clear:both;text-align:center">
                         <label class="col-lg-4 col-sm-12"></label>
-                        <button type="button" id="" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить заказ</button>
+                        <button type="button" id="buy" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить заказ</button>
                     </div>
                 </form>
                 <div class="clear"></div>
             </div>
             <?php if(!$logged) { ?>
-            <div class="form-wrap already-buy-here">
+         <!--   <div class="form-wrap already-buy-here">
                 <div id="login-errors" class="ajax-login-error"></div>
                 <form action="javascript:void(null);" onsubmit="ajax_login_in_checkout()" method="post" enctype="multipart/form-data">
                   <div class="form-group">
@@ -117,106 +453,18 @@
                   </div>
 
                 </form>
-            </div>
+            </div> -->
             <?php } ?>
         </div>
         <div class="clear"></div>
 
         <div class="pay-field">
-            <div class="choose-delivery-field only-delivery-field">
-                <h3><?php echo $entry_new_post;?></h3>
-                <form>
-                <?php if ($shipping_methods) { ?>
-                <?php foreach ($shipping_methods as $shipping_method) { ?>
-                <?php if (!$shipping_method['error']) { ?>
-                <?php foreach ($shipping_method['quote'] as $quote) { ?>
-                <div class="radio">
-                  <label>
-                    <?php if ((isset($code) && $quote['code'] == $code) || !isset($code)) { ?>
-                      <?php $code = $quote['code']; $explode = explode('.', $code); $class = $explode[0];?>
-                      <input type="radio" name="shipping_method" value="<?php echo $quote['code']; ?>" class="<?php echo $class; ?>" checked="checked" />
-                      <?php } else {
-                      $explode = explode('.', $quote['code']); $class = $explode[0]; ?>
-                      <input type="radio" name="shipping_method" value="<?php echo $quote['code']; ?>" class="<?php echo $class; ?>" />
-                      <?php } ?>
-                      <?php echo $quote['title']; ?> - <?php echo $quote['text']; ?></label>
-                </div>
-                <?php } ?>
-                <?php } else { ?>
-                <div class="alert alert-danger"><?php echo $shipping_method['error']; ?></div>
-                <?php } ?>
-                <?php } ?>
-                <?php } ?>
 
-                <div class="new_post_delivery_form">
-                    <label class="col-sm-3 control-label" for="input-country-new-post"><?php echo $entry_city; ?></label>
-                    <div class="col-sm-9">
-                        <select name="config_country_id" id="input-country-new-post" onchange="getPoint(this.value)">
-                            <?php foreach ($countries as $country) { ?>
-                            <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                    <label class="col-sm-3 control-label" for="input-point-new-post-styler"><?php echo $entry_point; ?></label>
-                    <div class="col-sm-9">
-                        <select name="config_point_id" id="input-point-new-post" onchange="setPoint(this.value)">
-                            <?php foreach ($entry_points as $point) { ?>
-                            <option value="<?php echo $point['name']?>"><?php echo $point['name']; ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                </div>
 
-                <?php if ($delivery_methods_custom) { ?>
-                <?php unset($code); ?>
-                <?php foreach ($delivery_methods_custom as $delivery_method_custom) { ?>
-                <div class="radio">
-                    <?php if (strlen($delivery_method_custom) > 0) { ?>
-                    <label>
-                      <input type="radio" name="shipping_method" value="<?php echo str_replace($exp, '', $delivery_method_custom); ?>" />
-                      <?php echo str_replace($exp, '', $delivery_method_custom) ?>
-                    </label>
-                    <?php } ?>
-                </div>
-                <?php } ?>
-                <?php } ?>
-                </form>
 
-            </div>
 
-          <div class="choose-delivery-field">
-              <h3><?php echo $entry_payment;?></h3>
-              <form>
-                  <?php if ($payment_methods) { ?>
-                  <?php unset($code); ?>
-                    <?php foreach ($payment_methods as $payment_method) { ?>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>" />
-                        <?php echo $payment_method['title']; ?>
-                      </label>
-                    </div>
-                    <?php } ?>
-                  <?php } ?>
 
-                  <?php if ($payment_methods_custom) { ?>
-                  <?php unset($code); ?>
-                  <?php foreach ($payment_methods_custom as $payment_method_custom) { ?>
-                    <?php if ($payment_method_custom) { ?>
-                    <div class="radio">
-                        <?php if (strlen($payment_method_custom) > 0) { ?>
-                        <label>
-                          <input type="radio" name="payment_method" value="<?php echo str_replace($exp, '',  $payment_method_custom); ?>" />
-                          <?php echo str_replace($exp, '', $payment_method_custom) ?>
-                        </label>
-                        <?php } ?>
-                    </div>
-                    <?php } ?>
-                  <?php } ?>
-                  <?php } ?>
-              </form>
-              <!--<iframe id="kaznachey_frame" width="508" height="588" style="border: none;" src="https://kaznachey.ua/PaymentForm/ru-RU/MwA0ADcANwA4ACYAMgA4AGEANgBhADMAMAAwAGYANgA3AGUAZQA4ADcANQA0AGUAMAAwAGIAYgA1ADQANAA2ADcAZgAzADIANgBhAA=="></iframe>-->
-          </div>
+
 
           <div class="form-group">
             <label class="col-lg-4 col-sm-12 control-label" for="textarea-payment-comment"><?php echo $entry_comment;?></label>
@@ -307,965 +555,387 @@
       <?php echo $content_bottom; ?></div>
   <?php } ?>
     <?php echo $column_right; ?></div>
-</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          var ua = navigator.userAgent;
-          if (!/android/i.test(ua)) {
-            $('#input-payment-telephone').mask('+38(999)-999-99-99');
-          }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script src="catalog/view/javascript/jquery.dd.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
 
-          // hack
-          setTimeout(function(){
-            $('#input-payment-register-styler').click();
-          },100);
-        });
+    window.onload = function() {
+    $("html, body").scrollTop(0);
+    $('#input-payment-telephone').mask("+38(999)-999-99-99");
+    $('#input-payment-register-styler').trigger('click');
+        setTimeout(function () {
+            $('#fiz-ur-styler').trigger('click');
+            $('#fiz-ur-styler').trigger('click');
+        }, 3000);
 
-        $(document).ready(function () {
-          $('.register-continue').click(function () {
-            var name = $('#input-payment-firstname').val();
-            var lastname = $('#input-payment-lastname').val();
-            var email = $('#input-payment-email').val();
-            var telephone = $('#input-payment-telephone').val();
-            var city = $('#input-payment-city').val();
-            //var address = $('#input-payment-address').val();
-            var registerRequired = $('#input-payment-register').prop('checked');
+    $('.buy-1-click-new').click(function(){
+        var phone = $('#input-payment-telephone').val();
+        clearAlertMessages();
 
-            // register if user required
-            if (registerRequired) {
-              var action = '<?= $register_action;?>';
-
-              $.post(
-                action,
-                {
-                  firstname: name, lastname: lastname, email: email, telephone: telephone, agree: true, noCaptcha: true
-                },
-                function (response) {
-                  console.log(response);
-                });
-            }
-
-            // validate step2
-            $.post('<?php echo $action_step_2;?>',
-              {
-                firstname: name, lastname: lastname, email: email, telephone: telephone, city: city
-              },
-              function (response) {
-                var json = JSON.parse(response);
-
-                var zones = $('#input-payment-zones');
-                $('.alert').remove();
-                $('*.error').removeClass('error');
-                for (var i = 0; i < json.length; i++) {
-                  if (json[i].success == true) {
-                    $('.step-menu span').removeClass("active");
-                    $(".account-menu").hide();
-                    $(".new-customer").hide();
-                    $(".pay-field").show();
-                    $(".step-2").addClass("active");
-                  }
-
-                  if (json[i].zones) {
-                    zones.empty();
-                    zones.append(json[i].zones);
-                    zones.trigger('refresh');
-                  }
-
-                  if (json[i].error_email) {
-                    $('#input-payment-email').addClass('error');
-                    $('#input-payment-email').after('<div class="alert text-danger">' + json[i].error_email + '</div>');
-                  }
-
-                  if (json[i].error_telephone) {
-                    $('#input-payment-telephone').addClass('error');
-                    $('#input-payment-telephone').after('<div class="alert text-danger">' + json[i].error_telephone + '</div>');
-                  }
-
-                  if (json[i].error_firstname) {
-                    $('#input-payment-firstname').addClass('error');
-                    $('#input-payment-firstname').after('<div class="alert text-danger">' + json[i].error_firstname + '</div>');
-                  }
-
-                  if (json[i].error_lastname) {
-                    $('#input-payment-lastname').addClass('error');
-                    $('#input-payment-lastname').after('<div class="alert text-danger">' + json[i].error_lastname + '</div>');
-                  }
-
-                  if (json[i].error_city) {
-                    $('#input-payment-city').addClass('error');
-                    $('#input-payment-city').after('<div class="alert text-danger">' + json[i].error_city + '</div>');
-                  }
-
-                  /*if(json[i].error_address){
-                   $('#input-payment-address').addClass('error');
-                   $('#input-payment-address').after('<div class="alert text-danger">'+json[i].error_address+'</div>');
-                   }*/
-                }
-                if (json[0].success == true) {
-                  $('.step-menu span').removeClass("active");
-                  $(".account-menu").hide();
-                  $(".new-customer").hide();
-                  $(".pay-field").show();
-                  $(".step-2").addClass("active");
-
-                  /* Событие перехода на шаг заполнения данных оплаты и доставки в оформлении заказа для Enhanced Ecommerce */
-                  var $cartContainer = $('#cart');
-                  var products = [];
-                  $cartContainer.find('meta[data-type="product-info"]').each(function () {
-                      products.push(JSON.parse($(this).attr('content')));
-                  });
-                  EEProcessor.checkoutSteps(3, 'user_credentials_filled', products);
-                }
-              }
-            );
-
-          });
-
-          $('.delivery-continue').click(function () {
-            var $shipping_method = $('input[name="shipping_method"]:checked');
-            var $payment_method = $('input[name="payment_method"]:checked');
-
-            clearAlertMessages();
-            setAlertMessage = function(msg, $elem){
-              $elem.find('h3').after('<span class="checkout-error"><i class="fa fa-chain-broken" style="font-size: 1.2em;margin-right: 10px;"></i>' + msg + '</span>');
-            };
-
-            if ($shipping_method.length == 0){
-              setAlertMessage('Необходимо выбрать способ доставки!', $('.choose-delivery-field:first'));
-              return false;
-            }
-
-            if ($payment_method.length == 0){
-              setAlertMessage('Необходимо выбрать способ оплаты!', $('.choose-delivery-field:last'));
-              return false;
-            }
-
-            var method = $shipping_method.val();
-            var payment_method = $payment_method.val();
-            var comment = $('#textarea-payment-comment').val();
-
-            $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
-            if (method == 'Курьерскими службами: Новая	Почта, Интайм, Mist Express'){
-            var isNewPost = false;
-            var city = $("#input-country-new-post option:selected").text();
-            var point = $("#input-point-new-post option:selected").text();
-            if ($("#new_post_checked").hasClass("checked")) {
-              //$("#new_post_checked option:first").attr('selected', 'selected');
-              isNewPost = true;
-            }}else{
-                var city = 'Не указан';
-            }
-//            console.log(city + '  ' + point);
-            var error = false;
-
-            if (!$('.input-delivery:checked')) {
-              $('.input-delivery').css('border', '1px solid red');
-            }
-            $.post('<?= $action_step_3;?>',
-              {
-                method: method, payment_method: payment_method,
-                city: city, point: point, isNewPost: isNewPost,
-                comment: comment
-              },
-              function (response) {
-                console.log(response);
+        if (phone.length == 0){
+            setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
+            $('html, body').animate({
+                scrollTop: $("#content").offset().top
+            }, 20);
+            return false;
+        }
+        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
+        $.ajax({
+            type: "POST",
+            url: "index.php?route=checkout/checkout/buy1clickCustom",
+            data: "telephone=" + phone,
+            success: function(data){
                 $.unblockUI();
-                $('.alert').remove();
-                $('*.error').removeClass('error');
-                var json = JSON.parse(response);
-                if (json.success) {
-                  /* Событие перехода на подтверждения в оформлении заказа для Enhanced Ecommerce */
-                  var $cartContainer = $('#cart');
-                  var products = [];
-                  $cartContainer.find('meta[data-type="product-info"]').each(function () {
-                      products.push(JSON.parse($(this).attr('content')));
-                  });
-                  EEProcessor.checkoutSteps(4, 'payment_shipping_filled', products);
+                $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
+                var el = $('#succes-popup').show();
 
-                  /* Событие выбора опции метода доставки для Enhanced Ecommerce */
-                  EEProcessor.checkoutOption(4, method);
-
-                  /* Событие выбора опции метода оплаты для Enhanced Ecommerce */
-                  EEProcessor.checkoutOption(4, payment_method);
-
-                  $('a.delivery-continue-popup').trigger('click');
-                  $('#succes-popup').load(json.success);
-                }
-              }
-            )
-          });
-
-          function payCard() {
-            if ($('input[value^="kaznachey"]').is(":checked")) {
-              $("#kaznachey_frame").addClass("show-kaznachey");
-            } else {
-              $("#kaznachey_frame").removeClass("show-kaznachey");
+                $('a.delivery-continue-popup').trigger('click');
+                $('#succes-popup').load(json.success);
             }
-          };
+        }) ;
+    });
 
-          payCard();
 
-          $(".choose-delivery-field .radio").click(function () {
-            payCard();
-          });
 
-//          function newPostDelivery() {
-//            if ($('input[value^="newpost2.newpost2"]').is(":checked")) {
-//              $(".new_post_delivery_form").show();
-//            } else {
-//              $(".new_post_delivery_form").hide();
-//            }
-//          };
+    };
+
+    setTimeout(function() {
+        $.ajax({
+            type: "GET",
+            url: "http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
+            success: function (data) {
+                var options = '';
+                for (var i = 0; i < data.data.length; i++) {
+                    if(data.data[i].ExtracityPickup === false) {
+                        options += '<option value="' + data.data[i].name + '" data-id="'+ data.data[i].id +'">' + data.data[i].name + '</option>';
+                    }
+                }
+                $('#input-country-delivery').append(options);
+
+                $('#input-country-delivery').trigger('refresh');
+            }
+        });
+    },200);
+    $(document).ready(function(e) {
+        try {
+            $(".msselect").msDropDown();
+//            $(".test").msDropDown();
+        } catch(e) {
+            alert(e.message);
+        }
+    });
+
+    //Select NP
+//    $(document).ready(function() {
+//        $(".test").select2({
 //
-//          newPostDelivery();
+//            ajax: {
+//                url: "http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
+//                type: 'post',
+//                dataType: 'json',
+//                delay: 250,
+//                data: function (params) {
+//                    var jsona = {
+//                        modelName: "AddressGeneral",
+//                        calledMethod: "getSettlements",
+//                        apiKey: "78bcd5e342ce167eaa57ad06f4b3c5a4",
+//                        methodProperties: {
+//                            Page: "1",
+//                            Warehouse: "1",
+//                            FindByString: params.term
+//                        }
+//                    };
+//                     return JSON.stringify(jsona)
 //
-//          $(".choose-delivery-field .radio").click(function () {
-//            newPostDelivery();
-//          });
+//                },
+//                processResults: function (json, params) {
+//                    // parse the results into the format expected by Select2
+//                    // since we are using custom formatting functions we do not need to
+//                    // alter the remote JSON data, except to indicate that infinite
+//                    // scrolling can be used
+//                    params.page = params.page || 1;
+//
 
+//                    return {
+//                        results:
+//
+////                        pagination: {
+////                            more: (params.page * 30) < data.total_count
+////                        }
+//                    };
+//                },
+//                success: function(json){
+//                    console.log(json);
+//                    setTimeout(function() {
+//                        console.log(json);
+//                        var options = '';
+//                        for (var i = 0; i < json['data'].length; i++) {
+////                            options += '<li class="select2-results__options" >' + json['data'][i].DescriptionRu + '</li>';
+//                            options += '<li class="select2-results__option" role="treeitem" aria-selected="true">' + json['data'][i].DescriptionRu + '</li>';
+//                        }
+//                        $(".select2-results__options").html(options);
+//                    }, 300);
+//                },
+//                cache: true
+//            },
+//
+//            minimumInputLength: 2
+//        });
+//
+//    });
+
+
+    //Search from NP select
+//    $(function() {
+//        $('.select2-search__field').keyup(function () {
+//            var test = $('.select2-search__field').val();
+//            var jsona = {
+//                modelName: "AddressGeneral",
+//                calledMethod: "getSettlements",
+//                apiKey: "78bcd5e342ce167eaa57ad06f4b3c5a4",
+//                methodProperties: {
+//                    Page: "1",
+//                    Warehouse: "1",
+//                    FindByString: test
+//                }
+//            };
+//
+//            $.ajax({
+//                type: "POST",
+//                url: "http://api.novaposhta.ua/v2.0/json/",
+//                headers: "Content-Type": "application/json",
+//                data: JSON.stringify(jsona)
+//
+//            });
+//
+//        });
+//    });
+
+
+    $(document).ready(function(){
+        $('li.enabled._msddli_').click(function(){
+            var shipping_company = $('.jq-selectbox__select-text').eq(1).text();
+            if( shipping_company === 'Новая Почта') {
+                $('#delivery_post_block').hide();
+                $('#intime_block').hide();
+                $('#np_block').show();
+            }else{ if(shipping_company === "Delivery") {
+                $('#np_block').hide();
+                $('#intime_block').hide();
+                $('#delivery_post_block').show();
+            }if(shipping_company === "InTime"){
+                $('#delivery_post_block').hide();
+                $('#np_block').hide();
+                $('#intime_block').show();
+            }
+            }
+        });
+    });
+
+//Class listener
+function addClassNameListener(elemId, callback, callback1) {
+
+    var elem = document.getElementById(elemId);
+    var lastClassName = elem.className;
+
+    window.setInterval( function() {
+
+        var className = elem.className;
+
+        if (className !== lastClassName) {
+
+            if(className.indexOf('checked') + 1){
+
+                callback();
+                lastClassName = className;
+
+            }else callback1();
+
+        }
+
+    },10);
+
+}
+
+    $(window).load(function () {
+        addClassNameListener("payment3-styler", function(){
+            $('.nal-payment').show();
+        },
+        function(){
+            $('.nal-payment').hide();
         });
 
-        function forgottenLoad(){
-            $(".forgotten-content").load("<?php echo $link_forgotten;?>");
-        }
+        addClassNameListener("ur-styler", function(){
+                $('.ur-lico').show();
+                $('.fiz-lico').hide();
+            },
+            function(){
+                $('.fiz-lico').show();
+                $('.ur-lico').hide();
+            });
 
-        function clearAlertMessages(){
-            $(".checkout-error").remove();
-        }
+        addClassNameListener("shipping-post-styler", function(){
+            $('.hide-select').show();}, function(){
+            $('.hide-select').hide();
+            $('.new_post_delivery').hide();});
 
-        function ajax_login_in_checkout(){
-            var action = '/index.php?route=account/login/ajax_login';
-            var email = $('.checkout-field #input-customer-email').attr('value');
-            var password = $('.checkout-field #input-password').attr('value');
+        addClassNameListener("shipping-self-styler", function(){
+            $('.self-shipping-block').show();}, function(){
+            $('.self-shipping-block').hide();
+            $('#np_block').show();});
 
-            $.post(
-                    action,
-                    {email: email, password: password, callback: 'checkout'},
-                    function(response){
-                        var json_response = JSON.parse(response);
-                        $('.alert-danger').remove();
-                        for (var i =0; i < json_response.length; i++){
-                            if(json_response[i].warning){
-                                $('.ajax-login-error').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle">'+json_response[i].warning+'</i></div>');
-                            }
+        addClassNameListener("np-address-styler",  function(){
+            $('#np-point').hide();
+            $('#np-addr').show()}, function(){
+            $('#np-point').show();
+            $('#np-addr').hide();
+            });
+        addClassNameListener("delivery-sklad-styler",  function(){
+            $('#delivery-block-show').show();
+            $('#delivery-addr').hide()}, function(){
+            $('#delivery-block-show').hide();
+            $('#delivery-addr').show();
+        });
+        addClassNameListener("delivery-address-styler",  function(){
+            $('.delivery-point-subblock').hide();}, function(){
+            $('.delivery-point-subblock').show();
+        });
+    });
 
-                            if(json_response[i].success){
-                                window.location.href = json_response[i].success;
-                            }
-                        }
+
+</script>
+<script type="text/javascript">
+    $(window).load(function () {
+        function getPointDelivery(id) {
+
+            $.ajax({
+                url: "http://www.delivery-auto.com/api/v4/Public/GetWarehousesListInDetail?culture=ru-RU&CityId=" + id + "&onlyWarehouses=true&country=1",
+                method: 'GET',
+                success: function (data) {
+
+                    var options = '';
+                    $("#input-point-delivery").children().remove();
+
+                    for (var i = 0; i < data.data.length; i++) {
+                        options += '<option value="' + data.data[i].address + '">' + data.data[i].address + '</option>';
                     }
-            );
-        }
-        //Функция отображения API формы Новой Почты
-        function clickDelivery() {
-            $('.only-delivery-field .jq-radio').click(function(){
-                var valueRadio = $(this).children('[name=shipping_method]').val();
-                if(valueRadio == 'Курьерскими службами: Новая	Почта, Интайм, Mist Express'){
-                    setTimeout('$(".new_post_delivery_form").show();', 0);
-                }else{
-                    $(".new_post_delivery_form").hide();
+
+                    $('#input-point-delivery').append(options);
+                    $('#input-point-delivery').trigger('refresh');
+
                 }
             });
         }
-        setTimeout('clickDelivery();', 2000);
 
-    </script>
-<script type="text/javascript"><!--
-$(document).on('change', 'input[name=\'account\']', function() {
-	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {	
-		if (this.value == 'register') {
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_account; ?> <i class="fa fa-caret-down"></i></a>');
-		} else {
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-		}
-	} else {
-		if (this.value == 'register') {
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_account; ?>');
-		} else {
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_address; ?>');
-		}	
-	}
-});
+        getPointDelivery('1e8e7257-a82a-e311-8b0d-00155d037960');
 
-<?php if (!$logged) { ?> 
-$(document).ready(function() {
-    $.ajax({
-        url: 'index.php?route=checkout/login',
-        dataType: 'html',
-        success: function(html) {
-           $('#collapse-checkout-option .panel-body').html(html);
-          
-			$('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
-			
-			$('a[href=\'#collapse-checkout-option\']').trigger('click');
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        $('#want-contract-styler').click(function () {
+            if($('#want-contract').is(':checked') === true){
+                $('.want-contract').show();
+            }else {
+                $('.want-contract').hide();
+            }
+        });
+
+    });
+        setAlertMessage = function (msg, $elem) {
+            $elem.before('<span class="checkout-error"><i class="fa fa-chain-broken" style="font-size: 1.2em;margin-right: 10px;"></i>' + msg + '</span>');
+        };
+
+        function clearAlertMessages() {
+            $(".checkout-error").remove();
+        }
+
+        function validateEmail($email) {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+            return emailReg.test($email);
+        }
+
+
+    $('#buy').click( function() {
+
+        var data = $('#order-form').serialize();
+        var shipping_company = $( ".msselect option:selected" ).val();
+        var email = $('#input-payment-email').val();
+        var phone = $('#input-payment-telephone').val();
+        var lastname = $('#input-payment-lastname').val();
+        var firstname = $('#input-payment-firstname').val();
+        clearAlertMessages();
+
+        if (phone.length == 0){
+            setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
+            $('html, body').animate({
+                scrollTop: $("#content").offset().top
+            }, 20);
+            return false;
+        }
+
+        if (lastname.length == 0){
+            setAlertMessage('Необходимо указать фамилию!', $('.lastname-block'));
+            $('html, body').animate({
+                scrollTop: $("#content").offset().top
+            }, 20);
+            return false;
+        }
+
+        if (firstname.length == 0){
+            setAlertMessage('Необходимо указать имя!', $('.firstname-block'));
+            $('html, body').animate({
+                scrollTop: $("#content").offset().top
+            }, 20);
+            return false;
+        }
+
+        if (email.length == 0){
+            setAlertMessage('Необходимо указать email!', $('.email'));
+            $('html, body').animate({
+                scrollTop: $("#input-payment-telephone").offset().top
+            }, 20);
+            return false;
+        }else {
+            if(!validateEmail(email)){
+                setAlertMessage('Указан неправильный email!', $('.email'));
+                $('html, body').animate({
+                    scrollTop: $("#input-payment-telephone").offset().top
+                }, 20);
+                return false;
+            }
+        }
+
+//        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
+        $.ajax({
+            url:  "index.php?route=checkout/checkout/success",
+            method: "POST",
+            data: data + '&shipping_company=' + shipping_company,
+            success: function(response){
+                var json = JSON.parse(response);
+                if(json.success){
+//                    $.unblockUI();
+                    $('a.delivery-continue-popup').trigger('click');
+                    $('#succes-popup').load(json.success);
+                }
+            }
+        });
+    });
+
+    $('#callback_input_submit_product').click(function () {
+        var phone = $('#callback_input_phone_product').val();
+        if (phone){
+            $.ajax({
+                url: "index.php?route=checkout/checkout/sendE",
+                method: "POST",
+                data: 'telephone=' + phone,
+                success: function () {
+                    console.log('ok');
+                }
+            });
         }
     });
-});     
-<?php } else { ?>
-$(document).ready(function() {
-    $.ajax({
-        url: 'index.php?route=checkout/payment_address',
-        dataType: 'html',
-        success: function(html) {
-            $('#collapse-payment-address .panel-body').html(html);
-            
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
 
-			$('a[href=\'#collapse-payment-address\']').trigger('click');
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-});
-<?php } ?>
-
-// Checkout
-$(document).delegate('#button-account', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/' + $('input[name=\'account\']:checked').val(),
-        dataType: 'html',
-        beforeSend: function() {
-        	$('#button-account').button('loading');
-		},      
-        complete: function() {
-			$('#button-account').button('reset');
-        },          
-        success: function(html) {
-            $('.alert, .text-danger').remove();
-            
-            $('#collapse-payment-address .panel-body').html(html);
-
-			if ($('input[name=\'account\']:checked').val() == 'register') {
-				$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_account; ?> <i class="fa fa-caret-down"></i></a>');
-			} else {
-				$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-			}	
-			
-			$('a[href=\'#collapse-payment-address\']').trigger('click');
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-});
-
-// Login
-$(document).delegate('#button-login', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/login/save',
-        type: 'post',
-        data: $('#collapse-checkout-option :input'),
-        dataType: 'json',
-        beforeSend: function() {
-        	$('#button-login').button('loading');
-		},  
-        complete: function() {
-            $('#button-login').button('reset');
-        },              
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            $('.form-group').removeClass('has-error');
-			
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                $('#collapse-checkout-option .panel-body').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-           
-				// Highlight any found errors
-				$('input[name=\'email\']').parent().addClass('has-error');	
-				$('input[name=\'password\']').parent().addClass('has-error');	   
-		   }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-// Register
-$(document).delegate('#button-register', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/register/save',
-        type: 'post',
-        data: $('#collapse-payment-address input[type=\'text\'], #collapse-payment-address input[type=\'date\'], #collapse-payment-address input[type=\'datetime-local\'], #collapse-payment-address input[type=\'time\'], #collapse-payment-address input[type=\'password\'], #collapse-payment-address input[type=\'hidden\'], #collapse-payment-address input[type=\'checkbox\']:checked, #collapse-payment-address input[type=\'radio\']:checked, #collapse-payment-address textarea, #collapse-payment-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-			$('#button-register').button('loading');
-		},  
-        complete: function() {
-            $('#button-register').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            $('.form-group').removeClass('has-error');
-			            
-            if (json['redirect']) {
-                location = json['redirect'];                
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-payment-address .panel-body').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
-                
-				for (i in json['error']) {
-					var element = $('#input-payment-' + i.replace('_', '-'));
-					
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
-				
-				// Highlight any found errors
-				$('.text-danger').parent().addClass('has-error');					
-            } else {
-                <?php if ($shipping_required) { ?>              
-                var shipping_address = $('#payment-address input[name=\'shipping_address\']:checked').prop('value');
-                
-                if (shipping_address) {
-                    $.ajax({
-                        url: 'index.php?route=checkout/shipping_method',
-                        dataType: 'html',
-                        success: function(html) {
-							// Add the shipping address
-                            $.ajax({
-                                url: 'index.php?route=checkout/shipping_address',
-                                dataType: 'html',
-                                success: function(html) {
-                                    $('#collapse-shipping-address .panel-body').html(html);
-									
-									$('#collapse-shipping-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_address; ?> <i class="fa fa-caret-down"></i></a>');
-                                },
-                                error: function(xhr, ajaxOptions, thrownError) {
-                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                }
-                            }); 
-							
-							$('#collapse-shipping-method .panel-body').html(html);
-                            
-							$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_method; ?> <i class="fa fa-caret-down"></i></a>');
-   
-   							$('a[href=\'#collapse-shipping-method\']').trigger('click');
-
-							$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_shipping_method; ?>');
-							$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');							
-							$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');	
-                        },
-                        error: function(xhr, ajaxOptions, thrownError) {
-                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                        }
-                    }); 
-                } else {
-                    $.ajax({
-                        url: 'index.php?route=checkout/shipping_address',
-                        dataType: 'html',
-                        success: function(html) {
-                            $('#collapse-shipping-address .panel-body').html(html);
-                            
-							$('#collapse-shipping-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_address; ?> <i class="fa fa-caret-down"></i></a>');
-			
-							$('a[href=\'#collapse-shipping-address\']').trigger('click');
-							
-							$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_shipping_method; ?>');
-							$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');							
-							$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');	
-                        },
-                        error: function(xhr, ajaxOptions, thrownError) {
-                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                        }
-                    });         
-                }
-                <?php } else { ?>
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-method .panel-body').html(html);
-                        
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_method; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-payment-method\']').trigger('click');
-						
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');					
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });                 
-                <?php } ?>
-
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_address',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-address .panel-body').html(html);
-                        
-						$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });
-            }    
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-// Payment Address  
-$(document).delegate('#button-payment-address', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/payment_address/save',
-        type: 'post',
-        data: $('#collapse-payment-address input[type=\'text\'], #collapse-payment-address input[type=\'date\'], #collapse-payment-address input[type=\'datetime-local\'], #collapse-payment-address input[type=\'time\'], #collapse-payment-address input[type=\'password\'], #collapse-payment-address input[type=\'checkbox\']:checked, #collapse-payment-address input[type=\'radio\']:checked, #collapse-payment-address input[type=\'hidden\'], #collapse-payment-address textarea, #collapse-payment-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-        	$('#button-payment-address').button('loading');
-		},  
-        complete: function() {
-			$('#button-payment-address').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-payment-address .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
-                				
-				for (i in json['error']) {
-					var element = $('#input-payment-' + i.replace('_', '-'));
-					
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
-								
-				// Highlight any found errors
-				$('.text-danger').parent().parent().addClass('has-error');				
-            } else {
-                <?php if ($shipping_required) { ?>
-                $.ajax({
-                    url: 'index.php?route=checkout/shipping_address',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-shipping-address .panel-body').html(html);
-                        
-						$('#collapse-shipping-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_address; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-shipping-address\']').trigger('click');
-
-						$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_shipping_method; ?>');
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });
-                <?php } else { ?>
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-method .panel-body').html(html);
-                    	
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_method; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-payment-method\']').trigger('click');
-
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                }); 
-                <?php } ?>
-                
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_address',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-address .panel-body').html(html);
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });             
-            }     
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-// Shipping Address         
-$(document).delegate('#button-shipping-address', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/shipping_address/save',
-        type: 'post',
-        data: $('#collapse-shipping-address input[type=\'text\'], #collapse-shipping-address input[type=\'date\'], #collapse-shipping-address input[type=\'datetime-local\'], #collapse-shipping-address input[type=\'time\'], #collapse-shipping-address input[type=\'password\'], #collapse-shipping-address input[type=\'checkbox\']:checked, #collapse-shipping-address input[type=\'radio\']:checked, #collapse-shipping-address textarea, #collapse-shipping-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-			$('#button-shipping-address').button('loading');
-	    },  
-        complete: function() {
-			$('#button-shipping-address').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-shipping-address .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
-  								
-				for (i in json['error']) {
-					var element = $('#input-shipping-' + i.replace('_', '-'));
-					
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
-								
-				// Highlight any found errors
-				$('.text-danger').parent().parent().addClass('has-error');				
-            } else {
-                $.ajax({
-                    url: 'index.php?route=checkout/shipping_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-shipping-method .panel-body').html(html);
-                        
-						$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_method; ?> <i class="fa fa-caret-down"></i></a>');
-		
-						$('a[href=\'#collapse-shipping-method\']').trigger('click');
-
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-						
-                        $.ajax({
-                            url: 'index.php?route=checkout/shipping_address',
-                            dataType: 'html',
-                            success: function(html) {
-                                $('#collapse-shipping-address .panel-body').html(html);
-                            },
-                            error: function(xhr, ajaxOptions, thrownError) {
-                                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                            }
-                        });
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                }); 
-                
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_address',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-address .panel-body').html(html);
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });                 
-            }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-// Guest
-$(document).delegate('#button-guest', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/guest/save',
-        type: 'post',
-        data: $('#collapse-payment-address input[type=\'text\'], #collapse-payment-address input[type=\'date\'], #collapse-payment-address input[type=\'datetime-local\'], #collapse-payment-address input[type=\'time\'], #collapse-payment-address input[type=\'checkbox\']:checked, #collapse-payment-address input[type=\'radio\']:checked, #collapse-payment-address input[type=\'hidden\'], #collapse-payment-address textarea, #collapse-payment-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-       		$('#button-guest').button('loading');
-	    },  
-        complete: function() {
-			$('#button-guest').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-payment-address .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
-                                
-				for (i in json['error']) {
-					var element = $('#input-payment-' + i.replace('_', '-'));
-					
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
-								
-				// Highlight any found errors
-				$('.text-danger').parent().addClass('has-error');					
-            } else {
-                <?php if ($shipping_required) { ?>  
-                var shipping_address = $('#collapse-payment-address input[name=\'shipping_address\']:checked').prop('value');
-                
-                if (shipping_address) {
-                    $.ajax({
-                        url: 'index.php?route=checkout/shipping_method',
-                        dataType: 'html',
-                        success: function(html) {
-							// Add the shipping address
-                            $.ajax({
-                                url: 'index.php?route=checkout/guest_shipping',
-                                dataType: 'html',
-                                success: function(html) {
-                                    $('#collapse-shipping-address .panel-body').html(html);
-									
-									$('#collapse-shipping-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_address; ?> <i class="fa fa-caret-down"></i></a>');
-                                },
-                                error: function(xhr, ajaxOptions, thrownError) {
-                                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                }
-                            });
-                           
-						    $('#collapse-shipping-method .panel-body').html(html);
-							
-							$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_method; ?> <i class="fa fa-caret-down"></i></a>');
-							
-							$('a[href=\'#collapse-shipping-method\']').trigger('click');
-									
-							$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');
-							$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                        },
-                        error: function(xhr, ajaxOptions, thrownError) {
-                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                        }
-                    });                 
-                } else {
-                    $.ajax({
-                        url: 'index.php?route=checkout/guest_shipping',
-                        dataType: 'html',
-                        success: function(html) {
-                            $('#collapse-shipping-address .panel-body').html(html);
-                             
-							$('#collapse-shipping-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_address; ?> <i class="fa fa-caret-down"></i></a>');
-							
-							$('a[href=\'#collapse-shipping-address\']').trigger('click');
-						
-							$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_shipping_method; ?>');
-							$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');
-							$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                        },
-                        error: function(xhr, ajaxOptions, thrownError) {
-                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                        }
-                    });
-                }
-                <?php } else { ?>               
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-method .panel-body').html(html);
-                        
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_method; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-payment-method\']').trigger('click');
-						
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });             
-                <?php } ?>
-            }    
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-// Guest Shipping
-$(document).delegate('#button-guest-shipping', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/guest_shipping/save',
-        type: 'post',
-        data: $('#collapse-shipping-address input[type=\'text\'], #collapse-shipping-address input[type=\'date\'], #collapse-shipping-address input[type=\'datetime-local\'], #collapse-shipping-address input[type=\'time\'], #collapse-shipping-address input[type=\'password\'], #collapse-shipping-address input[type=\'checkbox\']:checked, #collapse-shipping-address input[type=\'radio\']:checked, #collapse-shipping-address textarea, #collapse-shipping-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-        	$('#button-guest-shipping').button('loading');
-		},  
-        complete: function() {
-			$('#button-guest-shipping').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-shipping-address .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
-
-				for (i in json['error']) {
-					var element = $('#input-shipping-' + i.replace('_', '-'));
-					
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
-				
-				// Highlight any found errors
-				$('.text-danger').parent().addClass('has-error');				
-            } else {
-                $.ajax({
-                    url: 'index.php?route=checkout/shipping_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-shipping-method .panel-body').html(html);
-						
-						$('#collapse-shipping-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-shipping-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_shipping_method; ?> <i class="fa fa-caret-down"></i>');
-						
-						$('a[href=\'#collapse-shipping-method\']').trigger('click');
-
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_payment_method; ?>');
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });             
-            }    
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-$(document).delegate('#button-shipping-method', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/shipping_method/save',
-        type: 'post',
-        data: $('#collapse-shipping-method input[type=\'radio\']:checked, #collapse-shipping-method textarea'),
-        dataType: 'json',
-        beforeSend: function() {
-        	$('#button-shipping-method').button('loading');
-		},  
-        complete: function() {
-			$('#button-shipping-method').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-shipping-method .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }           
-            } else {
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_method',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-payment-method .panel-body').html(html);
-                        
-						$('#collapse-payment-method').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-method" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_method; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-payment-method\']').trigger('click');
-						
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<?php echo $text_checkout_confirm; ?>');
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                });                 
-            }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-
-$(document).delegate('#button-payment-method', 'click', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/payment_method/save', 
-        type: 'post',
-        data: $('#collapse-payment-method input[type=\'radio\']:checked, #collapse-payment-method input[type=\'checkbox\']:checked, #collapse-payment-method textarea'),
-        dataType: 'json',
-        beforeSend: function() {
-         	$('#button-payment-method').button('loading');
-		},  
-        complete: function() {
-            $('#button-payment-method').button('reset');
-        },          
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                if (json['error']['warning']) {
-                    $('#collapse-payment-method .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }           
-            } else {
-                $.ajax({
-                    url: 'index.php?route=checkout/confirm',
-                    dataType: 'html',
-                    success: function(html) {
-                        $('#collapse-checkout-confirm .panel-body').html(html);
-  						
-						$('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-confirm" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_confirm; ?> <i class="fa fa-caret-down"></i></a>');
-						
-						$('a[href=\'#collapse-checkout-confirm\']').trigger('click');
-					},
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                    }
-                }); 
-            }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    }); 
-});
-//--></script> 
-<script language="javascript" type="text/javascript">
-  window.onload = function() {
-    $("html, body").scrollTop(0);
-  }
 </script>
 <?php echo $footer; ?>

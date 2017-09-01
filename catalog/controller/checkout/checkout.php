@@ -736,6 +736,17 @@ class ControllerCheckoutCheckout extends Controller {
     $this->load->model('account/customer_group');
     $this->load->model('localisation/zone');
 
+    $checkNumber = $this->model_account_customer->checkCustomerNumber($this->request->post['telephone']);
+
+    if($checkNumber === NULL){
+        $registerCustomer = $this->model_account_customer->addNewCustomerByPhone($this->request->post);
+        if($registerCustomer !== NULL){
+            $this->emailAfterRegister($registerCustomer);
+        }
+    }
+
+
+
     $this->load->language('checkout/checkout');
     $json = array();
     if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->step2_validate()) {
@@ -754,6 +765,7 @@ class ControllerCheckoutCheckout extends Controller {
           ? $this->session->data['shipping_methods'][$method[0]]['title']
           : $this->request->post['method'];
         $this->session->data['guest']['address_shipping'] = $this->request->post['city'] . ' ' . $this->request->post['point'] ;
+
       if ($this->session->data['payment_address']['isNewPost'] == TRUE) {
         $this->session->data['payment_address']['city'] = $this->request->post['city'];
         $this->session->data['payment_address']['address_1'] = $this->request->post['point'];
@@ -762,6 +774,7 @@ class ControllerCheckoutCheckout extends Controller {
         $this->session->data['guest']['zone_id'] = $this->request->post['point'];
       }
 
+
       $this->load->controller('checkout/confirm');
       $this->load->controller('checkout/success');
 
@@ -769,9 +782,18 @@ class ControllerCheckoutCheckout extends Controller {
         $this->load->controller('payment/privat24gs');
         //echo(json_encode($this->session->data['privat_html']));
       }
+        $order_id = $this->session->data['order_id'];
 
       if ($this->session->data['order_id']) {
+//          echo "<pre>"; print_r($this->session->data['order_id']); echo "</pre>";
+      if ($this->request->post['payment'] == "Безналичный рассчет") {
+          $sort_array = $this->sortData();
+          $this->load->model('checkout/contract');
+          $this->model_checkout_contract->addRow($order_id, $sort_array);
+      }
         $json['success'] = $this->url->link('checkout/success/success_popup');
+
+
       }
     }
     else {
@@ -837,5 +859,137 @@ class ControllerCheckoutCheckout extends Controller {
     }
 
     return !$this->error;
+  }
+
+    /**
+     * @param $id
+     * Отправка email письма после регистрации пользователя
+     */
+  public function emailAfterRegister($id){
+      $this->load->model('account/customer');
+      $textMail = $this->load->controller('information/information/getInfo', '14');
+
+      $data = $this->model_account_customer->getCustomer($id);
+
+      $replaceData = ['%%login%%', '%%passwd%%', '%%username%%'];
+      $replaceTo = [$data['email'], 'budsite', $data['firstname'] . ' ' . $data['lastname']];
+
+
+      $text = str_replace($replaceData, $replaceTo, $textMail);
+      $mail = new Mail($this->config->get('config_mail'));
+      $mail->setTo($data['email']);
+      $mail->setFrom($this->config->get('config_email'));
+      $mail->setSender($this->config->get('config_name'));
+//		$mail->setContentType($email_subject);
+      $mail->setSubject("Регистрация в интернет-магазине budsite.ua");
+      $mail->setHtml($text);
+      $mail->send();
+
+  }
+
+    /**
+     * Функция обработки покупки в один клик из корзины
+     * с записью заказа в бд и отправкой письма администратору
+     */
+  public function buy1clickCustom(){
+      $this->load->model('catalog/seo_url');
+      $this->load->model('checkout/oneclick');
+
+      $products = $this->cart->getProducts();
+      $prod_arr =[];
+      $total = 0;
+      foreach ($products as $product){
+          $query = $this->model_catalog_seo_url->getUrlKeyword('product_id='.$product['product_id']);
+          $total += $product['total'];
+          $prod_arr[] = [
+              'link' => 'budsite.ua' .$query,
+              'name' => $product['name'],
+              'quantity' => $product['quantity'],
+              'price' => $product['total']
+          ];
+      }
+
+      $this->load->language('module/catapulta');
+      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $order_id);
+      $email_text = sprintf($this->language->get('text_order'), $order_id) . "\n\n";
+      $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'], ENT_QUOTES, 'UTF-8') . "\n";
+      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR'], ENT_QUOTES, 'UTF-8') . "\n\n";
+      $products_str = '';
+      foreach ($prod_arr as $product) {
+          $email_text .= sprintf($this->language->get('text_product'), $product['name'], ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_product_link'), $product['link'], ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_product_quantity'), $product['quantity'], ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_price'), $product['price'], ENT_QUOTES, 'UTF-8') . "\n\n";
+      }
+      $email_text .= sprintf($this->language->get('total_text_price'), $total, ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('text_date_order'), date('d.m.Y H:i'), ENT_QUOTES, 'UTF-8') . "\n\n";
+//      echo "<pre>"; print_r($email_text); echo "</pre>";
+//      $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
+      $mail = new Mail($this->config->get('config_mail'));
+      $mail->setTo('19ofis96@gmail.com');
+      $mail->setFrom($this->config->get('config_email'));
+      $mail->setSender($this->config->get('config_name'));
+      $mail->setSubject($email_subject);
+//      $mail->setText($email_text);
+      $mail->setHtml($email_text);
+      $mail->send();
+        echo "<pre>"; print_r($mail); echo "</pre>";
+
+//      $this->cart->clear();
+
+  }
+
+    /**
+     * Сортировка массива для заполнения таблицы order_contract
+     */
+  public function sortData(){
+      $data_contract = [];
+      if($this->request->post['face'] == 2){
+          $data_contract = [
+              'ur_lico' => 2,
+              'fio_ukr' => $this->request->post['fio-ukr'],
+              'inn' => $this->request->post['inn'],
+              'way' => 1,
+              'contract' => 0
+          ];
+      }elseif($this->request->post['face'] == 1){
+          $data_contract = [
+              'ur_lico' => 1,
+              'nds' => $this->request->post['nds'],
+              'company-name' => $this->request->post['company-name'],
+              'edrpou' => $this->request->post['edrpou'],
+              'contract' => 0
+          ];
+          if ($this->request->post['contract'] == 1){
+              $data_contract += [
+                  'ur-addr' => $this->request->post['ur-addr'],
+                  'post-addr' => $this->request->post['post-addr'],
+                  'phone-company' => $this->request->post['phone-company'],
+                  'payment-list' => $this->request->post['payment-list'],
+                  'mfo' => $this->request->post['mfo'],
+                  'fio-boss' => $this->request->post['fio-boss'],
+                  'boss-position' => $this->request->post['boss-position'],
+                  'ustav' => $this->request->post['ustav'],
+                  'want_contract' => $this->request->post['contract'],
+                  'way' => 3
+              ];
+//              array_push($data_contract, $stack);
+          }else{
+              $data_contract += ['way' => 2];
+          }
+      }
+//      echo "<pre>"; print_r($data_contract); echo "</pre>";die;
+      return $data_contract;
+  }
+
+  public function sendE(){
+      $mail = new Mail($this->config->get('config_mail'));
+      $mail->setTo('19ofis96@gmail.com');
+      $mail->setFrom($this->config->get('config_email'));
+      $mail->setSender($this->config->get('config_name'));
+      $mail->setSubject('test mail');
+//      $mail->setText($email_text);
+      $mail->setHtml('test mail');
+      $mail->send();echo "<pre>"; print_r($mail); echo "</pre>";
   }
 }

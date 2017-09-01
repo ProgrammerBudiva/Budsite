@@ -75,7 +75,7 @@ $_['entry_firstname'] = 'Имя';
 
 $_['entry_lastname'] = 'Фамилия';
 
-$_['entry_telephone'] = 'Телефон';
+$_['entry_telephone'] = 'Номер телефона';
 
 $_['entry_fax'] = 'Факс';
 

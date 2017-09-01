@@ -106,34 +106,68 @@ class ControllerCheckoutConfirm extends Controller {
         $order_data['email']             = ($customer_info['email']) ? $customer_info['email'] : $this->session->data['guest']['email'];
         $order_data['telephone']         = ($customer_info['telephone']) ? $customer_info['telephone'] : $this->session->data['guest']['telephone'];
       }
-      elseif (isset($this->session->data['guest'])) {
+//      elseif (isset($this->session->data['guest'])) {
         $order_data['customer_id']       = 0;
         $order_data['customer_group_id'] = 1;
-        $order_data['firstname']         = $name[0];
-        $order_data['lastname']          = isset($this->session->data['guest']['lastname']) ? $this->session->data['guest']['lastname'] : $lastname;
-        $order_data['email']             = $this->session->data['guest']['email'];
-        $order_data['telephone']         = $this->session->data['guest']['telephone'];
+        $order_data['firstname']         = $this->request->post['firstname'];
+        $order_data['lastname']          = $this->request->post['lastname'];
+        $order_data['email']             = $this->request->post['email'];
+        $order_data['telephone']         = $this->request->post['telephone'];
         $order_data['city']              = $this->session->data['guest']['city'];
 
         $order_data['comment'] = $this->session->data['guest']['comment'];
 
-      }
+//      }
 
       $order_data['address_1']          = $this->session->data['guest']['address_1'];
       $order_data['payment_address_1']  = $order_data['address_1'];
-//      $order_data['shipping_address_1'] = $order_data['address_1'];
-      $order_data['shipping_address_1'] = $this->session->data['guest']['address_shipping'];
-      $order_data['shipping_lastname'] = $this->session->data['guest']['lastname'];
+      $order_data['shipping_lastname'] = $this->request->post['lastname'];
 
       $this->load->model('localisation/country');
       $this->load->model('localisation/zone');
 
-      $order_data['payment_firstname']  = $name[0];
-      $order_data['payment_lastname']   = $lastname;
-      $order_data['shipping_firstname'] = $name[0];
+      $order_data['payment_firstname']  = $this->request->post['firstname'];
+      $order_data['payment_lastname']   = $this->request->post['lastname'];
+      $order_data['shipping_firstname'] = $this->request->post['firstname'];
 //      $order_data['shipping_lastname']  = $lastname;
-      $order_data['payment_city']       = $this->session->data['payment_address']['city'];
-      $order_data['shipping_city']      = $this->session->data['payment_address']['city'];
+//      $order_data['payment_city']       = $this->session->data['payment_address']['city'];
+        if ($this->request->post['shipping'] === 'Курьерской службой'){
+            if ($this->request->post['shipping_company'] == 1){
+                $order_data['shipping_city'] = $this->request->post['config_country_id'];
+                $order_data['shipping_method'] = 'Курьерской службой: Новая Почта';
+
+                if($this->request->post['np-sklad'] == 1){
+                    $order_data['shipping_address_1'] = 'Город: ' . $this->request->post['config_country_id'] . '. ' . $this->request->post['config_point_id'];
+                }else{
+                    $order_data['shipping_address_1'] = $this->request->post['config_country_id'] . ' Адрес: ' . $this->request->post['addr'];
+                }
+
+            }elseif ($this->request->post['shipping_company'] == 3) {
+                $order_data['shipping_city'] = $this->request->post['delivery-city'];
+                $order_data['shipping_method'] = 'Курьерской службой: Delivery';
+
+                if($this->request->post['delivery-sklad'] == 1){
+                    $order_data['shipping_address_1'] = 'Город: ' . $this->request->post['delivery-city'] . '. Склад: ' . $this->request->post['delivery-point'];
+                }else{
+                    $order_data['shipping_address_1'] = $this->request->post['delivery-city'] . ' Адрес: ' . $this->request->post['delivery-addr'];
+                }
+
+            }elseif($this->request->post['shipping_company'] == 2){
+                $order_data['shipping_city'] = $this->request->post['intime-city'];
+                $order_data['shipping_method'] = 'Курьерской службой: InTime';
+
+                if($this->request->post['intime-sklad'] == 1){
+                    $order_data['shipping_address_1'] = 'Город: ' . $this->request->post['intime-city'] . '. Склад: ' . $this->request->post['intime-addr'];
+                }else{
+                    $order_data['shipping_address_1'] = $this->request->post['intime-city'] . ' Адрес: ' . $this->request->post['intime-addr'];
+                }
+
+            }
+        }else {
+            $order_data['shipping_method'] = 'Самовывоз';
+            $order_data['shipping_address_1'] = 'Самовывоз';
+        }
+//      $order_data['shipping_city']      = $this->session->data['payment_address']['city'];
 
       $order_data['payment_zone']     = 0;
       $order_data['shipping_zone_id'] = 0;
@@ -146,14 +180,13 @@ class ControllerCheckoutConfirm extends Controller {
 
       $order_data['payment_country']  = 'Украина';
       $order_data['shipping_country'] = 'Украина';
-      $order_data['shipping_method']  = isset($this->session->data['guest']['shipping_method']) ? $this->session->data['guest']['shipping_method'] :
-        $this->session->data['guest']['shipping_code'];
+//      $order_data['shipping_method']  = isset($this->session->data['guest']['shipping_method']) ? $this->session->data['guest']['shipping_method'] :
+//        $this->session->data['guest']['shipping_code'];
       $order_data['shipping_code']    = isset($this->session->data['guest']['shipping_method']) ? $this->session->data['guest']['shipping_method'] :
         $this->session->data['guest']['shipping_code'];
-      $order_data['payment_method']   = isset($this->session->data['guest']['payment_method']) ? $this->session->data['guest']['payment_method'] :
-        $this->session->data['guest']['payment_code'];
-      $order_data['payment_code']     = isset($this->session->data['guest']['payment_method']) ? $this->session->data['guest']['payment_method'] :
-        $this->session->data['guest']['payment_code'];
+      $order_data['payment_method']   = $this->request->post['payment'];
+      $order_data['payment_code']     = $this->request->post['payment'];
+
 
       $order_data['products'] = array();
 

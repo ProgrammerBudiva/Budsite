@@ -240,5 +240,30 @@ class ModelAccountCustomer extends Model {
 	
 	public function deleteLoginAttempts($email) {
 		$this->db->query("DELETE FROM `" . DB_PREFIX . "customer_login` WHERE email = '" . $this->db->escape(utf8_strtolower($email)) . "'");
-	}	
+	}
+
+	public function addNewCustomerByPhone($data){
+        $customer_id = $this->db->getLastId();
+
+	    $registerCustomer = $this->db->query("INSERT INTO ". DB_PREFIX
+            ."customer (customer_group_id, firstname, lastname, email, telephone, ip, status, approved, date_added, salt, password, newsletter) VALUES('1','" . $this->db->escape($data["firstname"]) .
+            "', '" . $this->db->escape($data["lastname"]) .
+            "', '" . $this->db->escape($data["email"]) .
+            "', '" . $this->db->escape($data["telephone"]) .
+            "', '" . $this->db->escape($this->request->server['REMOTE_ADDR']) .
+            "', '1', '1', NOW(), '" . $this->db->escape($salt = substr(md5(uniqid(rand(), true)), 0, 9)) .
+            "',  '" . $this->db->escape(sha1($salt . sha1($salt . sha1("budsite")))) .
+            "', '" . (isset($data['subscribe']) ? (int)$data['subscribe'] : 0) . "')");
+        $customer_id = $this->db->getLastId();
+
+        return $customer_id;
+    }
+
+    public function checkCustomerNumber($number){
+        $query = $this->db->query("SELECT * FROM ". DB_PREFIX . "customer WHERE telephone= '" . $number . "'");
+        if($query->num_rows !== 0){
+            return $query->row['customer_id'];
+        }
+        return NULL;
+    }
 }
