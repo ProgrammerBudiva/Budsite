@@ -117,11 +117,12 @@ class ControllerFeedPrivatMarket extends Controller {
         $dom->appendChild($root);
 
 //        $dom->appendChild($dom->createElement('shop'));
-        header('Content-type: text/xml');
-        header('Pragma: public');
-        header('Cache-control: private');
-        header('Expires: -1');
-        echo $dom->saveXML();
+//        header('Content-type: text/xml');
+//        header('Pragma: public');
+//        header('Cache-control: private');
+//        header('Expires: -1');
+//        echo $dom->saveXML();
+        $dom->save('privat.xml');
 //        echo "<pre>"; print_r($dom); echo "</pre>";
     }
 }
