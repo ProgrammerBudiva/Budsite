@@ -13,6 +13,7 @@ class ControllerFeedPrivatMarket extends Controller {
         $dom = new DOMDocument("1.0", "utf-8");
 
         $root = $dom->createElement('yml_catalog');
+        $root->setAttribute('date', '2017-29-08 15:00');
 
         $shop = $dom->createElement('shop');
         $shop->appendChild($dom->createElement('name',"ТОВ 'БУДІВА'"));
