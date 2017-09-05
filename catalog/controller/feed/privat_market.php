@@ -11,6 +11,8 @@ class ControllerFeedPrivatMarket extends Controller {
 
     public function createXML($array){
         $dom = new DOMDocument("1.0", "utf-8");
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
 
         $root = $dom->createElement('yml_catalog');
         $root->setAttribute('date', '2017-29-08 15:00');
@@ -72,10 +74,6 @@ class ControllerFeedPrivatMarket extends Controller {
             $picture->nodeValue = 'https://budsite.ua/image/' . $product_self['image'];
             $offer->appendChild($picture);
 
-            $description = $dom->createElement('description');
-            $description->nodeValue = $product_self['description'];
-            $offer->appendChild($description);
-
             $attributes = explode('; ', $product_self['attributes']);
             $attributes_values = explode('; ', $product_self['attributes_values']);
             $count_attributes = count($attributes_values);
@@ -102,6 +100,9 @@ class ControllerFeedPrivatMarket extends Controller {
 //            echo "<pre>"; print_r($attributes); echo "</pre>";
 //            echo "<pre>"; print_r($attributes_values); echo "</pre>";die;
 
+            $description = $dom->createElement('description');
+            $description->nodeValue = mb_substr(strip_tags($product_self['description']), 0, 145) . '..';
+            $offer->appendChild($description);
 
 
             $delivery = $dom->createElement('delivery');
@@ -117,12 +118,12 @@ class ControllerFeedPrivatMarket extends Controller {
         $dom->appendChild($root);
 
 //        $dom->appendChild($dom->createElement('shop'));
-//        header('Content-type: text/xml');
-//        header('Pragma: public');
-//        header('Cache-control: private');
-//        header('Expires: -1');
-//        echo $dom->saveXML();
-        $dom->save('privat.xml');
+        header('Content-type: text/xml');
+        header('Pragma: public');
+        header('Cache-control: private');
+        header('Expires: -1');
+        echo $dom->saveXML();
+//        $dom->save('privat.xml');
 //        echo "<pre>"; print_r($dom); echo "</pre>";
     }
 }
