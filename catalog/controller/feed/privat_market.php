@@ -18,8 +18,8 @@ class ControllerFeedPrivatMarket extends Controller {
         $root->setAttribute('date', '2017-29-08 15:00');
 
         $shop = $dom->createElement('shop');
-        $shop->appendChild($dom->createElement('name',"ТОВ 'БУДІВА'"));
-        $shop->appendChild($dom->createElement('company',"ТОВ 'БУДІВА'"));
+        $shop->appendChild($dom->createElement('name','ТОВ "БУДІВА"'));
+        $shop->appendChild($dom->createElement('company','ТОВ "БУДІВА"'));
         $shop->appendChild($dom->createElement('url',"budsite.ua"));
 
         $currencies = $dom->createElement('currencies');
