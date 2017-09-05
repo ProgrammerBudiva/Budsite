@@ -52,6 +52,7 @@ class ControllerFeedPrivatMarket extends Controller {
         foreach ($array['products'] as $product_self){
             $offer = $dom->createElement('offer');
             $offer->setAttribute('available', 'true');
+            $offer->setAttribute('id', $product_self['product_id']);
 
             $name = $dom->createElement('name');
             $name->nodeValue = $product_self['model'];
