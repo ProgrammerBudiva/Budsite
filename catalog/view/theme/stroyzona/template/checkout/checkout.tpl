@@ -27,19 +27,19 @@
       <div class="col-md-6 col-sm-6 col-xs-12 checkout-main-block">
         <div class="checkout-field">
 
-            <h3 class="theme-header">Хочу быстрое оформление заказа</h3>
+            <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое оформление заказа</h3>
 
         <div class="quick">
             <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
-            <div class="buy-1-click col-sm-4" style="float: none;">
+            <div class="buy-1-click " style="float: none; width: 326px;">
                 <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
-                <span>
+                <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
                                             <div><img src="image/pointer.png" alt="pointer"></div>
                                             <div>Купить в 1 клик</div>
-                                        </span>
+                           </span>             </span>
                 <div class="modal-wrap">
                     <p><?php echo $text_callback_you; ?></p>
-                    <input id="callback_input_phone_product" name="phone" type="phone" />
+                    <input id="callback_input_phone_product" name="phone"  />
                     <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
                     <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="Жду звонка" class="btn btn-primary" /></a>
                     <i class="fa fa-times"></i>
@@ -63,23 +63,23 @@
             </div> -->
 
             <div class="form-wrap new-customer">
-                <div><h3 class="theme-header" style="display: block;">Оформление моего заказа</h3></div>
+                <div><h3 class="theme-header" style="display: block; padding-bottom: 0; padding-top: 20px;">Оформление моего заказа</h3></div>
                 <form id="order-form">
                     <div class="two-inputs">
-                    <div class="form-group custom-form-group-margin width">
+                    <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
                         <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?></strong></label>
                         <div class="lastname-block">
                             <input type="text" required name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control fio-height" />
                         </div>
                     </div>
-                    <div class="form-group custom-form-group-margin width ">
+                    <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
                         <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?></strong></label>
                         <div class="firstname-block">
                             <input type="text" required name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control fio-height" />
                         </div>
                     </div>
                     </div>
-                    <div class=" additional-margin mobile-margin">
+                    <div class=" additional-margin custom-margin-bottom mobile-margin additional-margin-">
                         <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?></strong></label>
                         <div class="one-row-display phone-block">
                             <input type="text" required name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control custom-height" />
@@ -95,7 +95,7 @@
                         </div>
                     </div> -->
 
-                    <div class="form-group custom-form-group-margin">
+                    <div id="email" class="form-group custom-form-group-margin custom-margin-bottom padding-10-mobile additional-margin-">
                         <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?></strong></label>
                         <div class="one-row-display email">
                             <input type="email" required name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control custom-height" />
@@ -112,43 +112,51 @@
                         <p class="additional-info-subcribe">Получать информацию о выгодных условиях покупки</p>
                     </div>
 
-                    <h4 class="theme-header">Оплата моего заказа:</h4>
+                    <h4 class="theme-header custom-padding">Оплата моего заказа:</h4>
 
                     <div class="font-10">
                         <div class="radio">
                             <label>
                                 <input type="radio" name="payment" id="payment1" value="Предоплата на карту ПриватБанка" checked>
-                                Предоплата на карту ПриватБанка
+                                Предоплата через Приват24
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
                                 <input type="radio" name="payment" id="payment2" value="Наложенный платеж (доп. +2% от стоимости)" >
-                                Наложенный платеж (доп. +2% от стоимости)
+                                Наложенный платеж (доп. +2% - услуги Новой Почты)
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" id="payment4" value="Оплата при самовывозе" >
+                                Оплата при самовывозе
                             </label>
                         </div>
 
                         <div class="radio">
                             <label>
                                 <input type="radio" name="payment" id="payment3" value="Безналичный рассчет" >
-                                Безналичный рассчет
+                                Оплата по счёту (безналичный расчет)
                             </label>
                         </div>
 
                     </div>
 
                     <div class="nal-payment" style="display: none; padding-left: 30px; max-width: 600px;">
+                        <span style="display: inline-block;color: #ff6600;font-size: 17px;">Все поля заполнять на украинском языке</span>
                         <div class="font-10">
-                            <div class="two-radio ">
+                            <div id="radio-inline" class="two-radio ">
                                 <div class="radio">
                                     <label>
                                         <input type="radio" checked name="face" id="ur" value="1" >
-                                        Юридическое лицо (ООО, ФОП, ...)
+                                        Юридическое лицо (ТОВ, ФОП, ...)
                                     </label>
                                 </div>
 
-                                <div class="radio">
+                                <div  class="radio bullshit">
                                     <label>
                                         <input type="radio" name="face" id="fiz" value="2" >
                                         Физическое лицо
@@ -156,8 +164,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ur-lico" >
-                        <label for="" style="padding-right:20px ">Плательщик НДС</label>
+
+                    <div class="ur-lico" >
+                        <label class="padding-20" for="" style="padding-right:20px ">Плательщик НДС</label>
                         <div class="font-10 " style="display: inline-block;">
                             <div class="two-radio ">
                                 <div class="radio">
@@ -179,7 +188,7 @@
                         <div class="form-group custom-form-group-margin">
                             <!-- <label class="control-label custom-label-checkout" for="input-payment-company-name">Название компании на укр.яз.</label> -->
                             <div class="one-row-display email">
-                                <input type="text"  name="company-name" value="" id="input-payment-company-name" placeholder="Название компании на укр.яз." class="form-control custom-height" />
+                                <input type="text"  name="company-name" value="" id="input-payment-company-name" placeholder="Полное название компании" class="form-control custom-height" />
                             </div>
                         </div>
 
@@ -187,6 +196,12 @@
                          <!--   <label class="control-label custom-label-checkout" for="edrpou">ЕДРПОУ</label> -->
                             <div class="one-row-display email">
                                 <input type="text"  name="edrpou" value="" id="edrpou" placeholder="ЕДРПОУ" class="form-control custom-height" />
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form-group-margin">
+                            <div class="one-row-display email">
+                                <input type="text"  name="inn-company" value="" id="inn-company" placeholder="ИНН (Идентификационный номер налогоплательщика)" class="form-control custom-height" />
                             </div>
                         </div>
 
@@ -223,14 +238,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group custom-form-group-margin" style="display: flex;     width: 90%;">
-                            <div style="width: 49%;padding-right: 2%;">
+                        <div class="form-group custom-form-group-margin custom-width no-margin-bottom" style="display: flex;     width: 90%;">
+                            <div class="width-50" style="width: 49%;padding-right: 2%;">
                            <!-- <label class="control-label custom-label-checkout" fur-addraddr">Расчетный счет</label> -->
                             <div class="one-row-display email">
-                                <input type="text" name="payment-list" value="" id="" placeholder="Расчетный счет" class="form-control " />
+                                <input type="text" name="payment-list" value="" id="" placeholder="№ расчетного счёта" class="form-control " />
                             </div>
                             </div>
-                            <div style="width: 49%;">
+                            <div class="width-50" style="width: 49%;">
                             <!-- <label class="control-label custom-label-checkout" fur-addraddr">МФО</label> -->
                             <div class="one-row-display email">
                                 <input type="text"  name="mfo" placeholder="МФО" value="" id="" class="form-control " />
@@ -240,14 +255,14 @@
                         <div class="form-group custom-form-group-margin">
                             <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр.</label>-->
                             <div class="one-row-display email">
-                                <input type="text"  name="fio-boss" value="" id="fio-boss" placeholder="ФИО руководителя на укр. яз." class="form-control custom-height" />
+                                <input type="text"  name="fio-boss" value="" id="fio-boss" placeholder="ФИО руководителя" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
                             <!--  <label class="control-label custom-label-checkout" for="boss-position">Должность руководителя на укр.</label>-->
                             <div class="one-row-display email">
-                                <input type="text"  name="boss-position" value="" id="boss-position" placeholder="Должность руководителя на укр. яз." class="form-control custom-height" />
+                                <input type="text"  name="boss-position" value="" id="boss-position" placeholder="Должность руководителя" class="form-control custom-height" />
                             </div>
                         </div>
 
@@ -264,21 +279,21 @@
                             <div class="form-group custom-form-group-margin">
                               <!--  <label class="control-label custom-label-checkout" for="fio-ukr">ФИО на укр.яз.</label> -->
                                 <div class="one-row-display email">
-                                    <input type="text"  name="fio-ukr" value="" id="fio-ukr" placeholder="ФИО на укр.яз." class="form-control custom-height" />
+                                    <input type="text"  name="fio-ukr" value="" id="fio-ukr" placeholder="ФИО" class="form-control custom-height" />
                                 </div>
                             </div>
 
                             <div class="form-group custom-form-group-margin">
                                 <!--<label class="control-label custom-label-checkout" for="inn">ИНН</label>-->
                                 <div class="one-row-display email">
-                                    <input type="text"  name="inn" value="" id="inn" placeholder="ИНН" class="form-control custom-height" />
+                                    <input type="text"  name="inn" value="" id="inn" placeholder="ИНН (Идентификационный номер налогоплательщика)" class="form-control custom-height" />
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
-                    <h4 class="theme-header">Доставка:</h4>
+                    <h4 class="theme-header no-margin-bottom"  style="padding-top: 20px;">Доставка:</h4>
 
                     <div class="font-10 ">
                         <div class="two-radio ">
@@ -307,16 +322,65 @@
                     </div>
 
                     <div class="self-shipping-block">
-                        <h4 class="theme-header">Адреса складов:</h4>
-                        <p> &#8226; Одесса (1-й Промышленный пер., 9)</p>
-                        <p> &#8226; Киев (ул. Стройиндустрии, 7)</p>
+                        <p><span class="theme-header" >Не для всех товаров.</span> При подтверждении Вашего заказа уточним возможность самовывоза в выбранном городе.</p>
+                        <div class="font-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" checked name="self-shipping" id="self-shipping-1" value="Киев" >
+                                    <b>Киев</b>, ул. Стройиндустрии, 7
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-2" value="Одесса" >
+                                    <b>Одесса</b>, пер 1-й Промышленный переулок, 9
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-3" value="Днепр" >
+                                    <b>Днепр</b>, ул. Квитки-Основьяненко, 5
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-4" value="Полтава" >
+                                    <b>Полтава</b>, пер. Перспективный, 10
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-4" value="Кривой Рог" >
+                                    <b>Кривой Рог</b>, ул. Волгоградская, 4
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-4" value="Запорожье" >
+                                    <b>Запорожье</b>, ул. Можайская, 63
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="self-shipping" id="self-shipping-4" value="Херсон" >
+                                    <b>Херсон</b>, ул. Ладычука, 161
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="new_post_delivery" id="np_block">
-                        <div class="label-input">
+                        <div class="label-input np-grid">
                             <label class="col-sm-3" for="input-country-new-post"><strong><?php echo $entry_city; ?></strong></label>
-                            <div class="col-sm-9">
-                                <select name="config_country_id" id="input-country-new-post" onchange="getPoint($(this).find(':selected').data('id'))">
+                            <div class="col-sm-9 no-padding-left">
+                                <select name="config_country_id" id="input-country-new-post" data-search="true" onchange="getPoint($(this).find(':selected').data('id'))">
+                                    <option selected value="Выберите город">Выберите город</option>
                                     <?php foreach ($countries as $country) { ?>
                                     <option value="<?php echo $country['name']; ?>" data-id="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
                                     <?php } ?>
@@ -324,20 +388,21 @@
                             </div>
                         </div>
                                 <div class="address-shipping">
-                                    <label>
+                                    <label style="padding-right: 3%;">
                                         <input type="radio" checked name="np-sklad" id="np-sklad" value="1" >
                                         На отделение:
                                     </label>
 
-                                    <label style="padding-left: 3%;">
+                                    <label class="no-padding-left" style=" ">
                                         <input type="radio"  name="np-sklad" id="np-address" value="2" >
                                         Адресная доставка:
                                     </label>
                                 </div>
                         <div id="np-point">
                         <label class="col-sm-3 control-label" for="input-point-new-post-styler"><strong><?php echo $entry_point; ?></strong></label>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 no-padding-left">
                             <select name="config_point_id" id="input-point-new-post" >
+                                <option value="Выберите отделение">Выберите отделение</option>
                                 <?php foreach ($entry_points as $point) { ?>
                                 <option value="<?php echo $point['name']?>"><?php echo $point['name']; ?></option>
                                 <?php } ?>
@@ -348,7 +413,7 @@
                             <div class="form-group custom-form-group-margin">
                                 <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
                                 <div class="one-row-display">
-                                    <input type="text" name="addr" value="" id="input-addr" class="form-control custom-height" />
+                                    <input type="text" name="addr" value="" placeholder="Укажите адрес для доставки" id="input-addr" class="form-control custom-height" />
 
                                 </div>
                             </div>
@@ -356,9 +421,9 @@
                     </div>
 
                     <div class="new_post_delivery" id="delivery_post_block" style="display: none;">
-                        <div class="label-input">
+                        <div class="label-input np-grid">
                             <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 no-padding-left">
                                 <select name="delivery-city" id="input-country-delivery" class="" data-search="true" onchange="getPointDelivery($(this).find(':selected').data('id'))"></select>
                             </div>
                         </div>
@@ -375,7 +440,7 @@
                         </div>
                         <div class="delivery-point-subblock" id="delivery-block-show">
                         <label class="col-sm-3 control-label" for="input-point-delivery"><strong><?php echo $entry_point; ?></strong></label>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 no-padding-left">
                             <select name="delivery-point" id="input-point-delivery"></select>
                         </div>
                         </div>
@@ -383,7 +448,7 @@
                             <div class="form-group custom-form-group-margin">
                                 <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
                                 <div class="one-row-display">
-                                    <input type="text" name="delivery-addr" value="" id="delivery-addr" class="form-control custom-height" />
+                                    <input type="text" name="delivery-addr" placeholder="Укажите адрес для доставки" value="" id="delivery-addr" class="form-control custom-height" />
 
                                 </div>
                             </div>
@@ -391,10 +456,10 @@
                     </div>
 
                     <div class="new_post_delivery" id="intime_block" style="display:none;">
-                        <div class="label-input">
+                        <div class="label-input np-grid">
                             <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
-                            <div class="col-sm-9">
-                                <input type="text" name="intime-city" value="" id="intime-city" class="form-control custom-height" />
+                            <div class="col-sm-9 no-padding-left">
+                                <input type="text" name="intime-city" value="" id="intime-city" class="form-control " />
                             </div>
                         </div>
 
@@ -413,7 +478,7 @@
                             <div class="form-group custom-form-group-margin">
 
                                 <div class="one-row-display" style="padding-top: 10px;">
-                                    <input type="text" name="intime-addr" value="" id="intime-addr" class="form-control custom-height" />
+                                    <input type="text" name="intime-addr" placeholder="Укажите адрес для доставки" value="" id="intime-addr" class="form-control" />
 
                                 </div>
                             </div>
@@ -421,8 +486,8 @@
                     </div>
 
                     <div class="form-group required" style="clear:both;text-align:center">
-                        <label class="col-lg-4 col-sm-12"></label>
-                        <button type="button" id="buy" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить заказ</button>
+                       <!-- <label class="col-lg-4 col-sm-12"></label> -->
+                        <button type="button" id="buy" style="margin-left: 0!important;" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить мой заказ</button>
                     </div>
                 </form>
                 <div class="clear"></div>
@@ -486,27 +551,13 @@
 
       <div class="col-md-6 col-sm-6 col-xs-12 checkout-cart">
 
-        <div class="title"><?= $entry_order;?></div>
+       <!-- <div class="title"><?= $entry_order;?></div>-->
+        <div class="title">Моя корзина</div>
 
-        <div class="cart-all-wrap">
-            <?php if($total_discount) { ?>
-            <div class="cart-all-row">
-                <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
-                <div class="text-left cart-all-total"><?= $total_discount;?></div>
-            </div>
-            <div class="clear"></div>
-            <?php } ?>
-            <div class="cart-all-row">
-                <?php foreach ($totals as $total) { ?>
-                <div class="text-left cart-all-title"><div><?= $total['title']; ?></div></div>
-                <div class="text-left cart-all-total total-total"><?= $total['text']; ?></div>
-                <?php } ?>
-            </div>
-            <div class="clear"></div>
-        </div>
+
         <div class="clear"></div>
 
-          <div class="">
+          <div class=""style="border-bottom: 1px solid #EBEBEB;">
             <div class="d-table table">
               <?php foreach ($products as $product) { ?>
               <div class="d-table-row one-item">
@@ -545,6 +596,23 @@
               <?php } ?>
             </div>
           </div>
+          <div class="clear"></div>
+          <div class="cart-all-wrap">
+              <?php if($total_discount) { ?>
+              <div class="cart-all-row">
+                  <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
+                  <div class="text-left cart-all-total"><?= $total_discount;?></div>
+              </div>
+              <div class="clear"></div>
+              <?php } ?>
+              <div class="cart-all-row">
+                  <?php foreach ($totals as $total) { ?>
+                  <div class="text-left cart-all-title"><div><?= $total['title']; ?></div></div>
+                  <div class="text-left cart-all-total total-total"><?= $total['text']; ?></div>
+                  <?php } ?>
+              </div>
+              <div class="clear"></div>
+          </div>
           <!--<div class="text-center">
             <a class="btn btn-primary" href="<?php /*echo $cart; */?>"><sdivong><?php /*echo $button_edit_order;*/?></sdivong></a>
           </div>-->
@@ -566,7 +634,8 @@
 
     window.onload = function() {
     $("html, body").scrollTop(0);
-    $('#input-payment-telephone').mask("+38(999)-999-99-99");
+    $('#input-payment-telephone').mask("+38 (999) 999 99 99");
+    $('#callback_input_phone_product').mask("+38 (999) 999 99 99");
     $('#input-payment-register-styler').trigger('click');
         setTimeout(function () {
             $('#fiz-ur-styler').trigger('click');
@@ -765,9 +834,20 @@ function addClassNameListener(elemId, callback, callback1) {
     $(window).load(function () {
         addClassNameListener("payment3-styler", function(){
             $('.nal-payment').show();
+//                $('#shipping-post-styler').closest('.radio').show();
+//                $('#shipping-post-styler').click();
         },
         function(){
             $('.nal-payment').hide();
+        });
+
+        addClassNameListener("payment4-styler" , function(){
+                $('#shipping-post-styler').closest('.radio').hide();
+                $('#shipping-self-styler').click();
+        },
+        function(){
+            $('#shipping-post-styler').closest('.radio').show();
+            $('#shipping-post-styler').click();
         });
 
         addClassNameListener("ur-styler", function(){
@@ -927,7 +1007,7 @@ function addClassNameListener(elemId, callback, callback1) {
         var phone = $('#callback_input_phone_product').val();
         if (phone){
             $.ajax({
-                url: "index.php?route=checkout/checkout/sendE",
+                url: "index.php?route=checkout/checkout/buy1clickCustom",
                 method: "POST",
                 data: 'telephone=' + phone,
                 success: function () {

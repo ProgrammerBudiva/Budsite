@@ -760,11 +760,19 @@ class ControllerCheckoutCheckout extends Controller {
           : $this->request->post['payment_method'];
 
       $method = explode('.', $this->request->post['method']);
-      $this->session->data['guest']['shipping_method'] =
-        isset($this->session->data['shipping_methods'][$method[0]]['title'])
-          ? $this->session->data['shipping_methods'][$method[0]]['title']
-          : $this->request->post['method'];
-        $this->session->data['guest']['address_shipping'] = $this->request->post['city'] . ' ' . $this->request->post['point'] ;
+
+
+      if($this->request->post['shipping'] === 'Самовывоз'){
+
+          $this->session->data['guest']['shipping_method'] = $this->request->post['shipping'] . ' ' . $this->request->post['self-shipping'];
+          $this->session->data['guest']['address_shipping'] = $this->request->post['self-shipping'];
+          $this->session->data['payment_address']['city'] = $this->request->post['self-shipping'];
+
+      }else {
+
+          $this->session->data['guest']['address_shipping'] = $this->request->post['city'] . ' ' . $this->request->post['point'];
+
+      }
 
       if ($this->session->data['payment_address']['isNewPost'] == TRUE) {
         $this->session->data['payment_address']['city'] = $this->request->post['city'];
@@ -958,6 +966,7 @@ class ControllerCheckoutCheckout extends Controller {
               'nds' => $this->request->post['nds'],
               'company-name' => $this->request->post['company-name'],
               'edrpou' => $this->request->post['edrpou'],
+              'inn' => $this->request->post['inn-company'],
               'contract' => 0
           ];
           if ($this->request->post['contract'] == 1){
@@ -971,6 +980,7 @@ class ControllerCheckoutCheckout extends Controller {
                   'boss-position' => $this->request->post['boss-position'],
                   'ustav' => $this->request->post['ustav'],
                   'want_contract' => $this->request->post['contract'],
+                  'inn' => $this->request->post['inn-company'],
                   'way' => 3
               ];
 //              array_push($data_contract, $stack);
@@ -990,6 +1000,8 @@ class ControllerCheckoutCheckout extends Controller {
       $mail->setSubject('test mail');
 //      $mail->setText($email_text);
       $mail->setHtml('test mail');
-      $mail->send();echo "<pre>"; print_r($mail); echo "</pre>";
+//      $mail->send();echo "<pre>"; print_r($mail); echo "</pre>";
+
+      mail('19ofis96@mail.ru', 'test-message', 'test message text');
   }
 }

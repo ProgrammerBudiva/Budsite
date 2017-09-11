@@ -1,0 +1,746 @@
+
+
+
+@media only screen
+and (min-width: 1224px) {
+    #input-payment-company-name, #edrpou, #ur-addr, #ustav, #fio-boss, #boss-position, #fio-ukr, #inn, #phone-company, #post-addr, #inn-company
+    {
+        width: 88% !important;
+    }
+    .checkout-cart {
+        width:40%;
+        left:0;
+        top:26px;
+    }
+
+    .checkout-main-block {
+        width:60%;
+    }
+
+    .custom-height {
+        width: 44%!important;
+        height: 31px;
+    }
+
+    .buy-1-click-new {
+        /*margin-left: 15px;*/
+        height: 30px;
+        border-radius: 0!important;
+    }
+    .custom-form-group-margin {
+        margin-bottom: -7px;
+    }
+
+    .help-info {
+        word-break: break-word;
+        font-size: 10px;
+        line-height: normal;
+        color: gray;
+        /*padding-left: 15px;*/
+        margin-top: -10px;
+    }
+
+    .additional-margin {
+        /*margin-bottom: -54px;*/
+    }
+
+    .checkbox-subscribe-position {
+        position: relative;
+        left: 50%;
+        bottom: 44px;
+    }
+    .fio-height {
+        width: 88%!important;
+    }
+
+    .additional-info-subcribe {
+        position: relative;
+        bottom: 52px;
+        word-break: break-word;
+        /*width: 19%;*/
+        font-size: 10px;
+        line-height: normal;
+        color: gray;
+        left: 57%;
+    }
+
+    .checkout h4 {
+        margin-bottom: -12px;
+    }
+    .two-radio {
+        display: flex;
+    }
+
+    .hide-select {
+
+    }
+
+    .new_post_delivery {
+        padding-top: 2%;
+    }
+
+    .two-inputs {
+        display: flex;
+    }
+    .width {
+        width: 50%;
+    }
+    #msdrpdd20_msdd {
+        width: 380px!important;
+    }
+    #np-point, #delivery-block-show, .np-grid {
+        display: grid;
+    }
+    #input-country-delivery-styler,
+    #input-point-delivery-styler,
+    #input-country-new-post-styler,
+    #input-point-new-post-styler,
+    #intime-city,
+    #intime-addr,
+    #input-addr
+    {
+        width:380px!important;
+    }
+
+    #email {
+        margin-top: 7px;
+    }
+
+    #buy {
+        width: 380px;!important;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width: 321px)
+and (max-device-width: 480px){
+    .custom-margin-bottom{
+        margin-bottom: -15px;
+    }
+    .custom-width {
+        width:100%!important;
+    }
+    .width-50 {
+        width:50%!important;
+    }
+    .no-margin-bottom{
+        /*margin-bottom: 0!important;*/
+    }
+
+    .jq-selectbox__dropdown {
+        width: inherit!important;
+    }
+
+    .buy-1-click {
+        /*margin-left: 2px;*/
+        /*margin-right: -14px;*/
+        /*height: 34px;*/
+        /*width: 60%;*/
+        width: 264px!important;
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+    .one-row-display {
+        display: block!important;
+    }
+    .help-info {
+        word-break: break-word;
+        font-size: 12px;
+        line-height: normal;
+        position: relative;
+        width: 100%;
+        padding-bottom: 2%;
+        left: 5px;
+        top: 2px;
+        color: gray;
+    }
+    .jq-selectbox__select-text {
+        width: 100%!important;
+    }
+    #input-payment-register-styler {
+        top: 14px;
+    }
+    .additional-info-subcribe{
+        position: relative;
+        top: -13px;
+        left: 60px;
+        width: 259px;
+        line-height: normal;
+    }
+    #input-country-new-post-styler, #input-country-delivery-styler, #input-country-intime-styler, #intime-city {
+        /*margin-left: -15px;*/
+        padding-bottom: 7px;
+        width: 100%;
+    }
+
+    #input-point-new-post-styler, #input-point-delivery-styler {
+        /*margin-left: -15px;*/
+        width: 100%;
+    }
+    #msdrpdd20_msdd {
+        width:91%!important;
+    }
+    .new_post_delivery label {
+        padding-left: 1px;
+        font-size: 12px;
+        color: #444;
+        padding-top: 10px;
+    }
+    .two-radio {
+        display: flex;
+    }
+    .cart-foto {
+        width: 56px;
+    }
+    .padding-10-mobile{
+        padding-top:14px ;
+    }
+
+    #input-country-delivery-styler, #input-point-delivery-styler,
+    #input-point-new-post-styler,
+    #input-country-new-post-styler,
+
+    #intime-city,
+    #intime-addr,
+    #input-addr, #buy{
+        width:100%!important;
+    }
+
+    #msdrpdd20_msdd {
+        width: 96% !important;
+    }
+
+    #radio-inline {
+        display: block!important;
+    }
+
+    .custom-form-group-margin{
+        margin-bottom: -7px;
+    }
+
+    .additional-margin- {
+        margin-bottom: -15px!important;
+    }
+    #quick-checkout-header{
+        padding-bottom: 0!important;
+    }
+    .checkout .price-wrap .big-price {
+        float: none;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width: 320px) {
+    .one-row-display {
+        display: block!important;
+    }
+
+    .jq-selectbox__dropdown {
+        width: inherit!important;
+    }
+
+    #input-country-new-post-styler{
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+    .help-info {
+        word-break: break-word;
+        font-size: 9px;
+        line-height: normal;
+        margin-top: 3px;
+        position: relative;
+        width: 209px;
+        left: 3px;
+        top: -5px;
+        color: gray;
+    }
+
+    .buy-1-click-new {
+        width: 142px;
+        font-size: 10px;
+    }
+
+    .theme-header {
+        font-size: 19px;
+    }
+
+    .additional-margin {
+        /*margin-bottom: -45px;*/
+    }
+
+    .custom-form-group-margin {
+        margin-bottom: -11px;
+    }
+
+    .register-continue {
+        margin-left: 2px!important;
+    }
+
+    .jq-selectbox__select-text {
+        width: 100%!important;
+    }
+    .additional-info-subcribe {
+        width: 200px;
+        margin-top: -21px;
+        margin-left: 47px;
+    }
+    .buy-1-click {
+        width:259px!important;
+    }
+    .padding-20 {
+        padding-top: 20px;
+    }
+    #input-country-delivery-styler, #input-point-delivery-styler,
+    #input-point-new-post-styler,
+    #input-country-new-post-styler,
+    #msdrpdd20_msdd,
+    #intime-city,
+    #intime-addr,
+    #input-addr{
+        width:260px!important;
+    }
+}
+/* END Smartphones (portrait) ----------- */
+
+@media only screen
+and (max-width: 425px) {
+
+}
+
+
+/* Tiny laptops */
+
+@media only screen
+and (min-width: 768px)
+and (max-device-width: 1024px){
+    .help-info {
+        /*width: 201px;*/
+        position: relative;
+        font-size: 10px;
+        /*top: -51px;*/
+        color: gray;
+        /*left: 11px;*/
+    }
+    .buy-1-click-new {
+        height: 34px;
+        position: relative;
+        top: 46px;
+        right: 143px;
+        padding-left: 0;
+    }
+    #input-payment-telephone {
+        /*width: 142px;*/
+        margin-bottom: 30px;
+    }
+
+    .mobile-margin {
+        margin-bottom: -21px;
+    }
+
+    .custom-width {
+        width:100%!important;
+    }
+    .width-50 {
+        width:50%!important;
+    }
+
+    .custom-form-group-margin {
+        margin-bottom: -7px;
+    }
+    .custom-margin-bottom {
+        margin-bottom: -9px !important;
+    }
+    /*.additional-info-subcribe {*/
+        /*max-width: 60%;*/
+        /*position: relative;*/
+        /*top: -39px;*/
+        /*left: 72px;*/
+
+    /*}*/
+
+    /*.checkbox-subscribe-position {*/
+        /*top: -22px;*/
+        /*position: relative;*/
+    /*}*/
+
+    .new_post_delivery label {
+        padding-left: 1px;
+        font-size: 12px;
+        color: #444;
+    }
+
+    .new_post_delivery {
+        padding-top: 2%;
+    }
+
+
+
+    .address-shipping label {
+        font-size: 14px!important;
+        padding-top: 4%!important;
+    }
+
+    .address-shipping {
+        padding-bottom: 2%;
+    }
+
+    .additional-info-subcribe {
+        padding-left: 45px;
+        margin-top: -11px;
+    }
+
+    .checkbox-subscribe-position{
+        margin-top: -20px;
+    }
+
+    #np-point, #delivery-block-show, .np-grid {
+        display: grid;
+    }
+    .address-shipping {
+        padding-top: 7px;
+    }
+
+    #input-country-delivery-styler,
+    #input-point-delivery-styler,
+    #input-country-new-post-styler,
+    #input-point-new-post-styler,
+    #intime-city,
+    #intime-addr,
+    #msdrpdd20_msdd,
+    #input-addr{
+        width:329px!important;
+    }
+
+    #email {
+        margin-top: -22px;
+    }
+
+    .two-radio {
+        display: flex;
+    }
+
+    .bullshit {
+        padding-left: 10px;
+    }
+}
+
+/*END of Tiny laptops */
+
+
+
+/* Tiny laptops */
+@media only screen
+and (min-width: 481px)
+and (max-device-width: 563px) {
+    .buy-1-click-new {
+        height: 34px;
+        position: relative;
+        top: 53px;
+        right: 55%!important;
+    }
+
+    .help-info {
+        width: 201px;
+        position: relative;
+        font-size: 10px;
+        /* top: 23%; */
+        color: black;
+        /*right: -50%!important;*/
+    }
+}
+
+@media only screen
+and (max-width: 481px){
+    #content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media only screen
+and (min-width: 481px){
+
+}
+
+@media only screen
+and (min-width: 321px)
+and (max-device-width: 375px) {
+    .help-info {
+        word-break: break-word;
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 3px;
+        position: relative;
+        width: 237px;
+        left: 5px;
+        top: 3px;
+        color: gray;
+    }
+    .buy-1-click-new {
+    margin-left: 2px;
+    margin-right: -14px;
+    height: 34px;
+    width: 77%;
+    }
+    .buy-1-click {
+        width:259px!important;
+    }
+
+}
+
+@media only screen
+and (min-width: 481px)
+and (max-device-width: 768px) {
+
+    .padding-10-mobile{
+        padding-top:10px ;
+    }
+    #email {
+        padding-top: 17px;
+    }
+
+    .help-info {
+        width: 100%;
+        position: relative;
+        font-size: 10px;
+        /* top: 22%; */
+        color: black;
+        /*right: -43%;*/
+    }
+    .buy-1-click {
+        height: 34px;
+        position: relative;
+        top: 0;
+        padding-left: 0!important;
+        width: 50%;
+        /*right: 62%;*/
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #input-payment-telephone {
+        width:100%;
+    }
+    #input-payment-register-styler {
+        top: 7px;
+    }
+    .additional-info-subcribe{
+        position: relative;
+        top: -12px;
+        left: 41px;
+    }
+    #input-country-new-post-styler, #input-country-delivery-styler, #input-country-intime-styler, #intime-city, #input-addr {
+        /*margin-left: -15px;*/
+        padding-bottom: 7px;
+        width: 70%;
+    }
+
+    #input-point-new-post-styler, #input-point-delivery-styler, #intime-addr, #buy {
+        /*margin-left: -15px;*/
+        width: 70%;
+    }
+    #msdrpdd20_msdd {
+        width:68%!important;
+    }
+    .new_post_delivery label {
+        padding-left: 1px;
+        font-size: 12px;
+        color: #444;
+        padding-top: 10px;
+    }
+
+    .custom-form-group-margin {
+        margin-bottom: -7px!important;
+    }
+
+    .custom-margin-bottom{
+        margin-bottom: -15px!important;
+    }
+    .custom-width {
+        width:100%!important;
+    }
+    .width-50 {
+        width:50%!important;
+    }
+    .no-margin-bottom{
+        margin-bottom: 0!important;
+    }
+    .custom-padding {
+        padding-top: 15px;
+    }
+
+    .two-radio {
+        display: flex;
+    }
+}
+
+@media only screen
+and (width: 768px){
+    .buy-1-click-new {
+        right: 42%;
+    }
+
+    .help-info {
+        /*top: -52px;*/
+    }
+}
+
+
+
+.custom-label-checkout {
+    font-size: 14px;
+}
+
+
+.one-row-display {
+    display: flex;
+}
+
+
+.theme-header {
+    color: #EB5D0A;
+    /*padding-left: 2%;*/
+    padding-bottom: 3%;
+}
+
+.font-10 {
+    font-size: 10px!important;
+    margin-left: -17px;
+    /*padding-bottom: 2%;*/
+}
+
+.radio+.radio, .checkbox+.checkbox {
+     margin-top: auto !important;
+}
+
+.fnone {
+    width: 60px;
+}
+
+.ddChild .ddchild_ .border .shadow {
+    width: 200px;
+    height: 100px;
+}
+.borderRadius {
+
+    border-radius: 0!important;
+}
+
+.self-shipping-block p {
+    /*color: #444;*/
+    /*font-size: 14px;*/
+}
+
+.self-shipping-block {
+    margin-top: -9px;
+    display: none;
+
+}
+
+.select2-container {
+    width:200px!important;
+}
+
+.new_post_delivery label {
+    padding-left: 1px;
+    font-size: 12px;
+    color: #444;
+}
+
+.address-shipping label {
+    font-size: 14px!important;
+    padding-top: 1%;
+}
+
+@media only screen and (min-width: 1024px)
+and (max-width: 1223px){
+    .additional-info-subcribe {
+        padding-left: 45px;
+        margin-top: -11px;
+    }
+
+    .checkbox-subscribe-position{
+        margin-top: -20px;
+    }
+
+    #np-point, #delivery-block-show, .np-grid {
+        display: grid;
+    }
+
+    .np-grid {
+        padding-top: 10px;
+    }
+    .address-shipping {
+        padding-top: 7px;
+    }
+
+    #input-country-delivery-styler, #input-point-delivery-styler,
+    #input-point-new-post-styler,
+    #input-country-new-post-styler,
+    #msdrpdd20_msdd,
+    #intime-city,
+    #intime-addr{
+        width:290px!important;
+    }
+
+
+    .custom-width {
+        width:100%!important;
+    }
+    .width-50 {
+        width:50%!important;
+    }
+
+    .custom-padding {
+        padding-top: 30px;
+    }
+
+    .custom-form-group-margin {
+        margin-bottom: -7px!important;
+    }
+
+    .custom-margin-bottom{
+        margin-bottom: -15px!important;
+    }
+    #email {
+        margin-top: 15px!important;
+    }
+    .two-radio {
+        display: flex;
+    }
+    #radio-inline {
+        display: block!important;
+    }
+}
+
+@media only screen and (min-width: 992px)
+and (max-width: 1224px){
+    #input-country-delivery-styler, #input-point-delivery-styler,
+    #input-point-new-post-styler,
+    #input-country-new-post-styler,
+    #intime-city,
+    #intime-addr{
+        width:140%!important;
+    }
+
+    #msdrpdd20_msdd {
+        width:100%!important;
+    }
+}
+
+.no-padding-left{
+    padding-left: 0;
+}
+
+.jq-selectbox__select-text {
+    width: 100%!important;
+}
+
+.modal-wrap {
+    width: 326px;
+}

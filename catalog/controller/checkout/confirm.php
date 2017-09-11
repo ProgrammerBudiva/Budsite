@@ -165,7 +165,7 @@ class ControllerCheckoutConfirm extends Controller {
             }
         }else {
             $order_data['shipping_method'] = 'Самовывоз';
-            $order_data['shipping_address_1'] = 'Самовывоз';
+            $order_data['shipping_address_1'] = $this->request->post['self-shipping'];
         }
 //      $order_data['shipping_city']      = $this->session->data['payment_address']['city'];
 
