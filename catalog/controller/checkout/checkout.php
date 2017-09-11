@@ -932,18 +932,16 @@ class ControllerCheckoutCheckout extends Controller {
       $email_text .= sprintf($this->language->get('total_text_price'), $total, ENT_QUOTES, 'UTF-8') . "\n\n";
       $email_text .= sprintf($this->language->get('text_date_order'), date('d.m.Y H:i'), ENT_QUOTES, 'UTF-8') . "\n\n";
 //      echo "<pre>"; print_r($email_text); echo "</pre>";
-//      $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
+      $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo('19ofis96@gmail.com');
+      $mail->setTo($this->config->get('config_email'));
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject($email_subject);
 //      $mail->setText($email_text);
       $mail->setHtml($email_text);
       $mail->send();
-        echo "<pre>"; print_r($mail); echo "</pre>";
 
-//      $this->cart->clear();
 
   }
 
