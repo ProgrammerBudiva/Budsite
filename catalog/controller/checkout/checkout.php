@@ -23,7 +23,8 @@ class ControllerCheckoutCheckout extends Controller {
 
     $total_data = array();
     $total = 0;
-
+    header("Content-Security-Policy: default-src 'self'");
+    header("Content-Security-Policy: script-src http://www.delivery-auto.com");
     unset($this->session->data['privat_html']);
 
     $taxes = $this->cart->getTaxes();
