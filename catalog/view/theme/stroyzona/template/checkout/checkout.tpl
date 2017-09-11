@@ -676,7 +676,7 @@
     setTimeout(function() {
         $.ajax({
             type: "GET",
-            url: "//www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
+            url: "http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
             success: function (data) {
                 var options = '';
                 for (var i = 0; i < data.data.length; i++) {
@@ -894,7 +894,7 @@ function addClassNameListener(elemId, callback, callback1) {
         function getPointDelivery(id) {
 
             $.ajax({
-                url: "//www.delivery-auto.com/api/v4/Public/GetWarehousesListInDetail?culture=ru-RU&CityId=" + id + "&onlyWarehouses=true&country=1",
+                url: "http://www.delivery-auto.com/api/v4/Public/GetWarehousesListInDetail?culture=ru-RU&CityId=" + id + "&onlyWarehouses=true&country=1",
                 method: 'GET',
                 success: function (data) {
 
