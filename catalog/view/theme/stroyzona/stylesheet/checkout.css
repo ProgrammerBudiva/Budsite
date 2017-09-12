@@ -3,6 +3,10 @@
 
 @media only screen
 and (min-width: 1224px) {
+    .modal-wrap {
+        width: 322px!important;
+    }
+
     #input-payment-company-name, #edrpou, #ur-addr, #ustav, #fio-boss, #boss-position, #fio-ukr, #inn, #phone-company, #post-addr, #inn-company
     {
         width: 88% !important;
@@ -659,6 +663,10 @@ and (width: 768px){
 
 @media only screen and (min-width: 1024px)
 and (max-width: 1223px){
+    /*.modal-wrap {*/
+        /*width: 322px;*/
+    /*}*/
+
     .additional-info-subcribe {
         padding-left: 45px;
         margin-top: -11px;
@@ -742,5 +750,5 @@ and (max-width: 1224px){
 }
 
 .modal-wrap {
-    width: 322px;
+    width: inherit;
 }

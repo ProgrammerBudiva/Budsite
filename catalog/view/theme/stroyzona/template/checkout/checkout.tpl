@@ -67,20 +67,20 @@
                 <form id="order-form">
                     <div class="two-inputs">
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?><sup style="color: red;left: 0.5em;padding-right: 5px;">⭐</sup></strong></label>
                         <div class="lastname-block">
                             <input type="text" required name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control fio-height" />
                         </div>
                     </div>
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?><sup style="color: red;left: 0.5em;padding-right: 5px;">⭐</sup></strong></label>
                         <div class="firstname-block">
                             <input type="text" required name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control fio-height" />
                         </div>
                     </div>
                     </div>
                     <div class=" additional-margin custom-margin-bottom mobile-margin additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?><sup style="color: red;left: 0.5em;padding-right: 5px;">⭐</sup></strong></label>
                         <div class="one-row-display phone-block">
                             <input type="text" required name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control custom-height" />
                         </div>
@@ -96,7 +96,7 @@
                     </div> -->
 
                     <div id="email" class="form-group custom-form-group-margin custom-margin-bottom padding-10-mobile additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?><sup style="color: red;left: 0.5em;padding-right: 5px;">⭐</sup></strong></label>
                         <div class="one-row-display email">
                             <input type="email" required name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control custom-height" />
 
@@ -952,6 +952,7 @@ function addClassNameListener(elemId, callback, callback1) {
             $('html, body').animate({
                 scrollTop: $("#content").offset().top
             }, 20);
+            $('input[name=lastname]').focus();
             return false;
         }
 
@@ -960,6 +961,7 @@ function addClassNameListener(elemId, callback, callback1) {
             $('html, body').animate({
                 scrollTop: $("#content").offset().top
             }, 20);
+            $('input[name=firstname]').focus();
             return false;
         }
 
@@ -968,6 +970,7 @@ function addClassNameListener(elemId, callback, callback1) {
             $('html, body').animate({
                 scrollTop: $("#content").offset().top
             }, 20);
+            $('input[name=telephone]').focus();
             return false;
         }
 
@@ -976,6 +979,7 @@ function addClassNameListener(elemId, callback, callback1) {
             $('html, body').animate({
                 scrollTop: $("#input-payment-telephone").offset().top
             }, 20);
+            $('input[name=email]').focus();
             return false;
         }else {
             if(!validateEmail(email)){
@@ -983,6 +987,7 @@ function addClassNameListener(elemId, callback, callback1) {
                 $('html, body').animate({
                     scrollTop: $("#input-payment-telephone").offset().top
                 }, 20);
+                $('input[name=email]').focus();
                 return false;
             }
         }
