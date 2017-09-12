@@ -34,8 +34,8 @@
             <div class="buy-1-click " style="float: none; width: 326px;">
                 <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
                 <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
-                                            <div><img src="image/pointer.png" alt="pointer"></div>
-                                            <div>Купить в 1 клик</div>
+                                            <div><img id="img-pointer" src="image/pointer.png" alt="pointer"></div>
+                                            <div id="div-click">Купить в 1 клик</div>
                            </span>             </span>
                 <div class="modal-wrap">
                     <p><?php echo $text_callback_you; ?></p>
@@ -67,20 +67,20 @@
                 <form id="order-form">
                     <div class="two-inputs">
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
                         <div class="lastname-block">
                             <input type="text" required name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control fio-height" />
                         </div>
                     </div>
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
                         <div class="firstname-block">
                             <input type="text" required name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control fio-height" />
                         </div>
                     </div>
                     </div>
                     <div class=" additional-margin custom-margin-bottom mobile-margin additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
                         <div class="one-row-display phone-block">
                             <input type="text" required name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control custom-height" />
                         </div>
@@ -96,7 +96,7 @@
                     </div> -->
 
                     <div id="email" class="form-group custom-form-group-margin custom-margin-bottom padding-10-mobile additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?><sup style="color: red;left: 0.5em;">⭐</sup></strong></label>
                         <div class="one-row-display email">
                             <input type="email" required name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control custom-height" />
 
@@ -114,10 +114,10 @@
 
                     <h4 class="theme-header custom-padding">Оплата моего заказа:</h4>
 
-                    <div class="font-10">
+                    <div id="payment-block" class="font-10">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="payment" id="payment1" value="Предоплата на карту ПриватБанка" checked>
+                                <input type="radio" checked name="payment" id="payment1" value="Предоплата на карту ПриватБанка" >
                                 Предоплата через Приват24
                             </label>
                         </div>
@@ -403,9 +403,7 @@
                         <div class="col-sm-9 no-padding-left">
                             <select name="config_point_id" id="input-point-new-post" >
                                 <option value="Выберите отделение">Выберите отделение</option>
-                                <?php foreach ($entry_points as $point) { ?>
-                                <option value="<?php echo $point['name']?>"><?php echo $point['name']; ?></option>
-                                <?php } ?>
+
                             </select>
                         </div>
                         </div>
@@ -947,13 +945,7 @@ function addClassNameListener(elemId, callback, callback1) {
         var firstname = $('#input-payment-firstname').val();
         clearAlertMessages();
 
-        if (phone.length == 0){
-            setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
-            $('html, body').animate({
-                scrollTop: $("#content").offset().top
-            }, 20);
-            return false;
-        }
+
 
         if (lastname.length == 0){
             setAlertMessage('Необходимо указать фамилию!', $('.lastname-block'));
@@ -965,6 +957,14 @@ function addClassNameListener(elemId, callback, callback1) {
 
         if (firstname.length == 0){
             setAlertMessage('Необходимо указать имя!', $('.firstname-block'));
+            $('html, body').animate({
+                scrollTop: $("#content").offset().top
+            }, 20);
+            return false;
+        }
+
+        if (phone.length == 0){
+            setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
             $('html, body').animate({
                 scrollTop: $("#content").offset().top
             }, 20);
@@ -986,6 +986,22 @@ function addClassNameListener(elemId, callback, callback1) {
                 return false;
             }
         }
+
+//        if (!$('[name=payment]').is('checked')){
+//            setAlertMessage('Выберите способ оплаты!', $('#payment-block'));
+//            $('html, body').animate({
+//                scrollTop: $("#input-payment-telephone").offset().top
+//            }, 20);
+//            return false;
+//        }
+
+//        if ($( ".msselect option:selected" ).val() == 1){
+//            if($('#input-country-new-post-styler option:selected').val() === 'Выберите город'){
+//                setAlertMessage('Выберите город доставки!', $('.hide-select'));
+//                return false;
+//            }
+//
+//        }
 
 //        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
         $.ajax({
@@ -1012,10 +1028,26 @@ function addClassNameListener(elemId, callback, callback1) {
                 data: 'telephone=' + phone,
                 success: function () {
                     console.log('ok');
+                    $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
+                    $('a.delivery-continue-popup').trigger('click');
+
                 }
             });
         }
     });
+
+
+        $('body').click(function (evt) {
+            if ($('.modal-wrap').is(':visible')) {
+                console.log($('.modal-wrap').is(':visible'));
+                if (!$(evt.target).is('.modal-wrap') && !$(evt.target).is(".buy-1-click>span, .modal-wrap i")
+                    && !$(evt.target).is("#div-click") && !$(evt.target).is("#img-pointer")
+                    && !$(evt.target).is("#callback_input_phone_product") && !$(evt.target).is("#callback_input_submit_product")) {
+                    $('.modal-wrap').hide();
+                }
+            }
+        });
+
 
 </script>
 <?php echo $footer; ?>

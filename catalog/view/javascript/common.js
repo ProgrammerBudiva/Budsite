@@ -526,3 +526,11 @@ $(document).delegate('.agree', 'click', function (e) {
         });
     };
 })(window.jQuery);
+
+if ($('.modal-wrap').is(':visible')){
+    $('body').click(function(evt){
+        if(!$(evt.target).is('.modal-wrap') && !$(evt.target).is('.buy-1-click')) {
+            $('.modal-wrap').hide();
+        }
+    });
+}
