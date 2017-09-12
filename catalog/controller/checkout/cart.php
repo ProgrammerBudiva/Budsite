@@ -521,7 +521,7 @@ class ControllerCheckoutCart extends Controller {
 
   public function ajax_edit() {
     $this->load->language('checkout/cart');
-
+//    echo "<pre>"; print_r($this->cart->getRealDiscount()); echo "</pre>";
     $json = array();
 
     $result = FALSE;
@@ -530,6 +530,7 @@ class ControllerCheckoutCart extends Controller {
     if (!empty($this->request->post['quantity'])) {
       foreach ($this->request->post['quantity'] as $key => $value) {
         $result = $this->cart->update($key, $value);
+
         if ($result) {
           $json['new_price'] = $this->currency->format($value * $this->request->post['price']);
         }
@@ -582,6 +583,8 @@ class ControllerCheckoutCart extends Controller {
         }
         $json['total_count'] =
           sprintf($this->language->get('text_items'), $this->cart->countProducts(), $this->currency->format($this->cart->getTotal()));
+        $json['total_discount'] = $this->cart->getRealDiscount();
+//        echo "<pre>"; print_r($json); echo "</pre>";die;
         echo json_encode($json);
         return TRUE;
       }
@@ -651,6 +654,7 @@ class ControllerCheckoutCart extends Controller {
         $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0),
         $this->currency->format($total)
       );
+      $json['total_discount'] = $this->cart->getRealDiscount();
       $json['total_products'] = $this->cart->countProducts();
     }
 

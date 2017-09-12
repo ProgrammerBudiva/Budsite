@@ -458,4 +458,17 @@ class Cart {
 
 		return $download;
 	}
+
+	public function getRealDiscount(){
+	    $products = $this->getProducts();
+
+	    $discount = 0;
+	    foreach ($products as $product){
+	        if($product['special_price']){
+                $discount +=  ($product['price'] - $product['special_price']) * $product['quantity'];
+            }
+        }
+
+        return $discount;
+    }
 }

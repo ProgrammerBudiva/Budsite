@@ -233,6 +233,12 @@ var cart = {
             success: function (json) {
                 console.log(json);
                 $('#cart-total').html(json['total']);
+
+                if(!json['total_discount'] || json['total_discount'] === 0){
+                    $('#discount-row').remove();
+                }else{
+                    $('.total-discount').html(json['total_discount'] + ' грн');
+                }
                 if (location.pathname == '/shopping-cart') {
                     location = location.pathname;
                 } else if (location.pathname == '/checkout') {

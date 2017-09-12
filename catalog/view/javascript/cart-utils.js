@@ -48,11 +48,16 @@ $(document).ready(function () {
                     $('.product-' + id).html(json.new_price);
                     //$('.total-total').html(json.total_total);
                     $('.total-total').html(json.total_sub_total);
+                    $('.total-discount').html(json.total_discount + ' грн');
                     $('.total-sub_total').html(json.total_sub_total);
                     $('.total-sum_discounts').html(json.total_discounts_text);
                     $('.title-sum_discounts').html(json.total_discounts_title);
                     $('.total-combo_products').html(json.total_combo_products);
                     $('#cart-total').html(json.total_count);
+
+                    if(!json.total_discount || json.total_discount === 0){
+                        $('#discount-row').remove();
+                    }
                 }
             );
         }

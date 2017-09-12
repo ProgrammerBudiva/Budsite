@@ -597,9 +597,11 @@
           <div class="clear"></div>
           <div class="cart-all-wrap">
               <?php if($total_discount) { ?>
-              <div class="cart-all-row">
-                  <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
-                  <div class="text-left cart-all-total"><?= $total_discount;?></div>
+              <div id="discount-row">
+                  <div class="cart-all-row">
+                      <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
+                      <div class="text-left cart-all-total total-discount"><?= $total_discount;?></div>
+                  </div>
               </div>
               <div class="clear"></div>
               <?php } ?>
@@ -607,7 +609,7 @@
                   <?php foreach ($totals as $total) { ?>
                   <div class="text-left cart-all-title"><div><?= $total['title']; ?></div></div>
                   <div class="text-left cart-all-total total-total"><?= $total['text']; ?></div>
-                  <?php } ?>
+                  <?php break;} ?>
               </div>
               <div class="clear"></div>
           </div>
