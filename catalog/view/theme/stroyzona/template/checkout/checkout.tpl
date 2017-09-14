@@ -187,20 +187,20 @@
 
                         <div class="form-group custom-form-group-margin">
                             <!-- <label class="control-label custom-label-checkout" for="input-payment-company-name">Название компании на укр.яз.</label> -->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="company-name" value="" id="input-payment-company-name" placeholder="Полное название компании" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
                          <!--   <label class="control-label custom-label-checkout" for="edrpou">ЕДРПОУ</label> -->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="edrpou" value="" id="edrpou" placeholder="ЕДРПОУ" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="inn-company" value="" id="inn-company" placeholder="ИНН (Идентификационный номер налогоплательщика)" class="form-control custom-height" />
                             </div>
                         </div>
@@ -213,7 +213,7 @@
                         <div class="want-contract" style="display: none;">
                         <div class="form-group custom-form-group-margin">
                             <!--<label class="control-label custom-label-checkout" fur-addraddr">Юридический адрес</label> -->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text" placeholder="Юридический адрес"  name="ur-addr" value="" id="ur-addr" class="form-control custom-height" />
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                         </div> -->
                             <div class="form-group custom-form-group-margin">
                                 <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр. яз.</label>-->
-                                <div class="one-row-display email">
+                                <div class="one-row-display ">
                                     <input type="text"  name="post-addr" value="" id="post-addr" placeholder="Почтовый адрес" class="form-control custom-height" />
                                 </div>
                             </div>
@@ -233,7 +233,7 @@
 
                             <div class="form-group custom-form-group-margin">
                             <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр. яз.</label>-->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="phone-company" value="" id="phone-company" placeholder="Телефон компании" class="form-control custom-height" />
                             </div>
                         </div>
@@ -241,34 +241,34 @@
                         <div class="form-group custom-form-group-margin custom-width no-margin-bottom" style="display: flex;     width: 90%;">
                             <div class="width-50" style="width: 49%;padding-right: 2%;">
                            <!-- <label class="control-label custom-label-checkout" fur-addraddr">Расчетный счет</label> -->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text" name="payment-list" value="" id="" placeholder="№ расчетного счёта" class="form-control " />
                             </div>
                             </div>
                             <div class="width-50" style="width: 49%;">
                             <!-- <label class="control-label custom-label-checkout" fur-addraddr">МФО</label> -->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="mfo" placeholder="МФО" value="" id="" class="form-control " />
                             </div></div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
                             <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр.</label>-->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="fio-boss" value="" id="fio-boss" placeholder="ФИО руководителя" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
                             <!--  <label class="control-label custom-label-checkout" for="boss-position">Должность руководителя на укр.</label>-->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="boss-position" value="" id="boss-position" placeholder="Должность руководителя" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
                             <!--  <label class="control-label custom-label-checkout" for="ustav">Руководитель действует на основании (устава, доверенности и т.д.)</label>-->
-                            <div class="one-row-display email">
+                            <div class="one-row-display ">
                                 <input type="text"  name="ustav" value="" id="ustav" placeholder="Руководитель действует на основании (устава, доверенности № и т.д.)" class="form-control custom-height" />
                             </div>
                         </div>
@@ -278,14 +278,14 @@
 
                             <div class="form-group custom-form-group-margin">
                               <!--  <label class="control-label custom-label-checkout" for="fio-ukr">ФИО на укр.яз.</label> -->
-                                <div class="one-row-display email">
+                                <div class="one-row-display ">
                                     <input type="text"  name="fio-ukr" value="" id="fio-ukr" placeholder="ФИО" class="form-control custom-height" />
                                 </div>
                             </div>
 
                             <div class="form-group custom-form-group-margin">
                                 <!--<label class="control-label custom-label-checkout" for="inn">ИНН</label>-->
-                                <div class="one-row-display email">
+                                <div class="one-row-display ">
                                     <input type="text"  name="inn" value="" id="inn" placeholder="ИНН (Идентификационный номер налогоплательщика)" class="form-control custom-height" />
                                 </div>
                             </div>
