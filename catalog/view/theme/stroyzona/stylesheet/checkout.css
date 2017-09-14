@@ -101,7 +101,8 @@ and (min-width: 1224px) {
     #input-point-new-post-styler,
     #intime-city,
     #intime-addr,
-    #input-addr
+    #input-addr,
+    #deliviries-styler
     {
         width:380px!important;
     }
@@ -207,8 +208,9 @@ and (max-device-width: 480px){
 
     #intime-city,
     #intime-addr,
-    #input-addr, #buy{
-        width:100%!important;
+    #input-addr, #buy,
+    #deliviries-styler{
+        width:290px!important;
     }
 
     #msdrpdd20_msdd {
@@ -413,7 +415,8 @@ and (max-device-width: 1024px){
     #intime-city,
     #intime-addr,
     #msdrpdd20_msdd,
-    #input-addr{
+    #input-addr,
+    #deliviries-styler{
         width:329px!important;
     }
 
@@ -538,15 +541,17 @@ and (max-device-width: 768px) {
         top: -12px;
         left: 41px;
     }
-    #input-country-new-post-styler, #input-country-delivery-styler, #input-country-intime-styler, #intime-city, #input-addr {
+    #input-country-new-post-styler, #input-country-delivery-styler, #input-country-intime-styler, #intime-city, #input-addr, #deliviries-styler {
         /*margin-left: -15px;*/
         padding-bottom: 7px;
-        width: 70%;
+        /*width: 70%;*/
+        width: 376px;
     }
 
     #input-point-new-post-styler, #input-point-delivery-styler, #intime-addr, #buy {
         /*margin-left: -15px;*/
-        width: 70%;
+        /*width: 70%;*/
+        width: 376px;
     }
     #msdrpdd20_msdd {
         width:68%!important;
@@ -732,8 +737,9 @@ and (max-width: 1224px){
     #input-point-new-post-styler,
     #input-country-new-post-styler,
     #intime-city,
-    #intime-addr{
-        width:140%!important;
+    #intime-addr,
+    #deliviries-styler{
+        width:400px!important;
     }
 
     #msdrpdd20_msdd {
@@ -752,3 +758,28 @@ and (max-width: 1224px){
 .modal-wrap {
     width: inherit;
 }
+
+.np-img {
+    background: url("/image/nova_poshta.jpg") no-repeat 0 7px;
+    background-position: 10px;
+}
+
+.delivery-img {
+    background: url("/image/delivery.png") no-repeat 0 7px;
+    background-position: 10px;
+}
+
+.intime-img {
+    background: url("/image/intime.jpg") no-repeat 0 7px;
+    background-position: 10px;
+}
+
+#deliviries-styler  li {
+    padding-left: 80px;
+    background-position: 10px 6px;
+}
+
+#deliviries-styler .jq-selectbox__select-text {
+    padding-left: 80px;
+}
+

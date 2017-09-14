@@ -67,20 +67,20 @@
                 <form id="order-form">
                     <div class="two-inputs">
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong><?php echo $entry_lastname;?><sup style="color: red;left: 0.5em;padding-right: 5px;">*</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-lastname"><strong style="padding-right: 5px;"><?php echo $entry_lastname;?></strong><strong style="color: red;">*</strong></label>
                         <div class="lastname-block">
                             <input type="text" required name="lastname" value="<?php print $lastname ? $lastname : (!empty($full_user_info['lastname']) ? $full_user_info['lastname'] : '');?>" id="input-payment-lastname" class="form-control fio-height" />
                         </div>
                     </div>
                     <div class="form-group custom-form-group-margin custom-margin-bottom width additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong><?php echo $entry_firstname;?><sup style="color: red;left: 0.5em;padding-right: 5px;">*</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-firstname"><strong style="padding-right: 5px;"><?php echo $entry_firstname;?></strong><strong style="color: red;">*</strong></label>
                         <div class="firstname-block">
                             <input type="text" required name="firstname" value="<?php print $firstname ? $firstname : (!empty($full_user_info['firstname']) ? $full_user_info['firstname'] : '');?>" id="input-payment-firstname" class="form-control fio-height" />
                         </div>
                     </div>
                     </div>
                     <div class=" additional-margin custom-margin-bottom mobile-margin additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong><?php echo $entry_telephone;?><sup style="color: red;left: 0.5em;padding-right: 5px;">*</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-telephone"><strong style="padding-right: 5px;"><?php echo $entry_telephone;?></strong><strong style="color: red;">*</strong></label>
                         <div class="one-row-display phone-block">
                             <input type="text" required name="telephone" value="<?php print $telephone ? $telephone : (!empty($full_user_info['telephone']) ? $full_user_info['telephone'] : '') ;?>" id="input-payment-telephone" class="form-control custom-height" />
                         </div>
@@ -96,7 +96,7 @@
                     </div> -->
 
                     <div id="email" class="form-group custom-form-group-margin custom-margin-bottom padding-10-mobile additional-margin-">
-                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong><?php echo $entry_email;?><sup style="color: red;left: 0.5em;padding-right: 5px;">*</sup></strong></label>
+                        <label class="control-label custom-label-checkout" for="input-payment-email"><strong style="padding-right: 5px;"><?php echo $entry_email;?></strong><strong style="color: red;">*</strong></label>
                         <div class="one-row-display email">
                             <input type="email" required name="email" value="<?php print $email ? $email : (!empty($full_user_info['email']) ? $full_user_info['email'] : '') ;?>" id="input-payment-email" class="form-control custom-height" />
 
@@ -314,10 +314,10 @@
                     </div>
 
                     <div class="hide-select">
-                        <select class="msselect">
-                            <option value="1" name="shipping-company" data-image="image/nova_poshta.jpg">Новая Почта</option>
-                            <option value="2" name="shipping-company" data-image="image/intime.jpg">InTime</option>
-                            <option value="3" name="shipping-company" data-image="image/delivery.png">Delivery</option>
+                        <select id="deliviries">
+                            <option value="1" name="shipping-company" class="np-img" data-image="image/nova_poshta.jpg">Новая Почта</option>
+                            <option value="2" name="shipping-company" class="intime-img" data-image="image/intime.jpg">InTime</option>
+                            <option value="3" name="shipping-company" class="delivery-img" data-image="image/delivery.png">Delivery</option>
                         </select>
                     </div>
 
@@ -374,115 +374,122 @@
                             </div>
                         </div>
                     </div>
+                    <div class="deliveries-block-all">
+                        <div class="new_post_delivery" id="np_block">
+                            <div class="label-input np-grid">
+                                <label class="col-sm-3" for="input-country-new-post"><strong><?php echo $entry_city; ?></strong></label>
+                                <div class="col-sm-9 no-padding-left">
+                                    <select name="config_country_id" id="input-country-new-post" data-search="true" onchange="getPoint($(this).find(':selected').data('id'))">
+                                        <option selected value="Выберите город">Выберите город</option>
+                                        <?php foreach ($countries as $country) { ?>
+                                        <option value="<?php echo $country['name']; ?>" data-id="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                                    <div class="address-shipping">
+                                        <label style="padding-right: 3%;">
+                                            <input type="radio" checked name="np-sklad" id="np-sklad" value="1" >
+                                            На отделение:
+                                        </label>
 
-                    <div class="new_post_delivery" id="np_block">
-                        <div class="label-input np-grid">
-                            <label class="col-sm-3" for="input-country-new-post"><strong><?php echo $entry_city; ?></strong></label>
+                                        <label class="no-padding-left" style=" ">
+                                            <input type="radio"  name="np-sklad" id="np-address" value="2" >
+                                            Адресная доставка:
+                                        </label>
+                                    </div>
+                            <div id="np-point">
+                            <label class="col-sm-3 control-label" for="input-point-new-post-styler"><strong><?php echo $entry_point; ?></strong></label>
                             <div class="col-sm-9 no-padding-left">
-                                <select name="config_country_id" id="input-country-new-post" data-search="true" onchange="getPoint($(this).find(':selected').data('id'))">
-                                    <option selected value="Выберите город">Выберите город</option>
-                                    <?php foreach ($countries as $country) { ?>
-                                    <option value="<?php echo $country['name']; ?>" data-id="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                                    <?php } ?>
+                                <select name="config_point_id" id="input-point-new-post" >
+                                    <option value="Выберите отделение">Выберите отделение</option>
+
                                 </select>
                             </div>
-                        </div>
-                                <div class="address-shipping">
-                                    <label style="padding-right: 3%;">
-                                        <input type="radio" checked name="np-sklad" id="np-sklad" value="1" >
-                                        На отделение:
-                                    </label>
+                            </div>
+                            <div id="np-addr" style="display: none;">
+                                <div class="form-group custom-form-group-margin">
+                                    <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
+                                    <div class="one-row-display">
+                                        <input type="text" name="addr" value="" placeholder="Укажите адрес для доставки" id="input-addr" class="form-control custom-height" />
 
-                                    <label class="no-padding-left" style=" ">
-                                        <input type="radio"  name="np-sklad" id="np-address" value="2" >
-                                        Адресная доставка:
-                                    </label>
-                                </div>
-                        <div id="np-point">
-                        <label class="col-sm-3 control-label" for="input-point-new-post-styler"><strong><?php echo $entry_point; ?></strong></label>
-                        <div class="col-sm-9 no-padding-left">
-                            <select name="config_point_id" id="input-point-new-post" >
-                                <option value="Выберите отделение">Выберите отделение</option>
-
-                            </select>
-                        </div>
-                        </div>
-                        <div id="np-addr" style="display: none;">
-                            <div class="form-group custom-form-group-margin">
-                                <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
-                                <div class="one-row-display">
-                                    <input type="text" name="addr" value="" placeholder="Укажите адрес для доставки" id="input-addr" class="form-control custom-height" />
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="new_post_delivery" id="delivery_post_block" style="display: none;">
-                        <div class="label-input np-grid">
-                            <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
+                        <div class="new_post_delivery" id="delivery_post_block" style="display: none;">
+                            <div class="label-input np-grid">
+                                <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
+                                <div class="col-sm-9 no-padding-left">
+                                    <select name="delivery-city" id="input-country-delivery" class="" data-search="true" onchange="getPointDelivery($(this).find(':selected').data('id'))">
+                                        <option selected value="Выберите город">Выберите город</option>
+                                        <?php foreach ($delivery_cities['data'] as $delivery_city) { ?>
+                                        <option value="<?php echo $delivery_city['name'] . ' (' . $delivery_city['regionName'] . ')' ; ?>" data-id="<?php echo $delivery_city['id']; ?>"><?php echo $delivery_city['name']  . ' (' . $delivery_city['regionName'] . ')' ; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="address-shipping">
+                                <label>
+                                    <input type="radio" checked name="delivery-sklad" id="delivery-sklad" value="1" >
+                                    На отделение:
+                                </label>
+
+                                <label style="padding-left: 3%;">
+                                    <input type="radio"  name="delivery-sklad" id="delivery-address" value="2" >
+                                    Адресная доставка:
+                                </label>
+                            </div>
+                            <div class="delivery-point-subblock" id="delivery-block-show">
+                            <label class="col-sm-3 control-label" for="input-point-delivery"><strong><?php echo $entry_point; ?></strong></label>
                             <div class="col-sm-9 no-padding-left">
-                                <select name="delivery-city" id="input-country-delivery" class="" data-search="true" onchange="getPointDelivery($(this).find(':selected').data('id'))"></select>
+                                <select name="delivery-point" id="input-point-delivery">
+                                    <option value="">Выберите отделение</option>
+                                </select>
+                            </div>
+                            </div>
+                            <div id="delivery-addr" style="display: none;">
+                                <div class="form-group custom-form-group-margin">
+                                    <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
+                                    <div class="one-row-display">
+                                        <input type="text" name="delivery-addr" placeholder="Укажите адрес для доставки" value="" id="delivery-addr" class="form-control custom-height" />
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="address-shipping">
-                            <label>
-                                <input type="radio" checked name="delivery-sklad" id="delivery-sklad" value="1" >
-                                На отделение:
-                            </label>
 
-                            <label style="padding-left: 3%;">
-                                <input type="radio"  name="delivery-sklad" id="delivery-address" value="2" >
-                                Адресная доставка:
-                            </label>
-                        </div>
-                        <div class="delivery-point-subblock" id="delivery-block-show">
-                        <label class="col-sm-3 control-label" for="input-point-delivery"><strong><?php echo $entry_point; ?></strong></label>
-                        <div class="col-sm-9 no-padding-left">
-                            <select name="delivery-point" id="input-point-delivery"></select>
-                        </div>
-                        </div>
-                        <div id="delivery-addr" style="display: none;">
-                            <div class="form-group custom-form-group-margin">
-                                <label class="control-label custom-label-checkout" for="input-payment-email"><strong>Адрес:</strong></label>
-                                <div class="one-row-display">
-                                    <input type="text" name="delivery-addr" placeholder="Укажите адрес для доставки" value="" id="delivery-addr" class="form-control custom-height" />
+                        <div class="new_post_delivery" id="intime_block" style="display:none;">
+                            <div class="label-input np-grid">
+                                <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
+                                <div class="col-sm-9 no-padding-left">
+                                    <input type="text" name="intime-city" value="" id="intime-city" class="form-control " />
+                                </div>
+                            </div>
 
+                            <div class="address-shipping">
+                                <label>
+                                    <input type="radio" checked name="intime-sklad" id="intime-sklad" value="1" >
+                                    На отделение:
+                                </label>
+
+                                <label style="padding-left: 3%;">
+                                    <input type="radio"  name="intime-sklad" id="intime-address" value="2" >
+                                    Адресная доставка:
+                                </label>
+                            </div>
+                            <div id="intime-addr-block" >
+                                <div class="form-group custom-form-group-margin">
+
+                                    <div class="one-row-display" style="padding-top: 10px;">
+                                        <input type="text" name="intime-addr" placeholder="Укажите адрес для доставки" value="" id="intime-addr" class="form-control" />
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="new_post_delivery" id="intime_block" style="display:none;">
-                        <div class="label-input np-grid">
-                            <label class="col-sm-3" for="input-country-delivery"><strong><?php echo $entry_city; ?></strong></label>
-                            <div class="col-sm-9 no-padding-left">
-                                <input type="text" name="intime-city" value="" id="intime-city" class="form-control " />
-                            </div>
-                        </div>
-
-                        <div class="address-shipping">
-                            <label>
-                                <input type="radio" checked name="intime-sklad" id="intime-sklad" value="1" >
-                                На отделение:
-                            </label>
-
-                            <label style="padding-left: 3%;">
-                                <input type="radio"  name="intime-sklad" id="intime-address" value="2" >
-                                Адресная доставка:
-                            </label>
-                        </div>
-                        <div id="intime-addr-block" >
-                            <div class="form-group custom-form-group-margin">
-
-                                <div class="one-row-display" style="padding-top: 10px;">
-                                    <input type="text" name="intime-addr" placeholder="Укажите адрес для доставки" value="" id="intime-addr" class="form-control" />
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="form-group required" style="clear:both;text-align:center">
                        <!-- <label class="col-lg-4 col-sm-12"></label> -->
                         <button type="button" id="buy" style="margin-left: 0!important;" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить мой заказ</button>
@@ -624,7 +631,7 @@
   <?php } ?>
     <?php echo $column_right; ?></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script src="catalog/view/javascript/jquery.dd.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
@@ -673,31 +680,31 @@
 
     };
 
-    setTimeout(function() {
-        $.ajax({
-            type: "GET",
-            url: "http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
-            success: function (data) {
-                var options = '';
-                for (var i = 0; i < data.data.length; i++) {
-                    if(data.data[i].ExtracityPickup === false) {
-                        options += '<option value="' + data.data[i].name + '" data-id="'+ data.data[i].id +'">' + data.data[i].name + '</option>';
-                    }
-                }
-                $('#input-country-delivery').append(options);
-
-                $('#input-country-delivery').trigger('refresh');
-            }
-        });
-    },200);
-    $(document).ready(function(e) {
-        try {
-            $(".msselect").msDropDown();
-//            $(".test").msDropDown();
-        } catch(e) {
-            alert(e.message);
-        }
-    });
+//    setTimeout(function() {
+//        $.ajax({
+//            type: "GET",
+//            url: "http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1",
+//            success: function (data) {
+//                var options = '';
+//                for (var i = 0; i < data.data.length; i++) {
+//                    if(data.data[i].ExtracityPickup === false) {
+//                        options += '<option value="' + data.data[i].name + '" data-id="'+ data.data[i].id +'">' + data.data[i].name + '</option>';
+//                    }
+//                }
+//                $('#input-country-delivery').append(options);
+//
+//                $('#input-country-delivery').trigger('refresh');
+//            }
+//        });
+//    },200);
+//    $(document).ready(function(e) {
+//        try {
+//            $(".msselect").msDropDown();
+////            $(".test").msDropDown();
+//        } catch(e) {
+//            alert(e.message);
+//        }
+//    });
 
     //Select NP
 //    $(document).ready(function() {
@@ -787,8 +794,10 @@
 
 
     $(document).ready(function(){
-        $('li.enabled._msddli_').click(function(){
+    setTimeout(function(){
+        $('#deliviries-styler li').click(function(){
             var shipping_company = $('.jq-selectbox__select-text').eq(1).text();
+//            console.log(shipping_company);
             if( shipping_company === 'Новая Почта') {
                 $('#delivery_post_block').hide();
                 $('#intime_block').hide();
@@ -797,6 +806,7 @@
                 $('#np_block').hide();
                 $('#intime_block').hide();
                 $('#delivery_post_block').show();
+//                console.log(shipping_company);
             }if(shipping_company === "InTime"){
                 $('#delivery_post_block').hide();
                 $('#np_block').hide();
@@ -804,6 +814,7 @@
             }
             }
         });
+    }, 20);
     });
 
 //Class listener
@@ -831,7 +842,36 @@ function addClassNameListener(elemId, callback, callback1) {
 
 }
 
+    function getPointDelivery(id) {
+
+        $.ajax({
+            url: "index.php?route=checkout/checkout/getPointDelivery",
+            data: 'id='+id,
+            method: 'GET',
+            success: function (data) {
+                    var obj = jQuery.parseJSON(data);
+                    var options = '';
+                    $("#input-point-delivery").children().remove();
+
+                    for (var i = 0; i < obj.data.length; i++) {
+                        if(obj.data.length > 1) {
+                            options += '<option value="' + obj.data[i].name + obj.data[i].address + '">' + obj.data[i].name + ' (' + obj.data[i].address + ')</option>';
+                        }else{
+                            options += '<option value="' + obj.data[i].address + '">' + obj.data[i].address + '</option>';
+                        }
+                    }
+
+                    $('#input-point-delivery').append(options);
+                    $('#input-point-delivery').trigger('refresh');
+
+            }
+        });
+    }
+
+
     $(window).load(function () {
+
+
         addClassNameListener("payment3-styler", function(){
             $('.nal-payment').show();
 //                $('#shipping-post-styler').closest('.radio').show();
@@ -843,13 +883,19 @@ function addClassNameListener(elemId, callback, callback1) {
 
         addClassNameListener("payment4-styler" , function(){
                 $('#shipping-post-styler').closest('.radio').hide();
-                $('#shipping-self-styler').click();
+//                $('#shipping-self-styler').click();
+                $('#shipping-self-styler').trigger('click');
+//                setTimeout(function() {
+//                    $('input, select').trigger('refresh');
+//                }, 1)
         },
         function(){
             $('#shipping-post-styler').closest('.radio').show();
-            $('#shipping-post-styler').click();
-        });
+//            $('#shipping-post-styler').click();
+//            $('#shipping-post-styler').trigger('click');
 
+        });
+//
         addClassNameListener("ur-styler", function(){
                 $('.ur-lico').show();
                 $('.fiz-lico').hide();
@@ -858,17 +904,17 @@ function addClassNameListener(elemId, callback, callback1) {
                 $('.fiz-lico').show();
                 $('.ur-lico').hide();
             });
-
+//
         addClassNameListener("shipping-post-styler", function(){
             $('.hide-select').show();}, function(){
             $('.hide-select').hide();
-            $('.new_post_delivery').hide();});
+            $('.deliveries-block-all').hide();});
 
         addClassNameListener("shipping-self-styler", function(){
             $('.self-shipping-block').show();}, function(){
             $('.self-shipping-block').hide();
-            $('#np_block').show();});
-
+            $('.deliveries-block-all').show();});
+//
         addClassNameListener("np-address-styler",  function(){
             $('#np-point').hide();
             $('#np-addr').show()}, function(){
@@ -877,7 +923,8 @@ function addClassNameListener(elemId, callback, callback1) {
             });
         addClassNameListener("delivery-sklad-styler",  function(){
             $('#delivery-block-show').show();
-            $('#delivery-addr').hide()}, function(){
+            $('#delivery-addr').hide();
+            $('#np_block').hide();}, function(){
             $('#delivery-block-show').hide();
             $('#delivery-addr').show();
         });
@@ -891,28 +938,7 @@ function addClassNameListener(elemId, callback, callback1) {
 </script>
 <script type="text/javascript">
     $(window).load(function () {
-        function getPointDelivery(id) {
 
-            $.ajax({
-                url: "http://www.delivery-auto.com/api/v4/Public/GetWarehousesListInDetail?culture=ru-RU&CityId=" + id + "&onlyWarehouses=true&country=1",
-                method: 'GET',
-                success: function (data) {
-
-                    var options = '';
-                    $("#input-point-delivery").children().remove();
-
-                    for (var i = 0; i < data.data.length; i++) {
-                        options += '<option value="' + data.data[i].address + '">' + data.data[i].address + '</option>';
-                    }
-
-                    $('#input-point-delivery').append(options);
-                    $('#input-point-delivery').trigger('refresh');
-
-                }
-            });
-        }
-
-        getPointDelivery('1e8e7257-a82a-e311-8b0d-00155d037960');
 
         $('#want-contract-styler').click(function () {
             if($('#want-contract').is(':checked') === true){
@@ -1010,7 +1036,7 @@ function addClassNameListener(elemId, callback, callback1) {
 //
 //        }
 
-//        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
+        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
         $.ajax({
             url:  "index.php?route=checkout/checkout/success",
             method: "POST",
@@ -1018,7 +1044,7 @@ function addClassNameListener(elemId, callback, callback1) {
             success: function(response){
                 var json = JSON.parse(response);
                 if(json.success){
-//                    $.unblockUI();
+                    $.unblockUI();
                     $('a.delivery-continue-popup').trigger('click');
                     $('#succes-popup').load(json.success);
                 }

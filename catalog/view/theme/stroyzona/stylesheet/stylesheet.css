@@ -518,7 +518,7 @@ footer .subscribe-email span{display:none;}
 .cart-description{}
 .table-cart .cart-description:nth-child(2){text-align:left !important;}
 .cart-description a,
-.cart-description span{color:#666;font-size:15px;vertical-align:middle;display:inline-block;}
+.cart-description span{color:#666;font-size:15px;vertical-align:middle;display:inline-block;padding-bottom: 12px;}
 .cart-description a:hover{color:#F18A36;}
 .cart-description small{font-size:16px;}
 .cart-price{vertical-align:middle!important;text-align:center;}

@@ -236,7 +236,7 @@ var cart = {
 
                 if(!json['total_discount'] || json['total_discount'] === 0){
                     $('#discount-row').remove();
-                }else{
+                }else{ищу
                     $('.total-discount').html(json['total_discount'] + ' грн');
                 }
                 if (location.pathname == '/shopping-cart') {

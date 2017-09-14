@@ -150,8 +150,8 @@
 
 }
 .jq-selectbox__select:hover {
-	background-color: #fafafa;
-	background-position: 0 -10px;
+	/*background-color: #fafafa;*/
+	/*background-position: 0 -10px;*/
 }
 .jq-selectbox__select:active {
 	background: #F5F5F5;
