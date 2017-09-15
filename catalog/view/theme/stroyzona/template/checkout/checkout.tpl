@@ -648,7 +648,11 @@
             $('#fiz-ur-styler').trigger('click');
             $('#fiz-ur-styler').trigger('click');
         }, 3000);
-
+        var mozilla = $.browser.mozilla;
+        console.log(mozilla);
+        if(mozilla == true){
+            $('.jq-checkbox__div').before().css('left','-10px');
+        };
     $('.buy-1-click-new').click(function(){
         var phone = $('#input-payment-telephone').val();
         clearAlertMessages();
