@@ -950,7 +950,7 @@ class ControllerCheckoutCheckout extends Controller {
       $mail->setHtml($email_text);
       $mail->send();
 
-//      $this->cart->clear();
+      $this->cart->clear();
   }
 
     /**
