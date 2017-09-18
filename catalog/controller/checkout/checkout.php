@@ -927,22 +927,22 @@ class ControllerCheckoutCheckout extends Controller {
 
       $this->load->language('module/catapulta');
       $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $order_id);
-      $email_text = sprintf($this->language->get('text_order'), $order_id) . "\n\n";
-      $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'], ENT_QUOTES, 'UTF-8') . "\n";
-      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR'], ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text = sprintf($this->language->get('text_order'), $order_id . '<br>') . "\n\n";
+      $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
+      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       $products_str = '';
       foreach ($prod_arr as $product) {
-          $email_text .= sprintf($this->language->get('text_product'), $product['name'], ENT_QUOTES, 'UTF-8') . "\n";
-          $email_text .= sprintf($this->language->get('text_product_link'), $product['link'], ENT_QUOTES, 'UTF-8') . "\n";
-          $email_text .= sprintf($this->language->get('text_product_quantity'), $product['quantity'], ENT_QUOTES, 'UTF-8') . "\n";
-          $email_text .= sprintf($this->language->get('text_price'), $product['price'], ENT_QUOTES, 'UTF-8') . "\n\n";
+          $email_text .= sprintf($this->language->get('text_product'), $product['name'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_product_link'), $product['link'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_product_quantity'), $product['quantity'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
+          $email_text .= sprintf($this->language->get('text_price'), $product['price'] . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       }
-      $email_text .= sprintf($this->language->get('total_text_price'), $total, ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('total_text_price') . '<br>', $total, ENT_QUOTES, 'UTF-8') . "\n\n";
       $email_text .= sprintf($this->language->get('text_date_order'), date('d.m.Y H:i'), ENT_QUOTES, 'UTF-8') . "\n\n";
 
       $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo($this->config->get('config_email'));
+      $mail->setTo();
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject($email_subject);
@@ -950,7 +950,7 @@ class ControllerCheckoutCheckout extends Controller {
       $mail->setHtml($email_text);
       $mail->send();
 
-      $this->cart->clear();
+//      $this->cart->clear();
   }
 
     /**

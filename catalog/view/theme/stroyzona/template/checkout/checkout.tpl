@@ -26,10 +26,10 @@
     <div id="content" class="<?php echo $class; ?> checkout"><?php echo $content_top; ?>
       <div class="col-md-6 col-sm-6 col-xs-12 checkout-main-block">
         <div class="checkout-field">
-
+            <div class="quick">
             <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое оформление заказа</h3>
 
-        <div class="quick">
+
             <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
             <div class="buy-1-click " style="float: none; width: 326px;">
                 <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
@@ -152,14 +152,14 @@
                                 <div class="radio">
                                     <label>
                                         <input type="radio" checked name="face" id="ur" value="1" >
-                                        Юридическое лицо (ТОВ, ФОП, ...)
+                                        Юридична особа
                                     </label>
                                 </div>
 
                                 <div  class="radio bullshit">
                                     <label>
                                         <input type="radio" name="face" id="fiz" value="2" >
-                                        Физическое лицо
+                                        Фізична особа
                                     </label>
                                 </div>
                             </div>
