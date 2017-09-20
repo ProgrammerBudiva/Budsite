@@ -161,7 +161,7 @@
                 </div>
                 <div class="hidden" id="oneclick_success">Жду звонка</div>
             </div>
-            <a href="<?php echo $checkout; ?>" class="btn btn-primary btn-cart">Оформить мой заказ</a>
+            <a href="<?php echo $checkout; ?>" class="btn btn-primary btn-cart" style="padding-top: 1px!important;">Оформить мой заказ</a>
         </div>
         <!--<div class="pull-right refresh-total"><a href="javascript:void(0);" class="btn btn-primary"><?php /*echo $button_refresh_total; */?></a></div>-->
         <div class="clear"></div>
