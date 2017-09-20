@@ -535,7 +535,7 @@ footer .subscribe-email span{display:none;}
 .cart-amount i{font-size:20px;color:#F18A36;}
 .cart-amount .plus:hover, .cart-amount .minus:hover{cursor:pointer;}
 .cart-total{color:#F18A36;font-weight:bold;font-size:14px;vertical-align:middle!important;}
-.cart-delete{width:30px;}
+.cart-delete{width:50px;top:-43px;position:relative;}
 .cart-delete button{width:100%;height:100%;border:0;background:none;padding:10px;}
 .cart-container .cart-delete{border-right:none !important;}
 .cart-container .cart-total, .cart-container .cart-price{width:10%;}
@@ -721,7 +721,7 @@ label{font-size:14px;color:#444;cursor:pointer;}
 .checkout .menu-wrap .d-table-cell:hover{background-color:#E15300;}
 .checkout .menu-wrap .d-table-cell.active{background-color:#EB5D0A;}
 .checkout .form-group input, .checkout .form-group .jqselect{width:100%;margin-bottom:15px;}
-.checkout-cart{border:1px solid #EBEBEB;margin-bottom:20px;}
+/*.checkout-cart{border:1px solid #EBEBEB;margin-bottom:20px;}*/
 .checkout-cart .d-table-cell{padding:10px;}
 .checkout .big-price{margin-top:10px;}
 .checkout .cart-amount{display:inline-block;}

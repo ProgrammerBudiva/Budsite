@@ -26,28 +26,7 @@
     <div id="content" class="<?php echo $class; ?> checkout"><?php echo $content_top; ?>
       <div class="col-md-6 col-sm-6 col-xs-12 checkout-main-block">
         <div class="checkout-field">
-            <div class="quick">
-            <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое оформление заказа</h3>
 
-
-            <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
-            <div class="buy-1-click " style="float: none; width: 326px;">
-                <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
-                <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
-                                            <div><img id="img-pointer" src="image/pointer.png" alt="pointer"></div>
-                                            <div id="div-click">Купить в 1 клик</div>
-                           </span>             </span>
-                <div class="modal-wrap">
-                    <p><?php echo $text_callback_you; ?></p>
-                    <input id="callback_input_phone_product" name="phone"  />
-                    <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
-                    <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="Жду звонка" class="btn btn-primary" /></a>
-                    <i class="fa fa-times"></i>
-                    <p class="phone-alert"></p>
-                </div>
-                <div class="hidden" id="oneclick_success">Жду звонка</div>
-            </div>
-        </div>
            <!-- <div class="menu-wrap account-menu">
                 <div class="d-table">
                     <div class="d-table-cell active new-customer-btn">
@@ -61,7 +40,32 @@
                     <?php } ?>
                 </div>
             </div> -->
+            <div class="quick quick-top-block" style="">
+                <div class="centering-content">
+                <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое</h3>
+                <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">оформление заказа</h3>
 
+
+                <p class="help-info">Заказ отправится сразу в обработку</p>
+                <p class="help-info">и все детали вы оговорите с менеджером </p>
+                <div class="buy-1-click " style="float: none; width: 326px;">
+                    <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
+                    <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
+                                            <div><img id="img-pointer" src="image/pointer.png" alt="pointer"></div>
+                                            <div id="div-click">Купить в 1 клик</div>
+                           </span>             </span>
+                    <div class="modal-wrap">
+                        <p><?php echo $text_callback_you; ?></p>
+                        <input id="callback_input_phone_product" name="phone"  />
+                        <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
+                        <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="Жду звонка" class="btn btn-primary" /></a>
+                        <i class="fa fa-times"></i>
+                        <p class="phone-alert"></p>
+                    </div>
+                    <div class="hidden" id="oneclick_success">Жду звонка</div>
+                </div>
+            </div>
+            </div>
             <div class="form-wrap new-customer">
                 <div><h3 class="theme-header" style="display: block; padding-bottom: 0; padding-top: 20px;">Оформление моего заказа</h3></div>
                 <form id="order-form">
@@ -555,8 +559,31 @@
       </div>
 
       <div class="col-md-6 col-sm-6 col-xs-12 checkout-cart">
+          <div class="quick cart-quick-block" style="">
+              <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое оформление заказа</h3>
 
+
+              <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
+              <div class="buy-1-click " style="float: none; width: 326px;">
+                  <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
+                  <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
+                                            <div><img id="img-pointer" src="image/pointer.png" alt="pointer"></div>
+                                            <div id="div-click">Купить в 1 клик</div>
+                           </span>             </span>
+                  <div class="modal-wrap">
+                      <p><?php echo $text_callback_you; ?></p>
+                      <input id="callback_input_phone_product" class="mask" name="phone"  />
+                      <input type="hidden" value="<?php echo $spec_link; ?>" name="product">
+                      <a class="thank-to-call"><input id="callback_input_submit_product" type="submit" value="Жду звонка" class="btn btn-primary callback-bottom" /></a>
+                      <i class="fa fa-times"></i>
+                      <p class="phone-alert"></p>
+                  </div>
+                  <div class="hidden" id="oneclick_success">Жду звонка</div>
+              </div>
+          </div>
        <!-- <div class="title"><?= $entry_order;?></div>-->
+        <div class="cart-border">
+            <div class="cart-width">
         <div class="title">Моя корзина</div>
 
 
@@ -591,39 +618,44 @@
                       <div class="clear"></div>
                   </div>
                 </div>
-                <div class="d-table-cell text-center width15 cart-delete">
-                  <button type="button" data-key="<?= $product['key']; ?>" title="<?= $button_remove; ?>" >
+                <div class="text-center width15 cart-delete">
+                  <!--<button type="button" data-key="<?= $product['key']; ?>" title="<?= $button_remove; ?>" >
                     <i class="fa fa-trash-o"></i>
-                  </button>
+                  </button> -->
+                    <span>✖</span>
+                    <div style="line-height: 1">Удалить</div>
                 </div>
                 <div class="clear"></div>
               </div>
               <?php } ?>
             </div>
           </div>
+            <div class="cart-all-wrap">
+                <?php if($total_discount) { ?>
+                <div id="discount-row">
+                    <div class="cart-all-row">
+                        <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
+                        <div class="text-left cart-all-total total-discount"><?= $total_discount;?></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <?php } ?>
+                <div class="cart-all-row">
+                    <?php foreach ($totals as $total) { ?>
+                    <div class="text-left cart-all-title"><div><?= $total['title']; ?></div></div>
+                    <div class="text-left cart-all-total total-total"><?= $total['text']; ?></div>
+                    <?php break;} ?>
+                </div>
+                <div class="clear"></div>
+            </div>
           <div class="clear"></div>
-          <div class="cart-all-wrap">
-              <?php if($total_discount) { ?>
-              <div id="discount-row">
-                  <div class="cart-all-row">
-                      <div class="text-left cart-all-title"><div><?= $text_total_discount;?></div></div>
-                      <div class="text-left cart-all-total total-discount"><?= $total_discount;?></div>
-                  </div>
-              </div>
-              <div class="clear"></div>
-              <?php } ?>
-              <div class="cart-all-row">
-                  <?php foreach ($totals as $total) { ?>
-                  <div class="text-left cart-all-title"><div><?= $total['title']; ?></div></div>
-                  <div class="text-left cart-all-total total-total"><?= $total['text']; ?></div>
-                  <?php break;} ?>
-              </div>
-              <div class="clear"></div>
-          </div>
+
           <!--<div class="text-center">
             <a class="btn btn-primary" href="<?php /*echo $cart; */?>"><sdivong><?php /*echo $button_edit_order;*/?></sdivong></a>
           </div>-->
+            </div>
         </div>
+      </div>
         <div class="clear"></div>
       </div>
         <?php if(!$logged){ ?>
@@ -643,6 +675,7 @@
     $("html, body").scrollTop(0);
     $('#input-payment-telephone').mask("+38 (999) 999 99 99");
     $('#callback_input_phone_product').mask("+38 (999) 999 99 99");
+    $('.mask').mask("+38 (999) 999 99 99");
     $('#input-payment-register-styler').trigger('click');
         setTimeout(function () {
             $('#fiz-ur-styler').trigger('click');
@@ -1058,6 +1091,16 @@ function addClassNameListener(elemId, callback, callback1) {
 
     $('#callback_input_submit_product').click(function () {
         var phone = $('#callback_input_phone_product').val();
+        buy1click(phone);
+    });
+
+    $('.callback-bottom').click(function () {
+        var phone = $('.mask').val();
+        buy1click(phone);
+    });
+
+    function buy1click(phone){
+//        var phone = $('#callback_input_phone_product').val();
         if (phone){
             $.ajax({
                 url: "index.php?route=checkout/checkout/buy1clickCustom",
@@ -1071,7 +1114,7 @@ function addClassNameListener(elemId, callback, callback1) {
                 }
             });
         }
-    });
+    }
 
 
         $('body').click(function (evt) {
