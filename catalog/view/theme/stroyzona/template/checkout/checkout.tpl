@@ -1003,7 +1003,8 @@ function addClassNameListener(elemId, callback, callback1) {
     $('#buy').click( function() {
 
         var data = $('#order-form').serialize();
-        var shipping_company = $( ".msselect option:selected" ).val();
+//        var shipping_company = $( ".msselect option:selected" ).val();
+        var shipping_company = $('#deliviries').val();
         var email = $('#input-payment-email').val();
         var phone = $('#input-payment-telephone').val();
         var lastname = $('#input-payment-lastname').val();
