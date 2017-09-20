@@ -43,11 +43,11 @@
             <div class="quick quick-top-block" style="">
                 <div class="centering-content">
                 <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">Хочу быстрое</h3>
-                <h3 id="quick-checkout-header"  class="theme-header" style="padding-bottom: 5px">оформление заказа</h3>
+                <h3 id="quick-checkout-header"  class="theme-header theme-margin" style="padding-bottom: 5px">оформление заказа</h3>
 
 
                 <p class="help-info">Заказ отправится сразу в обработку</p>
-                <p class="help-info">и все детали вы оговорите с менеджером </p>
+                <p class="help-info help-margin">и все детали вы оговорите с менеджером </p>
                 <div class="buy-1-click " style="float: none; width: 326px;">
                     <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
                     <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">

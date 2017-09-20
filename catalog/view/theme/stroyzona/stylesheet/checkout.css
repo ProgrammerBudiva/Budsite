@@ -650,14 +650,14 @@ and (max-device-width: 768px) {
         text-align: center;
     }
 
-    .centering-content #quick-checkout-header #quick-checkout-header {
+    .centering-content .theme-margin {
         margin-top: -11px;
     }
 
     .centering-content .help-info {
         padding-left: 67px;
     }
-    .centering-content .help-info .help-info{
+    .centering-content .help-margin{
         padding-left: 62px;
         margin-top: -12px;
     }
