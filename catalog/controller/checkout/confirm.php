@@ -99,14 +99,14 @@ class ControllerCheckoutConfirm extends Controller {
 
         $customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 
-        $order_data['customer_id']       = $this->customer->getId();
+        $order_data['customer_id']       = $customer_info['customer_id'];
         $order_data['customer_group_id'] = $customer_info['customer_group_id'];
         $order_data['firstname']         = $customer_info['firstname'];
         $order_data['lastname']          = $customer_info['lastname'];
         $order_data['email']             = ($customer_info['email']) ? $customer_info['email'] : $this->session->data['guest']['email'];
         $order_data['telephone']         = ($customer_info['telephone']) ? $customer_info['telephone'] : $this->session->data['guest']['telephone'];
       }
-//      elseif (isset($this->session->data['guest'])) {
+      elseif (isset($this->session->data['guest'])) {
         $order_data['customer_id']       = 0;
         $order_data['customer_group_id'] = 1;
         $order_data['firstname']         = $this->request->post['firstname'];
@@ -117,7 +117,7 @@ class ControllerCheckoutConfirm extends Controller {
 
         $order_data['comment'] = $this->session->data['guest']['comment'];
 
-//      }
+      }
 
       $order_data['address_1']          = $this->session->data['guest']['address_1'];
       $order_data['payment_address_1']  = $order_data['address_1'];

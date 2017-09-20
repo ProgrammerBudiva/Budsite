@@ -13,12 +13,8 @@ class ControllerCheckoutCheckout extends Controller {
       $this->response->redirect($this->url->link('checkout/cart'));
     }
 
-//    $ch = curl_init('http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=true&country=1');
-//    curl_exec($ch);
-//    curl_close($ch);
       $data['delivery_cities'] = json_decode(file_get_contents('http://www.delivery-auto.com/api/v4/Public/GetAreasList?culture=ru-RU&fl_all=false&country=1'), true);
-//
-//    echo "<pre>"; print_r($data['delivery_cities']); echo "</pre>"; echo count($test['data']);die;
+
 
     $this->load->model('catalog/product');
 
