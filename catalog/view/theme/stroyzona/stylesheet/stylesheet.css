@@ -1211,3 +1211,13 @@ div.alert-success{background-color:#ffe5d5;color:#6b6a6a;border-color:#ffe5d5;}
 .mobile-banner-img{max-width:100%;}
 .desktop-banner{display:none;}
 }
+
+@media screen and (min-width: 993px) and (max-width: 1234px) {
+    .dropdown-menu .navbar-nav>li>a {
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
+    .navbar-nav>li>a {
+        font-size: 12px!important;
+    }
+}
