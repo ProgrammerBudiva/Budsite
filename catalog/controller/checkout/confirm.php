@@ -103,8 +103,8 @@ class ControllerCheckoutConfirm extends Controller {
         $order_data['customer_group_id'] = $customer_info['customer_group_id'];
         $order_data['firstname']         = $customer_info['firstname'];
         $order_data['lastname']          = $customer_info['lastname'];
-        $order_data['email']             = ($customer_info['email']) ? $customer_info['email'] : $this->session->data['guest']['email'];
-        $order_data['telephone']         = ($customer_info['telephone']) ? $customer_info['telephone'] : $this->session->data['guest']['telephone'];
+        $order_data['email']             = ($customer_info['email']) ? $customer_info['email'] : $this->request->post['email'];
+        $order_data['telephone']         = ($customer_info['telephone']) ? $customer_info['telephone'] : $this->request->post['telephone'];
       }
       elseif (isset($this->session->data['guest'])) {
         $order_data['customer_id']       = 0;
