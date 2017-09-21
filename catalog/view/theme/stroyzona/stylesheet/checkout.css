@@ -920,3 +920,9 @@ and (max-width: 1224px){
         padding-left: 35px!important;
     }
 }
+
+.cart-delete {
+    width:50px;
+    top:-43px;
+    position:relative;
+}
