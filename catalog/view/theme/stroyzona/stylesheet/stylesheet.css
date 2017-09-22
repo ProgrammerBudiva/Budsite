@@ -20,7 +20,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg{display:inline;}
 .d-table{display:table;}
 .d-table-row{display:table-row;}
-.d-table-cell{display:table-cell;padding:5px;}
+.d-table-cell{display:table-cell;padding:3px;}
 .table-responsive .d-table{width:100%;}
 .table-responsive{overflow:visible;}
 td, th{padding:5px!important;}
