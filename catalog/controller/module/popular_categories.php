@@ -69,7 +69,7 @@ class ControllerModulePopularCategories extends Controller {
             );
 
             if($category['image']){
-                $image = $this->model_tool_image->resize($category['image'], $this->config->get('popular_categories_main_image_width'), $this->config->get('popular_categories_main_image_height'));
+                $image = '/image/' . $category['image'];
             } else {
                 $image = false;
             }

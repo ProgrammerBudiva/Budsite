@@ -190,7 +190,7 @@ a.cheep-ref:after{content:" ";position:absolute;right:2px;top:5px;background:url
 .wrap-top{margin-bottom:0;}
 .popular{margin:0;position:relative;}
 .popular-wrap{position:relative;margin-bottom:20px;}
-.blur-img{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;}
+.blur-img{position:absolute;top:0;left:0;width:100%;height:100%;}
 .popular-heading{border:1px solid #DDD;-moz-border-radius-bottomleft:3px;-moz-border-radius-bottomright:3px;border-radius-bottomleft:3px;border-radius-bottomright:3px;position:relative;overflow:hidden;transition:0.3s ease-in-out;background:none repeat scroll 0% 0% rgba(0, 0, 0, 0);padding:20px 0;box-sizing:border-box;height:250px;}
 .popular-heading:hover{box-shadow:0px 0px 10px rgba(104, 89, 89, 0.2);background:none repeat scroll 0% 0% rgba(0, 0, 0, 0.3);}
 .popular-heading:hover .more-categories{opacity:1;}
