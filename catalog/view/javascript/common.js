@@ -26,7 +26,7 @@ function getPoint(id) {
             $("#input-point-new-post").children().remove().end();
             $.each($.parseJSON(data), function (index, value) {
                 // console.log(value);
-                options += '<option value="' + value['country_id'] + '">' + value['name'] + '</option>';
+                options += '<option value="' + value['name'] + '">' + value['name'] + '</option>';
                 // console.log(value['country_id'] + ' ' + value['name']);
             });
             $("#input-point-new-post").html(options);
