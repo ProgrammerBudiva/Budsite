@@ -96,7 +96,7 @@
 
             <button <?php if($product['in_cart']) echo "style='display:none'" ?> class="add-to-cart <?php if($product['quantity'] == 0) echo 'disabled' ?>" <?php if ($product['quantity'] == 0) { ?> disabled="disabled" <?php } ?> type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '1', this);">
             <span>
-                        <?php if ($product['quantity'] == 0) { echo $button_cart_disable; } else { ?><i class="fa fa-shopping-cart"></i><?php echo ''; } ?>
+                        <?php if ($product['quantity'] == 0) { echo $button_cart_disable; } else { ?><i class="fa fa-shopping-cart"></i><?php echo 'Купить'; } ?>
                     </span>
             </button>
             <button <?php if(!$product['in_cart']) echo "style='display:none'" ?> class="go-to-cart" type="button" onclick="location.href='shopping-cart'">

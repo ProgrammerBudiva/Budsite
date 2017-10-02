@@ -210,6 +210,10 @@ class ControllerInformationContact extends Controller {
 			$this->error['email'] = $this->language->get('error_email');
 		}
 
+//        if (utf8_strlen(!$this->request->post['phone'])) {
+//            $this->error['phone'] = $this->language->get('error_phone');
+//        }
+
 		if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
 			$this->error['enquiry'] = $this->language->get('error_enquiry');
 		}
@@ -220,4 +224,72 @@ class ControllerInformationContact extends Controller {
 
 		return !$this->error;
 	}
+
+	public function validate_form(){
+        $this->load->language('information/contact');
+        if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+            $this->error['name'] = $this->language->get('error_name');
+        }
+
+        if (!preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
+            $this->error['email'] = $this->language->get('error_email');
+        }
+
+        if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
+            $this->error['enquiry'] = $this->language->get('error_enquiry');
+        }
+
+        if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
+            $this->error['captcha'] = $this->language->get('error_captcha');
+        }
+        if(!empty($this->error)) {
+            echo json_encode($this->error);
+        }else{
+            echo true;
+        }
+    }
+
+    public function validate_captcha(){
+        if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
+            $this->error['captcha'] = $this->language->get('error_captcha');
+            echo json_encode($this->error['captcha']);
+        }else {
+            $this->mail_to_admin_question();
+            echo true;
+        }
+    }
+
+    public function success_popup(){
+        $this->load->language('information/contact');
+        $data['heading_title'] = $this->language->get('heading_title_message');
+        $data['button_continue'] = $this->language->get('button_continue');
+
+        $data['text_message'] = sprintf($this->language->get('text_guest'), $this->url->link('information/contact'));
+
+        $data['continue'] = $this->url->link('common/home');
+        $data['content_top'] = $this->load->controller('common/content_top');
+        $data['content_bottom'] = $this->load->controller('common/content_bottom');
+
+        // GTM dataLayer
+        if (!empty($this->session->data['gtm']['dataLayer'])){
+            $data['dataLayer'] = $this->session->data['gtm']['dataLayer'];
+            unset($this->session->data['gtm']['dataLayer']);
+        }
+
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success_payment.tpl')) {
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/success_payment.tpl', $data));
+        } else {
+            $this->response->setOutput($this->load->view('default/template/common/success.tpl', $data));
+        }
+    }
+
+    function mail_to_admin_question(){
+        $mail = new Mail($this->config->get('config_mail'));
+        $mail->setTo('19ofis96gmail.com');
+        $mail->setFrom($this->request->post['email']);
+        $mail->setSender($this->request->post['name']);
+        $mail->setSubject(sprintf($this->language->get('email_subject'), $this->request->post['name']));
+        $mail->setText(strip_tags($this->request->post['enquiry'] . ' Номер телефона: ' . $this->request->post['phone']));
+        $mail->send();
+    }
 }
