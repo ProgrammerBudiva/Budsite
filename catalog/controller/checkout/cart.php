@@ -5,6 +5,22 @@ class ControllerCheckoutCart extends Controller {
 
   public function index() {
     $this->load->language('checkout/cart');
+//    echo "<pre>"; print_r($this->request); echo "</pre>";die;
+
+    $host_full = $this->request->server['REQUEST_SCHEME'] . '://' . $this->request->server['SERVER_NAME'];
+    if($this->request->server['HTTP_REFERER'] != $host_full . '/contact-us' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/about-us' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/shipping' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/news' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/garantii' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/wishlist' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/compare-products' &&
+        $this->request->server['HTTP_REFERER'] != $host_full . '/checkout'
+    ){
+        $data['referer'] = $this->request->server['HTTP_REFERER'];
+    }else {
+        $data['referer'] = '/';
+    }
 
     $this->document->setTitle($this->language->get('heading_title'));
     $this->document->addScript('catalog/view/javascript/cart-utils.js?v=1.02');

@@ -250,28 +250,24 @@
                             </div>
                             </div>
                             <div class="width-50" style="width: 49%;">
-                            <!-- <label class="control-label custom-label-checkout" fur-addraddr">МФО</label> -->
                             <div class="one-row-display ">
                                 <input type="text"  name="mfo" placeholder="МФО" value="" id="" class="form-control " />
                             </div></div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
-                            <!--<label class="control-label custom-label-checkout" for="fio-boss">ФИО руководителя на укр.</label>-->
-                            <div class="one-row-display ">
+                          <div class="one-row-display ">
                                 <input type="text"  name="fio-boss" value="" id="fio-boss" placeholder="ПІБ керівника" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
-                            <!--  <label class="control-label custom-label-checkout" for="boss-position">Должность руководителя на укр.</label>-->
-                            <div class="one-row-display ">
+                           <div class="one-row-display ">
                                 <input type="text"  name="boss-position" value="" id="boss-position" placeholder="Посада керівника" class="form-control custom-height" />
                             </div>
                         </div>
 
                         <div class="form-group custom-form-group-margin">
-                            <!--  <label class="control-label custom-label-checkout" for="ustav">Руководитель действует на основании (устава, доверенности и т.д.)</label>-->
                             <div class="one-row-display ">
                                 <input type="text"  name="ustav" value="" id="ustav" placeholder="Керівник діє на підставі (статуту, доручення № і т.д.)" class="form-control custom-height" />
                             </div>
@@ -281,14 +277,12 @@
                         <div class="fiz-lico" style="display: none;">
 
                             <div class="form-group custom-form-group-margin">
-                              <!--  <label class="control-label custom-label-checkout" for="fio-ukr">ФИО на укр.яз.</label> -->
                                 <div class="one-row-display ">
                                     <input type="text"  name="fio-ukr" value="" id="fio-ukr" placeholder="ПІБ" class="form-control custom-height" />
                                 </div>
                             </div>
 
                             <div class="form-group custom-form-group-margin">
-                                <!--<label class="control-label custom-label-checkout" for="inn">ИНН</label>-->
                                 <div class="one-row-display ">
                                     <input type="text"  name="inn" value="" id="inn" placeholder="ІПН (індивідуальний податковий номер)" class="form-control custom-height" />
                                 </div>
@@ -495,40 +489,11 @@
                         </div>
                     </div>
                     <div class="form-group required" style="clear:both;text-align:center">
-                       <!-- <label class="col-lg-4 col-sm-12"></label> -->
                         <button type="button" id="buy" style="margin-left: 0!important;" class="btn btn-primary next-btn register-continue"><i class="list-icon" aria-hidden="true"></i>Оформить мой заказ</button>
                     </div>
                 </form>
                 <div class="clear"></div>
             </div>
-            <?php if(!$logged) { ?>
-         <!--   <div class="form-wrap already-buy-here">
-                <div id="login-errors" class="ajax-login-error"></div>
-                <form action="javascript:void(null);" onsubmit="ajax_login_in_checkout()" method="post" enctype="multipart/form-data">
-                  <div class="form-group">
-                    <label class="col-sm-12 control-label" for="input-customer-email"><?php echo $entry_email;?></label>
-                    <div class="col-sm-12">
-                        <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-customer-email" class="form-control" />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-12 control-label" for="input-password"><?php echo $entry_password;?></label>
-                    <div class="col-sm-12">
-                        <input type="password" name="password" value="" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-                    </div>
-                  </div>
-                  <div class="clear"></div>
-                  <div style="text-align:center" class="form-group form-control-field clearfix">
-                    <input style="float:none" type="submit" value="<?php echo $button_login;?>" class="btn btn-primary next-btn" />
-                    <a style="float:none" class="forgotten" href="#forgotten-popup" data-effect="mfp-zoom-in" onclick="forgottenLoad()"><i class="fa fa-key"></i><?php echo $entry_forgotten;?></a>
-                    <div id="forgotten-popup" class="white-popup mfp-with-anim mfp-hide forgot-wrap">
-                        <div class="forgotten-content"></div>
-                    </div>
-                  </div>
-
-                </form>
-            </div> -->
-            <?php } ?>
         </div>
         <div class="clear"></div>
 
@@ -565,7 +530,7 @@
 
               <p class="help-info">Заказ отправится сразу в обработку и все детали вы оговорите с менеджером </p>
               <div class="buy-1-click " style="float: none; width: 326px;">
-                  <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
+
                   <span><span style="margin-left: auto;width: 200px;margin-right: auto;height: 0;border: none;padding: 0;">
                                             <div><img id="img-pointer" src="image/pointer.png" alt="pointer"></div>
                                             <div id="div-click">Купить в 1 клик</div>
@@ -581,7 +546,6 @@
                   <div class="hidden" id="oneclick_success">Жду звонка</div>
               </div>
           </div>
-       <!-- <div class="title"><?= $entry_order;?></div>-->
         <div class="cart-border">
             <div class="cart-width">
         <div class="title">Моя корзина</div>
@@ -650,9 +614,6 @@
             </div>
           <div class="clear"></div>
 
-          <!--<div class="text-center">
-            <a class="btn btn-primary" href="<?php /*echo $cart; */?>"><sdivong><?php /*echo $button_edit_order;*/?></sdivong></a>
-          </div>-->
             </div>
         </div>
       </div>
@@ -663,7 +624,7 @@
   <?php } ?>
     <?php echo $column_right; ?></div>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script src="catalog/view/javascript/jquery.dd.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
@@ -717,7 +678,7 @@
     setTimeout(function(){
         $('#deliviries-styler li').click(function(){
             var shipping_company = $('.jq-selectbox__select-text').eq(1).text();
-//            console.log(shipping_company);
+
             if( shipping_company === 'Новая Почта') {
                 $('#delivery_post_block').hide();
                 $('#intime_block').hide();
@@ -726,7 +687,7 @@
                 $('#np_block').hide();
                 $('#intime_block').hide();
                 $('#delivery_post_block').show();
-//                console.log(shipping_company);
+
             }if(shipping_company === "InTime"){
                 $('#delivery_post_block').hide();
                 $('#np_block').hide();

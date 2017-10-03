@@ -143,7 +143,7 @@
         </div>
       </div>
       <div class="buttons" style="margin-bottom:40px;margin-top:0;">
-        <div class="pull-left"><a href="<?php echo $continue; ?>" class="btn btn-primary btn-cart"><?php echo $button_shopping; ?></a></div>
+        <div class="pull-left"><a href="<?php echo $referer; ?>" class="btn btn-primary btn-cart"><?php echo $button_shopping; ?></a></div>
         <div class="pull-right" style="display: flex;">
             <div class="buy-1-click " style="float: none; width: 237px; padding-right: 15px;">
                 <!--<p><?php /*echo $text_buy_one_click; */?></p>-->
