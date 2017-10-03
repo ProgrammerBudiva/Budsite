@@ -358,7 +358,7 @@
                 $.ajax({
                     url: 'index.php?route=information/contact/validate_form',
                     type: 'POST',
-                    data: 'name=' + name +'&email=' + email + '&enquiry=' + review + '&captcha=' + captcha,
+                    data: 'name=' + name +'&email=' + email + '&enquiry=' + review + '&captcha=' + captcha + '&phone=' + phone,
                     success: function (data) {
 
                         if(data != 1){
