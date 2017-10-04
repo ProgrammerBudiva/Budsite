@@ -245,19 +245,8 @@ class ControllerInformationContact extends Controller {
         if(!empty($this->error)) {
             echo json_encode($this->error);
         }else{
-            echo true;
-        }
-    }
-
-    public function validate_captcha(){
-//echo "<pre>"; print_r($this->request->post); echo "</pre>";die;
-        if (empty($this->session->data['captcha']) || ($this->session->data['captcha'] != $this->request->post['captcha'])) {
-            $this->error['captcha'] = $this->language->get('error_captcha');
-            echo json_encode($this->error['captcha']);
-        }else {
             $this->mail_to_admin_question();
             echo true;
-
         }
     }
 
@@ -287,8 +276,8 @@ class ControllerInformationContact extends Controller {
 
     function mail_to_admin_question(){
         $to      = '19ofis96@gmail.com';
-        $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['name'];
-        $message = 'Сообщение от: ' . $this->request->post['name'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
+        $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['email'];
+        $message = 'Сообщение от: ' . $this->request->post['name'] . $this->request->post['email'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
         if ($this->request->post['phone']){
             $message .= 'Номер телефона: ' . $this->request->post['phone'];
         }
