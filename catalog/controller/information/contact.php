@@ -275,7 +275,7 @@ class ControllerInformationContact extends Controller {
     }
 
     function mail_to_admin_question(){
-        $to      = '19ofis96@gmail.com';
+        $to      = 'info@budsite.ua';
         $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['email'];
         $message = 'Сообщение от: ' . $this->request->post['name'] . $this->request->post['email'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
         if ($this->request->post['phone']){
