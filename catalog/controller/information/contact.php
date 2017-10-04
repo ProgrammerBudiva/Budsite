@@ -286,25 +286,15 @@ class ControllerInformationContact extends Controller {
     }
 
     function mail_to_admin_question(){
-//        $to      = '19ofis96@gmail.com';
-//        $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['name'];
-//        $message = $this->request->post['enquiry'] . "\r\n";
-//        if ($this->request->post['phone']){
-//            $message .= 'Номер телефона: ' . $this->request->post['phone'];
-//        }
-//        $headers = 'From: ' . $this->request->post[''] . "\r\n" .
-//            'Reply-To: webmaster@example.com' . "\r\n" .
-//            'X-Mailer: PHP/' . phpversion();
-//
-//        mail($to, $subject, $message, $headers);
+        $to      = '19ofis96@gmail.com';
+        $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['name'];
+        $message = 'Сообщение от: ' . $this->request->post['name'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
+        if ($this->request->post['phone']){
+            $message .= 'Номер телефона: ' . $this->request->post['phone'];
+        }
+        $headers = 'From: webmaster@example.com' . "\r\n" .
+            'Reply-To: webmaster@example.com' . "\r\n";
 
-
-        $mail = new Mail($this->config->get('config_mail'));
-        $mail->setTo('19ofis96@gmail.com');
-        $mail->setFrom($this->request->post['email']);
-        $mail->setSender($this->request->post['name']);
-        $mail->setSubject(sprintf($this->language->get('email_subject'), $this->request->post['name']));
-        $mail->setText(strip_tags($this->request->post['enquiry']));
-        $mail->send();
+        mail($to, $subject, $message, $headers);
     }
 }
