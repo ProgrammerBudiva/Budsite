@@ -292,7 +292,7 @@ class ControllerInformationContact extends Controller {
         if ($this->request->post['phone']){
             $message .= 'Номер телефона: ' . $this->request->post['phone'];
         }
-        $headers = 'From: webmaster@example.com' . "\r\n" .
+        $headers = 'From: ' . $this->request->post[''] . "\r\n" .
             'Reply-To: webmaster@example.com' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
