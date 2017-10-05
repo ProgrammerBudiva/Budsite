@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<link rel="stylesheet" href="/catalog/view/theme/stroyzona/stylesheet/contacts.css">
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -20,43 +21,53 @@
       <h3><?php echo $text_location; ?></h3>
       <div class="panel panel-default">
         <div class="panel-body">
-          <div class="row">
-            <?php if ($image) { ?>
-            <div class="col-sm-3">
-              <img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" class="img-thumbnail contact-img" />
-            </div>
-            <?php } ?>
-            <div class="col-sm-3">
-              <!--<strong><?php /*echo $store; */?></strong><br />-->
-              <strong>Пункт выдачи</strong><br />
-              <address>
-              <?php echo $address; ?>
-              </address>
-              <?php if ($geocode) { ?>
-              <a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=en&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
-              <?php } ?>
-            </div>
-            <div class="col-sm-3"><strong><?php echo $text_telephone; ?></strong><br>
-              <span class="ringo-phone"><?php echo $telephone; ?></span><br />
-              <br />
-              <?php if ($fax) { ?>
-              <strong><?php echo $text_fax; ?></strong><br>
-              <?php echo $fax; ?>
-              <?php } ?>
-            </div>
-            <div class="col-sm-3">
-              <?php if ($open) { ?>
-              <strong><?php echo $text_open; ?></strong><br />
-              <?php echo $open; ?><br />
-              <br />
-              <?php } ?>
-              <?php if ($comment) { ?>
-              <strong><?php echo $text_comment; ?></strong><br />
-              <?php echo $comment; ?>
-              <?php } ?>
+          <div class="content-block-wrapper">
+            <div class="content-block">
+              <div id="shipping-info" style=""><img class="img-mobile" style="margin-top: -17px;" src="/image/contacts/shipped.png" alt="">
+                <div class="text-block" style="margin-left: 20px;display: inline-block;"><b>Минимальной суммы заказа нет!</b>
+                  <div>Доставим Ваш заказ в любой населенный пункт Украины!</div>
+                </div>
+              </div>
+
+              <div style="padding-top: 15px;"><img class="img-mobile" style="margin-top: -17px;" src="/image/contacts/phone-call.png" alt="">
+                <div class="text-block" style="margin-left: 20px; display: inline-block;"><b>Для консультаций и заказов:</b>
+                  <div>(044) 390 20 40 , (067) 480 72 75</div>
+                </div>
+              </div>
+
+              <div style="padding-top: 15px;"><img style="margin-top: 8px;vertical-align: top;" src="/image/contacts/stopwatch.png" alt="">
+                <div class="text-block" style="margin-left: 20px; display: inline-block;"><b>График работы:</b>
+                  <div>ПН - ПТ: 9.00 - 18.00 (без перерыва)</div>
+                  <div>СБ - ВС: выходной</div>
+                </div>
+              </div>
+
+              <div style="padding-top: 15px;"><img style="margin-top: 4px;vertical-align: top;" src="/image/contacts/paper-plane.png" alt="">
+                <div class="text-block" style="margin-left: 20px; display: inline-block;"><b>Email адрес</b>
+                  <div>info@budsite.ua - для заказов,</div>
+                  <div>director@budsite.ua - для коммерческих предложений</div>
+                </div>
+              </div>
+
+         </div>
+            <div class="content-block">
+            <div class="self-shipping"><img style="margin-top: 6px; vertical-align: top;margin-right: -20px;" src="/image/contacts/placeholder.png" alt="">
+              <div class="text-block" style="margin-left: 20px;display: inline-block;"><b style="padding-left: 22px;">Пункты самовывоза:</b>
+                <div><ul>
+                    <li>Киев, ул. Стройиндустрии, 7</li>
+                    <li>Одесса, 1-й Промышленный пер., 9</li>
+                    <li>Днепр, ул. Квитки-Основьяненко, 5</li>
+                    <li>Полтава, Перспективный пер., 10</li>
+                    <li>Запорожье, ул Можайская, 63</li>
+                    <li>Херсон, ул Ладычука, 161</li>
+                    <li>Кривой Рог, ул Волгоградская, 4</li>
+                  </ul>
+                 </div>
+              </div>
+              <div style="max-width: 78%;padding-left: 57px;">Самовывоз возможен не для всех групп товаров. При оформлении Вашего заказа уточним информацию по интересующей позиции.</div>
             </div>
           </div>
-
+          </div>
           <br/>
           
           <div id="map" style="width: 100%; height: 400px">
@@ -167,60 +178,8 @@
         <?php } ?>
       </div>
       <?php } ?>
-      <!--<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-        <fieldset>
-          <h3><?php echo $text_contact; ?></h3>
-          <div class="form-group required">
-            <label class="col-lg-2 col-md-3 col-sm-4 col-xs-12" for="input-name"><?php echo $entry_name; ?></label>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
-              <input type="text" name="name" value="<?php echo $name; ?>" id="input-name" class="form-control" />
-              <?php if ($error_name) { ?>
-              <div class="text-danger"><?php echo $error_name; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-lg-2 col-md-3 col-sm-4 col-xs-12" for="input-email"><?php echo $entry_email; ?></label>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
-              <input type="text" name="email" value="<?php echo $email; ?>" id="input-email" class="form-control" />
-              <?php if ($error_email) { ?>
-              <div class="text-danger"><?php echo $error_email; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-lg-2 col-md-3 col-sm-4 col-xs-12" for="input-enquiry"><?php echo $entry_enquiry; ?></label>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
-              <textarea name="enquiry" rows="10" id="input-enquiry" class="form-control"><?php echo $enquiry; ?></textarea>
-              <?php if ($error_enquiry) { ?>
-              <div class="text-danger"><?php echo $error_enquiry; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-lg-2 col-md-3 col-sm-4 col-xs-12" for="input-captcha"><?php echo $entry_captcha; ?></label>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12">
-              <input type="text" name="captcha" id="input-captcha" class="form-control" />
-              <img src="index.php?route=tool/captcha" alt="" />
-              <?php if ($error_captcha) { ?>
-                <div class="text-danger"><?php echo $error_captcha; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-        </fieldset>
-        <div class="buttons">
-          <div class="pull-right">
-            <input class="btn btn-primary" type="submit" value="<?php echo $text_send; ?>" />
-          </div>
-          <div class="clear"></div>
-        </div>
 
-      </form>
-      <form class="form-horizontal">
-        <div id="reviewnews" class="col-sm-12"></div>
-        <!--  <div class="review-btn btn btn-primary"><?php echo $text_write; ?></div> -->
-
-        <div class="review-drop col-md-12 col-sm-12 col-xs-12 ">
+        <div style="padding-bottom: 15px;" class="review-drop col-md-12 col-sm-12 col-xs-12 ">
 
           <div class="form-group">
             <div class="col-sm-6 required">
@@ -263,20 +222,9 @@
         </div>
         </div>
 
-
-        <div class="form-group required">
-            <div class="col-sm-6" style="display: grid;">
-            <label class="control-label" for="input-captcha">Введите код</label>
-                <div class="captcha">
-            <input type="text" name="captcha" id="input-captcha" value="" class="form-control"/>
-            <img src="index.php?route=tool/captcha" alt="" />
-            </div></div>
-        </div>
-
-
           <div class="buttons">
-            <div class="pull-right" style="padding-bottom: 2%;">
-              <button style="border-radius: 10px; height: 45px;" type="button" id="button-review"
+            <div class="pull-left" style="padding-bottom: 2%;">
+              <button style="border-radius: 10px; height: 45px;margin-left: 15px;margin-top: 17px;" type="button" id="button-review"
                       data-loading-text="<?php echo $text_loading; ?>" data-news="<?php echo $news_id; ?>"
                       class="review-btn btn btn-primary"><?php echo $text_send; ?></button>
               <a href="#succes-popup" id="" class="btn btn-primary next-btn delivery-continue-popup" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
@@ -308,7 +256,6 @@
 
 
   $('#button-review').click(function(){
-    var captcha = $('#input-captcha').val();
 
       clearAlertMessages();
 
@@ -341,39 +288,19 @@
           return false;
       }
 
-      if (captcha.length == 0){
-          setAlertMessage('Код указан неверно!', $('.captcha'));
-          $('input[name=captcha]').focus();
-          return false;
-      }
-
-//    $.ajax({
-//        url: 'index.php?route=information/contact/validate_captcha',
-//        data: "captcha=" + captcha,
-//        type: 'POST',
-//        success: function (data) {
-//            if(data == 1) {
-//                console.log(data);
-
                 $.ajax({
                     url: 'index.php?route=information/contact/validate_form',
                     type: 'POST',
-                    data: 'name=' + name +'&email=' + email + '&enquiry=' + review + '&captcha=' + captcha + '&phone=' + phone,
+                    data: 'name=' + name +'&email=' + email + '&enquiry=' + review + '&phone=' + phone,
                     success: function (data) {
 
                         if(data != 1){
                             console.log(data);
                             var errors = JSON.parse(data);
 
-                            if(errors.captcha){
-                              setAlertMessage('Код указан неверно!', $('.captcha'));
-                              $('input[name=captcha]').focus();
-                            }
-
                             if (errors.enquiry){
                                 setAlertMessage('Напишите ваше сообщение!', $('#review'));
                                 $('input[name=review]').focus();
-
                             }
 
                             if (errors.name){
@@ -395,19 +322,3 @@
   });
 </script>
 
-<style>
-    @media screen and (max-width: 767px){
-        .reverse-block {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-    }
-
-    .review-drop .form-group {
-        margin-bottom: 0;
-    }
-
-    #review {
-        margin-bottom: 0;
-    }
-</style>
