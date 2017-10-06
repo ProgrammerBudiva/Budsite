@@ -44,8 +44,8 @@
 
               <div style="padding-top: 15px;"><img style="margin-top: 4px;vertical-align: top;" src="/image/contacts/paper-plane.png" alt="">
                 <div class="text-block" style="margin-left: 20px; display: inline-block;"><b>Email адрес</b>
-                  <div>info@budsite.ua - для заказов,</div>
-                  <div>director@budsite.ua - для коммерческих предложений</div>
+                  <div><a style="color: #EB5D0A;" href="mailto:info@budsite.ua">info@budsite.ua</a> - для заказов,</div>
+                  <div><a style="color: #EB5D0A;" href="mailto:info@budsite.ua">info@budsite.ua</a> - для коммерческих предложений</div>
                 </div>
               </div>
 
@@ -70,7 +70,7 @@
           </div>
           <br/>
           
-          <div id="map" style="width: 100%; height: 400px">
+          <div id="map" style="width: 100%; height: 400px; border:1px solid #ffcda5 ">
             <script>
                 var map;
                 function initMap() {
@@ -180,7 +180,7 @@
       <?php } ?>
 
         <div style="padding-bottom: 15px;" class="review-drop col-md-12 col-sm-12 col-xs-12 ">
-
+          <h3 style="color:#FF6600;padding-left:12px;margin-top:0;">Написать нам</h3>
           <div class="form-group">
             <div class="col-sm-6 required">
               <label class=" required control-label"
@@ -226,7 +226,7 @@
             <div class="pull-left" style="padding-bottom: 2%;">
               <button style="border-radius: 10px; height: 45px;margin-left: 15px;margin-top: 17px;" type="button" id="button-review"
                       data-loading-text="<?php echo $text_loading; ?>" data-news="<?php echo $news_id; ?>"
-                      class="review-btn btn btn-primary"><?php echo $text_send; ?></button>
+                      class="review-btn btn btn-primary">Жду Вашего ответа</button>
               <a href="#succes-popup" id="" class="btn btn-primary next-btn delivery-continue-popup" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
               <div id="succes-popup" class="white-popup mfp-with-anim mfp-hide"></div>
             </div>
