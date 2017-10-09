@@ -179,7 +179,7 @@
       </div>
       <?php } ?>
 
-        <div style="padding-bottom: 15px;" class="review-drop col-md-12 col-sm-12 col-xs-12 ">
+        <div style="padding-bottom: 15px;" class="review-drop col-md-12 col-sm-12 col-xs-12 " ><a name="form-review"></a>
           <h3 style="color:#FF6600;padding-left:12px;margin-top:0;">Написать нам</h3>
           <div class="form-group">
             <div class="col-sm-6 required">
