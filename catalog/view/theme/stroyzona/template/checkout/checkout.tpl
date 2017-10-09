@@ -633,111 +633,113 @@
 <script language="javascript" type="text/javascript">
 
     window.onload = function() {
-    $("html, body").scrollTop(0);
-    $('#input-payment-telephone').mask("+38 (999) 999 99 99");
-    $('#callback_input_phone_product').mask("+38 (999) 999 99 99");
-    $('.mask').mask("+38 (999) 999 99 99");
-    $('#input-payment-register-styler').trigger('click');
+        $("html, body").scrollTop(0);
+        $('#input-payment-telephone').mask("+38 (999) 999 99 99");
+        $('#callback_input_phone_product').mask("+38 (999) 999 99 99");
+        $('.mask').mask("+38 (999) 999 99 99");
+        $('#input-payment-register-styler').trigger('click');
         setTimeout(function () {
             $('#fiz-ur-styler').trigger('click');
             $('#fiz-ur-styler').trigger('click');
         }, 3000);
         var mozilla = $.browser.mozilla;
         console.log(mozilla);
-        if(mozilla == true){
-            $('.jq-checkbox__div').before().css('left','-10px');
-        };
-    $('.buy-1-click-new').click(function(){
-        var phone = $('#input-payment-telephone').val();
-        clearAlertMessages();
-
-        if (phone.length == 0){
-            setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
-            $('html, body').animate({
-                scrollTop: $("#content").offset().top
-            }, 20);
-            return false;
+        if (mozilla == true) {
+            $('.jq-checkbox__div').before().css('left', '-10px');
         }
-        $.blockUI({ message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>' });
-        $.ajax({
-            type: "POST",
-            url: "index.php?route=checkout/checkout/buy1clickCustom",
-            data: "telephone=" + phone,
-            success: function(data){
-                $.unblockUI();
-                $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
-                var el = $('#succes-popup').show();
+        $('.buy-1-click-new').click(function () {
+            var phone = $('#input-payment-telephone').val();
+            clearAlertMessages();
 
-                $('a.delivery-continue-popup').trigger('click');
-                $('#succes-popup').load(json.success);
+            if (phone.length == 0) {
+                setAlertMessage('Необходимо указать номер телефона!', $('.phone-block'));
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 20);
+                return false;
             }
-        }) ;
-    });
+            $.blockUI({message: '<div class="spinstyle"><img src="/image/spinner.gif" /></div>'});
+            $.ajax({
+                type: "POST",
+                url: "index.php?route=checkout/checkout/buy1clickCustom",
+                data: "telephone=" + phone,
+                success: function (data) {
+                    $.unblockUI();
+                    $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
+                    var el = $('#succes-popup').show();
 
-    $(document).ready(function(){
-    setTimeout(function(){
-        $('#deliviries-styler li').click(function(){
-            var shipping_company = $('.jq-selectbox__select-text').eq(1).text();
-
-            if( shipping_company === 'Новая Почта') {
-                $('#delivery_post_block').hide();
-                $('#intime_block').hide();
-                $('#np_block').show();
-            }else{ if(shipping_company === "Delivery") {
-                $('#np_block').hide();
-                $('#intime_block').hide();
-                $('#delivery_post_block').show();
-
-            }if(shipping_company === "InTime"){
-                $('#delivery_post_block').hide();
-                $('#np_block').hide();
-                $('#intime_block').show();
-            }
-            }
+                    $('a.delivery-continue-popup').trigger('click');
+                    $('#succes-popup').load(json.success);
+                }
+            });
         });
-    }, 20);
-    });
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#deliviries-styler li').click(function () {
+                    var shipping_company = $('.jq-selectbox__select-text').eq(1).text();
+
+                    if (shipping_company === 'Новая Почта') {
+                        $('#delivery_post_block').hide();
+                        $('#intime_block').hide();
+                        $('#np_block').show();
+                    } else {
+                        if (shipping_company === "Delivery") {
+                            $('#np_block').hide();
+                            $('#intime_block').hide();
+                            $('#delivery_post_block').show();
+
+                        }
+                        if (shipping_company === "InTime") {
+                            $('#delivery_post_block').hide();
+                            $('#np_block').hide();
+                            $('#intime_block').show();
+                        }
+                    }
+                });
+            }, 20);
+        });
 
 //Class listener
-function addClassNameListener(elemId, callback, callback1) {
+        function addClassNameListener(elemId, callback, callback1) {
 
-    var elem = document.getElementById(elemId);
-    var lastClassName = elem.className;
+            var elem = document.getElementById(elemId);
+            var lastClassName = elem.className;
 
-    window.setInterval( function() {
+            window.setInterval(function () {
 
-        var className = elem.className;
+                var className = elem.className;
 
-        if (className !== lastClassName) {
+                if (className !== lastClassName) {
 
-            if(className.indexOf('checked') + 1){
+                    if (className.indexOf('checked') + 1) {
 
-                callback();
-                lastClassName = className;
+                        callback();
+                        lastClassName = className;
 
-            }else callback1();
+                    } else callback1();
+
+                }
+
+            }, 10);
 
         }
 
-    },10);
+        function getPointDelivery(id) {
 
-}
-
-    function getPointDelivery(id) {
-
-        $.ajax({
-            url: "index.php?route=checkout/checkout/getPointDelivery",
-            data: 'id='+id,
-            method: 'GET',
-            success: function (data) {
+            $.ajax({
+                url: "index.php?route=checkout/checkout/getPointDelivery",
+                data: 'id=' + id,
+                method: 'GET',
+                success: function (data) {
                     var obj = jQuery.parseJSON(data);
                     var options = '';
                     $("#input-point-delivery").children().remove();
 
                     for (var i = 0; i < obj.data.length; i++) {
-                        if(obj.data.length > 1) {
+                        if (obj.data.length > 1) {
                             options += '<option value="' + obj.data[i].name + obj.data[i].address + '">' + obj.data[i].name + ' (' + obj.data[i].address + ')</option>';
-                        }else{
+                        } else {
                             options += '<option value="' + obj.data[i].address + '">' + obj.data[i].address + '</option>';
                         }
                     }
@@ -745,75 +747,83 @@ function addClassNameListener(elemId, callback, callback1) {
                     $('#input-point-delivery').append(options);
                     $('#input-point-delivery').trigger('refresh');
 
-            }
-        });
-    }
+                }
+            });
+        }
 
 
-    $(window).load(function () {
+        $(window).load(function () {
 
 
-        addClassNameListener("payment3-styler", function(){
-            $('.nal-payment').show();
+            addClassNameListener("payment3-styler", function () {
+                    $('.nal-payment').show();
 //                $('#shipping-post-styler').closest('.radio').show();
 //                $('#shipping-post-styler').click();
-        },
-        function(){
-            $('.nal-payment').hide();
-        });
+                },
+                function () {
+                    $('.nal-payment').hide();
+                });
 
-        addClassNameListener("payment4-styler" , function(){
-                $('#shipping-post-styler').closest('.radio').hide();
+            addClassNameListener("payment4-styler", function () {
+                    $('#shipping-post-styler').closest('.radio').hide();
 //                $('#shipping-self-styler').click();
-                $('#shipping-self-styler').trigger('click');
+                    $('#shipping-self-styler').trigger('click');
 //                setTimeout(function() {
 //                    $('input, select').trigger('refresh');
 //                }, 1)
-        },
-        function(){
-            $('#shipping-post-styler').closest('.radio').show();
+                },
+                function () {
+                    $('#shipping-post-styler').closest('.radio').show();
 //            $('#shipping-post-styler').click();
 //            $('#shipping-post-styler').trigger('click');
 
-        });
+                });
 //
-        addClassNameListener("ur-styler", function(){
-                $('.ur-lico').show();
-                $('.fiz-lico').hide();
-            },
-            function(){
-                $('.fiz-lico').show();
-                $('.ur-lico').hide();
+            addClassNameListener("ur-styler", function () {
+                    $('.ur-lico').show();
+                    $('.fiz-lico').hide();
+                },
+                function () {
+                    $('.fiz-lico').show();
+                    $('.ur-lico').hide();
+                });
+//
+            addClassNameListener("shipping-post-styler", function () {
+                $('.hide-select').show();
+            }, function () {
+                $('.hide-select').hide();
+                $('.deliveries-block-all').hide();
             });
-//
-        addClassNameListener("shipping-post-styler", function(){
-            $('.hide-select').show();}, function(){
-            $('.hide-select').hide();
-            $('.deliveries-block-all').hide();});
 
-        addClassNameListener("shipping-self-styler", function(){
-            $('.self-shipping-block').show();}, function(){
-            $('.self-shipping-block').hide();
-            $('.deliveries-block-all').show();});
-//
-        addClassNameListener("np-address-styler",  function(){
-            $('#np-point').hide();
-            $('#np-addr').show()}, function(){
-            $('#np-point').show();
-            $('#np-addr').hide();
+            addClassNameListener("shipping-self-styler", function () {
+                $('.self-shipping-block').show();
+            }, function () {
+                $('.self-shipping-block').hide();
+                $('.deliveries-block-all').show();
             });
-        addClassNameListener("delivery-sklad-styler",  function(){
-            $('#delivery-block-show').show();
-            $('#delivery-addr').hide();
-            $('#np_block').hide();}, function(){
-            $('#delivery-block-show').hide();
-            $('#delivery-addr').show();
+//
+            addClassNameListener("np-address-styler", function () {
+                $('#np-point').hide();
+                $('#np-addr').show()
+            }, function () {
+                $('#np-point').show();
+                $('#np-addr').hide();
+            });
+            addClassNameListener("delivery-sklad-styler", function () {
+                $('#delivery-block-show').show();
+                $('#delivery-addr').hide();
+                $('#np_block').hide();
+            }, function () {
+                $('#delivery-block-show').hide();
+                $('#delivery-addr').show();
+            });
+            addClassNameListener("delivery-address-styler", function () {
+                $('.delivery-point-subblock').hide();
+            }, function () {
+                $('.delivery-point-subblock').show();
+            });
         });
-        addClassNameListener("delivery-address-styler",  function(){
-            $('.delivery-point-subblock').hide();}, function(){
-            $('.delivery-point-subblock').show();
-        });
-    });
+    }
 
 
 </script>
