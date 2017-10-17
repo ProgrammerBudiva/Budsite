@@ -17,6 +17,7 @@ class ModelFeedPrivatMarket extends Model {
          where manufacturer_id='74'
          OR manufacturer_id='69'
          OR manufacturer_id='66'
+         OR manufacturer_id='53'
          OR manufacturer_id='54'
          OR manufacturer_id='71'
          OR manufacturer_id='63'
@@ -40,6 +41,16 @@ class ModelFeedPrivatMarket extends Model {
         }
 //        echo "<pre>"; print_r($categories); echo "</pre>";die;
         return array('categories' => $categories, 'products' => $products->rows);
+    }
+
+    public function rozetka_stairs_category(){
+        $prod_arr = $this->db->query("SELECT product_id FROM " . DB_PREFIX ."product_to_category WHERE category_id = '226'");
+        $arResult = [];
+        foreach($prod_arr->rows as $row){
+            $arResult[] = $row['product_id'];
+        }
+
+        return $arResult;
     }
 }
 
