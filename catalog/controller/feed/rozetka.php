@@ -93,6 +93,13 @@ class ControllerFeedRozetka extends Controller
             $picture->nodeValue = 'https://budsite.ua/image/' . $product_self['image'];
             $offer->appendChild($picture);
 
+            $images = $this->model_feed_privat_market->getAdditionalImages($product_self['product_id']);
+            foreach ($images as $image){
+                $picture = $dom->createElement('picture');
+                $picture->nodeValue = 'https://budsite.ua/image/' . $image['image'];
+                $offer->appendChild($picture);
+            }
+
             $name = $dom->createElement('name');
             $name->nodeValue = $product_self['model'];
             $offer->appendChild($name);

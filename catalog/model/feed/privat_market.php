@@ -52,6 +52,11 @@ class ModelFeedPrivatMarket extends Model {
 
         return $arResult;
     }
+
+    public function getAdditionalImages($id){
+        $images = $this->db->query("SELECT * FROM " . DB_PREFIX ."product_image where product_id='" . $id ."'");
+        return $images->rows;
+    }
 }
 
 // LEFT JOIN ". DB_PREFIX ."attribute_description AS ad ON pa.attribute_id = ad.attribute_id / pa.product_id  ad.name, pd.description
