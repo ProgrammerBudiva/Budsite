@@ -101,7 +101,7 @@ class ControllerFeedRozetka extends Controller
             }
 
             $name = $dom->createElement('name');
-            $name->nodeValue = $product_self['model'];
+            $name->nodeValue = $product_self['name'];
             $offer->appendChild($name);
 
             $attributes = explode('; ', $product_self['attributes']);

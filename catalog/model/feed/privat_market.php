@@ -8,7 +8,7 @@ class ModelFeedPrivatMarket extends Model {
      */
     public function getBudivaProducts(){
         $products = $this->db->query("SELECT p.product_id, p.status, p.model, p.image, p.price, p2c.category_id, cd.name AS category_name,
-         GROUP_CONCAT(DISTINCT ad.name SEPARATOR '; ') AS attributes, GROUP_CONCAT(DISTINCT pa.text SEPARATOR '; ') AS attributes_values,  pd.description  FROM ". DB_PREFIX ."product AS p
+         GROUP_CONCAT(DISTINCT ad.name SEPARATOR '; ') AS attributes, GROUP_CONCAT(DISTINCT pa.text SEPARATOR '; ') AS attributes_values, pd.name, pd.description  FROM ". DB_PREFIX ."product AS p
          LEFT JOIN ". DB_PREFIX ."product_description AS pd ON pd.product_id = p.product_id 
          LEFT JOIN ". DB_PREFIX ."product_to_category AS p2c ON p.product_id = p2c.product_id
          LEFT JOIN ". DB_PREFIX ."category_description AS cd ON p2c.category_id = cd.category_id
