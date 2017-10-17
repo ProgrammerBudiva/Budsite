@@ -184,7 +184,7 @@
           <div class="form-group">
             <div class="col-sm-6 required">
               <label class=" required control-label"
-                     for="name"><?php echo $entry_name; ?></label>
+                     for="name">Имя</label>
               <input  type="text" name="name" value="" id="name"
                       class="form-control"/>
             </div>
@@ -193,7 +193,7 @@
           <div class="form-group">
             <div class="col-sm-6 required">
               <label class=" required control-label"
-                     for="email">Ваш Email</label>
+                     for="email">Email</label>
               <input  type="text" name="email" value="" id="email"
                       class="form-control"/>
             </div>
@@ -204,7 +204,7 @@
           <div class="form-group required">
             <div class="col-sm-6">
               <label class="control-label"
-                     for="review"><?php echo $entry_enquiry; ?></label>
+                     for="review">Вопрос или сообщение</label>
               <textarea name="text" rows="5" id="review"
                         class="form-control"></textarea>
 
@@ -215,7 +215,7 @@
         <div class="form-group">
             <div class="col-sm-6 ">
                 <label class="control-label"
-                       for="phone">Ваш телефон</label>
+                       for="phone">Телефон</label>
                 <input  type="text" name="phone" value="" id="phone"
                         class="form-control"/>
             </div>
@@ -226,7 +226,7 @@
             <div class="pull-left" style="padding-bottom: 2%;">
               <button style="border-radius: 10px; height: 45px;margin-left: 15px;margin-top: 17px;" type="button" id="button-review"
                       data-loading-text="<?php echo $text_loading; ?>" data-news="<?php echo $news_id; ?>"
-                      class="review-btn btn btn-primary">Жду Вашего ответа</button>
+                      class="review-btn btn btn-primary">Жду ответа</button>
               <a href="#succes-popup" id="" class="btn btn-primary next-btn delivery-continue-popup" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
               <div id="succes-popup" class="white-popup mfp-with-anim mfp-hide"></div>
             </div>
