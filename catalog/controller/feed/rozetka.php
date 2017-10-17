@@ -71,7 +71,7 @@ class ControllerFeedRozetka extends Controller
             $offer->appendChild($url_product);
 
             $price = $dom->createElement('price');
-            $price->nodeValue = round($product_self['price'],0);
+            $price->nodeValue = round($product_self['price'],0)+1;
             $offer->appendChild($price);
 
             $currency_id = $dom->createElement('currencyId');
