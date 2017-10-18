@@ -81,7 +81,7 @@ body>.container{}
 .fa-times-circle{font-size:20px;color:#FF6600;}
 .fa-times-circle:hover{color:#EB5D0A;}
 .left-bar-menu .dropdown-menu{margin:0;padding:0;}
-.left-bar-menu .fa-angle-right ,.left-bar-menu .fa-circle-o{margin-left:20px;position:absolute;right:10px;}
+.left-bar-menu .fa-angle-right ,.left-bar-menu .fa-circle-o{margin-left:20px;left: 30px;position: relative;}
 .left-bar-menu .fa-circle-o{font-size:6px;}
 .left-bar-menu .navbar-nav li{width:100%;}
 .left-bar-menu .navbar-nav li a{color:#000;}
