@@ -42,7 +42,7 @@ class ControllerInformationNews extends Controller {
 		$pagination->total = $total;
 		$pagination->page = $page;
 		$pagination->limit = 9;
-		$pagination->url = 'news&page={page}';
+		$pagination->url = 'news?page={page}';
 
 		$data['pagination'] = $pagination->render();
 	 
