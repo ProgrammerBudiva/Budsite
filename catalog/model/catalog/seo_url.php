@@ -6,7 +6,7 @@ class ModelCatalogSeoUrl extends Model {
 
         if($query->num_rows !== 0 & $query->row['keyword'] != NULL) {
 
-            return '/' . $query->row['keyword'];
+            return '' . $query->row['keyword'];
 
         }else{
             return NULL;
