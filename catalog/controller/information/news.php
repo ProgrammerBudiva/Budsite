@@ -32,8 +32,8 @@ class ControllerInformationNews extends Controller {
 		
 		$filter_data = array(
 			'page' 	=> $page,
-			'limit' => 10,
-			'start' => 10 * ($page - 1),
+			'limit' => 9,
+			'start' => 9 * ($page - 1),
 		);
 		
 		$total = $this->model_extension_news->getTotalNews();
@@ -41,12 +41,12 @@ class ControllerInformationNews extends Controller {
 		$pagination = new Pagination();
 		$pagination->total = $total;
 		$pagination->page = $page;
-		$pagination->limit = 10;
-		$pagination->url = $this->url->link('information/news', 'page={page}');
-		
+		$pagination->limit = 9;
+		$pagination->url = 'news&page={page}';
+
 		$data['pagination'] = $pagination->render();
 	 
-		$data['results'] = sprintf($this->language->get('text_pagination'), ($total) ? (($page - 1) * 10) + 1 : 0, ((($page - 1) * 10) > ($total - 10)) ? $total : ((($page - 1) * 10) + 10), $total, ceil($total / 10));
+		$data['results'] = sprintf($this->language->get('text_pagination'), ($total) ? (($page - 1) * 9) + 1 : 0, ((($page - 1) * 9) > ($total - 9)) ? $total : ((($page - 1) * 9) + 9), $total, ceil($total / 9));
 
 		$data['heading_title'] = $this->language->get('heading_title');
 		$data['text_title'] = $this->language->get('text_title');
