@@ -35,16 +35,7 @@ class ControllerFeedRozetka extends Controller
         $shop->appendChild($currencies);
 
         $categories = $dom->createElement('categories');
-        $i=1;
-//        foreach ($array['categories'] as $category_self) {
-//
-//            $category = $dom->createElement('category');
-//            $category->nodeValue = $category_self;
-//            $category->setAttribute('id', $i);
-//            $i++;
-//
-//            $categories->appendChild($category);
-//        }
+
             $category = $dom->createElement('category');
             $category->nodeValue = 'Кровельные материалы';
             $category->setAttribute('id', 1);
@@ -59,9 +50,8 @@ class ControllerFeedRozetka extends Controller
         $shop->appendChild($categories);
 
         $offers = $dom->createElement('offers');
-
         foreach ($array['products'] as $product_self){
-//            echo "<pre>"; print_r($product_self); echo "</pre>";die;
+
             $offer = $dom->createElement('offer');
             $offer->setAttribute('available', 'true');
             $offer->setAttribute('id', $product_self['product_id']);
@@ -79,13 +69,13 @@ class ControllerFeedRozetka extends Controller
             $offer->appendChild($currency_id);
 
             $category_product = $dom->createElement('categoryId');
-//            $test = array_search($product_self['category_id'], $cat_226);
+
             if(array_search($product_self['product_id'], $cat_226) != false){
                 $category_product->nodeValue = 2;
             }else {
                 $category_product->nodeValue = 1;
             }
-//            $key = array_search($product_self['name'], $array['categories']);
+
 
             $offer->appendChild($category_product);
 
@@ -100,6 +90,10 @@ class ControllerFeedRozetka extends Controller
                 $offer->appendChild($picture);
             }
 
+            $vendor = $dom->createElement('vendor');
+            $vendor->nodeValue = $product_self['vendor'];
+            $offer->appendChild($vendor);
+
             $name = $dom->createElement('name');
             $name->nodeValue = $product_self['name'];
             $offer->appendChild($name);
@@ -113,7 +107,7 @@ class ControllerFeedRozetka extends Controller
                 $r='![,]!';
                 if (preg_match($r, $attributes[$i])){
                     $attributes_explode = explode( ', ' , $attributes[$i]);
-//                    echo "<pre>"; print_r($attributes_explode); echo "</pre>";die;
+
                     $param_xml = $dom->createElement('param');
                     $param_xml->setAttribute('name', $attributes_explode[0]);
                     $param_xml->setAttribute('unit', $attributes_explode[1]);
@@ -127,11 +121,11 @@ class ControllerFeedRozetka extends Controller
                 $param_xml->nodeValue = $attributes_values[$i];
                 $offer->appendChild($param_xml);
             }
-//            echo "<pre>"; print_r($attributes); echo "</pre>";
-//            echo "<pre>"; print_r($attributes_values); echo "</pre>";die;
 
             $description = $dom->createElement('description');
-            $description->nodeValue = '<![CDATA[' . $product_self['description'] . ']]>';
+            $text = preg_replace('#<a.*>.*</a>#USi', '', $product_self['description']);
+            $text = preg_replace('/<iframe.*?\/iframe>/i','', $text);
+            $description->nodeValue = '<![CDATA[' . $text . ']]>';
             $offer->appendChild($description);
 
 
