@@ -125,6 +125,7 @@ class ControllerFeedRozetka extends Controller
             $description = $dom->createElement('description');
             $text = preg_replace('#<a.*>.*</a>#USi', '', $product_self['description']);
             $text = preg_replace('/<iframe.*?\/iframe>/i','', $text);
+            $text = str_replace('<li>Есть возможность приобрести доп. секцию для увеличения высоты лестницы;</li>', '', $text);
             $description->nodeValue = '<![CDATA[' . $text . ']]>';
             $offer->appendChild($description);
 
