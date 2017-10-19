@@ -126,6 +126,7 @@ class ControllerFeedRozetka extends Controller
             $text = preg_replace('#<a.*>.*</a>#USi', '', $product_self['description']);
             $text = preg_replace('/<iframe.*?\/iframe>/i','', $text);
             $text = str_replace('<li>Есть возможность приобрести доп. секцию для увеличения высоты лестницы;</li>', '', $text);
+            $text = str_replace('<p>В нашем интернет-магазине Вы также найдете шторки, маркизеты, ролеты к мансанрдным окнам любых размеров и видов.</p>', '', $text);
             $description->nodeValue = '<![CDATA[' . $text . ']]>';
             $offer->appendChild($description);
 
