@@ -67,15 +67,15 @@
 </footer>
 
 <!-- Scripts -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/formstyler/jquery.formstyler.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.0/notify.min.js"></script>
-<script src="catalog/view/javascript/slick/slick.js" type="text/javascript"></script>
-<script src="catalog/view/javascript/jquery.elevatezoom.js" type="text/javascript"></script>
-<script src="catalog/view/javascript/jquery/jquery.cookie.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.0/notify.min.js"></script>
+<script async src="catalog/view/javascript/slick/slick.js" type="text/javascript"></script>
+<script async src="catalog/view/javascript/jquery.elevatezoom.js" type="text/javascript"></script>
+<script async src="catalog/view/javascript/jquery/jquery.cookie.js"></script>
 <script async src="catalog/view/javascript/front-end.js?v=1.02" type="text/javascript"></script>
 <script async src="catalog/view/javascript/common.js?v1.02" type="text/javascript"></script>
 <script type="text/javascript">

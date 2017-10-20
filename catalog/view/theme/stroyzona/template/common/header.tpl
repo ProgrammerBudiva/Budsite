@@ -79,7 +79,7 @@
     <!-- End Facebook Pixel Code -->
 
     <!-- Enhanced ecommerce processing -->
-    <script type="text/javascript" src="/catalog/view/javascript/ee-processor.js?v1.91"></script>
+    <script async type="text/javascript" src="/catalog/view/javascript/ee-processor.js?v1.91"></script>
 </head>
 <body class="<?php echo $class; ?>">
 <!-- Google Tag Manager -->
