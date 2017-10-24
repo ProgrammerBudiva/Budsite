@@ -511,13 +511,12 @@ class Cart {
         $roll_price = false;
         $product_price = $price;
         $product_attrs = $this->getProductAttributes($product_id);
-
+        /*Исключаем битумные ленты*/
         $categories_arr = explode('; ', $categories);
         $search = array_search(578,$categories_arr);
-//        echo "<pre>"; print_r($categories_arr); echo "</pre>";die;
 
         foreach ($product_attrs[0]['attribute'] as $attr){
-            if($attr['attribute_id'] == 8 & $search !== false){
+            if($attr['attribute_id'] == 8 & empty($search)){
                 $pattern = '/\d+(?=х)/';
                 preg_match($pattern, $attr['text'], $roll_price);
 
