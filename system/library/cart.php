@@ -40,7 +40,7 @@ class Cart {
 					$recurring_id = 0;
 				}
 
-				$product_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.date_available <= NOW() AND p.status = '1'");
+				$product_query = $this->db->query("SELECT *, GROUP_CONCAT(DISTINCT ptc.category_id SEPARATOR '; ') AS categories FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON p.product_id = ptc.product_id WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.date_available <= NOW() AND p.status = '1'");
 
 				if ($product_query->num_rows) {
 					$option_price = 0;
@@ -166,7 +166,7 @@ class Cart {
 					}
 
 					$price = $product_query->row['price'];
-					$price = $this->priceForRoll($product_id, $price);
+					$price = $this->priceForRoll($product_id, $price, $product_query->row['categories']);
                     $special_price = false;
 
 					// Product Discounts
@@ -506,13 +506,18 @@ class Cart {
         return $product_attribute_group_data;
     }
 
-    public function priceForRoll($product_id, $price){
+    public function priceForRoll($product_id, $price, $categories){
         /*Если рулон Стоимость = цена за метр * на длину рулона */
         $roll_price = false;
         $product_price = $price;
         $product_attrs = $this->getProductAttributes($product_id);
+
+        $categories_arr = explode('; ', $categories);
+        $search = array_search(578,$categories_arr);
+//        echo "<pre>"; print_r($categories_arr); echo "</pre>";die;
+
         foreach ($product_attrs[0]['attribute'] as $attr){
-            if($attr['attribute_id'] == 8){
+            if($attr['attribute_id'] == 8 & $search !== false){
                 $pattern = '/\d+(?=х)/';
                 preg_match($pattern, $attr['text'], $roll_price);
 
