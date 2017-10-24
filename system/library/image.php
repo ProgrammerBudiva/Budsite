@@ -35,7 +35,7 @@ class Image {
 		}
 	}
 
-	public function save($file, $quality = 75) {
+	public function save($file, $quality = 90) {
 		$info = pathinfo($file);
 
 		$extension = strtolower($info['extension']);
