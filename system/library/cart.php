@@ -511,20 +511,40 @@ class Cart {
         $roll_price = false;
         $product_price = $price;
         $product_attrs = $this->getProductAttributes($product_id);
+
+        $length = 0;
+        $width = 0;
+
         /*Исключаем битумные ленты*/
         $categories_arr = explode('; ', $categories);
-        $search = array_search(578,$categories_arr);
-
+        $search = array_search(578, $categories_arr);
+        $attr_test = [];
         foreach ($product_attrs[0]['attribute'] as $attr){
-            if($attr['attribute_id'] == 8 & empty($search)){
-                $pattern = '/\d+(?=х)/';
-                preg_match($pattern, $attr['text'], $roll_price);
-
-                $product_price = $price * $roll_price[0];
-
-            }
+            $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
         }
 
+     //38 -> длина, 39 -> ширина, 18 -> площадь в упаковке
+
+        if($attr_test[38]){
+            $length = str_replace(",",".",$attr_test[38]['text']);
+        }
+
+        if($attr_test[39]){
+            $width = str_replace(",",".",$attr_test[39]['text']);
+        }
+
+        if($attr_test[1]['text'] == 'кв.м'){
+            if($length != 0 && $width != 0){
+                $product_price = $price * $length * $width;
+            }elseif ($attr_test[18]['text']){
+                $area = str_replace(",",".",$attr_test[18]['text']);
+                $product_price = number_format($price * $area,2);
+            }elseif($attr_test[8]['text'] && empty($search)){
+                $pattern1 = '/\d+\W?\d*/xu';
+                preg_match_all($pattern1, $attr_test[8]['text'], $roll_price1);
+                $product_price = $price * str_replace(",",".",$roll_price1[0][0]) * str_replace(",",".",$roll_price1[0][1]);
+            }
+        }
         return $product_price;
     }
 }
