@@ -1254,3 +1254,30 @@ div.alert-success{background-color:#ffe5d5;color:#6b6a6a;border-color:#ffe5d5;}
         padding-right: 20px;
     }
 }
+.span-roll-price {
+    display: block;
+    padding: 1px 6px 0px;
+    text-align: center;
+    white-space: nowrap;
+    /* text-transform: uppercase; */
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: #F0EEEE #F0EEEE #CBC8C8;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    background: none repeat scroll 0% 0% #F0EEEE;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out 0s;
+    font-weight: bold;
+    /* margin-right: 10px; */
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.span-roll-price p {
+    font-weight: normal!important;
+    line-height: 1.4;
+}

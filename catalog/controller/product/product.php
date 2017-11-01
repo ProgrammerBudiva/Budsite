@@ -271,6 +271,8 @@ class ControllerProductProduct extends Controller
                 'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
             );
 
+
+
             $meta_title = empty($product_info['meta_title']) ?
               $product_info['name'] . ' | budsite.ua' :
               $product_info['meta_title'];
@@ -586,6 +588,7 @@ class ControllerProductProduct extends Controller
             $data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $attribute_groups = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
             $data['attribute_groups'] = $attribute_groups;
+
             $attributes_id = '';
             $attributes_text = array();
             // unit of product (is taken from attributes)
@@ -778,6 +781,21 @@ class ControllerProductProduct extends Controller
                 );
             }
 
+            $attr_test = [];
+            foreach ($attribute_groups[0]['attribute'] as $attr){
+//                echo "<pre>"; print_r($attr); echo "</pre>";die;
+                $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
+            }
+            if ($attr_test[1]){
+                if ($attr_test[8]){
+                    $data['rool_box'] = 'рулонам';
+                }else{
+                    $data['rool_box'] = 'упаковкам';
+                }
+            }
+            $roll_price = $this->cart->priceForRoll($data['product_id'],$data['base_price']);
+            $data['roll_price'] = $roll_price;
+//echo "<pre>"; print_r($attribute_groups); echo "</pre>";die;
 
             $data['tags'] = array();
 

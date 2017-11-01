@@ -506,7 +506,7 @@ class Cart {
         return $product_attribute_group_data;
     }
 
-    public function priceForRoll($product_id, $price, $categories){
+    public function priceForRoll($product_id, $price, $categories = 0){
         /*Если рулон Стоимость = цена за метр * на длину рулона */
         $roll_price = false;
         $product_price = $price;
@@ -516,13 +516,13 @@ class Cart {
         $width = 0;
 
         /*Исключаем битумные ленты*/
-        $categories_arr = explode('; ', $categories);
-        $search = array_search(578, $categories_arr);
+//        $categories_arr = explode('; ', $categories);
+//        $search = array_search(578, $categories_arr);
         $attr_test = [];
         foreach ($product_attrs[0]['attribute'] as $attr){
             $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
         }
-
+//echo "<pre>"; print_r($product_id); echo "</pre>";die;
      //38 -> длина, 39 -> ширина, 18 -> площадь в упаковке
 
         if($attr_test[38]){
@@ -538,11 +538,20 @@ class Cart {
                 $product_price = $price * $length * $width;
             }elseif ($attr_test[18]['text']){
                 $area = str_replace(",",".",$attr_test[18]['text']);
-                $product_price = number_format($price * $area,2);
+                $product_price = number_format($price * $area,2, '.', '');
+
             }elseif($attr_test[8]['text'] && empty($search)){
                 $pattern1 = '/\d+\W?\d*/xu';
                 preg_match_all($pattern1, $attr_test[8]['text'], $roll_price1);
                 $product_price = $price * str_replace(",",".",$roll_price1[0][0]) * str_replace(",",".",$roll_price1[0][1]);
+            }elseif($attr_test[27]['text']){
+                $pattern1 = '/\d+\W?\d*/xu';
+                preg_match_all($pattern1, $attr_test[27]['text'], $roll_price1);
+                $product_price = $price * str_replace(",",".",$roll_price1[0][0]) * str_replace(",",".",$roll_price1[0][1]);
+            }
+        }elseif ($attr_test[1]['text'] == 'пог.м'){
+            if($length != 0){
+                $product_price = $price * $length;
             }
         }
         return $product_price;
