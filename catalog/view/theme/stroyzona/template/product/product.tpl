@@ -280,7 +280,7 @@
                         </div>
                         <div class="product-to-do">
                             <div class="product-btn-group">
-                                <span class="span-roll-price"><?=$roll_price .' грн/шт'; ?><p> товар продается </br> кратно <?=$rool_box;?></p></span>
+                                <span class="span-roll-price"><?=$roll_price .' грн/шт'; ?><p> товар продается </p><p>кратно <?=$rool_box;?></p></span>
                                 <button type="button" data-toggle="tooltip" class="btn btn-default"
                                         title="<?php echo $button_wishlist; ?>"
                                         onclick="wishlist.add('<?php echo $product_id; ?>', this);">

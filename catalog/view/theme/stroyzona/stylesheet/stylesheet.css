@@ -1276,9 +1276,12 @@ div.alert-success{background-color:#ffe5d5;color:#6b6a6a;border-color:#ffe5d5;}
     margin-bottom: 8px;
     font-size: 0.9em;
     padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .span-roll-price p {
     font-weight: normal!important;
     line-height: 1.4;
+    width: fit-content;
+    margin: auto;
 }
