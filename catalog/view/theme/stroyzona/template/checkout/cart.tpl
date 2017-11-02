@@ -213,7 +213,7 @@
             margin: auto;
             padding-right: 0!important;
         }
-        .pull-right {
+        .buttons .pull-right {
             display: block!important;
         }
 
