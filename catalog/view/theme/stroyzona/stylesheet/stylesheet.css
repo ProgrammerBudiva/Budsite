@@ -1275,6 +1275,7 @@ div.alert-success{background-color:#ffe5d5;color:#6b6a6a;border-color:#ffe5d5;}
     /* margin-right: 10px; */
     margin-bottom: 8px;
     font-size: 0.9em;
+    padding-top: 8px;
 }
 
 .span-roll-price p {
