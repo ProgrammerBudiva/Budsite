@@ -359,7 +359,7 @@ box-shadow:none;text-shadow:none;color:#fff;}
 .product-price .instock{margin:0 0 8px 0;color:#3d8902;}
 .go-to-cart i, .add-to-cart i{margin-right:10px;font-size:18px;}
 .go-to-cart:hover span, .add-to-cart:hover span{background:#EB5D0A;color:#FFF;border-color:#FF6600 #FF6600 #e85f00;cursor:pointer;}
-.product-btn-group .btn-default{display:block;padding:10px 16px 8px;text-align:center;white-space:nowrap;text-transform:uppercase;border-width:1px 1px 2px;border-style:solid;border-color:#F0EEEE #F0EEEE #CBC8C8;-moz-border-top-colors:none;-moz-border-right-colors:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;border-image:none;background:none repeat scroll 0% 0% #F0EEEE;border-radius:5px;transition:all 0.2s ease-in-out 0s;font-weight:bold;margin-right:10px;margin-bottom:10px;font-size:0.9em;}
+.product-btn-group .btn-default{display:block;padding:10px 16px 8px;text-align:center;white-space:nowrap;text-transform:uppercase;border-width:1px 1px 2px;border-style:solid;border-color:#F0EEEE #F0EEEE #CBC8C8;-moz-border-top-colors:none;-moz-border-right-colors:none;-moz-border-bottom-colors:none;-moz-border-left-colors:none;border-image:none;background:none repeat scroll 0% 0% #F0EEEE;border-radius:5px;transition:all 0.2s ease-in-out 0s;font-weight:bold;margin-right:10px;margin-bottom:6px;font-size:0.9em;}
 .product-btn-group .btn-default:hover{background:none repeat scroll 0% 0% #FF6600;color:#FFF;border-color:#FF6600 #FF6600 #e85f00;}
 .pro_sale{background:none repeat scroll 0% 0% #FA0;position:absolute;z-index:1;left:-1px;top:65px;padding:5px;text-align:center;color:#FFF;text-transform:uppercase;font-size:14px;border-radius:0px 5px 5px 0px;}
 .pro_hot{display:block;background:none repeat scroll 0% 0% #FF0000;position:absolute;z-index:1;left:-1px;top:25px;padding:5px;text-align:center;color:#FFF;text-transform:uppercase;font-size:14px;border-radius:0px 5px 5px 0px;font-weight:bold;}
@@ -1273,7 +1273,7 @@ div.alert-success{background-color:#ffe5d5;color:#6b6a6a;border-color:#ffe5d5;}
     transition: all 0.2s ease-in-out 0s;
     font-weight: bold;
     /* margin-right: 10px; */
-    margin-bottom: 8px;
+    margin-bottom: 7px;
     font-size: 0.9em;
     padding-top: 8px;
     padding-bottom: 8px;
