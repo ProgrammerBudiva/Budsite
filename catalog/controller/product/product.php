@@ -783,7 +783,6 @@ class ControllerProductProduct extends Controller
 
             $attr_test = [];
             foreach ($attribute_groups[0]['attribute'] as $attr){
-//                echo "<pre>"; print_r($attr); echo "</pre>";die;
                 $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
             }
             if ($attr_test[1]){
@@ -794,9 +793,8 @@ class ControllerProductProduct extends Controller
                 }
             }
             $roll_price = $this->cart->priceForRoll($data['product_id'],$data['base_price']);
-            $data['roll_price'] = $roll_price;
-//echo "<pre>"; print_r($attribute_groups); echo "</pre>";die;
-
+            $data['roll_price'] = trim($roll_price);
+            $data['real_price'] = trim($data['base_price']);
             $data['tags'] = array();
 
             if ($product_info['tag']) {
