@@ -43,7 +43,7 @@
                             <div class="clear"></div>
                         </div>
                     </div>
-                    <?php if($i == 3){ ?>
+                    <?php if($i == 3 || end($all_news) == $news){ ?>
                 </div> <?php   $i = 0; } ?>
                 <?php } ?>
             </div>
