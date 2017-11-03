@@ -16,7 +16,10 @@
         <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
             <h1><?php echo $heading_title; ?></h1>
             <div class="row">
-                <?php foreach ($all_news as $news) { ?>
+                <?php   $i = 0;
+                foreach ($all_news as $news) { ?>
+                <?php $i++; if($i == 1){ ?>
+                <div class="test"> <?php }?>
                     <div class="col-sm-4">
                         <div class="news-wrap">
                         	<div class="d-table">
@@ -40,6 +43,8 @@
                             <div class="clear"></div>
                         </div>
                     </div>
+                    <?php if($i == 3){ ?>
+                </div> <?php   $i = 0; } ?>
                 <?php } ?>
             </div>
             <div class="row">
@@ -49,6 +54,14 @@
             <?php echo $content_bottom; ?></div>
         <?php echo $column_right; ?></div>
 </div>
+<style>
+    @media screen and (min-width:768px) {
+        .test {
+            display: inline-flex;
+            width: 100%;
+        }
+    }
+</style>
 <?php echo $footer; ?>
 
 
