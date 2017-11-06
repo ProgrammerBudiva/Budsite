@@ -45,7 +45,7 @@
               <div style="padding-top: 15px;"><img style="margin-top: 4px;vertical-align: top;" src="/image/contacts/paper-plane.png" alt="">
                 <div class="text-block" style="margin-left: 20px; display: inline-block;"><b>Email адрес</b>
                   <div><a style="color: #EB5D0A;" href="mailto:info@budsite.ua">info@budsite.ua</a> - для заказов,</div>
-                  <div><a style="color: #EB5D0A;" href="mailto:info@budsite.ua">info@budsite.ua</a> - для коммерческих предложений</div>
+                  <div><a style="color: #EB5D0A;" href="mailto:director@budsite.ua">director@budsite.ua</a> - для коммерческих предложений</div>
                 </div>
               </div>
 
