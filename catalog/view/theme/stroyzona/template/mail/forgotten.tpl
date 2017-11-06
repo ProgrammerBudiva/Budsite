@@ -177,15 +177,15 @@
                                                                     <tbody>
                                                                     <tr>
                                                                         <td width="40" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0; padding-left: 5px;" class="menu" st-content="menu">
-                                                                            <span style=""><a target="_blank" href="http://www.budsite.com.ua/about-us?utm_medium=mail&utm_source=carrot&utm_campaign=leave_cart" style="text-decoration: none; color: #6C767F;">О нас</a></span>
+                                                                            <span style=""><a target="_blank" href="https://www.budsite.ua/about-us" style="text-decoration: none; color: #6C767F;">О нас    </a></span>
                                                                         </td>
 
                                                                         <td width="45" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
-                                                                            <span style=""><a target="_blank" href="https://www.budsite.com.ua/shipping?utm_medium=mail&utm_source=carrot&utm_campaign=leave_cart" style="text-decoration: none; color: #6C767F;">Доставка</a></span>
+                                                                            <span style=""><a target="_blank" href="https://www.budsite.ua/shipping" style="text-decoration: none; color: #6C767F;">Доставка    </a></span>
                                                                         </td>
 
                                                                         <td width="45" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
-                                                                            <span> <a target="_blank" href="https://www.budsite.com.ua/contact-us?utm_medium=mail&utm_source=carrot&utm_campaign=leave_cart" style="text-decoration: none; color: #6C767F;">Контакты</a></span>
+                                                                            <span> <a target="_blank" href="https://www.budsite.ua/contact-us" style="text-decoration: none; color: #6C767F;">Контакты</a></span>
                                                                         </td>
 
                                                                     </tr>
