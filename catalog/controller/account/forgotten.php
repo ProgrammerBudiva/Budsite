@@ -95,7 +95,7 @@ class ControllerAccountForgotten extends Controller {
 //        $message  = sprintf($this->language->get('text_greeting'), $this->config->get('config_name')) . "\n\n";
 //        $message .= $this->language->get('text_password') . "\n\n";
 //        $message .= $password;
-        $message = $this->load->view('mail/abandonnedcart.tpl', $data);
+        $message = $this->load->view('mail/forgotten.tpl', $data);
 
         $mail = new Mail($this->config->get('config_mail'));
         $mail->setTo($this->request->post['email']);
