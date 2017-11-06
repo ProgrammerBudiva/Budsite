@@ -86,12 +86,16 @@ class ControllerAccountForgotten extends Controller {
         $password = substr(sha1(uniqid(mt_rand(), true)), 0, 10);
 
         $this->model_account_customer->editPassword($this->request->post['email'], $password);
+        $data['password'] = $password;
 
+        $customer_info = $this->model_account_customer->getCustomerByEmail($this->request->post['email']);
+        $data['name'] = $customer_info['firstname'] . ' ' . $customer_info['lastname'];
         $subject = sprintf($this->language->get('text_subject'), $this->config->get('config_name'));
 
-        $message  = sprintf($this->language->get('text_greeting'), $this->config->get('config_name')) . "\n\n";
-        $message .= $this->language->get('text_password') . "\n\n";
-        $message .= $password;
+//        $message  = sprintf($this->language->get('text_greeting'), $this->config->get('config_name')) . "\n\n";
+//        $message .= $this->language->get('text_password') . "\n\n";
+//        $message .= $password;
+        $message = $this->load->view('mail/abandonnedcart.tpl', $data);
 
         $mail = new Mail($this->config->get('config_mail'));
         $mail->setTo($this->request->post['email']);
@@ -104,7 +108,7 @@ class ControllerAccountForgotten extends Controller {
         $this->session->data['success'] = $this->language->get('text_success');
 
         // Add to activity log
-        $customer_info = $this->model_account_customer->getCustomerByEmail($this->request->post['email']);
+
 
         if ($customer_info) {
             $this->load->model('account/activity');
