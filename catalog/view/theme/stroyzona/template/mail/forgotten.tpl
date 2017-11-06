@@ -173,18 +173,18 @@
                                                                 </table>
                                                                 <!-- End of social icon -->
 
-                                                                <table width="169" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner" style="">
+                                                                <table width="189" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner" style="">
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td width="40" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0; padding-left: 5px;" class="menu" st-content="menu">
+                                                                        <td width="40" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
                                                                             <span style=""><a target="_blank" href="https://www.budsite.ua/about-us" style="text-decoration: none; color: #6C767F;">О нас    </a></span>
                                                                         </td>
 
-                                                                        <td width="45" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
+                                                                        <td width="40" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
                                                                             <span style=""><a target="_blank" href="https://www.budsite.ua/shipping" style="text-decoration: none; color: #6C767F;">Доставка    </a></span>
                                                                         </td>
 
-                                                                        <td width="45" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
+                                                                        <td width="40" valign="middle" style="font-size: 13px; line-height: 24px; padding: 3px 0;" class="menu" st-content="menu">
                                                                             <span> <a target="_blank" href="https://www.budsite.ua/contact-us" style="text-decoration: none; color: #6C767F;">Контакты</a></span>
                                                                         </td>
 
