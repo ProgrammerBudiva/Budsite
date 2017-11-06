@@ -93,7 +93,7 @@
                  <?php if(!$product['special']) { ?>
                 <div class="d-table-cell table-resp text-right cart-price">
                     <div class="price-wrap">
-                        <div class="big-price" style="text-decoration: line-through;">
+                        <div class="big-price">
                             <?php echo $product['price']; ?>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <?php echo $product['special']; ?>
                         </div>
                     </div>
-                    <div class="big-price">
+                    <div class="big-price"  style="text-decoration: line-through;">
                         <?php echo $product['price']; ?>
                     </div>
                     <div class="discount">
