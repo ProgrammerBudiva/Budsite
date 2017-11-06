@@ -155,14 +155,6 @@
 
                                                                         <td width="30" height="30" align="center">
                                                                             <div class="imgpop">
-                                                                                <a target="_blank" href="https://vk.com/budsite">
-                                                                                    <img src="https://www.budsite.com.ua/image/catalog/mail/vk.jpg" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
-
-                                                                        <td width="30" height="30" align="center">
-                                                                            <div class="imgpop">
                                                                                 <a target="_blank" href="https://www.youtube.com/channel/UCYK71g3ga1GUyUtqfLK5bLQ">
                                                                                     <img src="https://www.budsite.com.ua/image/catalog/mail/ut.jpg" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none; ">
                                                                                 </a>
@@ -666,13 +658,6 @@
                                         </div>
                                     </td>
 
-                                    <td width="30" height="30" align="left">
-                                        <div class="imgpop">
-                                            <a target="_blank" href="https://vk.com/budsite">
-                                                <img src="https://www.budsite.com.ua/image/catalog/mail/vk.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;">
-                                            </a>
-                                        </div>
-                                    </td>
                                     <td align="left" width="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
 
                                 </tr>
@@ -705,12 +690,6 @@
                     <!-- Spacing -->
                     <tr>
                         <td width="100%" height="3"></td>
-                    </tr>
-                    <!-- Spacing -->
-                    <tr>
-                        <td align="center" valign="middle" style="font-size: 10px;color: #999999" st-content="preheader">
-                            Вы получаете рассылку, так как оставили свой @-mail. Для того, чтобы отписаться, нажмите  <a target="_blank" class="hlite" href="{{ unsubscribe_url }}" style="text-decoration: none; color: #0db9ea">тут</a>
-                        </td>
                     </tr>
                     <!-- Spacing -->
                     <tr>
