@@ -305,18 +305,12 @@
 
                                 </tr>
                                 <tr>
-                                    <td width="100%" height="30"></td>
-                                </tr>
-                                <tr>
                                     <td style="font-size: 13px; color: #6C767F; text-align:left;line-height: 24px; text-align: justify; padding: 0 7%;" st-content="rightimage-paragraph">
                                         Вы запросили новый пароль для budsite. Ваш новый пароль: <b><?php echo $password;?></b>
                                         <hr style="border: none; color: #f6f4f5; height: 1px; background-color: #f6f4f5;">
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td width="100%" height="30"></td>
-                                </tr>
                                 <!-- end of content -->
                                 <!-- Spacing -->
 
