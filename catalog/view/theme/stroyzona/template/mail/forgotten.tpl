@@ -309,7 +309,7 @@
                                 </tr>
                                 <tr>
                                     <td style="font-size: 13px; color: #6C767F; text-align:left;line-height: 24px; text-align: justify; padding: 0 7%;" st-content="rightimage-paragraph">
-                                        Вы запросили новый пароль для budsite. Ваш новый пароль: <?php echo $password;?>
+                                        Вы запросили новый пароль для budsite. Ваш новый пароль: <b><?php echo $password;?></b>
                                         <hr style="border: none; color: #f6f4f5; height: 1px; background-color: #f6f4f5;">
                                     </td>
                                 </tr>
@@ -330,7 +330,7 @@
                                                 <td width="auto" align="center" valign="middle" height="50" style=" background-color:#ff6600; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip: padding-box;font-size:13px; text-align:center;  color:#ffffff; font-weight: 300; padding-left:18px; padding-right:18px; ">
 
                                                                            <span style="color: #ffffff; font-weight: 300;">
-                                                                              <a target="_blank" style="color: #ffffff; text-align:center; text-decoration: none; font-size: 16px;" href="https://www.budsite.com.ua/shopping-cart?utm_medium=mail&utm_source=carrot&utm_campaign=leave_cart">Вернуться на сайт</a>
+                                                                              <a target="_blank" style="color: #ffffff; text-align:center; text-decoration: none; font-size: 16px;" href="https://www.budsite.ua/">Перейти на сайт</a>
                                                                            </span>
                                                 </td>
                                             </tr>
