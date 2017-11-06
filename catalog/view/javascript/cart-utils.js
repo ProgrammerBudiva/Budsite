@@ -64,7 +64,7 @@ $(document).ready(function () {
     }
 
     /* Удаление товара из корзины */
-    $('.cart-delete button').click(function () {
+    $('.cart-delete').click(function () {
         var $this = $(this);
         var key = $this.data('key');
         var product = JSON.parse($this.parents().find('meta[data-type="product-info"]').attr('content'));
