@@ -160,14 +160,6 @@
                                                                                 </a>
                                                                             </div>
                                                                         </td>
-
-                                                                        <td width="30" height="30" align="center">
-                                                                            <div class="imgpop">
-                                                                                <a target="_blank" href="https://www.instagram.com/budsite_expert/">
-                                                                                    <img src="https://www.budsite.com.ua/image/catalog/mail/in.jpg" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none; ">
-                                                                                </a>
-                                                                            </div>
-                                                                        </td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -638,14 +630,6 @@
                                         <div class="imgpop">
                                             <a target="_blank" href="https://www.facebook.com/budsite/">
                                                 <img src="https://www.budsite.com.ua/image/catalog/mail/fb.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none; margin-right: 16px;">
-                                            </a>
-                                        </div>
-                                    </td>
-
-                                    <td width="30" height="30" align="left">
-                                        <div class="imgpop">
-                                            <a target="_blank" href="https://www.instagram.com/budsite_expert/">
-                                                <img src="https://www.budsite.com.ua/image/catalog/mail/in.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none; margin-right: 16px;">
                                             </a>
                                         </div>
                                     </td>
