@@ -540,8 +540,11 @@ if ($('.modal-wrap').is(':visible')){
         }
     });
 }
-$(window).load(function(){
-    if(window.location.pathname === '/checkout'){
-        $('#bingc-phone-button').css('display', 'none');
-    }
-});
+
+// $(document).ready(function(){
+//     $(window).load(function() {
+//         if(window.location.pathname === '/checkout'){
+//             $('#bingc-phone-button').css('display', 'none');
+//         }
+//     });
+// });
