@@ -358,6 +358,10 @@ var compare = {
                     $('#compare-total-count').html('<span class="hidden-xs hidden-sm hidden-md">' + json['total'] + '</span>');
                     $('#compare-total-count span').before('<i class="fa fa-exchange"></i>');
                 }
+                if (json['warning']) {
+                    $('#wishlist-popup .modal-product').html(json['warning']);
+                    $('#wishlist-popup').show();
+                }
             }
         });
     }, 'remove': function () {

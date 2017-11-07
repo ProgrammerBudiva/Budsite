@@ -46,7 +46,7 @@ header .container .positioned-wrap{margin-top:15px;margin-bottom:15px;}
 }
 .category-description-field a, .product-description-field a{color:#FF6600;}
 .category-description-field a:hover, .product-description-field a:hover{color:#428bca;}
-#content table tbody td:first-child{width:50%;}
+/*#content table tbody td:first-child{width:50%;}*/
 #content table thead .btn-danger{float:right;}
 #top{display:inline-block;width:150px;float:right;position:relative;z-index:1;}
 #top .dropdown-menu{left:16px;min-width:0;}
