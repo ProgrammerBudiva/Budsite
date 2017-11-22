@@ -232,7 +232,7 @@
                                 </div>
                                 <?php } ?>
                                 <?php if ($tax) { ?>
-                                <div class="price-wrap">
+                                 <div class="price-wrap">
                                     <?php echo $text_tax; ?> <?php echo $tax; ?>
                                 </div>
                                 <?php } ?>

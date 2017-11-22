@@ -39,8 +39,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
 RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 
-RewriteRule ^https://www.budsite.com.ua/image/catalog/(.*)$ http://budsite.ua/image/catalog/Category/(.*) [L,R=301]
-
+#RewriteRule ^https://www.budsite.com.ua/image/catalog/(.*)$ http://budsite.ua/image/catalog/Category/(.*) [L,R=301]
+#RewriteRule ^image/catalog/Category/(.*)$ https://budsite.ua/image/catalog/Category/$1 [R=301,L]
 ## ##############################  BOT BANNING #################################
 <Limit GET POST>
  order allow,deny
