@@ -40,7 +40,7 @@ class Cart {
 					$recurring_id = 0;
 				}
 
-				$product_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.date_available <= NOW() AND p.status = '1'");
+				$product_query = $this->db->query("SELECT *, GROUP_CONCAT(DISTINCT ptc.category_id SEPARATOR '; ') AS categories FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON p.product_id = ptc.product_id WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.date_available <= NOW() AND p.status = '1'");
 
 				if ($product_query->num_rows) {
 					$option_price = 0;
@@ -166,6 +166,7 @@ class Cart {
 					}
 
 					$price = $product_query->row['price'];
+					$price = $this->priceForRoll($product_id, $price, $product_query->row['categories']);
                     $special_price = false;
 
 					// Product Discounts
@@ -183,6 +184,7 @@ class Cart {
 
 					if ($product_discount_query->num_rows) {
                         $special_price = $product_discount_query->row['price'];
+                        $special_price = $this->priceForRoll($product_id, $special_price);
 					}
 
 					// Product Specials
@@ -190,6 +192,7 @@ class Cart {
 
 					if ($product_special_query->num_rows) {
                         $special_price = $product_special_query->row['price'];
+                        $special_price = $this->priceForRoll($product_id, $special_price);
 					}
 
 					// Reward Points
@@ -353,6 +356,9 @@ class Cart {
 		$total = 0;
 
 		foreach ($this->getProducts() as $product) {
+
+
+
 			$total += $product['total'];
 		}
 
@@ -470,5 +476,84 @@ class Cart {
         }
 
         return $discount;
+    }
+
+    public function getProductAttributes($product_id) {
+        $product_attribute_group_data = array();
+
+        $product_attribute_group_query = $this->db->query("SELECT ag.attribute_group_id, agd.name FROM " . DB_PREFIX . "product_attribute pa LEFT JOIN " . DB_PREFIX . "attribute a ON (pa.attribute_id = a.attribute_id) LEFT JOIN " . DB_PREFIX . "attribute_group ag ON (a.attribute_group_id = ag.attribute_group_id) LEFT JOIN " . DB_PREFIX . "attribute_group_description agd ON (ag.attribute_group_id = agd.attribute_group_id) WHERE pa.product_id = '" . (int)$product_id . "' AND agd.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY ag.attribute_group_id ORDER BY ag.sort_order, agd.name");
+
+        foreach ($product_attribute_group_query->rows as $product_attribute_group) {
+            $product_attribute_data = array();
+
+            $product_attribute_query = $this->db->query("SELECT a.attribute_id, ad.name, pa.text FROM " . DB_PREFIX . "product_attribute pa LEFT JOIN " . DB_PREFIX . "attribute a ON (pa.attribute_id = a.attribute_id) LEFT JOIN " . DB_PREFIX . "attribute_description ad ON (a.attribute_id = ad.attribute_id) WHERE pa.product_id = '" . (int)$product_id . "' AND a.attribute_group_id = '" . (int)$product_attribute_group['attribute_group_id'] . "' AND ad.language_id = '" . (int)$this->config->get('config_language_id') . "' AND pa.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY a.sort_order, ad.name");
+
+            foreach ($product_attribute_query->rows as $product_attribute) {
+                $product_attribute_data[] = array(
+                    'attribute_id' => $product_attribute['attribute_id'],
+                    'name'         => $product_attribute['name'],
+                    'text'         => $product_attribute['text']
+                );
+            }
+
+            $product_attribute_group_data[] = array(
+                'attribute_group_id' => $product_attribute_group['attribute_group_id'],
+                'name'               => $product_attribute_group['name'],
+                'attribute'          => $product_attribute_data
+            );
+        }
+
+        return $product_attribute_group_data;
+    }
+
+    public function priceForRoll($product_id, $price, $categories = 0){
+        /*Если рулон Стоимость = цена за метр * на длину рулона */
+        $roll_price = false;
+        $product_price = $price;
+        $product_attrs = $this->getProductAttributes($product_id);
+
+        $length = 0;
+        $width = 0;
+
+        /*Исключаем битумные ленты*/
+//        $categories_arr = explode('; ', $categories);
+//        $search = array_search(578, $categories_arr);
+        $attr_test = [];
+        foreach ($product_attrs[0]['attribute'] as $attr){
+            $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
+        }
+//echo "<pre>"; print_r($product_id); echo "</pre>";die;
+     //38 -> длина, 39 -> ширина, 18 -> площадь в упаковке
+
+        if($attr_test[38]){
+            $length = str_replace(",",".",$attr_test[38]['text']);
+        }
+
+        if($attr_test[39]){
+            $width = str_replace(",",".",$attr_test[39]['text']);
+        }
+
+        if($attr_test[1]['text'] == 'кв.м'){
+            if($length != 0 && $width != 0){
+                $product_price = $price * $length * $width;
+            }elseif ($attr_test[18]['text']){
+                $area = str_replace(",",".",$attr_test[18]['text']);
+                $product_price = number_format($price * $area,2, '.', '');
+
+            }elseif($attr_test[8]['text'] && empty($search)){
+                $pattern1 = '/\d+\W?\d*/xu';
+                preg_match_all($pattern1, $attr_test[8]['text'], $roll_price1);
+                $product_price = $price * str_replace(",",".",$roll_price1[0][0]) * str_replace(",",".",$roll_price1[0][1]);
+            }elseif($attr_test[27]['text']){
+                $pattern1 = '/\d+\W?\d*/xu';
+                preg_match_all($pattern1, $attr_test[27]['text'], $roll_price1);
+                $product_price = $price * str_replace(",",".",$roll_price1[0][0]) * str_replace(",",".",$roll_price1[0][1]);
+            }
+        }elseif ($attr_test[1]['text'] == 'пог.м'){
+            if($length != 0){
+                $product_price = $price * $length;
+            }
+        }
+        return $product_price;
     }
 }

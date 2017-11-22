@@ -582,7 +582,7 @@
                       <div class="clear"></div>
                   </div>
                 </div>
-                <div class="text-center width15 cart-delete">
+                <div data-key="<?= $product['key']; ?>" class="text-center width15 cart-delete">
                   <!--<button type="button" data-key="<?= $product['key']; ?>" title="<?= $button_remove; ?>" >
                     <i class="fa fa-trash-o"></i>
                   </button> -->

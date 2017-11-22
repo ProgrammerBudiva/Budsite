@@ -105,7 +105,7 @@
                             <?php echo $product['special']; ?>
                         </div>
                     </div>
-                    <div class="big-price">
+                    <div class="big-price"  style="text-decoration: line-through;">
                         <?php echo $product['price']; ?>
                     </div>
                     <div class="discount">
@@ -213,7 +213,7 @@
             margin: auto;
             padding-right: 0!important;
         }
-        .pull-right {
+        .buttons .pull-right {
             display: block!important;
         }
 

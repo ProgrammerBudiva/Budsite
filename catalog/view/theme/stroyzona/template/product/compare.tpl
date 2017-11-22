@@ -43,17 +43,19 @@
             <?php } ?>
           </tr>
           <tr>
-            <td><?php echo $text_image; ?></td>
+            <td style="width:unset!important;"><?php echo $text_image; ?></td>
             <?php foreach ($products as $product) { ?>
             <td class="text-center"><?php if ($products[$product['product_id']]['thumb']) { ?>
-              <img src="<?php echo $products[$product['product_id']]['thumb']; ?>" alt="<?php echo $products[$product['product_id']]['name']; ?>" title="<?php echo $products[$product['product_id']]['name']; ?>" class="img-thumbnail" />
+              <a href="<?php echo $products[$product['product_id']]['href']; ?>">
+                <img src="<?php echo $products[$product['product_id']]['thumb']; ?>" alt="<?php echo $products[$product['product_id']]['name']; ?>" title="<?php echo $products[$product['product_id']]['name']; ?>" class="img-thumbnail" />
+              </a>
               <?php } ?></td>
             <?php } ?>
           </tr>
           <tr>
             <td><?php echo $text_price; ?></td>
             <?php foreach ($products as $product) { ?>
-            <td><?php if ($products[$product['product_id']]['price']) { ?>
+            <td class="price"><?php if ($products[$product['product_id']]['price']) { ?>
               <?php if (!$products[$product['product_id']]['special']) { ?>
               <?php echo $products[$product['product_id']]['price']; ?>
               <?php } else { ?>
@@ -62,19 +64,19 @@
               <?php } ?></td>
             <?php } ?>
           </tr>
-          <tr>
+         <!-- <tr>
             <td><?php echo $text_model; ?></td>
             <?php foreach ($products as $product) { ?>
             <td><?php echo $products[$product['product_id']]['model']; ?></td>
             <?php } ?>
-          </tr>
-          <tr>
+          </tr> -->
+          <!--<tr>
             <td><?php echo $text_manufacturer; ?></td>
             <?php foreach ($products as $product) { ?>
             <td><?php echo $products[$product['product_id']]['manufacturer']; ?></td>
             <?php } ?>
-          </tr>
-          <?php if ($review_status) { ?>
+          </tr>-->
+          <!--<?php if ($review_status) { ?>
           <tr>
             <td><?php echo $text_rating; ?></td>
             <?php foreach ($products as $product) { ?>
@@ -95,46 +97,47 @@
             <?php foreach ($products as $product) { ?>
             <td class="description"><?php echo $products[$product['product_id']]['description']; ?></td>
             <?php } ?>
-          </tr>
-        </tbody>
+          </tr>-->
+        <!--</tbody>-->
         <?php foreach ($attribute_groups as $attribute_group) { ?>
-        <thead>
-          <tr>
+          <!--<thead>-->
+          <!--<tr>
             <td colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $attribute_group['name']; ?></strong></td>
-          </tr>
-        </thead>
-        <?php foreach ($attribute_group['attribute'] as $key => $attribute) { ?>
-        <tbody>
+          </tr>-->
+          <!--</thead>-->
+          <?php foreach ($attribute_group['attribute'] as $key => $attribute) { ?>
+          <!--<tbody>-->
+            <tr>
+              <td><?php echo $attribute['name']; ?></td>
+              <?php foreach ($products as $product) { ?>
+              <?php if (isset($products[$product['product_id']]['attribute'][$key])) { ?>
+              <td><?php echo $products[$product['product_id']]['attribute'][$key]; ?></td>
+              <?php } else { ?>
+              <td></td>
+              <?php } ?>
+              <?php } ?>
+            </tr>
+          <!--</tbody>-->
+          <?php } ?>
+          <?php } ?>
           <tr>
-            <td><?php echo $attribute['name']; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <?php if (isset($products[$product['product_id']]['attribute'][$key])) { ?>
-            <td><?php echo $products[$product['product_id']]['attribute'][$key]; ?></td>
-            <?php } else { ?>
             <td></td>
-            <?php } ?>
+            <?php foreach ($products as $product) { ?>
+            <td><input type="button" value="<?php echo $button_cart; ?>" class="btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>');" />
+              <!--<a href="<?php echo $product['remove']; ?>" class="btn btn-primary btn-delete btn-block"><?php echo $button_remove; ?></a>--></td>
             <?php } ?>
           </tr>
         </tbody>
+        </table>
+        </div>
+        <?php } else { ?>
+        <p><?php echo $text_empty; ?></p>
+        <div class="buttons">
+          <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        </div>
+        <div class="clear"></div>
         <?php } ?>
-        <?php } ?>
-        <tr>
-          <td></td>
-          <?php foreach ($products as $product) { ?>
-          <td><input type="button" value="<?php echo $button_cart; ?>" class="btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>');" />
-            <a href="<?php echo $product['remove']; ?>" class="btn btn-primary btn-delete btn-block"><?php echo $button_remove; ?></a></td>
-          <?php } ?>
-        </tr>
-      </table>
-      </div>
-      <?php } else { ?>
-      <p><?php echo $text_empty; ?></p>
-      <div class="buttons">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
-      </div>
-      <div class="clear"></div>
-      <?php } ?>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
-<?php echo $footer; ?>
+        <?php echo $content_bottom; ?></div>
+      <?php echo $column_right; ?></div>
+  </div>
+  <?php echo $footer; ?>

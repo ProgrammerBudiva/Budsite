@@ -525,10 +525,11 @@ and (max-device-width: 375px) {
         line-height: normal;
         margin-top: 3px;
         position: relative;
-        width: 237px;
+        width: fit-content;
         left: 5px;
         top: 3px;
         color: gray;
+        margin: auto;
     }
     .buy-1-click-new {
     margin-left: 2px;
@@ -537,7 +538,9 @@ and (max-device-width: 375px) {
     width: 77%;
     }
     .buy-1-click {
-        width:259px!important;
+        width:fit-content!important;
+        margin: auto;
+        margin-top: 10px;
     }
 
     .centering-content {
@@ -545,7 +548,8 @@ and (max-device-width: 375px) {
     }
 
     .centering-content #quick-checkout-header {
-        width: 260px;
+        width: fit-content;
+        margin: auto;
     }
 }
 
@@ -909,10 +913,10 @@ and (max-width: 1224px){
 }
 
 .centering-content {
-    width: 318px;
+    width: fit-content;
     margin: auto;
-    padding-bottom: 34px;
-    padding-top: 2px;
+    /*padding-bottom: 34px;*/
+    padding-top: 5px;
 }
 
 @media screen and (min-width:1224px) and (max-width:1351px){

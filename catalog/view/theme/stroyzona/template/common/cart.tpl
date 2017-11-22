@@ -22,7 +22,7 @@
                         - <small><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?></small>
                         <?php } ?></div>
                     <div class="d-table-cell text-right">x <?php echo $product['quantity']; ?></div>
-                    <div class="d-table-cell text-right"><?php echo $product['total']; ?></div>
+                    <div class="d-table-cell text-right" style="color: #F18A36;"><?php echo $product['total']; ?></div>
                     <div class="d-table-cell text-center">
                       <button type="button" data-key="<?php echo $product['key']; ?>" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs cart-module-remove"><i class="fa fa-times"></i></button>
                     </div>
