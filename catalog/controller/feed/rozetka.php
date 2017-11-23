@@ -61,7 +61,8 @@ class ControllerFeedRozetka extends Controller
             $offer->appendChild($url_product);
 
             $price = $dom->createElement('price');
-            $price->nodeValue = round($product_self['price'],0)+1;
+//            $price->nodeValue = round($product_self['price'],0)+1;
+            $price->nodeValue = $this->cart->priceForRoll($product_self['product_id'],$product_self['price']);
             $offer->appendChild($price);
 
             $currency_id = $dom->createElement('currencyId');
@@ -102,23 +103,38 @@ class ControllerFeedRozetka extends Controller
             $attributes_values = explode('; ', $product_self['attributes_values']);
             $count_attributes = count($attributes_values);
 
-            for ($i=0; $i<$count_attributes; $i++){
+            $attr_test = [];
+            $attribute_groups = $this->model_catalog_product->getProductAttributes($product_self['product_id']);
+            foreach ($attribute_groups[0]['attribute'] as $attr){
+                $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
+            }
 
+
+            if ($attr_test[1]['text'] == 'кв.м'){
+                if ($attr_test[8]){
+                    $attr_test[1]['text'] = 'рулон';
+                }else{
+                    $attr_test[1]['text'] = 'упаковка';
+                }
+            }
+
+            foreach ($attr_test as $value){
                 $r='![,]!';
-                if (preg_match($r, $attributes[$i])){
-                    $attributes_explode = explode( ', ' , $attributes[$i]);
+                if (preg_match($r, $value['name'])){
+
+                    $attributes_explode = explode( ', ' , $value['name']);
 
                     $param_xml = $dom->createElement('param');
                     $param_xml->setAttribute('name', $attributes_explode[0]);
                     $param_xml->setAttribute('unit', $attributes_explode[1]);
                 }else{
                     $param_xml = $dom->createElement('param');
-                    $param_xml->setAttribute('name', $attributes[$i]);
+                    $param_xml->setAttribute('name', $value['name']);
 
                 }
 
 
-                $param_xml->nodeValue = $attributes_values[$i];
+                $param_xml->nodeValue = $value['text'];
                 $offer->appendChild($param_xml);
             }
 
