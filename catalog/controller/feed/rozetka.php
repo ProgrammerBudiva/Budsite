@@ -6,7 +6,7 @@ class ControllerFeedRozetka extends Controller
         $this->load->model('feed/privat_market');
         $array = $this->model_feed_privat_market->getBudivaProducts();
         $cat_226 = $this->model_feed_privat_market->rozetka_stairs_category();
-
+//        echo "<pre>"; print_r($array); echo "</pre>";die;
         $this->createXML($array, $cat_226);
 
     }
@@ -62,7 +62,7 @@ class ControllerFeedRozetka extends Controller
 
             $price = $dom->createElement('price');
 //            $price->nodeValue = round($product_self['price'],0)+1;
-            $price->nodeValue = round($this->cart->priceForRoll($product_self['product_id'],$product_self['price']),0)+1;
+            $price->nodeValue = round($this->cart->priceForRoll($product_self['product_id'],$product_self['price']),1,PHP_ROUND_HALF_UP);
             $offer->appendChild($price);
 
             $currency_id = $dom->createElement('currencyId');
