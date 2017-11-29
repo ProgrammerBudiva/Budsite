@@ -800,8 +800,13 @@ class ControllerProductProduct extends Controller
                     $data['rool_box'] = 'упаковкам';
                 }
             }
-//            echo "<pre>"; print_r($attribute_groups[0]['attribute']); echo "</pre>";die;
-            $roll_price = $this->cart->priceForRoll($data['product_id'],$data['base_price']);
+
+            if($data['special']){
+                $roll_price = $this->cart->priceForRoll($data['product_id'],$data['special']);
+            }else {
+                $roll_price = $this->cart->priceForRoll($data['product_id'], $data['base_price']);
+            }
+
             $data['roll_price'] = trim($roll_price);
             $data['real_price'] = trim($data['base_price']);
             $data['tags'] = array();
@@ -1070,7 +1075,7 @@ class ControllerProductProduct extends Controller
     public function write()
     {
         $this->load->language('product/product');
-//echo "<pre>"; print_r($this->request); echo "</pre>";die;
+
         $json = array();
 
         if ($this->request->server['REQUEST_METHOD'] == 'POST') {
@@ -1083,7 +1088,7 @@ class ControllerProductProduct extends Controller
             }
 
             if (empty($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
-//                echo "<pre>"; print_r($this->request); echo "</pre>";die;
+
                 $json['error'] = $this->language->get('error_rating');
             }
 
