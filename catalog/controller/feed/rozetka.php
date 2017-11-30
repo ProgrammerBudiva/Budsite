@@ -6,7 +6,6 @@ class ControllerFeedRozetka extends Controller
         $this->load->model('feed/privat_market');
         $array = $this->model_feed_privat_market->getBudivaProducts();
         $cat_226 = $this->model_feed_privat_market->rozetka_stairs_category();
-//        echo "<pre>"; print_r($array); echo "</pre>";die;
         $this->createXML($array, $cat_226);
 
     }
@@ -36,16 +35,25 @@ class ControllerFeedRozetka extends Controller
 
         $categories = $dom->createElement('categories');
 
-            $category = $dom->createElement('category');
-            $category->nodeValue = 'Кровельные материалы';
-            $category->setAttribute('id', 1);
-            $categories->appendChild($category);
+        $category = $dom->createElement('category');
+        $category->nodeValue = 'Кровельные материалы';
+        $category->setAttribute('id', 1);
+        $categories->appendChild($category);
 
-            $category1 = $dom->createElement('category');
-            $category1->nodeValue = 'Лестницы, стремянки, подмости';
-            $category1->setAttribute('id', 2);
-            $categories->appendChild($category1);
+        $category1 = $dom->createElement('category');
+        $category1->nodeValue = 'Лестницы, стремянки, подмости';
+        $category1->setAttribute('id', 2);
+        $categories->appendChild($category1);
 
+        $category = $dom->createElement('category');
+        $category->nodeValue = 'Окна';
+        $category->setAttribute('id', 3);
+        $categories->appendChild($category);
+
+        $category = $dom->createElement('category');
+        $category->nodeValue = 'Жалюзи и ролеты';
+        $category->setAttribute('id', 4);
+        $categories->appendChild($category);
 
         $shop->appendChild($categories);
 
@@ -61,7 +69,6 @@ class ControllerFeedRozetka extends Controller
             $offer->appendChild($url_product);
 
             $price = $dom->createElement('price');
-//            $price->nodeValue = round($product_self['price'],0)+1;
             $price->nodeValue = round($this->cart->priceForRoll($product_self['product_id'],$product_self['price']),1,PHP_ROUND_HALF_UP);
             $offer->appendChild($price);
 
@@ -71,12 +78,15 @@ class ControllerFeedRozetka extends Controller
 
             $category_product = $dom->createElement('categoryId');
 
-            if(array_search($product_self['product_id'], $cat_226) != false){
+            if(strpos($product_self['name'], 'Мансардное окно') !== false || strpos($product_self['name'], 'Окно-люк') !== false){
+                $category_product->nodeValue = 3;
+            }elseif (strpos($product_self['name'], 'Штора ARS') !== false ){
+                $category_product->nodeValue = 4;
+            }elseif(array_search($product_self['product_id'], $cat_226) != false){
                 $category_product->nodeValue = 2;
             }else {
                 $category_product->nodeValue = 1;
             }
-
 
             $offer->appendChild($category_product);
 
@@ -99,16 +109,11 @@ class ControllerFeedRozetka extends Controller
             $name->nodeValue = $product_self['name'];
             $offer->appendChild($name);
 
-            $attributes = explode('; ', $product_self['attributes']);
-            $attributes_values = explode('; ', $product_self['attributes_values']);
-            $count_attributes = count($attributes_values);
-
             $attr_test = [];
             $attribute_groups = $this->model_catalog_product->getProductAttributes($product_self['product_id']);
             foreach ($attribute_groups[0]['attribute'] as $attr){
                 $attr_test[$attr['attribute_id']] = ['text' => $attr['text'], 'name' => $attr['name']];
             }
-
 
             if ($attr_test[1]['text'] == 'кв.м'){
                 if ($attr_test[8]){
