@@ -121,10 +121,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <nav role="select" class="mobile_nav">
                     <select onchange="if (this.value) window.location.href = this.value;">
                       <option value="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></option>
-                      <option value="<?php echo $link_contacts?>"><?php echo $text_contacts;?></option>
                       <option value="<?php echo $link_shipping;?>"><?php echo $text_shipping;?></option>
-                      <option value="<?php echo $link_blog;?>"><?php echo $text_blog;?></option>
                       <option value="<?php echo $link_garanthy;?>"><?php echo $text_garanthy;?></option>
+                      <option value="<?php echo $link_blog;?>"><?php echo $text_blog;?></option>
+                      <option value="<?php echo $link_contacts?>"><?php echo $text_contacts;?></option>
                     </select>
                   </nav>
                     <nav id="top">
