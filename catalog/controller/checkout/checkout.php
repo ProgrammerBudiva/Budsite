@@ -911,7 +911,7 @@ class ControllerCheckoutCheckout extends Controller {
       //Get user location by IP
       $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
       $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
-      $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
+      $addr = mysql_escape_string($record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city);
       geoip_close($gi);
       //End of GeoiP
 
