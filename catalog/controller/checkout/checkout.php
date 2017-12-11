@@ -1,6 +1,6 @@
 <?php
 
-
+require DIR_VENDOR .'autoload.php';
 class ControllerCheckoutCheckout extends Controller {
 
   private $error = array();
@@ -907,6 +907,16 @@ class ControllerCheckoutCheckout extends Controller {
       $this->load->model('catalog/seo_url');
       $this->load->model('checkout/oneclick');
 
+
+      //Get user location by IP
+      $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
+      $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
+      $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
+      geoip_close($gi);
+      //End of GeoiP
+
+      $last_order = $this->model_checkout_oneclick->getlastId() + 1;
+
       $products = $this->cart->getProducts();
       $prod_arr =[];
       $total = 0;
@@ -914,7 +924,7 @@ class ControllerCheckoutCheckout extends Controller {
           $query = $this->model_catalog_seo_url->getUrlKeyword('product_id='.$product['product_id']);
           $total += $product['total'];
           $prod_arr[] = [
-              'link' => 'budsite.ua' .$query,
+              'link' => 'budsite.ua/' .$query,
               'name' => $product['name'],
               'quantity' => $product['quantity'],
               'price' => $product['total']
@@ -922,10 +932,11 @@ class ControllerCheckoutCheckout extends Controller {
       }
 
       $this->load->language('module/catapulta');
-      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $order_id);
-      $email_text = sprintf($this->language->get('text_order'), $order_id . '<br>') . "\n\n";
+      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $last_order);
+      $email_text = sprintf($this->language->get('text_order'), $last_order . '<br>') . "\n\n";
       $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
-      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('location'), $addr  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       $products_str = '';
       foreach ($prod_arr as $product) {
           $email_text .= sprintf($this->language->get('text_product'), $product['name'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
@@ -938,7 +949,7 @@ class ControllerCheckoutCheckout extends Controller {
 
       $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo($this->config->get('config_email'));
+      $mail->setTo($this->config->get('config_mail'));
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject($email_subject);
@@ -996,7 +1007,7 @@ class ControllerCheckoutCheckout extends Controller {
 
   public function sendE(){
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo('19ofis96@gmail.com');
+      $mail->setTo($this->config->get('config_email'));
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject('test mail');
