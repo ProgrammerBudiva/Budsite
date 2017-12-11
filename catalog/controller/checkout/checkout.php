@@ -1,6 +1,6 @@
 <?php
 
-require '/var/www/budsite/vendor/autoload.php';
+require '../../../vendor/autoload.php';
 class ControllerCheckoutCheckout extends Controller {
 
   private $error = array();
