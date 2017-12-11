@@ -1,6 +1,6 @@
 <?php
 
-
+require '/var/www/budsite/vendor/autoload.php';
 class ControllerCheckoutCheckout extends Controller {
 
   private $error = array();
@@ -907,6 +907,14 @@ class ControllerCheckoutCheckout extends Controller {
       $this->load->model('catalog/seo_url');
       $this->load->model('checkout/oneclick');
 
+
+      //Get user location by IP
+      $gi = geoip_open('../../../vendor/geoip/GeoLiteCity.dat',GEOIP_STANDARD);
+      $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
+
+
+
+
       $products = $this->cart->getProducts();
       $prod_arr =[];
       $total = 0;
@@ -922,10 +930,11 @@ class ControllerCheckoutCheckout extends Controller {
       }
 
       $this->load->language('module/catapulta');
-      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $order_id);
-      $email_text = sprintf($this->language->get('text_order'), $order_id . '<br>') . "\n\n";
+      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'));
+      $email_text = sprintf($this->language->get('text_order'), 13 . '<br>') . "\n\n";
       $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
       $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('text_ip'), $record->city  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       $products_str = '';
       foreach ($prod_arr as $product) {
           $email_text .= sprintf($this->language->get('text_product'), $product['name'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
