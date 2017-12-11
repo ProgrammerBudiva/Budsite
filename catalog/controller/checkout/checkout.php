@@ -1007,7 +1007,7 @@ class ControllerCheckoutCheckout extends Controller {
 
   public function sendE(){
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo('19ofis96@gmail.com');
+      $mail->setTo($this->config->get('config_email'));
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject('test mail');
