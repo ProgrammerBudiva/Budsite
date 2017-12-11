@@ -10,6 +10,7 @@ $_['text_subject']    = '%s - %s Заказ №%s';
 $_['text_order']      = 'Заказ №%s';
 $_['text_contact']    = 'Телефон: %s';
 $_['text_ip']         = 'IP адрес: %s';
+$_['location']        = 'Местоположение: %s';
 $_['text_date_order'] = 'Дата заказа: %s';
 $_['text_product']    = 'Товар: %s';
 $_['text_product_link'] = 'Ссылка: %s';

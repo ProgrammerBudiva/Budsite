@@ -910,8 +910,12 @@ class ControllerCheckoutCheckout extends Controller {
 
       //Get user location by IP
       $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
-      $record = geoip_record_by_addr($gi, "83.143.236.168");
+      $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
       $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
+      geoip_close($gi);
+      //End of GeoiP
+
+      $last_order = $this->model_checkout_oneclick->getlastId() + 1;
 
       $products = $this->cart->getProducts();
       $prod_arr =[];
@@ -928,11 +932,11 @@ class ControllerCheckoutCheckout extends Controller {
       }
 
       $this->load->language('module/catapulta');
-      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'));
-      $email_text = sprintf($this->language->get('text_order'), 13 . '<br>') . "\n\n";
+      $email_subject = sprintf($this->language->get('text_subject'), $this->language->get('heading_title'), $this->config->get('config_name'), $last_order);
+      $email_text = sprintf($this->language->get('text_order'), $last_order . '<br>') . "\n\n";
       $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
-      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
-      $email_text .= sprintf('Местоположение', $addr  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf($this->language->get('location'), $addr  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       $products_str = '';
       foreach ($prod_arr as $product) {
           $email_text .= sprintf($this->language->get('text_product'), $product['name'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
