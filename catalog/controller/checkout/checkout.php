@@ -914,7 +914,7 @@ class ControllerCheckoutCheckout extends Controller {
           $query = $this->model_catalog_seo_url->getUrlKeyword('product_id='.$product['product_id']);
           $total += $product['total'];
           $prod_arr[] = [
-              'link' => 'budsite.ua' .$query,
+              'link' => 'budsite.ua/' .$query,
               'name' => $product['name'],
               'quantity' => $product['quantity'],
               'price' => $product['total']
@@ -938,7 +938,7 @@ class ControllerCheckoutCheckout extends Controller {
 
       $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo($this->config->get('config_email'));
+      $mail->setTo('19ofis96@gmail.com');
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject($email_subject);

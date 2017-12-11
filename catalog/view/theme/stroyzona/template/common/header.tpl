@@ -111,20 +111,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="row">
                     <div class="top_menu_list">
                         <a href="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></a>
-                        <a href="<?php echo $link_contacts?>"><?php echo $text_contacts;?></a>
                         <a href="<?php echo $link_shipping;?>"><?php echo $text_shipping;?></a>
-                        <a href="<?php echo $link_blog;?>"><?php echo $text_blog;?></a>
                         <a href="<?php echo $link_garanthy;?>"><?php echo $text_garanthy;?></a>
+                        <a href="<?php echo $link_blog;?>"><?php echo $text_blog;?></a>
+                        <a href="<?php echo $link_contacts?>"><?php echo $text_contacts;?></a>
                         <!--a href="<?php echo $link_cooperation;?>"><?php echo $text_cooperation;?></a>
                         <a href="<?php echo $link_statement;?>"><?php echo $text_statement;?></a-->
                     </div>
                   <nav role="select" class="mobile_nav">
                     <select onchange="if (this.value) window.location.href = this.value;">
                       <option value="<?php echo $link_about_us;?>"><?php echo $text_about_us;?></option>
-                      <option value="<?php echo $link_contacts?>"><?php echo $text_contacts;?></option>
                       <option value="<?php echo $link_shipping;?>"><?php echo $text_shipping;?></option>
-                      <option value="<?php echo $link_blog;?>"><?php echo $text_blog;?></option>
                       <option value="<?php echo $link_garanthy;?>"><?php echo $text_garanthy;?></option>
+                      <option value="<?php echo $link_blog;?>"><?php echo $text_blog;?></option>
+                      <option value="<?php echo $link_contacts?>"><?php echo $text_contacts;?></option>
                     </select>
                   </nav>
                     <nav id="top">
