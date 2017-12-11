@@ -1,5 +1,5 @@
 <?php
-require '../../../vendor/autoload.php';
+
 
 class ControllerCheckoutConfirm extends Controller {
 
@@ -247,7 +247,6 @@ class ControllerCheckoutConfirm extends Controller {
       $order_data['currency_value'] = $this->currency->getValue($this->currency->getCode());
       $order_data['ip']             = $this->request->server['REMOTE_ADDR'];
 
-
       if (!empty($this->request->server['HTTP_X_FORWARDED_FOR'])) {
         $order_data['forwarded_ip'] = $this->request->server['HTTP_X_FORWARDED_FOR'];
       }
@@ -394,11 +393,5 @@ class ControllerCheckoutConfirm extends Controller {
 //		} else {
 //			$this->response->setOutput($this->load->view('default/template/checkout/confirm.tpl', $data));
 //		}
-  }
-
-  public function getLocation($ip){
-      $gi = geoip_open('../../../vendor/geoip/GeoLiteCity.dat',GEOIP_STANDARD);
-      $record = geoip_record_by_addr($gi, $ip);
-
   }
 }
