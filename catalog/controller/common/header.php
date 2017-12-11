@@ -300,12 +300,13 @@ class ControllerCommonHeader extends Controller {
     if (empty($this->request->post['callback_phone'])){
       echo json_encode(['error'=>'empty_phone']);
     }
+        $page_link = $this->request->server['HTTP_REFERER'];
 		$mail = new Mail($this->config->get('config_mail'));
-		$mail->setTo($this->config->get('config_email'));
+		$mail->setTo($this->config->get('config_mail'));
 		$mail->setFrom($this->config->get('config_email'));
 		$mail->setSender($this->config->get('config_name'));
 		$mail->setSubject('Обратная связь');
-		$mail->setText('Перезвоните мне. ' . $this->request->post['callback_phone']);
+		$mail->setText('Перезвоните мне. <br> Страница: ' . $page_link . ' <br> Номер телефона: ' . $this->request->post['callback_phone']);
 		$mail->send();
 		echo json_encode('ok');
 	}
