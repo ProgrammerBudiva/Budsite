@@ -1,6 +1,6 @@
 <?php
 
-require '../../../vendor/autoload.php';
+require DIR_VENDOR .'autoload.php';
 class ControllerCheckoutCheckout extends Controller {
 
   private $error = array();
@@ -909,11 +909,9 @@ class ControllerCheckoutCheckout extends Controller {
 
 
       //Get user location by IP
-      $gi = geoip_open('../../../vendor/geoip/GeoLiteCity.dat',GEOIP_STANDARD);
-      $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
-
-
-
+      $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
+      $record = geoip_record_by_addr($gi, "83.143.236.168");
+      $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
 
       $products = $this->cart->getProducts();
       $prod_arr =[];
@@ -934,7 +932,7 @@ class ControllerCheckoutCheckout extends Controller {
       $email_text = sprintf($this->language->get('text_order'), 13 . '<br>') . "\n\n";
       $email_text .= sprintf($this->language->get('text_contact'), $this->request->post['telephone'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
       $email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
-      $email_text .= sprintf($this->language->get('text_ip'), $record->city  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
+      $email_text .= sprintf('Местоположение', $addr  . '<br><br>', ENT_QUOTES, 'UTF-8') . "\n\n";
       $products_str = '';
       foreach ($prod_arr as $product) {
           $email_text .= sprintf($this->language->get('text_product'), $product['name'] . '<br>', ENT_QUOTES, 'UTF-8') . "\n";
