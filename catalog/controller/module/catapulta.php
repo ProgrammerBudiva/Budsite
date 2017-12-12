@@ -1,4 +1,6 @@
 <?php
+
+require DIR_VENDOR .'autoload.php';
 class ControllerModuleCatapulta extends Controller {
 
 	public function index() {
@@ -34,7 +36,8 @@ class ControllerModuleCatapulta extends Controller {
 			$price = $settings['new-price'];
 		} elseif ($this->request->server['REQUEST_METHOD'] == 'POST') {
 			$contact = $this->request->post['phone'];
-			$product_id = $this->request->post['product'];
+			$product_id = $this->request->post['product_id'];
+			$product = $this->request->post['product'];
 			$price = $this->request->post['new-price'];
 		} else {
 			$product_id = 0;
@@ -61,7 +64,17 @@ class ControllerModuleCatapulta extends Controller {
 				$product_info = $this->model_catalog_product->getProduct($product_id);
 
 				$price = isset($product_info['special']) ? $product_info['special'] : $product_info['price'];
+				$price = $this->cart->priceForRoll($product_id, $price);
 				$total = $this->currency->format($price);
+
+
+                //Get user location by IP
+                $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
+                $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
+                $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
+                geoip_close($gi);
+                //End of GeoiP
+
 
 				$data = array(
 					'contact' => $contact,
@@ -80,7 +93,8 @@ class ControllerModuleCatapulta extends Controller {
 				$email_text = sprintf($this->language->get('text_order'), $order_id) . "\n\n";
 				$email_text .= sprintf($this->language->get('text_contact'), html_entity_decode($contact), ENT_QUOTES, 'UTF-8') . "\n";
 				$email_text .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR'], ENT_QUOTES, 'UTF-8') . "\n\n";
-				$email_text .= sprintf($this->language->get('text_product'), $product_id, ENT_QUOTES, 'UTF-8') . "\n";
+				$email_text .= sprintf($this->language->get('location'), $addr, ENT_QUOTES, 'UTF-8') . "\n\n";
+				$email_text .= sprintf($this->language->get('text_product'), $product, ENT_QUOTES, 'UTF-8') . "\n";
 				$email_text .= sprintf($this->language->get('text_date_order'), date('d.m.Y H:i'), ENT_QUOTES, 'UTF-8') . "\n\n";
 				$email_text .= sprintf($this->language->get('text_price'), $price, ENT_QUOTES, 'UTF-8');
 

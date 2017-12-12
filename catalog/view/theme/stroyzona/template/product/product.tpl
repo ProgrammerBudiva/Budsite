@@ -863,10 +863,12 @@
             $('.modal-wrap p.phone-alert').text('Введите корректный номер!').fadeIn().delay(3000).fadeOut();
             return;
         }
+
+
         $.ajax({
             type: "POST",
             url: "index.php?route=module/catapulta/write",
-            data: $('input[name=\'phone\'], input[name=\'product\'], input[name=\'new-price\']'),
+            data: $('input[name=\'phone\'], input[name=\'product_id\'], input[name=\'product\'], input[name=\'new-price\']'),
             success: function(response) {
                 var json = JSON.parse(response);
                 if (json['error']) {
