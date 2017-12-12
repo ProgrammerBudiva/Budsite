@@ -875,8 +875,7 @@
                     $('.modal-wrap').append($('<p>' + json['error']['contact'] + '</p>').fadeIn().delay(3000).fadeOut());
                     return;
                 }
-                    {*dataLayer.push({'event': 'buyonclick'});*}
-                {*console.log(json['link']);*}
+
 //                    $('#succes-popup').load(json['link']);
 //                    var el = $('#succes-popup').show();
                 $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
