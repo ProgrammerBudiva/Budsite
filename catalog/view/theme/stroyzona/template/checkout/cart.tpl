@@ -166,8 +166,8 @@
         <!--<div class="pull-right refresh-total"><a href="javascript:void(0);" class="btn btn-primary"><?php /*echo $button_refresh_total; */?></a></div>-->
         <div class="clear"></div>
       </div>
-        <a href="#succes-popup" id="" class="btn btn-primary next-btn delivery-continue-popup" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
-        <div id="succes-popup" class="white-popup mfp-with-anim mfp-hide"></div>
+        <a href="#succes-popup-recall" id="" class="btn btn-primary next-btn succes-popup-recall" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
+        <div id="succes-popup-recall" class="white-popup mfp-with-anim mfp-hide"></div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
@@ -197,7 +197,7 @@
                 data: 'telephone=' + phone,
                 success: function () {
                     console.log('ok');
-                    $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
+                    $('#succes-popup-recall').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
                     $('a.delivery-continue-popup').trigger('click');
 
                 }

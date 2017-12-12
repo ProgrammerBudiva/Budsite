@@ -875,21 +875,23 @@
                     $('.modal-wrap').append($('<p>' + json['error']['contact'] + '</p>').fadeIn().delay(3000).fadeOut());
                     return;
                 }
-                    dataLayer.push({'event': 'buyonclick'});
-                console.log(json['link']);
-                    $('#succes-popup').load(json['link']);
-                    var el = $('#succes-popup').show();
-                    $.magnificPopup.open({
-                        items: {
-                            src: el
-                        },
-                        type: 'inline',
-                        callbacks: {
-                            close: function() {
-                                $('.modal-wrap').hide();
-                            }
-                        }
-                    });
+                    {*dataLayer.push({'event': 'buyonclick'});*}
+                {*console.log(json['link']);*}
+//                    $('#succes-popup').load(json['link']);
+//                    var el = $('#succes-popup').show();
+                $('#succes-popup').load("https://budsite.ua/index.php?route=checkout/success/success_popup");
+                $('a.delivery-continue-popup').trigger('click');
+//                    $.magnificPopup.open({
+//                        items: {
+//                            src: el
+//                        },
+//                        type: 'inline',
+//                        callbacks: {
+//                            close: function() {
+//                                $('.modal-wrap').hide();
+//                            }
+//                        }
+//                    });
 
             }
         });
