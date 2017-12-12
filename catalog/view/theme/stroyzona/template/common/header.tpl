@@ -170,8 +170,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <i class="fa fa-mobile"></i>
                         <span class="callback-ringo"><?php echo $callback_text?></span>
                         <div class="dropdown_field my-dropdown ">
-                          <p><?php echo $callback; ?></p>
-                          <div class="form-group">
+                          <p class="success_hide"><?php echo $callback; ?></p>
+                          <div class="form-group success_hide">
                             <input id="callback_input_phone" name="callback_phone" type="phone" class="form-control"/>
                           </div>
                           <input id="callback_input_submit" type="submit" value="<?php echo $callback_button?>" class="btn btn-primary" />
@@ -279,6 +279,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </nav>
 </div>
+    <a href="#succes-popup" id="" class="btn btn-primary next-btn delivery-continue-popup" style="visibility: hidden" data-effect="mfp-zoom-in"><?php echo $button_continue;?></a>
+    <div id="succes-popup" class="white-popup mfp-with-anim mfp-hide"></div>
 </div>
 <?php } ?>
 
@@ -299,8 +301,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       data: {callback_phone: phone},
 
       success: function () {
-        $phoneInput.parent().addClass('has-success');
-        $("#callback_input_submit").attr('disabled', 'disabled').val("Запрос отправлен");
+//        $phoneInput.parent().addClass('has-success');
+//          $('.success_hide').hide();
+//          $('#callback_input_submit').css('margin', 0);
+//        $("#callback_input_submit").attr('disabled', 'disabled').val("Запрос отправлен");
+          $('#succes-popup').load("https://budsite.ua/index.php?route=information/contact/success_popup");
+          $('a.delivery-continue-popup').trigger('click');
       }
     });
   });
