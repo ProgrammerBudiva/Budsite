@@ -302,7 +302,7 @@ class ControllerCommonHeader extends Controller {
         }
         $page_link = htmlentities($this->request->server['HTTP_REFERER']);
 
-        $text = 'Перезвоните мне. <br> Страница: ' . $page_link . ' <br> Номер телефона: ' . $this->request->post['callback_phone'];
+        $text = 'Перезвоните мне. <br> Страница: <a href=" ' . $page_link . '">' . $page_link . '</a> <br> Номер телефона: ' . $this->request->post['callback_phone'];
 
         $mail = new Mail($this->config->get('config_mail'));
         $mail->setTo($this->config->get('config_email'));
