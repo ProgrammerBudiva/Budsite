@@ -306,7 +306,7 @@ class ControllerCommonHeader extends Controller {
 		$mail->setFrom($this->config->get('config_email'));
 		$mail->setSender($this->config->get('config_name'));
 		$mail->setSubject('Обратная связь');
-		$mail->setText('Перезвоните мне. <br> Страница: ' . $page_link . ' <br> Номер телефона: ' . $this->request->post['callback_phone']);
+		$mail->setHtml('Перезвоните мне. <br> Страница: ' . $page_link . ' <br> Номер телефона: ' . $this->request->post['callback_phone']);
 		$mail->send();
 		echo json_encode('ok');
 	}
