@@ -949,7 +949,7 @@ class ControllerCheckoutCheckout extends Controller {
 
       $one_click_order = $this->model_checkout_oneclick->add($this->request->post['telephone'], $email_text);
       $mail = new Mail($this->config->get('config_mail'));
-      $mail->setTo($this->config->get('config_mail'));
+      $mail->setTo('info@budsite.ua');
       $mail->setFrom($this->config->get('config_email'));
       $mail->setSender($this->config->get('config_name'));
       $mail->setSubject($email_subject);
