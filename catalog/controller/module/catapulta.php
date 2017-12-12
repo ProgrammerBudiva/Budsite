@@ -104,7 +104,7 @@ class ControllerModuleCatapulta extends Controller {
 				$mail->setSender($this->config->get('config_name'));
 				$mail->setSubject($email_subject);
 				$mail->setText($email_text);
-//				$mail->send();
+				$mail->send();
 
 				// Send to additional alert emails
 				$emails = explode(',', $this->config->get('config_alert_emails'));
