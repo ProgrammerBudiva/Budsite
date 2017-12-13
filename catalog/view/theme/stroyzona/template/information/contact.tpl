@@ -93,7 +93,7 @@
                 var infowindow = new google.maps.InfoWindow();
                 var marker, i;
                 var image = {
-                    url: 'http://budsite.dev/image/marker.png'
+                    url: 'https://budsite.ua/image/marker.png'
                 };
 
 
