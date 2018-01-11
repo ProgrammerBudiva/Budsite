@@ -138,6 +138,7 @@ class ModelModuleShoputilsMailOrderStatus extends Model {
 						'{comment}',
 						'{admin_comment}',
 						'{ip}',
+						'{location}',
 						'{date_added}',
 						'{date_modified}',
 						'{firstname}',
