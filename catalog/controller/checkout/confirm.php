@@ -271,6 +271,15 @@ class ControllerCheckoutConfirm extends Controller {
         $order_data['accept_language'] = '';
       }
 
+    //Get user location by IP
+    $gi = geoip_open(DIR_VENDOR .'geoip/GeoLiteCity.dat',GEOIP_STANDARD);
+    $record = geoip_record_by_addr($gi, $this->request->server['REMOTE_ADDR']);
+    $addr = $record->country_code . ' ' . $GLOBALS['GEOIP_REGION_NAME'][$record->country_code][$record->region] . ' ' . $record->city;
+    geoip_close($gi);
+    //End of GeoiP
+
+    $order_data['location'] = $addr;
+
       $this->load->model('checkout/order');
 
       $this->session->data['order_id'] = $this->model_checkout_order->addNewOrder($order_data);

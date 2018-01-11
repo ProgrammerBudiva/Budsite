@@ -306,6 +306,7 @@ class ControllerMOduleShoputilsMailOrderStatus extends Controller {
                              'text_comment_ft',
                              'text_admin_comment_ft',
                              'text_ip_ft',
+                             'text_ip_region',
                              'text_date_added_ft',
                              'text_date_modified_ft',
                              'text_firstname_ft',
