@@ -30,6 +30,7 @@
     <tr><td><span class="help">{comment}</span></td><td><span class="help left"><?php echo $text_comment_ft; ?></span></td></tr>
     <tr><td><span class="help">{admin_comment}</span></td><td><span class="help left"><?php echo $text_admin_comment_ft; ?></span></td></tr>
     <tr><td><span class="help">{ip}</span></td><td><span class="help left"><?php echo $text_ip_ft; ?></span></td></tr>
+    <tr><td><span class="help">{location}</span></td><td><span class="help left"><?php echo $text_ip_region; ?></span></td></tr>
     <tr><td><span class="help">{date_added}</span></td><td><span class="help left"><?php echo $text_date_added_ft; ?></span></td></tr>
     <tr><td><span class="help">{date_modified}</span></td><td><span class="help left"><?php echo $text_date_modified_ft; ?></span></td></tr>
     <tr><td><span class="help">{firstname}</span></td><td><span class="help left"><?php echo $text_firstname_ft; ?></span></td></tr>
