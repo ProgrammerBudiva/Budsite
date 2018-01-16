@@ -55,11 +55,6 @@ class ControllerFeedRozetka extends Controller
         $category->setAttribute('id', 4);
         $categories->appendChild($category);
 
-        $category = $dom->createElement('category');
-        $category->nodeValue = 'Садовые ограждения';
-        $category->setAttribute('id', 5);
-        $categories->appendChild($category);
-
         $shop->appendChild($categories);
 
         $offers = $dom->createElement('offers');
@@ -88,8 +83,6 @@ class ControllerFeedRozetka extends Controller
                 $category_product->nodeValue = 3;
             }elseif (strpos($product_self['name'], 'Штора ARS') !== false ){
                 $category_product->nodeValue = 4;
-            }elseif(strpos($product_self['name'], 'Решетка газонная') !== false ){
-                $category_product->nodeValue = 5;
             }elseif(array_search($product_self['product_id'], $cat_226) != false){
                 $category_product->nodeValue = 2;
             }else {

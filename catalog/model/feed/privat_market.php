@@ -39,7 +39,7 @@ class ModelFeedPrivatMarket extends Model {
          AND p2c.category_id!='269' AND p2c.category_id!='211' AND p2c.category_id!='432' AND p2c.category_id!='430'
          AND p2c.category_id!='429' AND p2c.category_id!='430' AND p2c.category_id!='428' AND p2c.category_id!='431'
          AND p2c.category_id!='481' AND p2c.category_id!='482' AND p2c.category_id!='485' AND p2c.category_id!='492')
-         OR p.manufacturer_id='89') GROUP BY p.product_id");
+         ) GROUP BY p.product_id");
 
         $categories_pre = [];
         foreach ($products->rows as $product){
