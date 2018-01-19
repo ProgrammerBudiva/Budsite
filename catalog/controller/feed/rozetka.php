@@ -11,6 +11,9 @@ class ControllerFeedRozetka extends Controller
     }
 
     public function createXML($array, $cat_226){
+        //ARS шторы убираем из списка товаров по id
+        $ars = [ 3573, 3574, 3575, 3576, 3577];
+
         $dom = new DOMDocument("1.0", "utf-8");
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
@@ -51,15 +54,16 @@ class ControllerFeedRozetka extends Controller
         $categories->appendChild($category);
 
         $category = $dom->createElement('category');
-        $category->nodeValue = 'Жалюзи и ролеты';
+        $category->nodeValue = 'Мастики и праймеры';
         $category->setAttribute('id', 4);
         $categories->appendChild($category);
 
         $shop->appendChild($categories);
-
         $offers = $dom->createElement('offers');
         foreach ($array['products'] as $product_self){
-
+            if (array_search($product_self['product_id'], $ars) !== false){
+                continue;
+            }
             $offer = $dom->createElement('offer');
             $offer->setAttribute('available', 'true');
             $offer->setAttribute('id', $product_self['product_id']);
@@ -79,9 +83,9 @@ class ControllerFeedRozetka extends Controller
             $category_product = $dom->createElement('categoryId');
 
             if(strpos($product_self['name'], 'Мансардное окно') !== false || strpos($product_self['name'], 'Окно-люк') !== false
-                || strpos($product_self['name'], 'Выход на крышу') !== false){
+                || strpos($product_self['name'], 'Выход на крышу') !== false || strpos($product_self['name'], 'Гидроизоляционный оклад') !== false){
                 $category_product->nodeValue = 3;
-            }elseif (strpos($product_self['name'], 'Штора ARS') !== false ){
+            }elseif (strpos($product_self['name'], 'Мастика') !== false ){
                 $category_product->nodeValue = 4;
             }elseif(array_search($product_self['product_id'], $cat_226) != false){
                 $category_product->nodeValue = 2;
@@ -122,6 +126,20 @@ class ControllerFeedRozetka extends Controller
                 }else{
                     $attr_test[1]['text'] = 'упаковка';
                 }
+            }
+
+            if(strpos($product_self['name'], 'Гидроизоляционный оклад') !== false && $attr_test[27]['text']){
+                $attr_test[27]['text'];
+                $size_explode = explode('x',$attr_test[27]['text']);
+                $attr_test[] = [
+                    'text' => $size_explode[0] * 10,
+                    'name' => 'Ширина, мм'
+                    ];
+                $attr_test[] = [
+                    'text' => $size_explode[1] * 10,
+                    'name' => 'Высота, мм'
+                ];
+                unset($attr_test[27]);
             }
 
             foreach ($attr_test as $value){
