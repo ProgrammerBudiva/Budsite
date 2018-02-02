@@ -172,7 +172,9 @@ class ControllerFeedRozetka extends Controller
             $text = str_replace('Если необходимо увеличить высоту лестницы, всегда есть возможность купить ступеньки LSS (при покупке учесть шиирну люка либо ширину ступеньки).', '', $text);
             $text = str_replace('Чтобы купить необходимое количество финской , заполните онлайн-заявку. Также не забывайте следить за выгодными предложениями и новостями проекта.', '', $text);
 
-            $description->nodeValue = '<![CDATA[ ' . $text . ' ]]>';
+//            $description->nodeValue = '<![CDATA[ ' . $text . ' ]]>';
+            $cdata = $dom->createCDATASection($text);
+            $description->appendChild($cdata);
             $offer->appendChild($description);
 
 
