@@ -275,12 +275,12 @@ class ControllerInformationContact extends Controller {
     function mail_to_admin_question(){
         $to      = 'info@budsite.ua';
         $subject = 'Сообщение отправленное через форму страницы КОНТАКТЫ от ' . $this->request->post['email'];
-        $message = 'Сообщение от: ' . $this->request->post['name'] . $this->request->post['email'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
+        $message = 'Сообщение от: ' . $this->request->post['name'] . ' ' . $this->request->post['email'] . "\r\n" . $this->request->post['enquiry'] . "\r\n";
         if ($this->request->post['phone']){
             $message .= 'Номер телефона: ' . $this->request->post['phone'];
         }
-        $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
+        $headers = 'From: info@budsite.ua' . "\r\n" .
+            'Reply-To: info@budsite.ua' . "\r\n" .
             'Content-Type: text/plain;charset=UTF-8' . "\r\n";
 
         mail($to, $subject, $message, $headers);
