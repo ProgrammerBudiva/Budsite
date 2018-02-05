@@ -38,13 +38,22 @@
 
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-product"><span data-toggle="tooltip" title="<?php echo $help_product; ?>"><?php echo $entry_product; ?></span></label>
+            <?php
+              if(!empty($title)){ ?>
+                <div class="col-sm-10">
+                  <input type="text" name="article" value="<?php echo $title; ?>" id="input-article" disabled class="form-control" />
+                  <input type="hidden" name="product" value="0" />
+                  <input type="hidden" name="product_id" value="0" />
+                </div>
+              <?php }else{
+            ?>
             <div class="col-sm-10">
               <input type="text" name="product" value="<?php echo $product; ?>" placeholder="<?php echo $entry_product; ?>" id="input-product" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <?php if ($error_product) { ?>
               <div class="text-danger"><?php echo $error_product; ?></div>
               <?php } ?>
-            </div>
+            </div> <?php } ?>
           </div>
     <!--      <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-plus"><?php echo $entry_plus; ?></label>

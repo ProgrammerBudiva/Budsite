@@ -68,7 +68,7 @@ class ControllerCatalogReview extends Controller {
 		$this->load->model('catalog/review');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_review->editReview($this->request->get['review_id'], $this->request->post);
+			$tets = $this->model_catalog_review->editReview($this->request->get['review_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -269,13 +269,13 @@ class ControllerCatalogReview extends Controller {
 				'name'       => $result['name'],
 				'author'     => $result['author'],
 				'email'      => !empty($result['email'])?$result['email']: '-',
+				'title'      => $result['title'],
 				'rating'     => $result['rating'],
 				'status'     => ($result['status']) ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'edit'       => $this->url->link('catalog/review/edit', 'token=' . $this->session->data['token'] . '&review_id=' . $result['review_id'] . $url, 'SSL')
 			);
 		}
-
 		$data['heading_title'] = $this->language->get('heading_title');
 		
 		$data['text_list'] = $this->language->get('text_list');
@@ -569,7 +569,8 @@ class ControllerCatalogReview extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
-
+        $review_info = $this->model_catalog_review->getReview($this->request->get['review_id']);
+        $data['title'] = $review_info['title'];
 		$this->response->setOutput($this->load->view('catalog/review_form.tpl', $data));
 	}
 
@@ -578,7 +579,8 @@ class ControllerCatalogReview extends Controller {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
-		if (!$this->request->post['product_id']) {
+		if (!isset($this->request->post['product_id'])) {
+		    echo '1234';
 			$this->error['product'] = $this->language->get('error_product');
 		}
 

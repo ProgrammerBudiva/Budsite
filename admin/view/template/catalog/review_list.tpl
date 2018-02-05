@@ -77,9 +77,9 @@
                 <tr>
                   <td style="width: 1px;" class="text-center"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" /></td>
                   <td class="text-left"><?php if ($sort == 'pd.name') { ?>
-                    <a href="<?php echo $sort_product; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_product; ?></a>
+                    <a href="<?php echo $sort_product; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_product . "/Статья"; ?></a>
                     <?php } else { ?>
-                    <a href="<?php echo $sort_product; ?>"><?php echo $column_product; ?></a>
+                    <a href="<?php echo $sort_product; ?>"><?php echo $column_product . "/Статья"; ?></a>
                     <?php } ?></td>
                   <td class="text-left"><?php if ($sort == 'r.author') { ?>
                     <a href="<?php echo $sort_author; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_author; ?></a>
@@ -116,7 +116,8 @@
                     <?php } else { ?>
                     <input type="checkbox" name="selected[]" value="<?php echo $review['review_id']; ?>" />
                     <?php } ?></td>
-                  <td class="text-left"><?php echo $review['name']; ?></td>
+
+                    <td class="text-left"><?php echo $review['name'] ? $review['name'] : $review['title'] ." <b>/Статья</td>"; ?></td>
                   <td class="text-left"><?php echo $review['author']; ?></td>
                   <td class="text-left"><?php echo $review['email']; ?></td>
                   <td class="text-right"><?php echo $review['rating']; ?></td>

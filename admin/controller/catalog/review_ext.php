@@ -298,6 +298,7 @@ class ControllerCatalogReviewExt extends Controller {
 			if (!is_array($columns)) {
 				$row['name'] = $result['name'];
 				$row['product'] = $result['product'];
+				$row['title'] = $result['title'];
 				$row['author'] = $result['author'];
 				$row['rating'] = $result['rating'];
 				$row['date_added'] = date($this->language->get('date_format_short'), strtotime($result['date_added']));

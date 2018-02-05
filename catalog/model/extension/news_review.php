@@ -4,7 +4,7 @@ class ModelExtensionNewsReview extends Model
 {
     public function getReviews($news_id){
 
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review WHERE news_id='" . (int)$news_id . "' ");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review WHERE news_id='" . (int)$news_id . "' AND status='1' ");
         if($query->num_rows !== NULL) {
             return $query->rows;
         }else

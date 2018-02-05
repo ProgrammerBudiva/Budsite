@@ -35,13 +35,12 @@ class ModelCatalogReview extends Model {
 	}
 
 	public function getReview($review_id) {
-		$query = $this->db->query("SELECT DISTINCT *, (SELECT pd.name FROM " . DB_PREFIX . "product_description pd WHERE pd.product_id = r.product_id AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS product FROM " . DB_PREFIX . "review r WHERE r.review_id = '" . (int)$review_id . "'");
-
+		$query = $this->db->query("SELECT DISTINCT *, (SELECT pd.name FROM " . DB_PREFIX . "product_description pd WHERE pd.product_id = r.product_id AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS product FROM " . DB_PREFIX . "review r LEFT JOIN ". DB_PREFIX ."news_description nd ON r.news_id = nd.news_id WHERE r.review_id = '" . (int)$review_id . "'");
 		return $query->row;
 	}
 
 	public function getReviews($data = array()) {
-		$sql = "SELECT r.review_id, pd.name, r.author, r.rating, r.email, r.status, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product_description pd ON (r.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+		$sql = "SELECT r.review_id, pd.name, n.title, r.news_id, r.author, r.rating, r.email, r.status, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product_description pd ON (r.product_id = pd.product_id) LEFT JOIN ". DB_PREFIX ."news_description n ON (r.news_id = n.news_id) WHERE r.review_id IS NOT NULL";
 
 		if (!empty($data['filter_product'])) {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_product']) . "%'";
@@ -92,12 +91,11 @@ class ModelCatalogReview extends Model {
 		}
 
 		$query = $this->db->query($sql);
-
 		return $query->rows;
 	}
 
 	public function getTotalReviews($data = array()) {
-		$sql = "SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product_description pd ON (r.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+		$sql = "SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r Full Outer JOIN " . DB_PREFIX . "product_description pd ON (r.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
 		if (!empty($data['filter_product'])) {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_product']) . "%'";
@@ -125,4 +123,10 @@ class ModelCatalogReview extends Model {
 
 		return $query->row['total'];
 	}
+
+	public function getNewsReviews(){
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review WHERE product_id = 0 ");
+
+        return $query->rows;
+    }
 }
