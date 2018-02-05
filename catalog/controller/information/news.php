@@ -206,6 +206,16 @@ class ControllerInformationNews extends Controller {
                 $this->model_extension_news_review->addReview($this->request->get['news_id'], $this->request->post);
 
                 $json['success'] = $this->language->get('text_success');
+
+                $to      = 'info@budsite.ua';
+                $subject = 'Новый комментарий к статье от  ' . $this->request->post['name'];
+                $message = 'Комментарий от: ' . $this->request->post['name'] . ' ' . "\r\n" . $this->request->post['text'] . "\r\n";
+
+                $headers = 'From: info@budsite.ua' . "\r\n" .
+                    'Reply-To: info@budsite.ua' . "\r\n" .
+                    'Content-Type: text/plain;charset=UTF-8' . "\r\n";
+
+                mail($to, $subject, $message, $headers);
             }
         }
 
