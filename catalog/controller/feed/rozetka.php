@@ -11,8 +11,8 @@ class ControllerFeedRozetka extends Controller
     }
 
     public function createXML($array, $cat_226){
-        //ARS шторы убираем из списка товаров по id
-        $ars = [ 3573, 3574, 3575, 3576, 3577];
+        //ARS шторы убираем из списка товаров по id и праймер битумный эмульсионный ТехноНИКОЛЬ №04 готовый 20 л.
+        $ars = [ 3573, 3574, 3575, 3576, 3577, 2783];
 
         $dom = new DOMDocument("1.0", "utf-8");
         $dom->preserveWhiteSpace = false;
@@ -140,6 +140,28 @@ class ControllerFeedRozetka extends Controller
                     'name' => 'Высота, мм'
                 ];
                 unset($attr_test[27]);
+            }
+
+            if (strpos($product_self['name'], 'Мансардное окно FAKRO Profi FTP-V U3') !== false || strpos($product_self['name'], 'Алюминиевая раздвижная чердачная лестница') !== false
+            || strpos($product_self['name'], 'Деревянная трехсекционная чердачная лестница ROTO') !== false || strpos($product_self['name'], 'Мансардное окно ROTO R') !== false ){
+                $attr_test[] = [
+                    'text' => 'под заказ, в течении 30 дней',
+                    'name' => 'Доставка/Оплата'
+                ];
+            }elseif (strpos($product_self['name'], 'Мастика битумнополимерная эмульсионная ТехноНИКОЛЬ №31 готовая 20 к') !== false ||
+                strpos($product_self['name'], 'Мастика битумнополимерная Защитная алюминиевая ТехноНИКОЛЬ №57 готовая 20 к') !== false ||
+                strpos($product_self['name'], 'Мастика битумная ТехноНИКОЛЬ МБК-Г требует разогрева 30 кг.') !== false ||
+                strpos($product_self['name'], 'Клей для рубероида ТехноНИКОЛЬ готовый 10 кг.') !== false ||
+                strpos($product_self['name'], 'Отсечная гидроизоляция ТехноНИКОЛЬ 600, 20 м.п.') !== false ||
+                strpos($product_self['name'], 'ПВХ мембрана Logicroof V-RP 1,2 мм. армированная, серый 2,05*25м.') !== false ||
+                strpos($product_self['name'], 'ПВХ мембрана Logicroof V-RP 1,5мм. с защитой от УФ, армированная, серый 2*20м.') !== false ||
+                strpos($product_self['name'], 'ПВХ мембрана Logicroof V-SR 1,5мм. с защитой от УФ, неармированная, серый 2*20м.') !== false ||
+                strpos($product_self['name'], 'Праймер битумный ТехноНИКОЛЬ №01 концентрат 20 л.') !== false
+            ){
+                $attr_test[] = [
+                    'text' => 'под заказ, в течении 2 недель',
+                    'name' => 'Доставка/Оплата'
+                ];
             }
 
             foreach ($attr_test as $value){

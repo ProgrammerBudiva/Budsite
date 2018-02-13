@@ -207,7 +207,7 @@ class ControllerInformationNews extends Controller {
 
                 $json['success'] = $this->language->get('text_success');
 
-                $to      = 'info@budsite.ua';
+                $to      = '19ofis96@gmail.com';
                 $subject = 'Новый комментарий к статье от  ' . $this->request->post['name'];
                 $message = 'Комментарий от: ' . $this->request->post['name'] . ' ' . "\r\n" . $this->request->post['text'] . "\r\n";
 
