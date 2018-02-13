@@ -89,7 +89,7 @@ class ControllerCommonFooter extends Controller {
     $data['link_twitter'] = $this->config->get('config_twitter');
 
 
-    $data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), '2016');
+    $data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), '2018');
 
     // Whos Online
     if ($this->config->get('config_customer_online')) {
